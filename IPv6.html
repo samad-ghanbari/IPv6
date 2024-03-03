@@ -25,119 +25,231 @@
 			data-transition-duration="1000"
 			data-width="1024"
 			data-height="768"
-			data-max-scale="3"
+			data-max-scale="2"
 			data-min-scale="0"
 			data-perspective="1000">
 			<!-- data-autoplay="7" -->
-			<div class="step" data-x="-1500" data-y="-1500">
-				<h1>Step-1</h1>
+			<!-- Start -->
+			<div class="step" id="start" data-x="-2000" data-y="-2000">
+				<h1
+					style="
+						text-align: center;
+						font-size: 10rem;
+						font-weight: bold;
+						color: deepskyblue;
+					">
+					IPv6
+				</h1>
+				<div
+					style="
+						text-align: center;
+						font-size: 2rem;
+						color: skyblue;
+					">
+					<span style="font-size: 1rem">By</span>
+					<br />
+					Samad Ghanbari
+				</div>
+				<br />
+				<img
+					src="assets/images/TCI.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 64px;
+					" />
 			</div>
-
+			<!-- Topics -->
 			<div
+				id="topics"
 				class="step"
 				data-x="0"
-				data-y="-1500"
+				data-y="-2000"
+				data-z="2"
+				data-rotate="45">
+				<h1
+					style="
+						font-size: 5rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					Topics
+				</h1>
+				<hr />
+				<ul style="font-size: 2rem">
+					<li>- IPv6 Basics</li>
+					<li>- IPv6 Routing</li>
+					<li>- IPv6 Security</li>
+					<li>- IPv6 Tunneling</li>
+					<li>- NAT64 / DNS64</li>
+				</ul>
+			</div>
+			<!-- Basics -->
+			<div
+				id="basics-Topics"
+				class="step"
+				data-x="2000"
+				data-y="-2000"
+				data-z="2"
+				data-rotate="45">
+				<h1
+					style="
+						font-size: 5rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Basics
+				</h1>
+				<hr />
+				<ul style="font-size: 2rem">
+					<li>- Features</li>
+					<li>- Practical Usage</li>
+					<li>- IPv6 Calculation</li>
+					<li>- IPv6 Address Types</li>
+					<li>- IPv6 Summerization</li>
+					<li>- IPv6 General-Prefix</li>
+					<li>- IPv6 SNMA</li>
+					<li>- IPv6 NDP</li>
+					<li>- DHCPv6</li>
+				</ul>
+			</div>
+			<!-- Routing Topics -->
+			<div
+				id="Routing-Topics"
+				class="step"
+				data-x="4000"
+				data-y="-2000"
 				data-z="2"
 				data-rotate="90">
-				<h2>Step-2</h2>
+				<h1
+					style="
+						font-size: 5rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Routing
+				</h1>
+				<hr />
+				<ul style="font-size: 2rem">
+					<li>- Static Route</li>
+					<li>- RIPng Protocol</li>
+					<li>- EIGRP Protocol</li>
+					<li>- OSPFv3 Protocol</li>
+					<li>- ISIS Protocol</li>
+					<li>- BGP protocol</li>
+				</ul>
 			</div>
 
+			<!-- Security Topics -->
 			<div
-				class="step slide"
-				data-x="1000"
-				data-y="-1500"
-				data-rotate="-90"
-				data-z="1">
-				<q> setp 3</q>
-			</div>
-
-			<div class="step" data-x="0" data-y="0">
-				<q> setp 4</q>
-			</div>
-
-			<div class="step" data-x="850" data-y="3000" data-rotate="90">
-				<h1>Step-5</h1>
-			</div>
-
-			<div
-				class="step slide"
-				data-x="3500"
-				data-y="2100"
-				data-rotate="180">
-				<h1>Step-6</h1>
-			</div>
-
-			<div
-				class="step slide"
-				data-x="3825"
-				data-y="3325"
-				data-z="-3000"
-				data-rotate="300">
-				<h1>Step-7</h1>
-			</div>
-
-			<div
-				id="ing"
-				class="step"
-				data-x="3500"
-				data-y="-850"
-				data-z="0"
-				data-rotate="270">
-				<p>
-					by <b class="positioning">positioning</b>,
-					<b class="rotating">rotating</b> and
-					<b class="scaling">scaling</b> them on an infinite
-					canvas
-				</p>
-			</div>
-
-			<div
-				id="imagination"
-				class="step"
-				data-x="6700"
-				data-y="-300">
-				<p>
-					the only <b>limit</b> is your
-					<b class="imagination">imagination</b>
-				</p>
-			</div>
-
-			<div
-				id="source"
-				class="step"
-				data-x="6300"
-				data-y="2000"
-				data-rotate="20">
-				<p>want to know more?</p>
-				<h1>step last</h1>
-			</div>
-
-			<div
-				id="one-more-thing"
+				id="Security-Topics"
 				class="step"
 				data-x="6000"
-				data-y="4000">
-				<p>one more thing...</p>
+				data-y="-2000"
+				data-z="2"
+				data-rotate="180">
+				<h1
+					style="
+						font-size: 5rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Security
+				</h1>
+				<hr />
+				<ul style="font-size: 2rem">
+					<li>- IPv6 ACL</li>
+					<li>- OSPFv3 Authentication/Encryption</li>
+					<li>- ISIS Authentication</li>
+					<li>- IPv6 First-Hop Security</li>
+				</ul>
+			</div>
+
+			<!-- Tunneling Topics -->
+			<div
+				id="Tunneling-Topics"
+				class="step"
+				data-x="8000"
+				data-y="-2000"
+				data-z="2"
+				data-rotate="270">
+				<h1
+					style="
+						font-size: 5rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Tunneling
+				</h1>
+				<hr />
+				<ul style="font-size: 2rem">
+					<li>- IPv6 GRE/Manual Tunneling</li>
+					<li>- IPv6 Automatic 6to4 Tunneling</li>
+					<li>- IPv6 6RD Tunneling</li>
+					<li>- IPv6 ISATAP Tunneling</li>
+					<li>- IPv6 6PE / 6VPE Tunneling</li>
+					<li>- IPv6 6VPE Option-A</li>
+					<li>- IPv6 6VPE Option-B</li>
+					<li>- IPv6 6VPE Option-C</li>
+					<li>- IPv6 IPsec Tunneling</li>
+				</ul>
+			</div>
+
+			<!-- NAT Topics -->
+			<div
+				id="NAT-Topics"
+				class="step"
+				data-x="10000"
+				data-y="-2000"
+				data-z="2"
+				data-rotate="360">
+				<h1
+					style="
+						font-size: 5rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					NAT64 / DNS64
+				</h1>
+				<hr />
+				<ul style="font-size: 2rem">
+					<li>- NAT Types</li>
+					<li>- Stateless NAT64</li>
+					<li>- Stateful Static NAt64</li>
+					<li>- Stateful Dynamic NAt64</li>
+					<li>- DNS Concepts</li>
+					<li>- DNS64</li>
+				</ul>
 			</div>
 
 			<div
-				id="its-in-3d"
-				class="step"
-				data-x="6200"
-				data-y="4300"
-				data-z="-100"
-				data-rotate-x="-400"
-				data-rotate-y="100">
-				<h1>rotate x- y</h1>
+				id="Tanks"
+				class="step slide"
+				data-x="12000"
+				data-y="-2000"
+				data-z="-1000"
+				data-rotate="360">
+				<q
+					style="
+						display: block;
+						text-align: center;
+						font-size: 3em;
+						font-weight: bold;
+						color: deepskyblue;
+					"
+					>Thanks<br /><br />
+					For<br /><br />
+					Your Attention</q
+				>
 			</div>
 
 			<div
 				id="overview"
 				class="step"
-				data-x="1000"
-				data-y="1000"
+				data-x="14000"
+				data-y="-2000"
 				data-z="50"
-				data-scale="20"></div>
+				data-scale="5"></div>
 		</div>
 
 		<div id="impress-toolbar"></div>
