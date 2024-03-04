@@ -114,6 +114,11 @@ video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-o-user-select: none;
 }
 
 /* HTML5 display-role reset for older browsers */
