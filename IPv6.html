@@ -256,7 +256,7 @@
 				</ul>
 			</div>
 
-			<!-- Basics address space -->
+			<!-- Basics address space IPv4 -->
 			<div
 				id="basics-Address-Space-IPv4"
 				class="step"
@@ -286,6 +286,8 @@
 					<li>sample: X.X.X.X</li>
 				</ul>
 			</div>
+
+			<!-- Basics address space IPv6 -->
 			<div
 				id="basics-Address-Space-IPv6"
 				class="step"
@@ -315,6 +317,8 @@
 					<li>sample: X:X:X:X:X:X:X:X</li>
 				</ul>
 			</div>
+
+			<!-- Basics Math-->
 			<div
 				id="basics-Address-Space-Math"
 				class="step"
@@ -649,7 +653,7 @@
 				<hr />
 				<p
 					style="
-						font-size: 2rem;
+						font-size: 1.5rem;
 						font-weight: bold;
 						color: deeppink;
 					">
@@ -658,6 +662,7 @@
 						>1234:5678:ABCD:1234</span
 					>/<span style="color: cadetblue">64</span>
 				</p>
+				<br />
 
 				<table style="width: 100%; font-weight: bold">
 					<tr style="font-size: 1rem; color: deeppink">
@@ -675,7 +680,7 @@
 				</table>
 			</div>
 
-			<!-- Basics-IPv6 shortening -->
+			<!-- Basics-IPv6 bitwise grouping  -->
 			<div
 				id="basics-IPv6-bit-group"
 				class="step"
@@ -797,7 +802,7 @@
 				</p>
 			</div>
 
-			<!-- Basics-IPv6 bitwise grouping -->
+			<!-- Basics-IPv6 shortening -->
 			<div
 				id="basics-IPv6-shortening"
 				class="step"
@@ -822,22 +827,807 @@
 					">
 					<tr>
 						<td>
-							2200:0000:ABCD:0000:0000:0000:0000:1111
+							2200:0000:ABCD:<span
+								style="
+									color: crimson;
+									font-weight: bold;
+									font-size: 1rem;
+								"
+								>0000:0000:0000:0000</span
+							>:1111
 						</td>
 						<td style="color: deeppink">
-							2200:0000:ABCD::1111
+							2200:0000:ABCD<span
+								style="
+									color: crimson;
+									font-weight: bold;
+									font-size: 2rem;
+								"
+								>::</span
+							>1111
 						</td>
 					</tr>
-
+					<tr style="height: 40px"></tr>
 					<tr>
 						<td>
-							2200:0000:0001:0002:0003:0004:0005:0006:0007
+							2200:<span
+								style="
+									color: crimson;
+									font-weight: bold;
+									font-size: 1rem;
+								"
+								>0000:0001:0002:0003:0004:0005:0006:0007</span
+							>
 						</td>
 						<td style="color: deeppink">
-							2200:0:1:2:3:4:5:6:7
+							2200:<span
+								style="
+									color: crimson;
+									font-weight: bold;
+									font-size: 1.5rem;
+								"
+								>0:1:2:3:4:5:6:7</span
+							>
 						</td>
 					</tr>
 				</table>
+			</div>
+
+			<!-- Basics-IPv6 calc-1 -->
+			<div
+				id="basics-IPv6-calc-1"
+				class="step"
+				data-x="2000"
+				data-y="9500"
+				data-z="2"
+				data-rotate="350">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Calculation
+				</h1>
+				<hr />
+				<p style="font-size: 1rem; text-align: center">
+					IPv6: 1234:4568:9ABC:DEF0:1234:5678:9ABC:DEF0 /
+					<span style="color: deeppink; font-weight: bold"
+						>43</span
+					>
+				</p>
+				<br />
+				<p style="font-weight: bold; font-size: 1rem">
+					Find the 43th bit Hextet 2*16=32 && 3*16=48 =>
+					<span style="color: dodgerblue"
+						>2*Hextet + 2*nibble + 3bit</span
+					>
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					1234:4568:<span
+						style="color: deeppink; font-weight: bold"
+						>9ABC</span
+					>:DEF0:1234:5678:9ABC:DEF0
+				</p>
+				<p style="font-weight: bold; font-size: 1rem">
+					9A<span
+						style="
+							color: deeppink;
+							font-weight: bold;
+							font-size: 2rem;
+						"
+						>B</span
+					>C
+				</p>
+				<p style="font-weight: bold; font-size: 1rem">
+					B ~ 10<span
+						style="font-size: 2rem; color: deeppink"
+						>1</span
+					>1 =>10<span
+						style="font-size: 2rem; color: deeppink"
+						>1</span
+					>0 => A
+				</p>
+				<p style="font-weight: bold; font-size: 1rem">
+					9A<span
+						style="
+							color: deeppink;
+							font-weight: bold;
+							font-size: 2rem;
+						"
+						>A</span
+					>0
+				</p>
+				<hr />
+				<table style="font-size: 1rem; width: 100%">
+					<tr>
+						<td style="color: dodgerblue">Prefix</td>
+						<td>1234:4568:9AA0:: / 43</td>
+					</tr>
+
+					<tr>
+						<td style="color: dodgerblue">
+							Start IPv6
+						</td>
+						<td>1234:4568:9AA0::1 / 43</td>
+					</tr>
+
+					<tr>
+						<td style="color: dodgerblue">End IPv6</td>
+						<td>
+							1234:4568:9ABF:FFFF:FFFF:FFFF:FFFF:FFFF
+							/ 43
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Basics-IPv6 calc-2 -->
+			<div
+				id="basics-IPv6-calc-2"
+				class="step"
+				data-x="2000"
+				data-y="11000"
+				data-z="2"
+				data-rotate="45">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Calculation
+				</h1>
+				<hr />
+				<p style="font-size: 1rem; text-align: center">
+					IPv6: 1234:4568:9ABC:DEF0:1234:5678:9ABC:DEF0 /
+					<span style="color: deeppink; font-weight: bold"
+						>77</span
+					>
+				</p>
+				<br />
+				<p style="font-weight: bold; font-size: 1rem">
+					Find the 77th bit Hextet 4*16=32 && 5*16=80 =>
+					<span style="color: dodgerblue"
+						>4*Hextet + 3*nibble + 1bit</span
+					>
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					1234:4568:9ABC:DEF0:<span
+						style="color: deeppink; font-weight: bold"
+						>1234</span
+					>:5678:9ABC:DEF0
+				</p>
+				<p style="font-weight: bold; font-size: 1rem">
+					123<span
+						style="
+							color: deeppink;
+							font-weight: bold;
+							font-size: 2rem;
+						"
+						>4</span
+					>
+				</p>
+				<p style="font-weight: bold; font-size: 1rem">
+					4 ~
+					<span style="font-size: 2rem; color: deeppink"
+						>0</span
+					>100 =><span
+						style="font-size: 2rem; color: deeppink"
+						>0</span
+					>000 => 0
+				</p>
+				<p style="font-weight: bold; font-size: 1rem">
+					123<span
+						style="
+							color: deeppink;
+							font-weight: bold;
+							font-size: 2rem;
+						"
+						>0</span
+					>
+				</p>
+				<hr />
+				<table style="font-size: 1rem; width: 100%">
+					<tr>
+						<td style="color: dodgerblue">Prefix</td>
+						<td>1234:4568:9ABC:DEF0:1230:: / 77</td>
+					</tr>
+
+					<tr>
+						<td style="color: dodgerblue">
+							Start IPv6
+						</td>
+						<td>1234:4568:9ABC:DEF0:1230::1 / 77</td>
+					</tr>
+
+					<tr>
+						<td style="color: dodgerblue">End IPv6</td>
+						<td>
+							1234:4568:9ABC:DEF0:1237:FFFF:FFFF:FFFF:
+							/ 77
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Basics-IPv6 split-1 -->
+			<div
+				id="basics-IPv6-split-1"
+				class="step"
+				data-x="2000"
+				data-y="12500"
+				data-z="2"
+				data-rotate="90">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Split
+				</h1>
+				<hr />
+				<p style="font-size: 1rem; text-align: center">
+					IPv6: 1234:4568:9ABC:DEF0:1234:5678:9ABC:DEF0 /
+					<span style="color: deeppink; font-weight: bold"
+						>57</span
+					>
+				</p>
+				<br />
+				<p
+					style="
+						font-weight: bold;
+						font-size: 1rem;
+						text-align: center;
+					">
+					Prefix Calculation
+				</p>
+				<p style="font-weight: bold; font-size: 1rem">
+					/57 => 3*Hextet + 2*nibble + 1bit = 57
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					1234:4568:9ABC:DE<span
+						style="color: deeppink; font-weight: bold"
+						>8</span
+					>0::/57
+				</p>
+				<br />
+				<p style="font-size: 1rem">
+					split to two prefix
+					<span style="color: dodgerblue"> => /58</span>
+				</p>
+				<p style="font-size: 1rem">
+					58th bit can be 0 and 1 so <br />
+					1<span style="color: deeppink">0</span>00 and
+					1<span style="color: deeppink">1</span>00
+				</p>
+				<p style="text-align: center; font-size: 1rem">
+					The fourth Hextet Will become
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					DE<span style="color: deeppink; font-weight: bold"
+						>8</span
+					>0
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					DE<span style="color: deeppink; font-weight: bold"
+						>C</span
+					>0
+				</p>
+				<hr />
+				<p style="font-size: 1rem; text-align: center">
+					1234:4568:9ABC:DE<span
+						style="color: deeppink; font-weight: bold"
+						>8</span
+					>0::/58
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					1234:4568:9ABC:DE<span
+						style="color: deeppink; font-weight: bold"
+						>C</span
+					>0::/58
+				</p>
+			</div>
+
+			<!-- Basics-IPv6 split-2 -->
+			<div
+				id="basics-IPv6-split-2"
+				class="step"
+				data-x="2000"
+				data-y="14000"
+				data-z="2"
+				data-rotate="120">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Split
+				</h1>
+				<hr />
+				<p style="font-size: 1rem; text-align: center">
+					1234:4568:9ABC:DEF0:1234:5678:9ABC:DEF0
+					<span style="color: deeppink; font-weight: bold"
+						>57</span
+					>
+				</p>
+				<p
+					style="
+						font-weight: bold;
+						font-size: 1rem;
+						text-align: center;
+					">
+					Prefix Calculation
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					1234:4568:9ABC:DE<span
+						style="color: deeppink; font-weight: bold"
+						>8</span
+					>0::/57
+				</p>
+				<br />
+				<p style="font-size: 1rem">
+					Split to four prefix so TWO bits needed
+					<span style="color: dodgerblue"> => /59</span>
+				</p>
+				<p style="font-size: 1rem">
+					58th and 59th bit can be 00, 01, 10 and 11 so
+					<br />
+					1<span style="color: deeppink">00</span>0 <br />
+					1<span style="color: deeppink">01</span>0 <br />
+					1<span style="color: deeppink">10</span>0 <br />
+					1<span style="color: deeppink">11</span>0 <br />
+				</p>
+				<p style="text-align: center; font-size: 1rem">
+					The fourth Hextet Will become
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					DE<span style="color: deeppink; font-weight: bold"
+						>8</span
+					>0
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					DE<span style="color: deeppink; font-weight: bold"
+						>A</span
+					>0
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					DE<span style="color: deeppink; font-weight: bold"
+						>C</span
+					>0
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					DE<span style="color: deeppink; font-weight: bold"
+						>E</span
+					>0
+				</p>
+				<hr />
+				<p style="font-size: 1rem; text-align: center">
+					1234:4568:9ABC:DE<span
+						style="color: deeppink; font-weight: bold"
+						>8</span
+					>0::/59
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					1234:4568:9ABC:DE<span
+						style="color: deeppink; font-weight: bold"
+						>A</span
+					>0::/59
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					1234:4568:9ABC:DE<span
+						style="color: deeppink; font-weight: bold"
+						>C</span
+					>0::/59
+				</p>
+				<p style="font-size: 1rem; text-align: center">
+					1234:4568:9ABC:DE<span
+						style="color: deeppink; font-weight: bold"
+						>E</span
+					>0::/59
+				</p>
+			</div>
+
+			<!-- Basics-IPv6 Address Types-->
+			<div
+				id="basics-IPv6-address-types"
+				class="step"
+				data-x="2000"
+				data-y="15500"
+				data-z="2"
+				data-rotate="120">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Address Types
+				</h1>
+				<hr />
+				<ul style="font-size: 2rem">
+					<li style="color: deeppink">
+						Unicast
+						<ul
+							style="
+								padding-left: 5rem;
+								list-style-type: disc;
+								color: black;
+							">
+							<li>
+								GUA - Global Unicast -
+								<span
+									style="
+										font-weight: bold;
+										color: indigo;
+									"
+									>2000::/3</span
+								>
+							</li>
+							<li>
+								ULA - Unique Local -
+								<span
+									style="
+										font-weight: bold;
+										color: indigo;
+									"
+									>FC00::/7 ~ FD00::/8</span
+								>
+							</li>
+							<li>
+								LLA - Link-Local -
+								<span
+									style="
+										font-weight: bold;
+										color: indigo;
+									"
+									>FE80::/10</span
+								>
+							</li>
+							<li>
+								Loopback -
+								<span
+									style="
+										font-weight: bold;
+										color: indigo;
+									"
+									>::1/128</span
+								>
+							</li>
+							<li>
+								Unspecified -
+								<span
+									style="
+										font-weight: bold;
+										color: indigo;
+									"
+									>::</span
+								>
+							</li>
+						</ul>
+					</li>
+					<li style="color: deeppink">
+						Multicast -
+						<span
+							style="
+								font-weight: bold;
+								color: indigo;
+							"
+							>FF::/8</span
+						>
+					</li>
+					<li style="color: deeppink">Anycast</li>
+				</ul>
+			</div>
+
+			<!-- Basics-IPv6 Address Assignment-->
+			<div
+				id="basics-IPv6-address-assign"
+				class="step"
+				data-x="2000"
+				data-y="17000"
+				data-z="2"
+				data-rotate="170">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Address Assignment
+				</h1>
+				<hr />
+				<p
+					style="
+						text-align: center;
+						font-size: 2rem;
+						color: deeppink;
+					">
+					IANA => RIR => ISP => Customers
+				</p>
+				<img
+					src="assets/images/rir-map.svg"
+					style="
+						display: block;
+						margin: auto;
+						width: 80%;
+					" />
+			</div>
+
+			<!-- Basics-IPv6 EUI-64-->
+			<div
+				id="basics-IPv6-EUI-64"
+				class="step"
+				data-x="2000"
+				data-y="18500"
+				data-z="2"
+				data-rotate="120">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 EUI-64
+				</h1>
+				<hr />
+				<p
+					style="
+						text-align: center;
+						color: deeppink;
+						font-size: 2rem;
+					">
+					Extended Unique Identifier
+				</p>
+				<p style="font-size: 1rem">
+					A method to automatically configure IPv6 host
+					addresses based on MAC address
+				</p>
+				<br />
+				<img
+					src="assets/images/eui-64.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 80%;
+					" />
+			</div>
+
+			<!-- Basics-IPv6 eui-64-->
+			<div
+				id="basics-IPv6-eui-64-example"
+				class="step"
+				data-x="2000"
+				data-y="20000"
+				data-z="2"
+				data-rotate="120">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 EUI-64
+				</h1>
+				<hr />
+				<code style="font-size: 1rem; width: 90%">
+					<p>Router(config)#interface fastEthernet 0/0</p>
+					<p>
+						Router(config-if)#ipv6 address
+						<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>2001:1234:5678:abcd::/64 eui-64</span
+						>
+					</p>
+					<p style="margin-top: 1rem">
+						Router#show interfaces fastEthernet 0/0 |
+						include Hardware
+					</p>
+					<p style="color: deeppink; font-weight: bold">
+						bia c<span style="color: indigo">2</span
+						>00.185c.0000
+					</p>
+					<p style="text-align: center">
+						7th bit : 1100 00<span
+							style="
+								font-weight: bold;
+								font-size: 1.5rem;
+								color: indigo;
+							"
+							>1</span
+						>0 0000 0000
+					</p>
+					<p style="text-align: center; font-weight: bold">
+						C<span
+							style="
+								color: indigo;
+								font-size: 1.5rem;
+							"
+							>0</span
+						>00 18
+						<span
+							style="
+								color: deeppink;
+								font-size: 1.5rem;
+							"
+							>FFFE</span
+						>
+						5C 0000
+					</p>
+					<p style="margin-top: 1rem">
+						Router#show ipv6 interface fa0/0
+					</p>
+					<p>FastEthernet0/0 is up, line protocol is up</p>
+					<p>IPv6 is enabled, link-local address is</p>
+					<p style="color: deeppink; font-weight: bold">
+						FE80::C<span style="color: indigo">0</span
+						>00:18<span style="color: blue">FF:FE</span
+						>5C:0 No Virtual link-local
+					</p>
+					<p>address(es): Global unicast address(es):</p>
+					<p style="color: deeppink; font-weight: bold">
+						2001:1234:5678:ABCD:C<span
+							style="color: indigo"
+							>0</span
+						>00:18<span style="color: blue">FF:FE</span
+						>5C:0, subnet is
+					</p>
+				</code>
+			</div>
+
+			<!-- Basics-IPv6 summerization-->
+			<div
+				id="basics-IPv6-NDP"
+				class="step"
+				data-x="2000"
+				data-y="21500"
+				data-z="2"
+				data-rotate="-200">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Summarization
+				</h1>
+				<hr />
+				<p
+					style="
+						font-weight: bold;
+						text-align: center;
+						font-size: 1.5rem;
+					">
+					Creating one prefix Representative for multiple
+					prefix
+				</p>
+				<p
+					style="
+						font-size: 1rem;
+						font-weight: bold;
+						margin-top: 2rem;
+					">
+					Removing varying bits
+				</p>
+				<ul
+					style="
+						list-style: disc;
+						font-size: 1.5rem;
+						padding-left: 4rem;
+					">
+					<li>
+						3000:123:0:F<span style="color: deeppink"
+							>1</span
+						>::/64
+					</li>
+					<li>
+						3000:123:0:F<span style="color: deeppink"
+							>2</span
+						>::/64
+					</li>
+					<li>
+						3000:123:0:F<span style="color: deeppink"
+							>3</span
+						>::/64
+					</li>
+				</ul>
+
+				<ul
+					style="
+						font-size: 2rem;
+						padding-left: 4rem;
+						width: 80%;
+						margin: auto;
+						margin-top: 2rem;
+						font-weight: bold;
+					">
+					<li style="text-align: center">
+						1111 00<span style="color: deeppink"
+							>01</span
+						>
+					</li>
+					<li style="text-align: center">
+						1111 00<span style="color: deeppink"
+							>10</span
+						>
+					</li>
+					<li style="text-align: center">
+						1111 00<span style="color: deeppink"
+							>11</span
+						>
+					</li>
+				</ul>
+				<br />
+				<p
+					style="
+						color: deeppink;
+						font-size: 2rem;
+						text-align: center;
+					">
+					3000:123:0:F0::/62
+				</p>
+			</div>
+
+			<!-- Basics-IPv6 GP-->
+			<div
+				id="basics-IPv6-GP"
+				class="step"
+				data-x="2000"
+				data-y="23000"
+				data-z="2"
+				data-rotate="120">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 General Prefix
+				</h1>
+				<hr />
+			</div>
+
+			<!-- Basics-IPv6 NDP RS-RA-->
+			<div
+				id="basics-IPv6-RSRA"
+				class="step"
+				data-x="2000"
+				data-y="24500"
+				data-z="2"
+				data-rotate="120">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 ...
+				</h1>
+				<hr />
+			</div>
+
+			<!-- Basics-IPv6 DHCPv6-->
+			<div
+				id="basics-IPv6-dhcpv6"
+				class="step"
+				data-x="2000"
+				data-y="26000"
+				data-z="2"
+				data-rotate="120">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 ...
+				</h1>
+				<hr />
 			</div>
 
 			<!-- Thank you -->
