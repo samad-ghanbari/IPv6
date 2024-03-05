@@ -640,7 +640,204 @@
 					IPv6 Format
 				</h1>
 				<hr />
-				<ul style="font-size: 2rem; list-style-type: disc"></ul>
+				<p style="text-align: center; font-size: 2rem">
+					X:X:X:X:X:X:X:X / Y
+				</p>
+				<p style="font-size: 2rem">X is a 16-bit hexadecimal</p>
+				<p style="font-size: 2rem">no subnet-mask</p>
+				<p style="font-size: 2rem">We Use Prefix-Length</p>
+				<hr />
+				<p
+					style="
+						font-size: 2rem;
+						font-weight: bold;
+						color: deeppink;
+					">
+					2200:1234:5678:ABCD:<span
+						style="color: dodgerblue"
+						>1234:5678:ABCD:1234</span
+					>/<span style="color: cadetblue">64</span>
+				</p>
+
+				<table style="width: 100%; font-weight: bold">
+					<tr style="font-size: 1rem; color: deeppink">
+						<td>2200:1234:5678:ABCD::</td>
+						<td>Prefix</td>
+					</tr>
+					<tr style="font-size: 1rem; color: dodgerblue">
+						<td>1234:5678:ABCD:1234</td>
+						<td>Host</td>
+					</tr>
+					<tr style="font-size: 1rem; color: cadetblue">
+						<td>64</td>
+						<td>Prefix-Length</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Basics-IPv6 shortening -->
+			<div
+				id="basics-IPv6-bit-group"
+				class="step"
+				data-x="2000"
+				data-y="6500"
+				data-z="2"
+				data-rotate="180">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					Bitwise Group
+				</h1>
+				<hr />
+				<table
+					style="
+						width: 100%;
+						font-weight: bold;
+						font-size: 1rem;
+					">
+					<tr>
+						<td>1 bit</td>
+						<td>Bit</td>
+					</tr>
+
+					<tr>
+						<td>2 bit</td>
+						<td>Duet</td>
+					</tr>
+
+					<tr>
+						<td>3 bit</td>
+						<td>Trio</td>
+					</tr>
+
+					<tr>
+						<td>4 bit</td>
+						<td>Nibble/Quartet</td>
+					</tr>
+
+					<tr>
+						<td>5 bit</td>
+						<td>Quintet</td>
+					</tr>
+
+					<tr>
+						<td>6 bit</td>
+						<td>Sextet</td>
+					</tr>
+
+					<tr>
+						<td>7 bit</td>
+						<td>Septet</td>
+					</tr>
+
+					<tr>
+						<td>8 bit</td>
+						<td>Byte/Octet/Character</td>
+					</tr>
+
+					<tr>
+						<td>9 bit</td>
+						<td>Nonet</td>
+					</tr>
+
+					<tr>
+						<td>10 bit</td>
+						<td>Declet</td>
+					</tr>
+
+					<tr>
+						<td
+							style="
+								color: deeppink;
+								font-weight: bold;
+							">
+							16 bit
+						</td>
+						<td
+							style="
+								color: deeppink;
+								font-weight: bold;
+							">
+							Hexadectet/<span
+								style="
+									font-size: 2rem;
+									color: crimson;
+								"
+								>Hextet</span
+							>/Doublet
+						</td>
+					</tr>
+
+					<tr>
+						<td>32 bit</td>
+						<td>Quadlet</td>
+					</tr>
+
+					<tr>
+						<td>64 bit</td>
+						<td>Octlet</td>
+					</tr>
+
+					<tr>
+						<td>128 bit</td>
+						<td>Hexlet</td>
+					</tr>
+				</table>
+				<hr />
+				<p
+					style="
+						text-align: center;
+						color: crimson;
+						font-size: 2rem;
+					">
+					1-Hextet = 16bit = 4-nibble = 2-Octet
+				</p>
+			</div>
+
+			<!-- Basics-IPv6 bitwise grouping -->
+			<div
+				id="basics-IPv6-shortening"
+				class="step"
+				data-x="2000"
+				data-y="8000"
+				data-z="2"
+				data-rotate="270">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					Shortening IPv6 Addresses
+				</h1>
+				<hr />
+				<table
+					style="
+						width: 100%;
+						font-weight: bold;
+						font-size: 1rem;
+					">
+					<tr>
+						<td>
+							2200:0000:ABCD:0000:0000:0000:0000:1111
+						</td>
+						<td style="color: deeppink">
+							2200:0000:ABCD::1111
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							2200:0000:0001:0002:0003:0004:0005:0006:0007
+						</td>
+						<td style="color: deeppink">
+							2200:0:1:2:3:4:5:6:7
+						</td>
+					</tr>
+				</table>
 			</div>
 
 			<!-- Thank you -->
