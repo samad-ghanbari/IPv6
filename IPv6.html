@@ -79,16 +79,16 @@
 				</h1>
 				<hr />
 				<ul style="font-size: 2rem">
-					<li>- IPv6 Basics</li>
+					<li>- IPv6 Fundamentals</li>
 					<li>- IPv6 Routing</li>
 					<li>- IPv6 Security</li>
 					<li>- IPv6 Tunneling</li>
 					<li>- NAT64 / DNS64</li>
 				</ul>
 			</div>
-			<!-- Basics -->
+			<!-- Fundamentals -->
 			<div
-				id="basics-Topics"
+				id="Fundamentals-Topics"
 				class="step"
 				data-x="2000"
 				data-y="-2000"
@@ -100,7 +100,7 @@
 						text-align: center;
 						color: deepskyblue;
 					">
-					IPv6 Basics
+					IPv6 Fundamentals
 				</h1>
 				<hr />
 				<ul style="font-size: 2rem">
@@ -563,12 +563,65 @@
 
 			<!-- Basics-Applications -->
 			<div
-				id="basics-Usage"
+				id="basics-ipv6-format"
 				class="step"
 				data-x="2000"
 				data-y="3500"
 				data-z="2"
 				data-rotate="90">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Format
+				</h1>
+				<hr />
+				<p style="text-align: center; font-size: 2rem">
+					X:X:X:X:X:X:X:X / Y
+				</p>
+				<p style="font-size: 2rem">X is a 16-bit hexadecimal</p>
+				<p style="font-size: 2rem">no subnet-mask</p>
+				<p style="font-size: 2rem">We Use Prefix-Length</p>
+				<hr />
+				<p
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						color: deeppink;
+					">
+					2200:1234:5678:ABCD:<span
+						style="color: dodgerblue"
+						>1234:5678:ABCD:1234</span
+					>/<span style="color: cadetblue">64</span>
+				</p>
+				<br />
+
+				<table style="width: 100%; font-weight: bold">
+					<tr style="font-size: 1rem; color: deeppink">
+						<td>2200:1234:5678:ABCD::</td>
+						<td>Prefix</td>
+					</tr>
+					<tr style="font-size: 1rem; color: dodgerblue">
+						<td>1234:5678:ABCD:1234</td>
+						<td>Host</td>
+					</tr>
+					<tr style="font-size: 1rem; color: cadetblue">
+						<td>64</td>
+						<td>Prefix-Length</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Basics-IPv6 Format -->
+			<div
+				id="basics-IPv6-application"
+				class="step"
+				data-x="2000"
+				data-y="5000"
+				data-z="2"
+				data-rotate="135">
 				<h1
 					style="
 						font-size: 3rem;
@@ -625,59 +678,6 @@
 						</ul>
 					</li>
 				</ul>
-			</div>
-
-			<!-- Basics-IPv6 Format -->
-			<div
-				id="basics-IPv6-Format"
-				class="step"
-				data-x="2000"
-				data-y="5000"
-				data-z="2"
-				data-rotate="135">
-				<h1
-					style="
-						font-size: 3rem;
-						text-align: center;
-						color: deepskyblue;
-					">
-					IPv6 Format
-				</h1>
-				<hr />
-				<p style="text-align: center; font-size: 2rem">
-					X:X:X:X:X:X:X:X / Y
-				</p>
-				<p style="font-size: 2rem">X is a 16-bit hexadecimal</p>
-				<p style="font-size: 2rem">no subnet-mask</p>
-				<p style="font-size: 2rem">We Use Prefix-Length</p>
-				<hr />
-				<p
-					style="
-						font-size: 1.5rem;
-						font-weight: bold;
-						color: deeppink;
-					">
-					2200:1234:5678:ABCD:<span
-						style="color: dodgerblue"
-						>1234:5678:ABCD:1234</span
-					>/<span style="color: cadetblue">64</span>
-				</p>
-				<br />
-
-				<table style="width: 100%; font-weight: bold">
-					<tr style="font-size: 1rem; color: deeppink">
-						<td>2200:1234:5678:ABCD::</td>
-						<td>Prefix</td>
-					</tr>
-					<tr style="font-size: 1rem; color: dodgerblue">
-						<td>1234:5678:ABCD:1234</td>
-						<td>Host</td>
-					</tr>
-					<tr style="font-size: 1rem; color: cadetblue">
-						<td>64</td>
-						<td>Prefix-Length</td>
-					</tr>
-				</table>
 			</div>
 
 			<!-- Basics-IPv6 bitwise grouping  -->
@@ -1589,12 +1589,54 @@
 					">
 					IPv6 General Prefix
 				</h1>
+				<p style="font-size: 2rem">
+					The Available Global-Prefix
+				</p>
+				<p
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: deeppink;
+						font-weight: bold;
+					">
+					2A04:2680:17::/48
+				</p>
 				<hr />
+				<p style="font-size: 1.5rem">
+					R1(config)#interface GigabitEthernet 0/1
+				</p>
+				<p style="font-size: 1.5rem">
+					R1(config-if)#ipv6 address
+					<span style="color: deeppink"
+						>2A04:2680:17::100/64</span
+					>
+				</p>
+				<hr />
+				<p style="font-size: 1.7rem; color: dodgerblue">
+					R1(config)#ipv6 general-prefix
+					<span style="font-weight: bold">GLOBAL</span>
+					2A04:2680:17::/48
+				</p>
+
+				<p style="font-size: 1.5rem">
+					R1(config)#interface GigabitEthernet 0/1
+				</p>
+				<p style="font-size: 1.5rem">
+					R1(config-if)#ipv6 address
+					<span
+						style="
+							color: dodgerblue;
+							font-weight: bold;
+						">
+						GLOBAL
+					</span>
+					::100/64
+				</p>
 			</div>
 
-			<!-- Basics-IPv6 NDP RS-RA-->
+			<!-- Basics-IPv6 SNMA-->
 			<div
-				id="basics-IPv6-RSRA"
+				id="basics-IPv6-SNMA"
 				class="step"
 				data-x="2000"
 				data-y="24500"
@@ -1606,28 +1648,417 @@
 						text-align: center;
 						color: deepskyblue;
 					">
-					IPv6 ...
+					IPv6 Solicited Node Multicast Address
 				</h1>
 				<hr />
+				<p style="font-size: 1.5rem">SNMA Prefix is</p>
+				<p
+					style="
+						font-size: 2rem;
+						font-weight: bold;
+						color: deeppink;
+						text-align: center;
+					">
+					FF02::1:FF /104
+				</p>
+				<p style="font-size: 1.5rem">
+					128 - 106 = 24bit left => 6 nibble => 6 Nibble Of
+					LSB IPv6 Address
+				</p>
+				<p style="font-size: 1.5rem; margin-top: 1rem">
+					R1(config)#interface FastEthernet 0/0
+				</p>
+				<p style="font-size: 1.5rem">
+					R1(config-if)#ipv6 enable
+				</p>
+				<p style="font-size: 1.5rem">
+					R1(config-if)#ipv6 address
+					<span style="font-weight: bold"
+						>2000:1234:5678:9ABCD:EF10:1112:1314:1516/64
+					</span>
+				</p>
+				<p style="font-size: 1.5rem; margin-top: 1rem">
+					R1#show ipv6 interface FastEthernet 0/0
+				</p>
+				<p style="font-size: 1.5rem">
+					IPv6 is enabled, link-local address is
+					<span
+						style="
+							font-weight: bold;
+							display: block;
+							text-align: center;
+						"
+						>FE80::21D:A1FF:FE<span
+							style="
+								font-weight: bold;
+								color: dodgerblue;
+							"
+							>8B:36D0</span
+						></span
+					>
+				</p>
+				<p style="font-size: 1.5rem">
+					Global unicast address(es):
+					<span
+						style="
+							font-weight: bold;
+							display: block;
+							text-align: center;
+						"
+						>2000:1234:5678:9ABCD:EF10:1122:13<span
+							style="
+								font-weight: bold;
+								color: dodgerblue;
+							"
+							>14:1516</span
+						></span
+					>
+				</p>
+				<p style="font-size: 1.5rem">
+					Joined group address(es):
+				</p>
+				<p
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						color: dodgerblue;
+					">
+					FF02::1
+				</p>
+				<p
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						color: dodgerblue;
+					">
+					FFF02::1:FF8B:36D0
+				</p>
+				<p
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						color: dodgerblue;
+					">
+					FFF02::1:FF14:1516
+				</p>
 			</div>
 
-			<!-- Basics-IPv6 DHCPv6-->
+			<!-- Basics-IPv6 NDP-->
 			<div
 				id="basics-IPv6-dhcpv6"
 				class="step"
 				data-x="2000"
 				data-y="26000"
 				data-z="2"
-				data-rotate="120">
+				data-rotate="-120">
 				<h1
 					style="
 						font-size: 3rem;
 						text-align: center;
 						color: deepskyblue;
 					">
-					IPv6 ...
+					IPv6 Neighbor Discovery Protocol
 				</h1>
 				<hr />
+
+				<p
+					style="
+						color: orangered;
+						text-align: center;
+						font-size: 2rem;
+					">
+					ARP (Address Resolution Protocol) NOT Exists In
+					IPv6
+				</p>
+				<p
+					style="
+						color: green;
+						text-align: center;
+						font-size: 2rem;
+					">
+					NDP will Do the functionality of ARP
+				</p>
+				<p style="font-size: 2rem; margin-top: 1rem">
+					NDP Requisits:
+				</p>
+				<ul
+					style="
+						width: 90%;
+						list-style-type: disc;
+						margin-left: 4rem;
+						font-size: 2rem;
+					">
+					<li>ICMPv6</li>
+					<li>SNMA</li>
+				</ul>
+
+				<p style="font-size: 2rem; margin-top: 1rem">
+					Messages
+				</p>
+				<ul
+					style="
+						width: 90%;
+						list-style-type: disc;
+						margin-left: 4rem;
+						font-size: 2rem;
+					">
+					<li>NS - Neighbor solicitation message</li>
+					<li>NA - Neighbor advertisement message</li>
+				</ul>
+			</div>
+
+			<!-- Basics-IPv6 NDP-->
+			<div
+				id="basics-IPv6-ndp-nsna"
+				class="step"
+				data-x="2000"
+				data-y="27500"
+				data-z="2"
+				data-rotate="-180">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 NDP - NS / NA
+				</h1>
+				<hr />
+				<img
+					src="assets/images/nsna.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 70%;
+					" />
+
+				<p style="font-size: 1.5rem; font-weight: bold">R1</p>
+				<p style="font-size: 1.5rem">interface Ethernet0/0</p>
+				<p style="font-size: 1.5rem">
+					ipv6 address
+					1234:5678:9ABC:DEF0:1234:1234:1234:1234/112
+				</p>
+				<br />
+				<p style="font-size: 1.5rem; font-weight: bold">R2</p>
+				<p style="font-size: 1.5rem">interface Ethernet0/0</p>
+				<p style="font-size: 1.5rem">
+					ipv6 address 1234:5678:9ABC:DEF0:1234:1234:12<span
+						style="color: deeppink"
+						>34:1235</span
+					>/112
+				</p>
+			</div>
+
+			<!-- Basics-IPv6 NDP NS-->
+			<div
+				id="basics-IPv6-ndp-ns"
+				class="step"
+				data-x="2000"
+				data-y="29000"
+				data-z="2"
+				data-rotate="-180">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 NDP - NS
+				</h1>
+				<hr />
+				<img
+					src="assets/images/11-NS.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 95%;
+					" />
+			</div>
+
+			<!-- Basics-IPv4 NDP NA-->
+			<div
+				id="basics-IPv6-ndp-NA"
+				class="step"
+				data-x="2000"
+				data-y="30500"
+				data-z="2"
+				data-rotate="-240">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 NDP - NA
+				</h1>
+				<hr />
+				<img
+					src="assets/images/11-NA.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 95%;
+					" />
+			</div>
+
+			<!-- Basics-IPv4 Multicast MAC-->
+			<div
+				id="basics-IPv4-Multicast-MAC"
+				class="step"
+				data-x="2000"
+				data-y="32000"
+				data-z="2"
+				data-rotate="-290">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv4 Multicast MAC Addresses
+				</h1>
+				<hr />
+				<p style="font-size: 1.5rem">
+					IPv4 multicast range is
+					<span style="color: deeppink">224.0.0.0/4</span>
+					so 1110 are always fixed
+				</p>
+				<p style="font-size: 1.5rem; margin-bottom: 1rem">
+					The most significant 24 bits of an IPv4 multicast
+					MAC address are
+					<span style="color: deeppink">0x01005E</span>
+				</p>
+				<img
+					src="assets/images/ipv4-multi-MAC.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 95%;
+					" />
+			</div>
+
+			<!-- Basics-IPv6 Multicast MAC-->
+			<div
+				id="basics-IPv6-Multicast-MAC"
+				class="step"
+				data-x="2000"
+				data-y="33500"
+				data-z="2"
+				data-rotate="-290">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Multicast MAC Addresses
+				</h1>
+				<hr />
+				<p style="font-size: 1.5rem">
+					Pv6 multicast range is
+					<span style="color: deeppink">FF::/8</span>
+					so 8 bits are always fixed
+				</p>
+				<p style="font-size: 1.5rem; margin-bottom: 1rem">
+					The most significant 16 bits of an IPv6 multicast
+					MAC address are
+					<span style="color: deeppink">0x3333</span>
+				</p>
+
+				<img
+					src="assets/images/ipv6-multi-MAC.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 95%;
+					" />
+			</div>
+
+			<!-- Basics-IPv6 SLAAC-->
+			<div
+				id="basics-IPv6-SLAAC"
+				class="step"
+				data-x="2000"
+				data-y="35000"
+				data-z="2"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					StateLess Address Auto-Configuration
+				</h1>
+				<hr />
+				<p style="font-size: 1.5rem"></p>
+				<p style="font-size: 1.5rem; margin-bottom: 1rem"></p>
+
+				<img
+					src="assets/images/ipv6-multi-MAC.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 95%;
+					" />
+			</div>
+
+			<!-- Basics-IPv6 SLAAC-RS-->
+			<div
+				id="basics-IPv6-RS"
+				class="step"
+				data-x="2000"
+				data-y="36500"
+				data-z="2"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					SLAAC - RS
+				</h1>
+				<hr />
+				<p style="font-size: 1.5rem"></p>
+				<p style="font-size: 1.5rem; margin-bottom: 1rem"></p>
+
+				<img
+					src="assets/images/ipv6-multi-MAC.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 95%;
+					" />
+			</div>
+
+			<!-- Basics-IPv6 SLAAC-RA-->
+			<div
+				id="basics-IPv6-SLAAC-RA"
+				class="step"
+				data-x="2000"
+				data-y="38000"
+				data-z="2"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					SLAAC - RA
+				</h1>
+				<hr />
+				<p style="font-size: 1.5rem"></p>
+				<p style="font-size: 1.5rem; margin-bottom: 1rem"></p>
+
+				<img
+					src="assets/images/ipv6-multi-MAC.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 95%;
+					" />
 			</div>
 
 			<!-- Thank you -->
