@@ -872,58 +872,37 @@
 					Shortening IPv6 Addresses
 				</h1>
 				<hr />
-				<table
-					style="
-						width: 100%;
-						font-weight: bold;
-						font-size: 1rem;
-					">
-					<tr>
-						<td>
-							2200:0000:ABCD:<span
-								style="
-									color: crimson;
-									font-weight: bold;
-									font-size: 1rem;
-								"
-								>0000:0000:0000:0000</span
-							>:1111
-						</td>
-						<td style="color: deeppink">
-							2200:0000:ABCD<span
-								style="
-									color: crimson;
-									font-weight: bold;
-									font-size: 2rem;
-								"
-								>::</span
-							>1111
-						</td>
-					</tr>
-					<tr style="height: 40px"></tr>
-					<tr>
-						<td>
-							2200:<span
-								style="
-									color: crimson;
-									font-weight: bold;
-									font-size: 1rem;
-								"
-								>0000:0001:0002:0003:0004:0005:0006:0007</span
-							>
-						</td>
-						<td style="color: deeppink">
-							2200:<span
-								style="
-									color: crimson;
-									font-weight: bold;
-									font-size: 1.5rem;
-								"
-								>0:1:2:3:4:5:6:7</span
-							>
-						</td>
-					</tr>
-				</table>
+				<p class="fs1half">String of Zeros Replacement</p>
+				<p class="fs2">
+					2200:0000:ABCD:<span
+						style="color: crimson; font-weight: bold"
+						>0000:0000:0000:0000</span
+					>:1111
+				</p>
+				<p class="fs2">
+					2200:0000:ABCD<span
+						style="
+							color: crimson;
+							font-weight: bold;
+							font-size: 2rem;
+						"
+						>::</span
+					>1111
+				</p>
+				<hr />
+				<p class="fs1half">Leading Zeros Removal</p>
+				<p class="fs2">
+					2200:<span
+						style="color: crimson; font-weight: bold"
+						>0000:0001:0002:0003:0004:0005:0006:0007</span
+					>
+				</p>
+				<p class="fs2">
+					2200:<span
+						style="color: crimson; font-weight: bold"
+						>0:1:2:3:4:5:6:7</span
+					>
+				</p>
 			</div>
 
 			<!-- Basics-IPv6 calc-1 -->
@@ -3336,6 +3315,327 @@
 					IPv6 Security
 				</h1>
 			</div>
+
+			<!-- IPv6 Security - IPv6 Access list-->
+			<div
+				id="IPv6-Sec-acl"
+				class="step"
+				data-x="6000"
+				data-y="1000"
+				data-z="2"
+				data-rotate="180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 Access-List
+				</h1>
+				<hr />
+				<p class="fs2">IPv4 Access-List</p>
+				<ul class="fs1half pl3" style="list-style-type: circle">
+					<li>
+						IPv4 ACL types are :
+						<span class="bold">Standard</span> and
+						<span class="bold">Extended</span>
+					</li>
+					<li>
+						IPv4 ACL has an invisible implicit deny any
+						at the end
+					</li>
+				</ul>
+				<hr />
+				<p class="fs2">IPv6 Access-List</p>
+				<ul class="fs1half pl3" style="list-style-type: circle">
+					<li>
+						IPv6 only has
+						<span class="bold">
+							Named Extended ACL</span
+						>
+					</li>
+					<li>
+						IPv6 ACL has
+						<span class="bold">3</span> invisible
+						implicit Statement at the end
+						<ul
+							class="fs1half pl4"
+							style="
+								list-style-type: disk;
+								color: darkslategray;
+							">
+							<li>permit icmp any any nd-na</li>
+							<li>permit icmp any any nd-ns</li>
+							<li>deny ipv6 any any</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<!-- IPv6 Security - IPv6 Access list config-->
+			<div
+				id="IPv6-Sec-acl-config"
+				class="step"
+				data-x="6000"
+				data-y="2500"
+				data-z="2"
+				data-rotate="-180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 Access-List
+				</h1>
+				<hr />
+
+				<p class="fs2 bold">R</p>
+				<p class="fs1half pl2">ipv6 unicast-routing</p>
+				<p class="fs1half pl2">!</p>
+				<p class="fs1half pl2 bold">
+					ipv6 access-list
+					<span style="color: blueviolet">ACLv6</span>
+				</p>
+				<p class="fs1half pl4 bold">
+					permit tcp host 2000:0:1:2::1 any eq 23
+				</p>
+				<p class="fs1half pl2">!</p>
+				<p class="fs1half pl2">interface FastEthernet 0/0</p>
+				<p class="fs1half" style="padding-left: 4rem">
+					ipv6 enable
+				</p>
+				<p class="fs1half bold" style="padding-left: 4rem">
+					ipv6 traffic-filter
+					<span style="color: blueviolet">ACLv6</span> in
+				</p>
+				<p class="fs1half pl2">!</p>
+			</div>
+
+			<!-- IPv6 Security - IPv6 Access list config 2-->
+			<div
+				id="IPv6-Sec-acl-config2"
+				class="step"
+				data-x="6000"
+				data-y="4000"
+				data-z="2"
+				data-rotate="180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 Access-List
+				</h1>
+				<hr />
+
+				<p class="fs2 bold">R</p>
+				<p class="fs1half pl2">ipv6 unicast-routing</p>
+				<p class="fs1half pl2">!</p>
+				<p class="fs1half pl2 bold">
+					ipv6 access-list
+					<span style="color: blueviolet"
+						>DENY_2004_128</span
+					>
+				</p>
+				<p class="fs1half pl4 bold">
+					sequence 30 deny ipv6 2004:3::/64 any
+				</p>
+				<p class="fs1half pl4 bold">
+					sequence 35 permit ipv6 any any
+				</p>
+
+				<p class="fs1half pl2">!</p>
+				<p class="fs1half pl2">interface FastEthernet 0/0</p>
+				<p class="fs1half" style="padding-left: 4rem">
+					ipv6 enable
+				</p>
+				<p class="fs1half bold" style="padding-left: 4rem">
+					ipv6 traffic-filter
+					<span style="color: blueviolet"
+						>DENY_2004_128</span
+					>
+					in
+				</p>
+				<p class="fs1half pl2">!</p>
+			</div>
+
+			<!-- IPv6 Security - OSPF Auth/Encr-->
+			<div
+				id="IPv6-Sec-ospf-auth-encr"
+				class="step"
+				data-x="6000"
+				data-y="5500"
+				data-z="2"
+				data-rotate="-180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					OSPFv3 Authentication / Encryption
+				</h1>
+				<hr />
+				<p class="fs2">
+					OSPFv3 uses IPsec for Authentication and
+					Encryption
+				</p>
+				<p class="fs2" style="color: blueviolet">
+					IPsec Encapsulation Types
+				</p>
+				<ul class="fs1half pl4" style="list-style-type: circle">
+					<li>
+						<span style="color: blueviolet">AH</span> -
+						Authentication Header
+					</li>
+					<li>
+						<span style="color: blueviolet">ESP</span> -
+						Encapsulating Security Payload
+					</li>
+				</ul>
+				<hr />
+				<p class="fs1half">
+					The AH protocol provides a mechanism for
+					Authentication only
+				</p>
+
+				<p class="fs1half">
+					The AH algorithms are
+					<span class="bold">HMAC-MD5</span> or
+					<span class="bold">HMAC-SHA</span>
+				</p>
+				<hr />
+				<p class="fs1half">
+					The ESP protocol provides data Confidentiality
+					and/or Authentication
+				</p>
+				<p class="fs1half">
+					The ESP algorithms are
+					<span class="bold">DES</span> or
+					<span class="bold">3DES</span> or
+					<span class="bold">AES-CBC</span>
+				</p>
+			</div>
+
+			<!-- IPv6 Security - AH-->
+			<div
+				id="IPv6-Sec-AH"
+				class="step"
+				data-x="6000"
+				data-y="7000"
+				data-z="2"
+				data-rotate="180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					Authentication Header
+				</h1>
+				<hr />
+				<img
+					src="assets/images/AH.png"
+					style="
+						width: 95%;
+						display: block;
+						margin: auto;
+					" />
+			</div>
+
+			<!-- IPv6 Security - OSPF Auth requisits-->
+			<div
+				id="IPv6-Sec-AH-requisits"
+				class="step"
+				data-x="6000"
+				data-y="8500"
+				data-z="2"
+				data-rotate="-180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					Authentication Header
+				</h1>
+				<hr />
+				<p class="fs2">AH requisits</p>
+				<ul class="fs1half pl4" style="list-style-type: circle;">
+					<li style="color:blueviolet">SPI</li>
+					<li style="color:deeppink">Algorithm</li>
+					<li style="color:dodgerblue">KEY</li>
+				</ul>
+				<p class="fs1half" style=" text-align:center">
+					SPI should be unique per interface
+				</p>
+				<p class="fs1half" style="text-align:center"">
+					SPI range is 256~4294967295
+				</p>
+				<p class="fs1half" style=" text-align:center"">
+					SPI in the two router should be the same
+				</p>
+				<p class="fs1half">!</p>
+				<p class="fs1half">interface Ethernet0/0</p>
+				<p class="fs1half pl2"> ipv6 enable</p>
+				<p class="fs1half pl2">ipv6 ospf authentication ipsec <span class="bold" style="color:blueviolet">spi 256</span> <span style="color:deeppink; font-weight: bold;">md5</span> <span style="color:dodgerblue; font-size:1rem;">202CB962AC59075B964B07152D234B70</span></p>
+				<p class="fs1half pl2">ipv6 ospf 1 area 1</p>
+				<p class="fs1half">!</p>
+
+			</div>
+
+			<!-- IPv6 Security - OSPF with/withouit AH-->
+			<div
+				id="IPv6-Sec-ospf-with-without-AH"
+				class="step"
+				data-x="6000"
+				data-y="10000"
+				data-z="2"
+				data-rotate="180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					OSPFv3 Authentication
+				</h1>
+				<hr />
+				<p class="fs1half">OSPF Hello Packet with AH</p>
+				<img src="assets/images/OSPF-AH.png" style="display: block;margin:auto;height:95%">
+			</div>
+
+			<!-- IPv6 Security - OSPF Encryption-->
+			<div
+				id="IPv6-Sec-ospf-encryption"
+				class="step"
+				data-x="6000"
+				data-y="11500"
+				data-z="2"
+				data-rotate="-180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					OSPFv3 Encryption
+				</h1>
+				<hr />
+				<p class="fs1half">OSPF Hello Packet with AH</p>
+			</div>
+
+
 
 			<!-- IPv6 Tunneling - Chapter Tunneling -->
 			<!-- IPv6 Tunneling - Chapter Tunneling -->
