@@ -3616,7 +3616,7 @@
 
 			<!-- IPv6 Security - OSPF Encryption-->
 			<div
-				id="IPv6-Sec-ospf-encryption"
+				id="IPv6-Sec-esp"
 				class="step"
 				data-x="6000"
 				data-y="11500"
@@ -3629,11 +3629,212 @@
 						color: blueviolet;
 						font-weight: bold;
 					">
+					Encapsulating Security Payload
+				</h1>
+				<hr />
+				<img src="assets/images/ESP.png" style="width:95%; display: block; margin: auto;">
+			</div>
+
+			<!-- IPv6 Security - OSPF Encryption requisites-->
+			<div
+				id="IPv6-Sec-esp-configuration"
+				class="step"
+				data-x="6000"
+				data-y="13000"
+				data-z="2"
+				data-rotate="180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					ESP Configuration
+				</h1>
+				<hr />
+				<p class="fs2">ESP requisits</p>
+				<ul class="fs1half pl4" style="list-style-type: circle;">
+					<li style="color:blueviolet">SPI</li>
+					<li style="color:deeppink">Encryption Algorithm</li>
+					<li style="color:dodgerblue">Encryption Key</li>
+					<li style="color:darkcyan">Authentication Algorithm</li>
+					<li style="color:tomato">Authentication Key</li>
+				</ul>
+				<p class="fs1half">Example</p>
+				<p class="fs1half">!</p>
+				<p class="fs1half">interface Ethernet0/0</p>
+				<p class="fs1half pl2"> ipv6 enable</p>
+				<p class="fs1half pl2">ipv6 ospf encryption ipsec <span class="bold" style="color:blueviolet">spi 256</span> esp <span style="color:deeppink; font-weight: bold;">aes-cbc 256</span> <span style="color:dodgerblue; font-size:1.5rem;">B2..10</span> <span style="color:darkcyan; font-size:1.5rem;">sha1</span> <span style="color:tomato; font-size:1.5rem;">A2..D1</span> </p>
+				<p class="fs1half pl2">ipv6 ospf 1 area 1</p>
+				<p class="fs1half">!</p>
+			</div>
+
+			<!-- IPv6 Security - OSPF Encryption-->
+			<div
+				id="IPv6-Sec-encryption-algorithm"
+				class="step"
+				data-x="6000"
+				data-y="14500"
+				data-z="2"
+				data-rotate="-180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					Symmetric Encryption Algorithms
+				</h1>
+				<hr />
+				<p class="fs2">Algorithms:</p>
+				<ul class="fs1half pl4" style="list-style-type: circle;">
+					<li style="color:dodgerblue"><span class="bold">DES</span></span><span style="font-size:1rem; color:black"> - Data Encryption Standard</span></li>
+					<li style="color:dodgerblue"><span class="bold">3DES</span></span><span style="font-size:1rem; color:black"> - Triple Data Encryption Standard</span></li>
+					<li style="color:dodgerblue"><span class="bold">AES</span></span><span style="font-size:1rem; color:black"> - Advanced Encryption Standard (6 times faster than the 3DES)</span>
+					</li>
+				</ul>
+				<p class="fs2">AES</p>
+				<ul class="fs1half pl4" style="list-style-type: square;">
+					<li style="color:dodgerblue">AES is a block cipher</li>
+					<li style="color:dodgerblue">The key size can be 128/192/256 bits</li>
+					<li style="color:dodgerblue">The industry standard</li>
+				</ul>
+				<p class="fs2">AES Modes:</p>
+				<ul class="fs1half pl4" style="list-style-type: square;">
+					<li style="color:dodgerblue"><span class="bold">ECB</span><span style="font-size:1rem; color:black"> - Electronic Code Book (Suitable for encrypting small messages)</span></li>
+					<li style="color:dodgerblue"><span class="bold">CBC</span><span  style="font-size:1rem; color:black">- Cipher Block Chaining (Better suited for encrypting large messages)</span></li>
+					<li style="color:dodgerblue"><span class="bold">OFB</span><span  style="font-size:1rem; color:black"> - Output FeedBack</span></li>
+					<li style="color:dodgerblue"><span class="bold">CTR</span><span  style="font-size:1rem; color:black"> -Counter</span></li>
+
+				</ul>
+			</div>
+
+			<!-- IPv6 Security - OSPF with/withouit AH-->
+			<div
+				id="IPv6-Sec-ospf-esp-capture"
+				class="step"
+				data-x="6000"
+				data-y="16000"
+				data-z="2"
+				data-rotate="180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
 					OSPFv3 Encryption
 				</h1>
 				<hr />
-				<p class="fs1half">OSPF Hello Packet with AH</p>
+				<p class="fs1half">OSPF Hello Packet with ESP Encryption</p>
+				<img src="assets/images/ESP-Cap.png" style="display: block;margin:auto;height:95%">
 			</div>
+
+
+			<!-- IPv6 Security - ISIS-->
+			<div
+				id="IPv6-Sec-ISIS"
+				class="step"
+				data-x="6000"
+				data-y="17500"
+				data-z="2"
+				data-rotate="-180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 ISIS Security
+				</h1>
+				<hr />
+				<p class="fs2">Methods:</p>
+				<ul class="fs1half pl2" style="list-style-type: circle;">
+					<li>Plain-Text
+						<ul class="fs1half pl4" style="list-style-type: square; color:darkslategrey">
+							<li>Interface Password</li>
+							<li>Area Password</li>
+							<li>Domain Password</li>
+						</ul>
+
+					</li>
+					<li>HMAC MD5
+						<ul class="fs1half pl4" style="list-style-type: square; color:darkslategrey">
+							<li>Interface Authentication</li>
+							<li>Instance Authentication</li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+
+			<!-- IPv6 Security - ISIS plain-text-->
+			<div
+				id="IPv6-Sec-ISIS-plain-text"
+				class="step"
+				data-x="6000"
+				data-y="19000"
+				data-z="2"
+				data-rotate="180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 ISIS Plain-Text Password
+				</h1>
+				<hr />
+				<img src="assets/images/isis-plain-text.png" style="width: 90%; display: block; margin: auto;">
+			</div>
+
+
+			<!-- IPv6 Security - ISIS - md5-->
+			<div
+				id="IPv6-Sec-ISIS-md5"
+				class="step"
+				data-x="6000"
+				data-y="20500"
+				data-z="2"
+				data-rotate="-180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 ISIS HMAC-MD5 Authentication
+				</h1>
+				<hr />
+				<img src="assets/images/isis-HMAC.png" style="width: 90%; display: block; margin: auto;">
+			</div>
+
+		<!-- IPv6 Security - First-hop-security-->
+		<div
+			id="IPv6-Sec-first-hop-sec"
+			class="step"
+			data-x="6000"
+			data-y="22000"
+			data-z="2"
+			data-rotate="180">
+			<h1
+				style="
+					font-size: 2rem;
+					text-align: center;
+					color: blueviolet;
+					font-weight: bold;
+				">
+				IPv6 L2-Links First-Hop Security
+			</h1>
+			<hr />
+			<!-- <img src="assets/images/isis-HMAC.png" style="width: 90%; display: block; margin: auto;"> -->
+	</div>
 
 
 
