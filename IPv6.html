@@ -2792,7 +2792,7 @@
 					IPv6 Routing
 				</h1>
 			</div>
-			
+
 			<!-- IPv6 Routing - static -->
 			<div
 				id="Routing-Static"
@@ -3551,7 +3551,7 @@
 					" />
 			</div>
 
-			<!-- IPv6 Security - OSPF Auth requisits-->
+			<!-- IPv6 Security - OSPF Auth requisits -->
 			<div
 				id="IPv6-Sec-AH-requisits"
 				class="step"
@@ -3570,27 +3570,37 @@
 				</h1>
 				<hr />
 				<p class="fs2">AH requisits</p>
-				<ul class="fs1half pl4" style="list-style-type: circle;">
-					<li style="color:blueviolet">SPI</li>
-					<li style="color:deeppink">Algorithm</li>
-					<li style="color:dodgerblue">KEY</li>
+				<ul class="fs1half pl4" style="list-style-type: circle">
+					<li style="color: blueviolet">SPI</li>
+					<li style="color: deeppink">Algorithm</li>
+					<li style="color: dodgerblue">KEY</li>
 				</ul>
-				<p class="fs1half" style=" text-align:center">
+				<p class="fs1half" style="text-align: center">
 					SPI should be unique per interface
 				</p>
-				<p class="fs1half" style="text-align:center"">
+				<p class="fs1half" style="text-align: center">
 					SPI range is 256~4294967295
 				</p>
-				<p class="fs1half" style=" text-align:center"">
+				<p class="fs1half" style="text-align: center">
 					SPI in the two router should be the same
 				</p>
 				<p class="fs1half">!</p>
 				<p class="fs1half">interface Ethernet0/0</p>
-				<p class="fs1half pl2"> ipv6 enable</p>
-				<p class="fs1half pl2">ipv6 ospf authentication ipsec <span class="bold" style="color:blueviolet">spi 256</span> <span style="color:deeppink; font-weight: bold;">md5</span> <span style="color:dodgerblue; font-size:1rem;">202CB962AC59075B964B07152D234B70</span></p>
+				<p class="fs1half pl2">ipv6 enable</p>
+				<p class="fs1half pl2">
+					ipv6 ospf authentication ipsec
+					<span class="bold" style="color: blueviolet"
+						>spi 256</span
+					>
+					<span style="color: deeppink; font-weight: bold"
+						>md5</span
+					>
+					<span style="color: dodgerblue; font-size: 1rem"
+						>202CB962AC59075B964B07152D234B70</span
+					>
+				</p>
 				<p class="fs1half pl2">ipv6 ospf 1 area 1</p>
 				<p class="fs1half">!</p>
-
 			</div>
 
 			<!-- IPv6 Security - OSPF with/withouit AH-->
@@ -3612,7 +3622,13 @@
 				</h1>
 				<hr />
 				<p class="fs1half">OSPF Hello Packet with AH</p>
-				<img src="assets/images/OSPF-AH.png" style="display: block;margin:auto;height:95%">
+				<img
+					src="assets/images/OSPF-AH.png"
+					style="
+						display: block;
+						margin: auto;
+						height: 95%;
+					" />
 			</div>
 
 			<!-- IPv6 Security - OSPF Encryption-->
@@ -3633,7 +3649,13 @@
 					Encapsulating Security Payload
 				</h1>
 				<hr />
-				<img src="assets/images/ESP.png" style="width:95%; display: block; margin: auto;">
+				<img
+					src="assets/images/ESP.png"
+					style="
+						width: 95%;
+						display: block;
+						margin: auto;
+					" />
 			</div>
 
 			<!-- IPv6 Security - OSPF Encryption requisites-->
@@ -3655,18 +3677,40 @@
 				</h1>
 				<hr />
 				<p class="fs2">ESP requisits</p>
-				<ul class="fs1half pl4" style="list-style-type: circle;">
-					<li style="color:blueviolet">SPI</li>
-					<li style="color:deeppink">Encryption Algorithm</li>
-					<li style="color:dodgerblue">Encryption Key</li>
-					<li style="color:darkcyan">Authentication Algorithm</li>
-					<li style="color:tomato">Authentication Key</li>
+				<ul class="fs1half pl4" style="list-style-type: circle">
+					<li style="color: blueviolet">SPI</li>
+					<li style="color: deeppink">
+						Encryption Algorithm
+					</li>
+					<li style="color: dodgerblue">Encryption Key</li>
+					<li style="color: darkcyan">
+						Authentication Algorithm
+					</li>
+					<li style="color: tomato">Authentication Key</li>
 				</ul>
 				<p class="fs1half">Example</p>
 				<p class="fs1half">!</p>
 				<p class="fs1half">interface Ethernet0/0</p>
-				<p class="fs1half pl2"> ipv6 enable</p>
-				<p class="fs1half pl2">ipv6 ospf encryption ipsec <span class="bold" style="color:blueviolet">spi 256</span> esp <span style="color:deeppink; font-weight: bold;">aes-cbc 256</span> <span style="color:dodgerblue; font-size:1.5rem;">B2..10</span> <span style="color:darkcyan; font-size:1.5rem;">sha1</span> <span style="color:tomato; font-size:1.5rem;">A2..D1</span> </p>
+				<p class="fs1half pl2">ipv6 enable</p>
+				<p class="fs1half pl2">
+					ipv6 ospf encryption ipsec
+					<span class="bold" style="color: blueviolet"
+						>spi 256</span
+					>
+					esp
+					<span style="color: deeppink; font-weight: bold"
+						>aes-cbc 256</span
+					>
+					<span style="color: dodgerblue; font-size: 1.5rem"
+						>B2..10</span
+					>
+					<span style="color: darkcyan; font-size: 1.5rem"
+						>sha1</span
+					>
+					<span style="color: tomato; font-size: 1.5rem"
+						>A2..D1</span
+					>
+				</p>
 				<p class="fs1half pl2">ipv6 ospf 1 area 1</p>
 				<p class="fs1half">!</p>
 			</div>
@@ -3690,25 +3734,75 @@
 				</h1>
 				<hr />
 				<p class="fs2">Algorithms:</p>
-				<ul class="fs1half pl4" style="list-style-type: circle;">
-					<li style="color:dodgerblue"><span class="bold">DES</span></span><span style="font-size:1rem; color:black"> - Data Encryption Standard</span></li>
-					<li style="color:dodgerblue"><span class="bold">3DES</span></span><span style="font-size:1rem; color:black"> - Triple Data Encryption Standard</span></li>
-					<li style="color:dodgerblue"><span class="bold">AES</span></span><span style="font-size:1rem; color:black"> - Advanced Encryption Standard (6 times faster than the 3DES)</span>
+				<ul class="fs1half pl4" style="list-style-type: circle">
+					<li style="color: dodgerblue">
+						<span class="bold">DES</span
+						><span
+							style="font-size: 1rem; color: black">
+							- Data Encryption Standard</span
+						>
+					</li>
+					<li style="color: dodgerblue">
+						<span class="bold">3DES</span
+						><span
+							style="font-size: 1rem; color: black">
+							- Triple Data Encryption
+							Standard</span
+						>
+					</li>
+					<li style="color: dodgerblue">
+						<span class="bold">AES</span
+						><span
+							style="font-size: 1rem; color: black">
+							- Advanced Encryption Standard (6
+							times faster than the 3DES)</span
+						>
 					</li>
 				</ul>
 				<p class="fs2">AES</p>
-				<ul class="fs1half pl4" style="list-style-type: square;">
-					<li style="color:dodgerblue">AES is a block cipher</li>
-					<li style="color:dodgerblue">The key size can be 128/192/256 bits</li>
-					<li style="color:dodgerblue">The industry standard</li>
+				<ul class="fs1half pl4" style="list-style-type: square">
+					<li style="color: dodgerblue">
+						AES is a block cipher
+					</li>
+					<li style="color: dodgerblue">
+						The key size can be 128/192/256 bits
+					</li>
+					<li style="color: dodgerblue">
+						The industry standard
+					</li>
 				</ul>
 				<p class="fs2">AES Modes:</p>
-				<ul class="fs1half pl4" style="list-style-type: square;">
-					<li style="color:dodgerblue"><span class="bold">ECB</span><span style="font-size:1rem; color:black"> - Electronic Code Book (Suitable for encrypting small messages)</span></li>
-					<li style="color:dodgerblue"><span class="bold">CBC</span><span  style="font-size:1rem; color:black">- Cipher Block Chaining (Better suited for encrypting large messages)</span></li>
-					<li style="color:dodgerblue"><span class="bold">OFB</span><span  style="font-size:1rem; color:black"> - Output FeedBack</span></li>
-					<li style="color:dodgerblue"><span class="bold">CTR</span><span  style="font-size:1rem; color:black"> -Counter</span></li>
-
+				<ul class="fs1half pl4" style="list-style-type: square">
+					<li style="color: dodgerblue">
+						<span class="bold">ECB</span
+						><span
+							style="font-size: 1rem; color: black">
+							- Electronic Code Book (Suitable for
+							encrypting small messages)</span
+						>
+					</li>
+					<li style="color: dodgerblue">
+						<span class="bold">CBC</span
+						><span style="font-size: 1rem; color: black"
+							>- Cipher Block Chaining (Better
+							suited for encrypting large
+							messages)</span
+						>
+					</li>
+					<li style="color: dodgerblue">
+						<span class="bold">OFB</span
+						><span
+							style="font-size: 1rem; color: black">
+							- Output FeedBack</span
+						>
+					</li>
+					<li style="color: dodgerblue">
+						<span class="bold">CTR</span
+						><span
+							style="font-size: 1rem; color: black">
+							-Counter</span
+						>
+					</li>
 				</ul>
 			</div>
 
@@ -3730,10 +3824,17 @@
 					OSPFv3 Encryption
 				</h1>
 				<hr />
-				<p class="fs1half">OSPF Hello Packet with ESP Encryption</p>
-				<img src="assets/images/ESP-Cap.png" style="display: block;margin:auto;height:95%">
+				<p class="fs1half">
+					OSPF Hello Packet with ESP Encryption
+				</p>
+				<img
+					src="assets/images/ESP-Cap.png"
+					style="
+						display: block;
+						margin: auto;
+						height: 95%;
+					" />
 			</div>
-
 
 			<!-- IPv6 Security - ISIS-->
 			<div
@@ -3754,23 +3855,33 @@
 				</h1>
 				<hr />
 				<p class="fs2">Methods:</p>
-				<ul class="fs1half pl2" style="list-style-type: circle;">
-					<li>Plain-Text
-						<ul class="fs1half pl4" style="list-style-type: square; color:darkslategrey">
+				<ul class="fs1half pl2" style="list-style-type: circle">
+					<li>
+						Plain-Text
+						<ul
+							class="fs1half pl4"
+							style="
+								list-style-type: square;
+								color: darkslategrey;
+							">
 							<li>Interface Password</li>
 							<li>Area Password</li>
 							<li>Domain Password</li>
 						</ul>
-
 					</li>
-					<li>HMAC MD5
-						<ul class="fs1half pl4" style="list-style-type: square; color:darkslategrey">
+					<li>
+						HMAC MD5
+						<ul
+							class="fs1half pl4"
+							style="
+								list-style-type: square;
+								color: darkslategrey;
+							">
 							<li>Interface Authentication</li>
 							<li>Instance Authentication</li>
 						</ul>
 					</li>
 				</ul>
-
 			</div>
 
 			<!-- IPv6 Security - ISIS plain-text-->
@@ -3791,9 +3902,14 @@
 					IPv6 ISIS Plain-Text Password
 				</h1>
 				<hr />
-				<img src="assets/images/isis-plain-text.png" style="width: 90%; display: block; margin: auto;">
+				<img
+					src="assets/images/isis-plain-text.png"
+					style="
+						width: 90%;
+						display: block;
+						margin: auto;
+					" />
 			</div>
-
 
 			<!-- IPv6 Security - ISIS - md5-->
 			<div
@@ -3813,7 +3929,13 @@
 					IPv6 ISIS HMAC-MD5 Authentication
 				</h1>
 				<hr />
-				<img src="assets/images/isis-HMAC.png" style="width: 90%; display: block; margin: auto;">
+				<img
+					src="assets/images/isis-HMAC.png"
+					style="
+						width: 90%;
+						display: block;
+						margin: auto;
+					" />
 			</div>
 
 			<!-- IPv6 Security - First-hop-security-->
@@ -3834,11 +3956,317 @@
 					IPv6 L2-Links First-Hop Security
 				</h1>
 				<hr />
-				<!-- <img src="assets/images/isis-HMAC.png" style="width: 90%; display: block; margin: auto;"> -->
+				<ul
+					class="fs2"
+					style="width: 90%; list-style-type: disc">
+					<li>
+						RA Guard
+						<ul
+							style="
+								font-size: 1rem;
+								color: dimgray;
+								list-style-type: square;
+								padding-left: 4rem;
+							">
+							<li>
+								Accept RA On Specified Interface
+							</li>
+							<li>
+								Accept RA With Defined Criteria
+							</li>
+						</ul>
+					</li>
+					<li>
+						DHCPv6 Guard
+						<ul
+							style="
+								font-size: 1rem;
+								color: dimgray;
+								list-style-type: square;
+								padding-left: 4rem;
+							">
+							<li>
+								Permit DHCP Packets From Trusted
+								Interfaces
+							</li>
+							<li>
+								Accept DHCP Packets With
+								Specified Prefixes /
+								Preferences.
+							</li>
+						</ul>
+					</li>
+					<li>
+						ND Inspection
+						<ul
+							style="
+								font-size: 1rem;
+								color: dimgray;
+								list-style-type: square;
+								padding-left: 4rem;
+							">
+							<li>
+								Stores NS/NA Messages In The
+								IPv6 Binding Table
+							</li>
+							<li>
+								Drops Any Spoofed NS/NA Messages
+							</li>
+						</ul>
+					</li>
+					<li>
+						Source Guard
+						<ul
+							style="
+								font-size: 1rem;
+								color: dimgray;
+								list-style-type: square;
+								padding-left: 4rem;
+							">
+							<li>
+								Filters All Packets That Source
+								Address Is Not Found In The IPv6
+								Binding Table
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 
+			<!-- IPv6 Security - First-hop-security RAGUARD-->
+			<div
+				id="IPv6-Sec-FHS-raguard"
+				class="step"
+				data-x="6000"
+				data-y="23500"
+				data-z="2"
+				data-rotate="-180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 FHS - RA Guard
+				</h1>
+				<hr />
+				<p class="fs2">RA-Guard Roles:</p>
+				<ul
+					style="
+						font-size: 1.5rem;
+						list-style-type: circle;
+						padding-left: 2rem;
+					">
+					<li>
+						Host<span
+							style="
+								font-size: 1rem;
+								color: dimgray;
+							">
+							- Default Role - Blocks All RAs</span
+						>
+					</li>
+					<li>
+						Router<span
+							style="
+								font-size: 1rem;
+								color: dimgray;
+							">
+							- RAs are allowed</span
+						>
+					</li>
+				</ul>
 
+				<p class="fs2" style="text-align: center">
+					RA-Guard Configuration
+				</p>
+				<p class="fs1">
+					ipv6 nd raguard policy
+					<span
+						style="
+							font-weight: bold;
+							color: deepskyblue;
+						"
+						>HOSTS</span
+					>
+				</p>
+				<p class="fs1 pl2">device-role host</p>
+				<p class="fs1">!</p>
+				<p class="fs1">
+					ipv6 prefix-list
+					<span style="color: deeppink">PREFIX</span>
+					permit 2000::/64
+				</p>
+				<p class="fs1">!</p>
+				<p class="fs1">
+					ipv6 nd raguard policy
+					<span
+						style="
+							font-weight: bold;
+							color: deepskyblue;
+						"
+						>ROUTERS</span
+					>
+				</p>
+				<p class="fs1 pl2">device-role router</p>
+				<p class="fs1 pl2">
+					match ra prefix-list
+					<span style="color: deeppink">PREFIX</span>
+				</p>
+				<p class="fs1">!</p>
+				<p class="fs1">interface ethernet 0/0</p>
+				<p class="fs1 pl2">
+					ipv6 nd raguard attach-policy
+					<span
+						style="
+							font-weight: bold;
+							color: deepskyblue;
+						"
+						>ROUTERS</span
+					>
+				</p>
+				<p class="fs1">!</p>
+				<p class="fs1">interface ethernet 0/1</p>
+				<p class="fs1 pl2">
+					ipv6 nd raguard attach-policy
+					<span
+						style="
+							font-weight: bold;
+							color: deepskyblue;
+						"
+						>HOSTS</span
+					>
+				</p>
+			</div>
 
+			<!-- IPv6 Security - First-hop-security DHCPV6 GUARD -->
+			<div
+				id="IPv6-Sec-FHS-DHCPv6-GUARD"
+				class="step"
+				data-x="6000"
+				data-y="25000"
+				data-z="2"
+				data-rotate="180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 FHS - DHCPv6 Guard
+				</h1>
+				<hr />
+				<img
+					src="assets/images/dhcpguard.png"
+					style="
+						width: 90%;
+						display: block;
+						margin: auto;
+					" />
+			</div>
+
+			<!-- IPv6 Security - First-hop-security DHCPV6 GUARD config -->
+			<div
+				id="IPv6-Sec-FHS-DHCPv6-GUARD-config"
+				class="step"
+				data-x="6000"
+				data-y="27500"
+				data-z="2"
+				data-rotate="-180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 FHS - DHCPv6 Guard
+				</h1>
+				<hr />
+				<p class="fs1">
+					ipv6 dhcp guard policy
+					<span style="color: deepskyblue">SERVER</span>
+				</p>
+				<p class="fs1 pl4">device-role server</p>
+				<p class="fs1">!</p>
+				<p class="fs1">
+					ipv6 dhcp guard policy
+					<span style="color: deeppink">CLIENT</span>
+				</p>
+				<p class="fs1 pl4">device-role client</p>
+				<p class="fs1">!</p>
+				<p class="fs1">interface ethernet 0/0</p>
+				<p class="fs1 pl4">
+					ipv6 dhcp guard attach-policy
+					<span style="color: deepskyblue">SERVER</span>
+				</p>
+				<p class="fs1">!</p>
+				<p class="fs1">interface ethernet 0/1</p>
+				<p class="fs1 pl4">
+					ipv6 dhcp guard attach-policy
+					<span style="color: deeppink">CLIENT</span>
+				</p>
+				<hr />
+				<p class="fs1half">Advanced DHCPv6 Options</p>
+				<ul
+					style="
+						font-size: 1.5rem;
+						list-style-type: circle;
+						padding-left: 4rem;
+						color: dimgray;
+					">
+					<li>DHCPv6 Server Prefix</li>
+					<li>DHCPv6 Server LLA</li>
+					<li>DHCPv6 Server Preference</li>
+				</ul>
+			</div>
+
+			<!-- IPv6 Security - First-hop-security DHCPV6 GUARD config advanced-->
+			<div
+				id="IPv6-Sec-FHS-DHCPv6-GUARD-config-adv"
+				class="step"
+				data-x="6000"
+				data-y="29000"
+				data-z="2"
+				data-rotate="180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 FHS - DHCPv6 Guard
+				</h1>
+				<hr />
+				<p class="fs1">
+					ipv6 prefix-list PREFIX permit 2000::/64 le 128
+				</p>
+				<p class="fs1">!</p>
+				<p class="fs1">ipv6 access-list SERVER_LLA</p>
+				<p class="fs1 pl4">permit ipv6 host FE80::1 any</p>
+				<p class="fs1">!</p>
+				<p class="fs1">
+					ipv6 dhcp guard policy
+					<span style="color: deepskyblue">SERVER</span>
+				</p>
+				<p class="fs1 pl4">device-role server</p>
+				<p class="fs1 pl4">match reply prefix-list PREFIX</p>
+				<p class="fs1 pl4">
+					match server access-list SERVER_LLA
+				</p>
+				<p class="fs1 pl4">preference min 110</p>
+				<p class="fs1 pl4">preference max 120</p>
+
+				<p class="fs1">!</p>
+				<p class="fs1">interface ethernet 0/0</p>
+				<p class="fs1 pl4">
+					ipv6 dhcp guard attach-policy SERVER
+				</p>
+				<p class="fs1">!</p>
+			</div>
 			<!-- IPv6 Tunneling - Chapter Tunneling -->
 			<!-- IPv6 Tunneling - Chapter Tunneling -->
 			<!-- IPv6 Tunneling - Chapter Tunneling -->
@@ -3912,10 +4340,7 @@
 				data-x="5000"
 				data-y="2000"
 				data-z="50"
-				data-scale="20">
-			</div>
-
-
+				data-scale="20"></div>
 		</div>
 
 		<!-- ...... -->
@@ -3946,7 +4371,4 @@
 			initSlideNo(impress);
 		</script>
 	</body>
-
-
-	
 </html>
