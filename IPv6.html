@@ -563,7 +563,7 @@
 							>one decillion</span
 						>
 					</li>
-					<li>
+					<li style="background-color: beige">
 						1,000,<span
 							style="
 								color: olivedrab;
@@ -1694,7 +1694,7 @@
 					FF02::1:FF /104
 				</p>
 				<p style="font-size: 1.5rem">
-					128 - 106 = 24bit left => 6 nibble => 6 Nibble Of
+					128 - 104 = 24bit left => 6 nibble => 6 Nibble Of
 					LSB IPv6 Address
 				</p>
 				<p style="font-size: 1.5rem; margin-top: 1rem">
@@ -4267,6 +4267,157 @@
 				</p>
 				<p class="fs1">!</p>
 			</div>
+
+			<!-- IPv6 Security - First-hop-security ND Inspection-->
+			<div
+				id="IPv6-Sec-FHS-nd-inspection"
+				class="step"
+				data-x="6000"
+				data-y="30500"
+				data-z="2"
+				data-rotate="-180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 FHS - ND Inspection
+				</h1>
+				<hr />
+				<img
+					src="assets/images/ND-insp.png"
+					style="
+						display: block;
+						width: 85%;
+						margin: auto;
+					" />
+				<p
+					class="fs1"
+					style="text-align: center; color: deeppink">
+					<span style="font-weight: bold"
+						>ND-Inspection</span
+					>
+					: The switch creates a Binding-Table based on NS
+					and NA messages
+				</p>
+				<p class="fs1half">Configuration</p>
+				<p class="fs1">!</p>
+				<p class="fs1">interface range ethernet 0/0-2</p>
+				<p class="fs1 pl4">ipv6 nd inspection</p>
+				<p class="fs1">!</p>
+			</div>
+
+			<!-- IPv6 Security - First-hop-security  Source Guard-->
+			<div
+				id="IPv6-Sec-FHS-source-guard"
+				class="step"
+				data-x="6000"
+				data-y="32000"
+				data-z="2"
+				data-rotate="180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 FHS - Source Guard
+				</h1>
+				<hr />
+				<p class="fs1half" style="color: deeppink">
+					IPv6 Binding-Table contains:
+				</p>
+				<ul
+					style="
+						font-size: 1.5rem;
+						list-style-type: disc;
+						padding-left: 4rem;
+					">
+					<li>IPv6 address</li>
+					<li>MAC address</li>
+					<li>VLAN</li>
+					<li>Interface ID</li>
+				</ul>
+				<p class="fs1half" style="color: deeppink">
+					IPv6 Binding-Table fills by:
+				</p>
+				<ul
+					style="
+						font-size: 1.5rem;
+						list-style-type: disc;
+						padding-left: 4rem;
+					">
+					<li>DHCPv6</li>
+					<li>NDP</li>
+					<li>Static binding</li>
+				</ul>
+				<hr />
+				<p
+					class="fs1half"
+					style="text-align: center; color: deeppink">
+					<span style="font-weight: bold"
+						>Source Guard</span
+					>
+					: Drops inbound traffic that are not in the IPv6
+					Binding-Table
+				</p>
+				<p class="fs1">!</p>
+				<p class="fs1">ipv6 snooping policy example_policy</p>
+				<p class="fs1 pl4">security-level glean</p>
+				<p class="fs1">!</p>
+				<p class="fs1">interface ethernet 0/0</p>
+				<p class="fs1 pl4">
+					ipv6 snooping attach-policy example_policy
+				</p>
+				<p class="fs1">!</p>
+			</div>
+
+			<!-- IPv6 Security - First-hop-security  pacl-->
+			<div
+				id="IPv6-Sec-FHS-PACL"
+				class="step"
+				data-x="6000"
+				data-y="33500"
+				data-z="2"
+				data-rotate="-180">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 FHS - PACL - L2-Port ACL
+				</h1>
+				<hr />
+				<p
+					style="
+						font-size: 1.5rem;
+						text-align: center;
+						color: deeppink;
+					">
+					Only applied on Inbound traffic
+				</p>
+				<p style="font-size: 1.5rem; margin-top: 2rem">
+					Here ethernet 0/0 cannot SSH to server addressed
+					as 2000::1
+				</p>
+
+				<p class="fs1" style="margin-top: 1rem">!</p>
+				<p class="fs1">ipv6 access-list NO_SSH_TO_SERVER</p>
+				<p class="fs1 pl4">deny tcp any host 2000::1 eq 22</p>
+				<p class="fs1 pl4">permit ipv6 any any</p>
+				<p class="fs1">!</p>
+				<p class="fs1">interface ethernet 0/0</p>
+				<p class="fs1 pl4">
+					ipv6 traffic-filter NO_SSH_TO_SERVER in
+				</p>
+				<p class="fs1">!</p>
+			</div>
+
 			<!-- IPv6 Tunneling - Chapter Tunneling -->
 			<!-- IPv6 Tunneling - Chapter Tunneling -->
 			<!-- IPv6 Tunneling - Chapter Tunneling -->
@@ -4287,6 +4438,203 @@
 					">
 					IPv6 Tunneling
 				</h1>
+			</div>
+
+			<!-- Tunneling intro - Chapter Tunneling -->
+			<div
+				id="Tunneling"
+				class="step"
+				data-x="8000"
+				data-y="1000"
+				data-z="2"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					Tunneling
+				</h1>
+				<hr />
+				<p
+					class="fs1 bold"
+					style="text-align: center; color: deeppink">
+					Tunneling is a way of communicating or
+					transferring data from one network to another
+					through a process called encapsulation.
+				</p>
+				<p class="fs1">!</p>
+				<p class="fs1 bold">
+					interface Tunnel 0 tunnel destination Y tunnel
+				</p>
+				<p class="fs1 pl4">
+					ip address x.x.x.x | ipv6 address x::y
+				</p>
+				<p class="fs1 pl4">tunnel source X</p>
+				<p class="fs1 pl4">tunnel destination Y</p>
+				<p class="fs1 pl4">mode MODE</p>
+				<p class="fs1">!</p>
+
+				<p style="color: deeppink; font-size: 1.5rem">
+					All Tunnel Interface Modes
+				</p>
+				<ul
+					style="
+						list-style-type: circle;
+						padding-left: 2rem;
+						font-size: 1rem;
+					">
+					<li>
+						<span style="font-weight: bold">aurp</span>
+						AURP TunnelTalk AppleTalk encapsulation
+					</li>
+					<li>
+						<span style="font-weight: bold"
+							>cayman</span
+						>
+						Cayman TunnelTalk AppleTalk encapsulation
+					</li>
+					<li>
+						<span style="font-weight: bold"
+							>iptalk</span
+						>
+						Apple IPTalk encapsulation
+					</li>
+					<li>
+						<span style="font-weight: bold">dvmrp</span>
+						DVMRP multicast tunnel
+					</li>
+					<li>
+						<span style="font-weight: bold">eon</span>
+						EON compatible CLNS tunnel(CLNS Traffic-
+						ISIS)
+					</li>
+					<li>
+						<span
+							style="
+								font-weight: bold;
+								color: darkcyan;
+							"
+							>gre</span
+						>
+						generic route encapsulation
+						protocol(Supports ISIS)
+					</li>
+					<li>
+						<span style="font-weight: bold">ipip</span>
+						IP over IP encapsulation
+					</li>
+					<li>
+						<span style="font-weight: bold">ipsec</span>
+						IPSec tunnel encapsulation
+					</li>
+					<li>
+						<span
+							style="
+								font-weight: bold;
+								color: darkcyan;
+							"
+							>ipv6</span
+						>
+						Generic packet tunneling in IPv6 (IPv6
+						Tunneling is a mechanism for encapsulating
+						IPv4 and IPv6 packets inside IPv6 packets.)
+					</li>
+					<li>
+						<span
+							style="
+								font-weight: bold;
+								color: darkcyan;
+							"
+							>ipv6ip</span
+						>
+						IPv6 over IP encapsulation
+					</li>
+					<li>
+						<span style="font-weight: bold">mpls</span>
+						MPLS encapsulations
+					</li>
+					<li>
+						<span style="font-weight: bold">nos</span>
+						IP over IP encapsulation (KA9Q/NOS
+						compatible)
+					</li>
+					<li>
+						<span style="font-weight: bold">rbscp</span>
+						RBSCP in IP tunnel (Rate Based Satellite
+						Control Protocol)
+					</li>
+				</ul>
+			</div>
+
+			<!-- Tunneling intro - Chapter Tunneling -->
+			<div
+				id="IPv6-Tunneling-modes"
+				class="step"
+				data-x="8000"
+				data-y="2500"
+				data-z="2"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 Tunneling
+				</h1>
+				<hr />
+				<h1
+					style="
+						font-size: 1.5rem;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					L3 Encapsulation
+				</h1>
+				<ul
+					style="
+						list-style-type: circle;
+						padding-left: 4rem;
+						font-size: 1.5rem;
+					">
+					<li>GRE (tunnel mode gre ip)</li>
+					<li>IPv6 (tunnel mode ipv6)</li>
+					<li>
+						IPv6IP
+						<ul
+							style="
+								list-style-type: square;
+								padding-left: 8rem;
+								font-size: 1.5rem;
+							">
+							<li>tunnel mode ipv6ip</li>
+							<li>tunnel mode ipv6ip 6to4</li>
+							<li>tunnel mode ipv6ip 6rd</li>
+							<li>tunnel mode ipv6ip isatap</li>
+						</ul>
+					</li>
+				</ul>
+				<h1
+					style="
+						font-size: 1.5rem;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					MPLS Network
+				</h1>
+				<ul
+					style="
+						list-style-type: square;
+						padding-left: 8rem;
+						font-size: 1.5rem;
+					">
+					<li>IPv6 over MPLS 6PE</li>
+					<li>IPv6 over MPLS 6VPE</li>
+				</ul>
 			</div>
 
 			<!-- IPv6 NAT - Chapter NAT -->
