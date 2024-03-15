@@ -4478,7 +4478,7 @@
 				<p class="fs1">!</p>
 
 				<p style="color: deeppink; font-size: 1.5rem">
-					All Tunnel Interface Modes
+					All L3 Tunnel Interface Modes
 				</p>
 				<ul
 					style="
@@ -4601,8 +4601,14 @@
 						padding-left: 4rem;
 						font-size: 1.5rem;
 					">
-					<li>GRE (tunnel mode gre ip)</li>
-					<li>IPv6 (tunnel mode ipv6)</li>
+					<li>
+						<span class="bold">GRE</span> (tunnel mode
+						gre ip)
+					</li>
+					<li>
+						<span class="bold">IPv6</span> (tunnel mode
+						ipv6)
+					</li>
 					<li>
 						IPv6IP
 						<ul
@@ -4611,10 +4617,26 @@
 								padding-left: 8rem;
 								font-size: 1.5rem;
 							">
-							<li>tunnel mode ipv6ip</li>
-							<li>tunnel mode ipv6ip 6to4</li>
-							<li>tunnel mode ipv6ip 6rd</li>
-							<li>tunnel mode ipv6ip isatap</li>
+							<li>
+								<span class="bold"
+									>Manual
+								</span>
+								(tunnel mode ipv6ip)
+							</li>
+							<li>
+								<span class="bold"
+									>Automatic 6to4 </span
+								>(tunnel mode ipv6ip 6to4)
+							</li>
+							<li>
+								<span class="bold"
+									>Rapid Deployment </span
+								>(tunnel mode ipv6ip 6rd)
+							</li>
+							<li>
+								<span class="bold">ISATAP </span
+								>(tunnel mode ipv6ip isatap)
+							</li>
 						</ul>
 					</li>
 				</ul>
@@ -4632,9 +4654,229 @@
 						padding-left: 8rem;
 						font-size: 1.5rem;
 					">
-					<li>IPv6 over MPLS 6PE</li>
-					<li>IPv6 over MPLS 6VPE</li>
+					<li>
+						IPv6 over MPLS <span class="bold">6PE</span>
+					</li>
+					<li>
+						IPv6 over MPLS
+						<span class="bold">6VPE</span>
+					</li>
 				</ul>
+			</div>
+
+			<!-- Tunneling intro - Chapter Tunneling manual-->
+			<div
+				id="IPv6-Tunneling-manual"
+				class="step"
+				data-x="8000"
+				data-y="4000"
+				data-z="2"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 Tunneling - Manual
+				</h1>
+				<hr />
+				<p class="fs1half">
+					Supports IPv6 IGPs (RIP, EIGRP, OSPF, BGP) and
+					multicast traffic
+				</p>
+				<img
+					src="assets/images/manual.png"
+					style="
+						display: block;
+						height: 95%;
+						margin: auto;
+					" />
+			</div>
+
+			<!-- Tunneling intro - Chapter Tunneling manual-config r5 -->
+			<div
+				id="IPv6-Tunneling-manual-config-r5"
+				class="step"
+				data-x="8000"
+				data-y="5500"
+				data-z="2"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 Tunneling - Manual
+				</h1>
+				<hr />
+				<p class="fs1 bold">R5</p>
+				<p class="fs1">!</p>
+				<p class="fs1 bold">interface Tunnel 0</p>
+				<p class="fs1 pl4">ipv6 address FD::5/64</p>
+				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
+				<p class="fs1 pl4">tunnel destination 10.10.46.6</p>
+				<p class="fs1 pl4">tunnel mode ipv6ip</p>
+				<p class="fs1">!</p>
+				<p class="fs1">!</p>
+				<p class="fs1 bold">router bgp 1</p>
+				<p class="fs1 pl2">neighbor FD::6 remote-as 1</p>
+				<p class="fs1">!</p>
+				<p class="fs1 pl2">address-family ipv6</p>
+				<p class="fs1 pl4">
+					redistribute ospf 1 metric 10 match internal
+					external 1 external 2 include-connected
+				</p>
+				<p class="fs1 pl4">neighbor FD::6 activate</p>
+				<p class="fs1 pl2">exit-address-family</p>
+				<p class="fs1">!</p>
+			</div>
+
+			<!-- Tunneling intro - Chapter Tunneling manual-config r6 -->
+			<div
+				id="IPv6-Tunneling-manual-config-r6"
+				class="step"
+				data-x="8000"
+				data-y="7000"
+				data-z="2"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 Tunneling - Manual
+				</h1>
+				<hr />
+				<p class="fs1 bold">R6</p>
+				<p class="fs1">!</p>
+				<p class="fs1 bold">interface Tunnel 0</p>
+				<p class="fs1 pl4">ipv6 address FD::6/64</p>
+				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
+				<p class="fs1 pl4">tunnel destination 10.10.35.5</p>
+				<p class="fs1 pl4">tunnel mode ipv6ip</p>
+				<p class="fs1">!</p>
+				<p class="fs1">!</p>
+				<p class="fs1 bold">router bgp 1</p>
+				<p class="fs1 pl2">neighbor FD::5 remote-as 1</p>
+				<p class="fs1">!</p>
+				<p class="fs1 pl2">address-family ipv6</p>
+				<p class="fs1 pl4">
+					redistribute isis 1 metric 10 level-1-2
+					include-connected
+				</p>
+				<p class="fs1 pl4">neighbor FD::5 activate</p>
+				<p class="fs1 pl2">exit-address-family</p>
+				<p class="fs1">!</p>
+			</div>
+
+			<!-- Tunneling intro - Chapter Tunneling GRE-->
+			<div
+				id="IPv6-Tunneling-gre"
+				class="step"
+				data-x="8000"
+				data-y="8500"
+				data-z="2"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 Tunneling - GRE
+				</h1>
+				<hr />
+				<p class="fs1">
+					Supports IPv6 IGPs (RIP, EIGRP, OSPF,
+					<span class="bold">ISIS</span>, BGP) and multicast
+					traffic
+				</p>
+				<img
+					src="assets/images/gre.png"
+					style="
+						display: block;
+						width: 80%;
+						margin: auto;
+					" />
+			</div>
+
+			<!-- Tunneling intro - Chapter Tunneling GRE-config r5 -->
+			<div
+				id="IPv6-Tunneling-gre-config-r5"
+				class="step"
+				data-x="8000"
+				data-y="10000"
+				data-z="2"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 Tunneling - GRE
+				</h1>
+				<hr />
+				<p class="fs1 bold">R5</p>
+				<p class="fs1">!</p>
+				<p class="fs1 bold">interface Tunnel 0</p>
+				<p class="fs1 pl4">ipv6 enable</p>
+				<p class="fs1 pl4">ipv6 router isis 1</p>
+				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
+				<p class="fs1 pl4">tunnel destination 10.10.46.6</p>
+				<p class="fs1 pl4">tunnel mode gre ip</p>
+				<p class="fs1">!</p>
+				<p class="fs1 bold">router isis 1</p>
+				<p class="fs1 pl2">net 98.0005.0000.0000.0005.00</p>
+				<p class="fs1">!</p>
+				<p class="fs1 pl2">address-family ipv6</p>
+				<p class="fs1 pl4">
+					redistribute ospf 1 metric 10 match internal
+					external 1 external 2 include-connected
+				</p>
+				<p class="fs1 pl2">exit-address-family</p>
+				<p class="fs1">!</p>
+			</div>
+
+			<!-- Tunneling intro - Chapter Tunneling GRE-config r6 -->
+			<div
+				id="IPv6-Tunneling-gre-config-r6"
+				class="step"
+				data-x="8000"
+				data-y="11500"
+				data-z="2"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 Tunneling - GRE
+				</h1>
+				<hr />
+				<p class="fs1 bold">R6</p>
+				<p class="fs1">!</p>
+				<p class="fs1 bold">interface Tunnel 0</p>
+				<p class="fs1 pl4">ipv6 enable</p>
+				<p class="fs1 pl4">ipv6 router isis 1</p>
+				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
+				<p class="fs1 pl4">tunnel destination 10.10.35.5</p>
+				<p class="fs1 pl4">tunnel mode gre ip</p>
+				<p class="fs1">!</p>
+				<p class="fs1">!</p>
+				<p class="fs1 bold">router isis 1</p>
+				<p class="fs1 pl2">net 98.0006.0000.0000.0006.00</p>
+				<p class="fs1">!</p>
 			</div>
 
 			<!-- IPv6 NAT - Chapter NAT -->
