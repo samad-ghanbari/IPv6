@@ -4879,6 +4879,431 @@
 				<p class="fs1">!</p>
 			</div>
 
+			<!-- Tunneling intro - Chapter Tunneling Automatic 6to4 -->
+			<div
+				id="IPv6-Tunneling-autamatic-6to4"
+				class="step"
+				data-x="8000"
+				data-y="13000"
+				data-z="2"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 Automatic 6to4 Tunneling
+				</h1>
+				<hr />
+				<ul style="list-style-type: circle; font-size: 1.5rem">
+					<li>
+						Categorised as dynamic multipoint IPv6
+						tunnels
+					</li>
+					<li>Don’t support IPv6 IGPs</li>
+					<li>Supports Static routes or BGP</li>
+					<li>
+						The tunneling reserved prefix is 2002::/16
+					</li>
+					<li>Not specified the destination manually</li>
+					<li>
+						Only one 6to4 tunnel per router is allowed
+					</li>
+				</ul>
+				<img
+					src="assets/images/6to4.png"
+					style="display: block; margin: auto" />
+			</div>
+
+			<!-- Tunneling intro - Chapter Tunneling Automatic 6to4 src-->
+			<div
+				id="IPv6-Tunneling-autamatic-6to4-src"
+				class="step"
+				data-x="8000"
+				data-y="14500"
+				data-z="2"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 Automatic 6to4 Tunneling - Source-IP
+				</h1>
+				<hr />
+				<p class="fs1half">Tunnel source-IP is important</p>
+				<p class="fs1half">
+					Tunnel IPv6 source-IP should contain IPv4 address
+				</p>
+				<p
+					style="
+						font-size: 1.5rem;
+						margin-top: 1rem;
+						color: deeppink;
+					">
+					Automatic 6to4 IPv4 to IPv6
+				</p>
+				<p style="font-size: 1.5rem; text-align: center">
+					<span style="color: tomato">6to4-Prefix </span>+
+					<span style="color: blueviolet">IPv4-Hex</span> +
+					<span style="color: darkmagenta">subnet</span> +
+					<span style="color: firebrick">Host</span>
+				</p>
+				<img
+					src="assets/images/6to4-ip.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 80%;
+					" />
+				<ul style="font-size: 1.5rem; list-style-type: circle">
+					<li>6to4 Prefix : 2002::/16</li>
+					<li>
+						IPv4 hex-format:
+						<ul
+							style="
+								padding-left: 4rem;
+								font-size: 1rem;
+								color: dimgray;
+							">
+							<li>
+								192.168.1.1 => C0.A8.01.01 =>
+								C0A8.0101
+							</li>
+							<li>
+								10.10.1.6 => 0A.0A.01.06 =>
+								A0A.106
+							</li>
+							<li>
+								172.16.18.1 => AC.10.12.1 =>
+								AC10.1201
+							</li>
+						</ul>
+						<hr />
+						<ul style="font-size: 1rem">
+							<li>
+								192.168.1.1 =>
+								2002:C0A8:101::1/64
+							</li>
+							<li>
+								10.10.1.6 => 2002:A0A.106::/64
+							</li>
+							<li>
+								172.16.18.1 =>
+								2002:AC10.1201::/64
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<hr />
+				<p style="font-size: 1.5rem">6to4 Prefix by command</p>
+				<p
+					style="
+						font-size: 1.5rem;
+						text-align: center;
+						color: dodgerblue;
+					">
+					ipv6 general-prefix prefix6to4 6to4 ethernet 0/0
+				</p>
+			</div>
+
+			<!-- Tunneling intro - Chapter Tunneling Automatic 6to4 topo-->
+			<div
+				id="IPv6-Tunneling-autamatic-6to4-topo"
+				class="step"
+				data-x="8000"
+				data-y="16000"
+				data-z="2"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 Automatic 6to4 Tunneling
+				</h1>
+				<hr />
+				<img
+					src="assets/images/Tunnel-6to4.png"
+					style="
+						display: block;
+						width: 95%;
+						margin: auto;
+					" />
+			</div>
+
+			<!-- Tunneling intro - Chapter Tunneling Automatic 6to4 config-2-->
+			<div
+				id="IPv6-Tunneling-autamatic-6to4-2"
+				class="step"
+				data-x="8000"
+				data-y="17500"
+				data-z="2"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 Automatic 6to4 Tunneling
+				</h1>
+				<hr />
+				<p class="fs1 bold" style="color: darkcyan">R6</p>
+				<p class="fs1 bold">
+					ipv6 general-prefix prefix6to4 6to4 Ethernet0/1
+				</p>
+				<p class="fs1 bold">!</p>
+				<p class="fs1 bold">interface Tunnel 0</p>
+				<p class="fs1 pl2">ipv6 address prefix6to4 ::1/64</p>
+				<p class="fs1 pl2">tunnel source Ethernet0/1</p>
+				<p class="fs1 pl2">tunnel mode ipv6ip 6to4</p>
+				<p class="fs1 pl2">!</p>
+				<p class="fs1">ipv6 route 2002::/16 Tunnel 0</p>
+				<p class="fs1">
+					ipv6 route 2000:7::1/128 2002:A0A:207::1
+				</p>
+				<p class="fs1">
+					ipv6 route 2000:8::1/128 2002:A0A:308::1
+				</p>
+				<p class="fs1">
+					ipv6 route 2000:9::1/128 2002:A0A:409::1
+				</p>
+				<hr style="border: 1px solid lightgray" />
+				<p class="fs1 bold" style="color: darkcyan">R7</p>
+				<p class="fs1 bold">interface Tunnel 0</p>
+				<p class="fs1 pl2">ipv6 address 2002:A0A:207::1/64</p>
+				<p class="fs1 pl2">tunnel source Ethernet0/2</p>
+				<p class="fs1 pl2">tunnel mode ipv6ip 6to4</p>
+				<p class="fs1 pl2">!</p>
+				<p class="fs1">ipv6 route 2002::/16 Tunnel0</p>
+				<p class="fs1">
+					ipv6 route 2000:6::1/128 2002:A0A:106::1
+				</p>
+				<p class="fs1">
+					ipv6 route 2000:8::1/128 2002:A0A:308::1
+				</p>
+				<p class="fs1">
+					ipv6 route 2000:9::1/128 2002:A0A:409::1
+				</p>
+			</div>
+			<!-- Tunneling intro - Chapter Tunneling Automatic 6to4 config-3-->
+			<div
+				id="IPv6-Tunneling-autamatic-6to4-3"
+				class="step"
+				data-x="8000"
+				data-y="19000"
+				data-z="2"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 Automatic 6to4 Tunneling
+				</h1>
+				<hr />
+				<p class="fs1 bold" style="color: darkcyan">R8</p>
+				<p class="fs1 bold">interface Tunnel 0</p>
+				<p class="fs1 pl2">ipv6 address 2002:A0A:308::1/64</p>
+				<p class="fs1 pl2">tunnel source Ethernet0/3</p>
+				<p class="fs1 pl2">tunnel mode ipv6ip 6to4</p>
+				<p class="fs1 pl2">!</p>
+				<p class="fs1">ipv6 route 2002::/16 Tunnel0</p>
+				<p class="fs1">
+					ipv6 route 2000:6::1/128 2002:A0A:106::1
+				</p>
+				<p class="fs1">
+					ipv6 route 2000:7::1/128 2002:A0A:207::1
+				</p>
+				<p class="fs1">
+					ipv6 route 2000:9::1/128 2002:A0A:409::1
+				</p>
+				<hr style="border: 1px solid lightgray" />
+				<p class="fs1 bold" style="color: darkcyan">R9</p>
+				<p class="fs1 bold">
+					ipv6 general-prefix prefix6to4 6to4 Ethernet0/0
+				</p>
+				<p class="fs1 bold">!</p>
+				<p class="fs1 bold">interface Tunnel 0</p>
+				<p class="fs1 pl2">ipv6 address prefix6to4 ::1/64</p>
+				<p class="fs1 pl2">tunnel source Ethernet0/0</p>
+				<p class="fs1 pl2">tunnel mode ipv6ip 6to4</p>
+				<p class="fs1 pl2">!</p>
+				<p class="fs1">ipv6 route 2002::/16 Tunnel0</p>
+				<p class="fs1">
+					ipv6 route 2000:6::1/128 2002:A0A:106::1
+				</p>
+				<p class="fs1">
+					ipv6 route 2000:7::1/128 2002:A0A:207::1
+				</p>
+				<p class="fs1">
+					ipv6 route 2000:8::1/128 2002:A0A:308::1
+				</p>
+			</div>
+			<!-- Tunneling intro - Chapter Tunneling Automatic 6to4 drawbacks-->
+			<div
+				id="IPv6-Tunneling-autamatic-6to4-drawback"
+				class="step"
+				data-x="8000"
+				data-y="20500"
+				data-z="2"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 Automatic 6to4 Tunneling Drawbacks
+				</h1>
+				<hr />
+				<ul style="font-size: 1.5rem; list-style-type: circle">
+					<li>Fixed Prefix - 2002::/16</li>
+					<li>Inter ISP Routing</li>
+					<li>
+						Native IPv6 Network Communications problems
+					</li>
+				</ul>
+				<p
+					class="fs2 bold"
+					style="
+						text-align: center;
+						margin-top: 2rem;
+						color: darkmagenta;
+					">
+					Solution: Rapid-Deployment
+				</p>
+			</div>
+
+			<!-- Tunneling intro - Chapter Tunneling 6rd-->
+			<div
+				id="IPv6-Tunneling-6rd"
+				class="step"
+				data-x="8000"
+				data-y="22000"
+				data-z="2"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 6RD Tunneling - Rapid Deployment
+				</h1>
+				<hr />
+				<ul style="font-size: 1.5rem; list-style-type: circle">
+					<li>
+						ISPs Uses Its Own Unique IPv6 Prefix For 6RD
+					</li>
+					<li>Relay Router Belongs To The ISP</li>
+					<li>Communication With Native IPv6 Network</li>
+					<li>
+						ISPs Can Have Multiple Border-Relay-Router
+					</li>
+				</ul>
+				<p
+					style="
+						text-align: center;
+						color: dodgerblue;
+						font-size: 1.5rem;
+						margin-top: 1rem;
+						font-weight: bold;
+					">
+					6RD Steps
+				</p>
+				<ul
+					style="
+						font-size: 1.5rem;
+						list-style-type: decimal;
+						color: steelblue;
+					">
+					<li>Specify The IPv6 Prefix</li>
+					<li>Specify Virtaul IPv4 Subnet</li>
+					<li>Specify The BR Router</li>
+					<li>Route The Prefix To The Tunnel Interface</li>
+					<li>Route Default To The BR Router</li>
+				</ul>
+			</div>
+
+			<!-- Tunneling intro - Chapter Tunneling 6rd topo-->
+			<div
+				id="IPv6-Tunneling-6rd-topo"
+				class="step"
+				data-x="8000"
+				data-y="23500"
+				data-z="2"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 6RD Tunneling
+				</h1>
+				<hr />
+				<img
+					src="assets/images/6rd.png"
+					style="
+						display: block;
+						width: 95%;
+						margin: auto;
+					" />
+			</div>
+			<!-- Tunneling intro - Chapter Tunneling 6rd requisits-->
+			<div
+				id="IPv6-Tunneling-6rd-requisits"
+				class="step"
+				data-x="8000"
+				data-y="25000"
+				data-z="2"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 6RD Tunneling
+				</h1>
+				<hr />
+				<p
+					style="
+						color: dodgerblue;
+						font-size: 1.5rem;
+						margin-top: 1rem;
+						font-weight: bold;
+					">
+					6RD Requisites
+				</p>
+				<ul
+					style="
+						font-size: 1.5rem;
+						list-style-type: decimal;
+						color: steelblue;
+						padding-left: 4rem;
+					">
+					<li>IPv6 Prefix : 2000:ABCD::/32</li>
+					<li>IPv4 Prefix-Length : 10.10.0.0/16</li>
+					<li>BR router : 10.10.4.4</li>
+				</ul>
+			</div>
+
 			<!-- IPv6 NAT - Chapter NAT -->
 			<!-- IPv6 NAT - Chapter NAT -->
 			<!-- IPv6 NAT - Chapter NAT -->
