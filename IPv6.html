@@ -4664,7 +4664,7 @@
 				</ul>
 			</div>
 
-			<!-- Tunneling intro - Chapter Tunneling manual-->
+			<!-- Tunneling - Chapter Tunneling manual-->
 			<div
 				id="IPv6-Tunneling-manual"
 				class="step"
@@ -4695,7 +4695,7 @@
 					" />
 			</div>
 
-			<!-- Tunneling intro - Chapter Tunneling manual-config r5 -->
+			<!-- Tunneling - Chapter Tunneling manual-config r5 -->
 			<div
 				id="IPv6-Tunneling-manual-config-r5"
 				class="step"
@@ -4735,7 +4735,7 @@
 				<p class="fs1">!</p>
 			</div>
 
-			<!-- Tunneling intro - Chapter Tunneling manual-config r6 -->
+			<!-- Tunneling - Chapter Tunneling manual-config r6 -->
 			<div
 				id="IPv6-Tunneling-manual-config-r6"
 				class="step"
@@ -4775,7 +4775,7 @@
 				<p class="fs1">!</p>
 			</div>
 
-			<!-- Tunneling intro - Chapter Tunneling GRE-->
+			<!-- Tunneling - Chapter Tunneling GRE-->
 			<div
 				id="IPv6-Tunneling-gre"
 				class="step"
@@ -4807,7 +4807,7 @@
 					" />
 			</div>
 
-			<!-- Tunneling intro - Chapter Tunneling GRE-config r5 -->
+			<!-- Tunneling - Chapter Tunneling GRE-config r5 -->
 			<div
 				id="IPv6-Tunneling-gre-config-r5"
 				class="step"
@@ -4846,7 +4846,7 @@
 				<p class="fs1">!</p>
 			</div>
 
-			<!-- Tunneling intro - Chapter Tunneling GRE-config r6 -->
+			<!-- Tunneling - Chapter Tunneling GRE-config r6 -->
 			<div
 				id="IPv6-Tunneling-gre-config-r6"
 				class="step"
@@ -4879,7 +4879,7 @@
 				<p class="fs1">!</p>
 			</div>
 
-			<!-- Tunneling intro - Chapter Tunneling Automatic 6to4 -->
+			<!-- Tunneling - Chapter Tunneling Automatic 6to4 -->
 			<div
 				id="IPv6-Tunneling-autamatic-6to4"
 				class="step"
@@ -4917,7 +4917,7 @@
 					style="display: block; margin: auto" />
 			</div>
 
-			<!-- Tunneling intro - Chapter Tunneling Automatic 6to4 src-->
+			<!-- Tunneling - Chapter Tunneling Automatic 6to4 src-->
 			<div
 				id="IPv6-Tunneling-autamatic-6to4-src"
 				class="step"
@@ -4950,7 +4950,8 @@
 				<p style="font-size: 1.5rem; text-align: center">
 					<span style="color: tomato">6to4-Prefix </span>+
 					<span style="color: blueviolet">IPv4-Hex</span> +
-					<span style="color: darkmagenta">subnet</span> +
+					<span style="color: darkmagenta">subnet</span>
+					<span style="color: olivedrab">/64</span> +
 					<span style="color: firebrick">Host</span>
 				</p>
 				<img
@@ -5011,7 +5012,7 @@
 				</p>
 			</div>
 
-			<!-- Tunneling intro - Chapter Tunneling Automatic 6to4 topo-->
+			<!-- Tunneling - Chapter Tunneling Automatic 6to4 topo-->
 			<div
 				id="IPv6-Tunneling-autamatic-6to4-topo"
 				class="step"
@@ -5038,7 +5039,7 @@
 					" />
 			</div>
 
-			<!-- Tunneling intro - Chapter Tunneling Automatic 6to4 config-2-->
+			<!-- Tunneling - Chapter Tunneling Automatic 6to4 config-2-->
 			<div
 				id="IPv6-Tunneling-autamatic-6to4-2"
 				class="step"
@@ -5094,7 +5095,7 @@
 					ipv6 route 2000:9::1/128 2002:A0A:409::1
 				</p>
 			</div>
-			<!-- Tunneling intro - Chapter Tunneling Automatic 6to4 config-3-->
+			<!-- Tunneling - Chapter Tunneling Automatic 6to4 config-3-->
 			<div
 				id="IPv6-Tunneling-autamatic-6to4-3"
 				class="step"
@@ -5150,7 +5151,7 @@
 					ipv6 route 2000:8::1/128 2002:A0A:308::1
 				</p>
 			</div>
-			<!-- Tunneling intro - Chapter Tunneling Automatic 6to4 drawbacks-->
+			<!-- Tunneling - Chapter Tunneling Automatic 6to4 drawbacks-->
 			<div
 				id="IPv6-Tunneling-autamatic-6to4-drawback"
 				class="step"
@@ -5186,7 +5187,7 @@
 				</p>
 			</div>
 
-			<!-- Tunneling intro - Chapter Tunneling 6rd-->
+			<!-- Tunneling - Chapter Tunneling 6rd-->
 			<div
 				id="IPv6-Tunneling-6rd"
 				class="step"
@@ -5238,7 +5239,7 @@
 				</ul>
 			</div>
 
-			<!-- Tunneling intro - Chapter Tunneling 6rd topo-->
+			<!-- Tunneling - Chapter Tunneling 6rd topo-->
 			<div
 				id="IPv6-Tunneling-6rd-topo"
 				class="step"
@@ -5264,9 +5265,9 @@
 						margin: auto;
 					" />
 			</div>
-			<!-- Tunneling intro - Chapter Tunneling 6rd requisits-->
+			<!-- Tunneling - Chapter Tunneling 6rd src-->
 			<div
-				id="IPv6-Tunneling-6rd-requisits"
+				id="IPv6-Tunneling-6rd-src"
 				class="step"
 				data-x="8000"
 				data-y="25000"
@@ -5298,12 +5299,158 @@
 						color: steelblue;
 						padding-left: 4rem;
 					">
-					<li>IPv6 Prefix : 2000:ABCD::/32</li>
-					<li>IPv4 Prefix-Length : 10.10.0.0/16</li>
-					<li>BR router : 10.10.4.4</li>
+					<li>IPv6 Prefix</li>
+					<li>IPv4 Prefix-Length</li>
+					<li>BR router</li>
 				</ul>
+				<p style="font-size: 1.5rem; text-align: center">
+					<span style="color: tomato">6RD-Prefix </span>+
+					<span style="color: blueviolet">IPv4-Hex</span> +
+					<span style="color: darkmagenta">subnet</span>
+					<span style="color: olivedrab">/64</span> +
+					<span style="color: firebrick">Host</span>
+				</p>
+				<p
+					style="
+						color: steelblue;
+						font-size: 1.5rem;
+						margin-top: 1rem;
+						font-weight: bold;
+					">
+					6RD IPv4 Prefix-Length
+				</p>
+				<p
+					style="
+						color: deeppink;
+						text-align: left;
+						font-size: 1.5rem;
+					">
+					Default value for Tunnel 6rd ipv4 prefex-length is
+					0
+				</p>
+				<p style="font-size: 1.5rem; text-align: center">
+					<span>6RD-Prefix/32 </span>
+					+
+					<span style="background-color: greenyellow"
+						>IPv4-Hex/32</span
+					>
+					+
+					<span>Host</span>
+					<span>/64</span>
+				</p>
+				<p
+					style="
+						color: deeppink;
+						text-align: left;
+						font-size: 1.5rem;
+					">
+					IPv4 Prefex-Length = 24 => 3 Octet In Common => 3
+					Octet Can Be Removed
+				</p>
+				<p style="font-size: 1.5rem; text-align: center">
+					<span>6RD-Prefix/32 </span>
+					+
+					<span style="background-color: greenyellow"
+						>IPv4-Hex/8</span
+					>
+					+
+					<span style="background-color: yellow"
+						>subnet/24</span
+					>
+					+
+					<span>Host</span>
+					<span>/64</span>
+				</p>
+				<p
+					style="
+						color: deeppink;
+						text-align: left;
+						font-size: 1.5rem;
+					">
+					IPv4 Prefex-Length = 16 => 2 Octet In Common => 2
+					Octet Can Be Removed
+				</p>
+				<p style="font-size: 1.5rem; text-align: center">
+					<span>6RD-Prefix/32 </span>
+					+
+					<span style="background-color: greenyellow"
+						>IPv4-Hex/16</span
+					>
+					+
+					<span style="background-color: yellow"
+						>subnet/16</span
+					>
+					+
+					<span>Host</span>
+					<span>/64</span>
+				</p>
 			</div>
+			<!-- Tunneling - Chapter Tunneling 6rd address example-->
+			<div
+				id="IPv6-Tunneling-6rd-address"
+				class="step"
+				data-x="8000"
+				data-y="26500"
+				data-z="2"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 6RD Tunneling
+				</h1>
+				<hr />
+				<p class="fs1 bold">interface Loopback 200</p>
+				<p class="fs1 pl4">
+					ip address
+					<span style="background-color: goldenrod"
+						>206.206.206.206</span
+					>
+					255.255.255.255
+				</p>
 
+				<p class="fs1">!</p>
+				<p class="fs1 bold">interface Tunnel 0</p>
+				<p class="fs1 pl4">ipv6 enable</p>
+				<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
+				<p class="fs1 pl4">tunnel source Loopback200</p>
+				<p class="fs1 pl4">tunnel 6rd prefix 2000:ABCD::/32</p>
+				<p class="fs1 pl4">
+					tunnel 6rd br
+					<span style="background-color: goldenrod"
+						>100.100.100.100</span
+					>
+				</p>
+				<p class="fs1">!</p>
+				<hr />
+				<p class="fs1 bold">interface Tunnel 0</p>
+				<p class="fs1 pl4">ipv6 enable</p>
+				<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
+				<p class="fs1 pl4">tunnel source Loopback200</p>
+				<p class="fs1 pl4">tunnel 6rd prefix 2000:ABCD::/32</p>
+				<p class="fs1 pl4 bold">
+					<span style="background-color: chartreuse"
+						>tunnel 6rd ipv4 prefix-len 16</span
+					>
+				</p>
+
+				<p class="fs1 pl4">
+					tunnel 6rd br
+					<span style="background-color: goldenrod"
+						>206.206.100.100</span
+					>
+				</p>
+				<p class="fs1">!</p>
+				<p class="fs1 pl4"></p>
+				<p class="fs1 pl4"></p>
+				<p class="fs1 pl4"></p>
+				<p class="fs1 pl4"></p>
+				<p class="fs1 pl4"></p>
+				<p class="fs1 pl4"></p>
+			</div>
 			<!-- IPv6 NAT - Chapter NAT -->
 			<!-- IPv6 NAT - Chapter NAT -->
 			<!-- IPv6 NAT - Chapter NAT -->
