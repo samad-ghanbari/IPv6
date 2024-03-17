@@ -55,7 +55,7 @@
 
 		<div
 			id="impress"
-			data-transition-duration="1000"
+			data-transition-duration="1500"
 			data-width="1024"
 			data-height="768"
 			data-max-scale="2"
@@ -5239,40 +5239,14 @@
 				</ul>
 			</div>
 
-			<!-- Tunneling - Chapter Tunneling 6rd topo-->
-			<div
-				id="IPv6-Tunneling-6rd-topo"
-				class="step"
-				data-x="8000"
-				data-y="23500"
-				data-z="2"
-				data-rotate="-330">
-				<h1
-					style="
-						font-size: 2rem;
-						text-align: center;
-						color: darkcyan;
-						font-weight: bold;
-					">
-					IPv6 6RD Tunneling
-				</h1>
-				<hr />
-				<img
-					src="assets/images/6rd.png"
-					style="
-						display: block;
-						width: 95%;
-						margin: auto;
-					" />
-			</div>
 			<!-- Tunneling - Chapter Tunneling 6rd src-->
 			<div
 				id="IPv6-Tunneling-6rd-src"
 				class="step"
 				data-x="8000"
-				data-y="25000"
+				data-y="23500"
 				data-z="2"
-				data-rotate="330">
+				data-rotate="-330">
 				<h1
 					style="
 						font-size: 2rem;
@@ -5390,9 +5364,9 @@
 				id="IPv6-Tunneling-6rd-address"
 				class="step"
 				data-x="8000"
-				data-y="26500"
+				data-y="25000"
 				data-z="2"
-				data-rotate="-330">
+				data-rotate="330">
 				<h1
 					style="
 						font-size: 2rem;
@@ -5428,7 +5402,7 @@
 				<p
 					class="fs1 bold"
 					style="text-align: center; color: deeppink">
-					IPv6 Prefix Useable In The Router :
+					IPv6 Prefix Assigned To This Router :
 					<span style="font-size: 1.2rem; color: crimson"
 						>2000:ABCD:<span
 							style="background-color: bisque"
@@ -5458,7 +5432,7 @@
 				<p
 					class="fs1 bold"
 					style="text-align: center; color: deeppink">
-					IPv6 Prefix Useable In The Router :
+					IPv6 Prefix Assigned To This Router :
 					<span style="font-size: 1.2rem; color: crimson"
 						>2000:ABCD:<span
 							style="background-color: bisque"
@@ -5474,6 +5448,272 @@
 					>
 				</p>
 			</div>
+
+			<!-- Tunneling - Chapter Tunneling 6rd topo-->
+			<div
+				id="IPv6-Tunneling-6rd-topo"
+				class="step"
+				data-x="8000"
+				data-y="26500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 6RD Tunneling
+				</h1>
+				<hr />
+				<img
+					src="assets/images/6rd.png"
+					style="
+						display: block;
+						width: 95%;
+						margin: auto;
+					" />
+			</div>
+			<!-- Tunneling - Chapter Tunneling 6rd topo - r6-->
+			<div
+				id="IPv6-Tunneling-6rd-topo-r6"
+				class="step"
+				data-x="8000"
+				data-y="28000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 6RD Tunneling
+				</h1>
+				<hr />
+				<img
+					src="assets/images/6rd-R6.png"
+					style="
+						display: block;
+						width: 250px;
+						margin: auto;
+					" />
+				<p class="fs1 bold" style="color: deeppink">R6</p>
+				<p class="fs1">!</p>
+				<p class="fs1 bold">interface Tunnel 0</p>
+				<p class="fs1 pl4">ipv6 enable</p>
+				<p class="fs1 pl4">tunnel source Ethernet0/1</p>
+				<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
+				<p class="fs1 pl4">tunnel 6rd ipv4 prefix-len 16</p>
+				<p class="fs1 pl4">tunnel 6rd prefix 2000:ABCD::/32</p>
+				<p class="fs1 pl4">tunnel 6rd br 10.10.4.4</p>
+				<p class="fs1">!</p>
+				<p class="fs1 bold">interface Loopback 0</p>
+				<p class="fs1 pl4">
+					ipv6 address
+					<span style="background-color: chartreuse"
+						>2000:ABCD:106::1/128</span
+					>
+				</p>
+				<p class="fs1">!</p>
+				<p class="fs1">ipv6 route 2000:ABCD::/32 Tunnel0</p>
+				<p class="fs1">ipv6 route ::/0 2000:ABCD:404::</p>
+				<p class="fs1">!</p>
+				<p class="fs1 bold">interface Ethernet0/1</p>
+				<p class="fs1 pl4">
+					ip address 10.10.1.6 255.255.255.0
+				</p>
+				<p class="fs1">!</p>
+			</div>
+			<!-- Tunneling - Chapter Tunneling 6rd topo - r7-->
+			<div
+				id="IPv6-Tunneling-6rd-topo-r7"
+				class="step"
+				data-x="8000"
+				data-y="29500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 6RD Tunneling
+				</h1>
+				<hr />
+				<img
+					src="assets/images/6rd-R7-R8.png"
+					style="
+						display: block;
+						height: 150px;
+						margin: auto;
+					" />
+				<div style="float: left">
+					<p class="fs1 bold" style="color: deeppink">R7</p>
+					<p class="fs1">!</p>
+					<p class="fs1">
+						ipv6 general-prefix
+						<span style="background-color: chartreuse"
+							>prefix6rd</span
+						>
+						6rd Tunnel0
+					</p>
+					<p class="fs1">!</p>
+					<p class="fs1 bold">interface Tunnel 0</p>
+					<p class="fs1 pl4">ipv6 enable</p>
+					<p class="fs1 pl4">tunnel source Ethernet0/2</p>
+					<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
+					<p class="fs1 pl4">
+						tunnel 6rd ipv4 prefix-len 16
+					</p>
+					<p class="fs1 pl4">
+						tunnel 6rd prefix 2000:ABCD::/32
+					</p>
+					<p class="fs1 pl4">tunnel 6rd br 10.10.4.4</p>
+					<p class="fs1">!</p>
+					<p class="fs1 bold">interface Loopback 0</p>
+					<p class="fs1 pl4">
+						ipv6 address
+						<span style="background-color: chartreuse"
+							>prefix6rd ::1/128</span
+						>
+					</p>
+					<p class="fs1">!</p>
+					<p class="fs1">
+						ipv6 route 2000:ABCD::/32 Tunnel0
+					</p>
+					<p class="fs1">ipv6 route ::/0 2000:ABCD:404::</p>
+					<p class="fs1">!</p>
+					<p class="fs1 bold">interface Ethernet0/2</p>
+					<p class="fs1 pl4">
+						ip address 10.10.2.7 255.255.255.0
+					</p>
+					<p class="fs1">!</p>
+				</div>
+				<div style="float: right">
+					<p class="fs1 bold" style="color: deeppink">R8</p>
+					<p class="fs1">!</p>
+					<p class="fs1 bold">interface Tunnel 0</p>
+					<p class="fs1 pl4">ipv6 enable</p>
+					<p class="fs1 pl4">tunnel source Ethernet0/3</p>
+					<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
+					<p class="fs1 pl4">
+						tunnel 6rd ipv4 prefix-len 16
+					</p>
+					<p class="fs1 pl4">
+						tunnel 6rd prefix 2000:ABCD::/32
+					</p>
+					<p class="fs1 pl4">tunnel 6rd br 10.10.4.4</p>
+					<p class="fs1">!</p>
+					<p class="fs1 bold">interface Loopback 0</p>
+					<p class="fs1 pl4">
+						ipv6 address
+						<span style="background-color: chartreuse"
+							>2000:ABCD:308::1/128</span
+						>
+					</p>
+					<p class="fs1">!</p>
+					<p class="fs1">
+						ipv6 route 2000:ABCD::/32 Tunnel0
+					</p>
+					<p class="fs1">ipv6 route ::/0 2000:ABCD:404::</p>
+					<p class="fs1">!</p>
+					<p class="fs1 bold">interface Ethernet0/3</p>
+					<p class="fs1 pl4">
+						ip address 10.10.3.8 255.255.255.0
+					</p>
+					<p class="fs1">!</p>
+				</div>
+			</div>
+			<!-- Tunneling - Chapter Tunneling 6rd topo - BR-->
+			<div
+				id="IPv6-Tunneling-6rd-topo-BR"
+				class="step"
+				data-x="8000"
+				data-y="31000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 6RD Tunneling
+				</h1>
+				<hr />
+				<img
+					src="assets/images/6rd-BR.png"
+					style="
+						display: block;
+						height: 150px;
+						margin: auto;
+					" />
+				<p class="fs1 bold" style="color: deeppink">BR</p>
+
+				<p class="fs1">!</p>
+				<p class="fs1 bold">interface Tunnel 0</p>
+				<p class="fs1 pl4">ipv6 enable</p>
+				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
+				<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
+				<p class="fs1 pl4">tunnel 6rd ipv4 prefix-len 16</p>
+				<p class="fs1 pl4">tunnel 6rd prefix 2000:ABCD::/32</p>
+				<p class="fs1 pl4">tunnel 6rd br 10.10.4.4</p>
+				<p class="fs1">!</p>
+				<p class="fs1">ipv6 route 2000:ABCD::/32 Tunnel0</p>
+				<p class="fs1">!</p>
+				<p class="fs1 bold">interface Ethernet0/0</p>
+				<p class="fs1 pl4">
+					ip address 10.10.4.4 255.255.255.0
+				</p>
+				<p class="fs1">!</p>
+			</div>
+
+			<!-- Tunneling - Chapter Tunneling ISATAP-->
+			<div
+				id="IPv6-Tunneling-isatap"
+				class="step"
+				data-x="8000"
+				data-y="32500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+					">
+					IPv6 ISATAP <br />
+					Intra Site Automatic Tunnel Addressing Protocol
+				</h1>
+				<hr />
+				<p class="fs1half bold" style="color: dodgerblue">
+					ISTAP Features
+				</p>
+				<ul
+					style="
+						font-size: 1.5rem;
+						list-style-type: disc;
+						padding-left: 4rem;
+					">
+					<li>Intra-Site Tunnel - Prefix is /64</li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+
 			<!-- IPv6 NAT - Chapter NAT -->
 			<!-- IPv6 NAT - Chapter NAT -->
 			<!-- IPv6 NAT - Chapter NAT -->
