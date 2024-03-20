@@ -267,8 +267,8 @@ a:focus {
 
 .step {
 	position: relative;
-	width: 900px;
-	padding: 40px;
+	width: 1024px;
+	padding: 20px;
 	margin: 20px auto;
 
 	-webkit-box-sizing: border-box;
