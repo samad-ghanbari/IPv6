@@ -44,6 +44,15 @@
 			.bold {
 				font-weight: bold;
 			}
+			table,
+			th,
+			td {
+				border: 1px solid;
+			}
+			td {
+				vertical-align: middle;
+				text-align: left;
+			}
 		</style>
 	</head>
 	<body class="impress-not-supported">
@@ -6594,6 +6603,1414 @@
 					6VPE
 				</h1>
 				<hr />
+				<img
+					src="assets/images/6VPE.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 100%;
+					" />
+			</div>
+			<!-- Tunneling - Chapter Tunneling MPLS Network 6VPE topo-->
+			<div
+				id="IPv6-Tunneling-mpls-6vpe-topo"
+				class="step"
+				data-x="8000"
+				data-y="49000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE
+				</h1>
+				<hr />
+				<img
+					src="assets/images/6vpe-topo.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 100%;
+					" />
+			</div>
+			<!-- Tunneling - Chapter Tunneling MPLS Network 6vPE-config -->
+			<div
+				id="IPv6-Tunneling-mpls-6vpe-config"
+				class="step"
+				data-x="8000"
+				data-y="50500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE
+				</h1>
+				<hr />
+				<div style="float: left">
+					<p style="font-size: 1.5rem; font-weight: bold">
+						R7
+					</p>
+					<p style="font-size: 1rem">!</p>
+
+					<p
+						style="
+							font-size: 1rem;
+							font-weight: bold;
+							padding-left: 2rem;
+							color: dimgray;
+						">
+						router bgp 1
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							color: dimgray;
+						">
+						neighbor 8.8.8.8 remote-as 1
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							color: dimgray;
+						">
+						neighbor 8.8.8.8 update-source Loopback0
+					</p>
+					<p style="font-size: 1rem; color: dimgray">!</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							color: dimgray;
+						">
+						address-family vpnv4
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							color: dimgray;
+						">
+						neighbor 8.8.8.8 activate
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							color: dimgray;
+						">
+						neighbor 8.8.8.8 send-community extended
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							color: dimgray;
+						">
+						exit-address-family
+					</p>
+					<p style="font-size: 1rem; color: dimgray">!</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							font-weight: bold;
+							color: dimgray;
+						">
+						address-family
+						<span style="background-color: gold"
+							>vpnv6</span
+						>
+					</p>
+
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							font-weight: bold;
+							color: dimgray;
+						">
+						neighbor
+						<span style="background-color: gold"
+							>8.8.8.8</span
+						>
+						activate
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							font-weight: bold;
+							color: dimgray;
+						">
+						neighbor
+						<span style="background-color: gold"
+							>8.8.8.8</span
+						>
+						send-community extended
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							font-weight: bold;
+							color: dimgray;
+						">
+						exit-address-family
+					</p>
+					<p style="font-size: 1rem; color: dimgray">!</p>
+
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							color: dimgray;
+						">
+						address-family ipv4 vrf V4
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							color: dimgray;
+						">
+						neighbor 20.20.73.3 remote-as 2
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							color: dimgray;
+						">
+						neighbor 20.20.73.3 activate
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							color: dimgray;
+						">
+						exit-address-family
+					</p>
+					<p style="font-size: 1rem; color: dimgray">!</p>
+					<p
+						style="
+							font-size: 1rem;
+							font-weight: bold;
+							padding-left: 2rem;
+							color: dimgray;
+						">
+						address-family<span
+							style="background-color: gold">
+							ipv6 vrf V6</span
+						>
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							font-weight: bold;
+							color: dimgray;
+						">
+						neighbor FD:79::9 remote-as 2
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							font-weight: bold;
+							color: dimgray;
+						">
+						neighbor FD:79::9 activate
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							font-weight: bold;
+							color: dimgray;
+						">
+						exit-address-family
+					</p>
+					<p style="font-size: 1rem; color: dimgray">!</p>
+				</div>
+				<div style="float: right">
+					<p style="font-size: 1.5rem; font-weight: bold">
+						R8
+					</p>
+					<p style="font-size: 1rem">!</p>
+
+					<p
+						style="
+							font-size: 1rem;
+							font-weight: bold;
+							padding-left: 2rem;
+							color: dimgray;
+						">
+						router bgp 1
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							color: dimgray;
+						">
+						neighbor 7.7.7.7 remote-as 1
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							color: dimgray;
+						">
+						neighbor 7.7.7.7 update-source Loopback0
+					</p>
+					<p style="font-size: 1rem; color: dimgray">!</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							color: dimgray;
+						">
+						address-family vpnv4
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							color: dimgray;
+						">
+						neighbor 7.7.7.7 activate
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							color: dimgray;
+						">
+						neighbor 7.7.7.7 send-community extended
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							color: dimgray;
+						">
+						exit-address-family
+					</p>
+					<p style="font-size: 1rem; color: dimgray">!</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							font-weight: bold;
+							color: dimgray;
+						">
+						address-family
+						<span style="background-color: gold"
+							>vpnv6</span
+						>
+					</p>
+
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							font-weight: bold;
+							color: dimgray;
+						">
+						neighbor
+						<span style="background-color: gold"
+							>7.7.7.7</span
+						>
+						activate
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							font-weight: bold;
+							color: dimgray;
+						">
+						neighbor
+						<span style="background-color: gold"
+							>7.7.7.7</span
+						>
+						send-community extended
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							font-weight: bold;
+							color: dimgray;
+						">
+						exit-address-family
+					</p>
+					<p style="font-size: 1rem; color: dimgray">!</p>
+
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							color: dimgray;
+						">
+						address-family ipv4 vrf V4
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							color: dimgray;
+						">
+						redistribute static
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							color: dimgray;
+						"></p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							color: dimgray;
+						">
+						exit-address-family
+					</p>
+					<p style="font-size: 1rem; color: dimgray">!</p>
+					<p
+						style="
+							font-size: 1rem;
+							font-weight: bold;
+							padding-left: 2rem;
+							color: dimgray;
+						">
+						address-family<span
+							style="background-color: gold">
+							ipv6 vrf V6</span
+						>
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 4rem;
+							font-weight: bold;
+							color: dimgray;
+						">
+						redistribute static
+					</p>
+
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							font-weight: bold;
+							color: dimgray;
+						">
+						exit-address-family
+					</p>
+					<p style="font-size: 1rem; color: dimgray">!</p>
+				</div>
+			</div>
+			<!-- Tunneling - Chapter Tunneling MPLS Network 6VPE-capture -->
+			<div
+				id="IPv6-Tunneling-mpls-6Vpe-capture"
+				class="step"
+				data-x="8000"
+				data-y="52000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE
+				</h1>
+				<hr />
+				<p class="fs1half" style="color: darkolivegreen">
+					Captured ICMPv6 Packet Between Sites
+				</p>
+				<img
+					src="assets/images/6vpe-capture.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 100%;
+						margin-top: 2rem;
+					" />
+			</div>
+
+			<!-- Tunneling - Chapter Tunneling GRE - IPsec -->
+			<div
+				id="IPv6-Tunneling-GRE-IPsec"
+				class="step"
+				data-x="8000"
+				data-y="53500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					IPv6 over GRE with IPSec
+				</h1>
+				<hr />
+				<p class="fs1half" style="color: darkcyan">
+					IPsec is a group of protocols for securing
+					connections between devices.
+				</p>
+				<p class="fs1half bold">
+					IPsec Tunnel:
+					<span style="color: deeppink">IKE</span> (Internet
+					Key Exchange)
+				</p>
+				<ul
+					style="
+						list-style-type: square;
+						font-size: 1.5rem;
+						padding-left: 2rem;
+					">
+					<li>
+						<span
+							style="
+								font-weight: bold;
+								color: darkcyan;
+							"
+							>IKE phase-1</span
+						>
+						<ul
+							style="
+								list-style-type: decimal;
+								padding-left: 2rem;
+								font-size: 1rem;
+							">
+							<li>
+								Exchange Parameters Of
+								Encryption, Authentication,
+								Hashing Algorithms and
+								Parameters (SA)
+							</li>
+							<li>
+								Establish IKE-Phase-1 Session Or
+								ISAKMP session (Internet
+								Security Association and Key
+								Management Protocol)
+							</li>
+							<li>
+								IKE-Phase-1 Tunnel Is Required
+								For IKE-Phase-2 Tunnel
+							</li>
+							<li>
+								IKE-Phase-1 Tunnel Is
+								Management-Tunnel
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span
+							style="
+								font-weight: bold;
+								color: darkcyan;
+							"
+							>IKE phase-2</span
+						>
+						<ul
+							style="
+								list-style-type: decimal;
+								padding-left: 2rem;
+								font-size: 1rem;
+							">
+							<li>
+								IKE-Phase 2 Tunnel Establishes
+								Inside the IKE Phase-1 Tunnel
+							</li>
+							<li>
+								IKE-Phase 2 Tunnel Protects User
+								Data
+							</li>
+							<li>
+								IKE-Phase-2 Is Called
+								IPsec-Tunnel
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- Tunneling - Chapter Tunneling GRE - IPsec -->
+			<div
+				id="IPv6-Tunneling-GRE-IPsec-tunnel"
+				class="step"
+				data-x="8000"
+				data-y="55000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					IPv6 over GRE with IPSec
+				</h1>
+				<hr />
+				<img
+					src="assets/images/ipsec-tunnel.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 100%;
+					" />
+			</div>
+			<!-- Tunneling - Chapter Tunneling GRE - IPsec Configuration steps-->
+			<div
+				id="IPv6-Tunneling-GRE-IPsec-tunnel-steps-"
+				class="step"
+				data-x="8000"
+				data-y="56500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					IPv6 over GRE with IPSec
+				</h1>
+				<hr />
+				<ul style="list-style-type: decimal; font-size: 1.5rem">
+					<li>Verify Two End-Point Network Connectivity</li>
+					<li>Establish GRE Tunneling</li>
+					<li>Verify Traffic Over GRE Tunnel</li>
+					<li>
+						Ipsec Configuration:
+						<ul
+							style="
+								list-style-type: decimal;
+								padding-left: 4rem;
+								font-size: 1.5rem;
+							">
+							<li>
+								<span
+									style="
+										color: darkcyan;
+										font-weight: bold;
+									"
+									>IKE#1</span
+								>
+								<ul
+									style="
+										list-style-type: decimal;
+										padding-left: 4rem;
+										font-size: 1.5rem;
+									">
+									<li
+										style="
+											color: dimgray;
+										">
+										crypto isakmp policy
+									</li>
+									<li
+										style="
+											color: dimgray;
+										">
+										crypto isakmp key
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span
+									style="
+										color: darkcyan;
+										font-weight: bold;
+									"
+									>IKE#2</span
+								>
+								<ul
+									style="
+										list-style-type: decimal;
+										padding-left: 4rem;
+										font-size: 1.5rem;
+									">
+									<li
+										style="
+											color: dimgray;
+										">
+										crypto ipsec
+										transform-set
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						Perform Ipsce:
+						<ul
+							style="
+								list-style-type: decimal;
+								padding-left: 4rem;
+								font-size: 1.5rem;
+							">
+							<li style="color: dimgray">
+								access-list to match gre source
+								and destination
+							</li>
+							<li style="color: dimgray">
+								crypto map X ipsec-isakmp [peer,
+								transform-set, acl]
+							</li>
+							<li style="color: dimgray">
+								crypto map X uner interface
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- Tunneling - Chapter Tunneling GRE - IPsec Configuration Template-->
+			<div
+				id="IPv6-Tunneling-GRE-IPsec-tunnel-template"
+				class="step"
+				data-x="8000"
+				data-y="58000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					IPv6 over GRE with IPSec
+				</h1>
+				<hr />
+				<p
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						color: darkcyan;
+					">
+					IKE#1
+				</p>
+				<p style="font-size: 1rem">crypto isakmp policy 1</p>
+				<p style="font-size: 1rem; padding-left: 4rem">
+					encr
+					<span style="background-color: yellow">DES</span>
+					|
+					<span style="background-color: yellow">3DES</span>
+					|
+					<span
+						style="
+							background-color: yellow;
+							font-weight: bold;
+						"
+						>AES</span
+					>
+				</p>
+				<p style="font-size: 1rem; padding-left: 4rem">
+					hash
+					<span
+						style="
+							background-color: yellow;
+							font-weight: bold;
+						"
+						>MD5</span
+					>
+					|
+					<span
+						style="
+							background-color: yellow;
+							font-weight: bold;
+						"
+						>SHA</span
+					>
+					|
+					<span style="background-color: yellow"
+						>SHA256</span
+					>
+					|
+					<span style="background-color: yellow"
+						>SHA384</span
+					>
+					|
+					<span style="background-color: yellow"
+						>SHA512</span
+					>
+				</p>
+				<p style="font-size: 1rem; padding-left: 4rem">
+					authentication
+					<span
+						style="
+							background-color: yellow;
+							font-weight: bold;
+						"
+						>PRE-SHARE</span
+					>
+					|
+					<span style="background-color: yellow"
+						>RSA-ENCR</span
+					>
+					|
+					<span style="background-color: yellow"
+						>RSA-SIG</span
+					>
+				</p>
+				<p style="font-size: 1rem; padding-left: 4rem">
+					group
+					<span style="background-color: yellow"
+						>1 |
+						<span style="font-weight: bold">2</span> | 5
+						| 14 | 15 | 16 | 19 | 20 | 21 | 24
+					</span>
+				</p>
+				<p style="font-size: 1rem">!</p>
+				<p style="font-size: 1rem">
+					crypto isakmp key
+					<span style="background-color: yellow"
+						>IPSEC_KEY</span
+					>
+					address
+					<span style="background-color: yellow"
+						>PEER-IP-ADDRESS</span
+					>
+				</p>
+				<p style="font-size: 1rem">!</p>
+
+				<p
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						color: darkcyan;
+					">
+					IKE#2
+				</p>
+				<p style="font-size: 1rem">
+					crypto ipsec transform-set TSET
+					<span style="background-color: mediumturquoise"
+						>AH-AUTH</span
+					>
+					<span style="background-color: mediumturquoise"
+						>ESP-ENCRx</span
+					>
+					<span style="background-color: mediumturquoise"
+						>ESP-AUTH</span
+					>
+				</p>
+				<p style="font-size: 1rem; padding-left: 4rem">
+					mode tunnel
+				</p>
+				<p style="font-size: 1rem">!</p>
+				<p
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						color: darkcyan;
+					">
+					Perform
+				</p>
+				<p style="font-size: 1rem">
+					ip access-list extended ACL
+				</p>
+				<p style="font-size: 1rem; padding-left: 4rem">
+					permit gre host FROM-HOST host TO-HOST
+				</p>
+				<p style="font-size: 1rem">!</p>
+				<p style="font-size: 1rem">
+					crypto map IPSEC_MAP 1 ipsec-isakmp
+				</p>
+				<p style="font-size: 1rem; padding-left: 4rem">
+					set peer PEER-ADDRESS
+				</p>
+				<p style="font-size: 1rem; padding-left: 4rem">
+					set transform-set TSET
+				</p>
+				<p style="font-size: 1rem; padding-left: 4rem">
+					match address ACL
+				</p>
+				<p style="font-size: 1rem">!</p>
+				<p style="font-size: 1rem">interface Ethernet X</p>
+				<p style="font-size: 1rem; padding-left: 4rem">
+					crypto map IPSEC_MAP
+				</p>
+				<p style="font-size: 1rem">!</p>
+			</div>
+			<!-- Tunneling - Chapter Tunneling GRE - IPsec Algorithm-->
+			<div
+				id="IPv6-Tunneling-GRE-IPsec-tunnel-alg"
+				class="step"
+				data-x="8000"
+				data-y="59500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					IPv6 over GRE with IPSec
+				</h1>
+				<hr />
+				<table style="font-size: 1.5rem; width: 100%">
+					<tr style="background-color: palegreen">
+						<td rowspan="2">AH Transform</td>
+						<td>ah-md5-hmac</td>
+						<td>AH with MD5 authentication</td>
+					</tr>
+					<tr style="background-color: palegreen">
+						<td>ah-sha-hmac</td>
+						<td>AH with SHA authentication</td>
+					</tr>
+
+					<tr style="background-color: powderblue">
+						<td rowspan="5">
+							ESP Encryption Transform
+						</td>
+						<td>esp-aes</td>
+						<td>ESP with 128-bit AES encryption</td>
+					</tr>
+					<tr style="background-color: powderblue">
+						<td>esp-aes 192</td>
+						<td>ESP with 192-bit AES encryption</td>
+					</tr>
+					<tr style="background-color: powderblue">
+						<td>esp-aes 256</td>
+						<td>ESP with 256-bit AES encryption</td>
+					</tr>
+					<tr style="background-color: powderblue">
+						<td>esp-des</td>
+						<td>ESP with 56-bit DES encryption</td>
+					</tr>
+					<tr style="background-color: powderblue">
+						<td>esp-3des</td>
+						<td>ESP with 168-bit DES encryption</td>
+					</tr>
+
+					<tr style="background-color: pink">
+						<td rowspan="2">
+							ESP Authentication Transform
+						</td>
+						<td>esp-md5-hmac</td>
+						<td>ESP with MD5 authentication</td>
+					</tr>
+					<tr style="background-color: pink">
+						<td>esp-sha-hmac</td>
+						<td>ESP with SHA authentication</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Tunneling - Chapter Tunneling GRE - IPsec topo-->
+			<div
+				id="IPv6-Tunneling-GRE-IPsec-tunnel-topo"
+				class="step"
+				data-x="8000"
+				data-y="61000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					IPv6 over GRE with IPSec - Topology
+				</h1>
+				<hr />
+				<img
+					src="assets/images/ipsec-TOPO.png"
+					style="
+						display: block;
+						width: 100%;
+						margin: auto;
+					" />
+			</div>
+			<!-- Tunneling - Chapter Tunneling GRE - IPsec config-->
+			<div
+				id="IPv6-Tunneling-GRE-IPsec-tunnel-config"
+				class="step"
+				data-x="8000"
+				data-y="62500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					IPv6 over GRE with IPSec - Configuration
+				</h1>
+				<hr />
+				<div style="float: left">
+					<p
+						style="
+							font-size: 2rem;
+							color: darkcyan;
+							font-weight: bold;
+						">
+						R1
+					</p>
+					<p style="font-size: 1rem">!</p>
+					<p style="font-size: 1rem; font-weight: bold">
+						interface Tunnel 0
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						ipv6 address FD:1::1/64
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						ipv6 enable
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						tunnel source Ethernet0/0
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						tunnel destination 20.20.52.2
+					</p>
+					<p style="font-size: 1rem">!</p>
+					<hr />
+					<p
+						style="
+							font-size: 2rem;
+							color: darkcyan;
+							font-weight: bold;
+						">
+						IKE#1
+					</p>
+					<p style="font-size: 1rem; font-weight: bold">
+						crypto isakmp policy 1
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						encr aes
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						hash md5
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						authentication pre-share
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						group 2
+					</p>
+					<p style="font-size: 1rem">!</p>
+					<p style="font-size: 1rem; font-weight: bold">
+						crypto isakmp key IPSEC_KEY address
+						20.20.52.2
+					</p>
+					<p style="font-size: 1rem">!</p>
+				</div>
+
+				<div style="float: right">
+					<p
+						style="
+							font-size: 2rem;
+							font-weight: bold;
+							color: darkcyan;
+						">
+						IKE#2
+					</p>
+					<p style="font-size: 1rem; font-weight: bold">
+						crypto ipsec transform-set TSET ah-sha-hmac
+						esp-aes
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						mode tunnel
+					</p>
+					<p style="font-size: 1rem">!</p>
+					<p
+						style="
+							font-size: 2rem;
+							color: darkcyan;
+							font-weight: bold;
+						">
+						Perform
+					</p>
+					<p style="font-size: 1rem; font-weight: bold">
+						crypto map IPSEC_MAP 1 ipsec-isakmp
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						set peer 20.20.52.2
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						set transform-set TSET
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						match address ipsec-r2
+					</p>
+					<p style="font-size: 1rem">!</p>
+					<p style="font-size: 1rem; font-weight: bold">
+						ip access-list extended ipsec-r2
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						permit gre host 20.20.31.1 host 20.20.52.2
+					</p>
+					<p style="font-size: 1rem">!</p>
+					<p style="font-size: 1rem">
+						interface Ethernet0/0
+					</p>
+					<p style="font-size: 1rem; padding-left: 2rem">
+						ip address 20.20.31.1 255.255.255.0
+					</p>
+					<p
+						style="
+							font-size: 1rem;
+							padding-left: 2rem;
+							font-weight: bold;
+						">
+						crypto map IPSEC_MAP
+					</p>
+					<p style="font-size: 1rem">!</p>
+				</div>
+			</div>
+
+			<!-- Tunneling - Chapter Tunneling Inter-AS topo-->
+			<div
+				id="IPv6-Tunneling-Inter-AS-topo"
+				class="step"
+				data-x="8000"
+				data-y="64000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					Inter-AS Communication
+				</h1>
+				<hr />
+				<img
+					src="assets/images/Inter-AS.png"
+					style="
+						display: block;
+						width: 100%;
+						margin: auto;
+					" />
+			</div>
+			<!-- Tunneling - Chapter Tunneling Inter-AS-->
+			<div
+				id="IPv6-Tunneling-Inter-AS"
+				class="step"
+				data-x="8000"
+				data-y="65500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					Inter-AS Communication
+				</h1>
+				<hr />
+				<ul
+					style="
+						list-style-type: circle;
+						font-size: 1.5rem;
+						padding-left: 4rem;
+						font-weight: bold;
+					">
+					<li>
+						<span style="background-color: pink"
+							>Option-A</span
+						>
+						<ul
+							style="
+								padding-left: 4rem;
+								list-style-type: square;
+								font-size: 1.5rem;
+							">
+							<li>
+								R1 to ASBR-1 connection is VPNv6
+							</li>
+							<li>
+								ASBR-1 with ASBR-2 is IP-Based
+							</li>
+							<li>ASBR-2 to R2 is VPNv6</li>
+						</ul>
+					</li>
+					<li>
+						<span style="background-color: pink"
+							>Option-B</span
+						>
+						<ul
+							style="
+								padding-left: 4rem;
+								list-style-type: square;
+								font-size: 1.5rem;
+							">
+							<li>R1 to ASBR-1 is VPNv6</li>
+							<li>ASBR-1 to ASBR-2 is VPNv6</li>
+							<li>ASBR-2 to R2 is VPNv6</li>
+						</ul>
+					</li>
+					<li>
+						<span style="background-color: pink"
+							>Option-C</span
+						>
+						<ul
+							style="
+								padding-left: 4rem;
+								list-style-type: square;
+								font-size: 1.5rem;
+							">
+							<li>
+								PE-1 to PE-2 the connection is
+								VPNv6
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span style="background-color: hotpink"
+							>Option-D</span
+						>
+						<ul
+							style="
+								padding-left: 4rem;
+								list-style-type: square;
+								font-size: 1.5rem;
+							">
+							<li>PE-1 to ASBR-1 is VPNv4</li>
+							<li>
+								ASBR-1 to ASBR-2 is VPNv4
+								neigborhood
+								<ul
+									style="
+										padding-left: 4rem;
+										list-style-type: disc;
+										font-size: 1.5rem;
+									">
+									<li>
+										Traffic is under
+										subinterface and is
+										IP-bases
+									</li>
+								</ul>
+							</li>
+							<li>ASBR2-PE2 is VPNv4</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- Tunneling - Chapter Tunneling 6VPE - Option-A-->
+			<div
+				id="IPv6-Tunneling-Inter-AS-Option-A"
+				class="step"
+				data-x="8000"
+				data-y="67000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE Inter-AS Option-A
+				</h1>
+				<hr />
+				<img
+					src="assets/images/option-A.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 100%;
+					" />
+			</div>
+			<!-- Tunneling - Chapter Tunneling 6VPE - Option-A cfg-->
+			<div
+				id="IPv6-Tunneling-Inter-AS-Option-A-cfg"
+				class="step"
+				data-x="8000"
+				data-y="68500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE Inter-AS Option-A
+				</h1>
+				<hr />
+				<div style="float: left; font-size: 1rem">
+					<p style="font-weight: bold">R6</p>
+					<p>!</p>
+					<p>router bgp 2</p>
+					<p style="padding-left: 2rem">
+						neighbor 4.4.4.4 remote-as 2
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 4.4.4.4 update-source Loopback0
+					</p>
+					<p>!</p>
+					<p>
+						address-family
+						<span style="font-weight: bold">vpnv6</span>
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 4.4.4.4 activate
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 4.4.4.4 send-community extended
+					</p>
+					<p>exit-address-family</p>
+					<p>!</p>
+					<p>
+						address-family ipv6
+						<span style="font-weight: bold">vrf B</span>
+					</p>
+					<p style="padding-left: 2rem">
+						redistribute connected
+					</p>
+					<p>exit-address-family</p>
+					<p>!</p>
+				</div>
+				<div style="font-size: 1rem; float: right">
+					<p style="font-weight: bold">R4</p>
+					<p>!</p>
+					<p>interface Ethernet0/2</p>
+					<p style="padding-left: 2rem">vrf forwarding B</p>
+					<p style="padding-left: 2rem">
+						ipv6 address 3000:41::4/64
+					</p>
+					<p style="padding-left: 2rem">ipv6 enable</p>
+					<p>!</p>
+					<p>router bgp 2</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 remote-as 2
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 update-source Loopback0
+					</p>
+					<p>!</p>
+					<p>
+						address-family
+						<span style="font-weight: bold">vpnv6</span>
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 activate
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 send-community extended
+					</p>
+					<p>exit-address-family</p>
+					<p>!</p>
+
+					<p>
+						address-family ipv6
+						<span style="font-weight: bold">vrf B</span>
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3000:41::1 remote-as 1
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3000:41::1 activate
+					</p>
+					<p>exit-address-family</p>
+					<p>!</p>
+				</div>
+			</div>
+			<!-- Tunneling - Chapter Tunneling 6VPE - Option-B-->
+			<div
+				id="IPv6-Tunneling-Inter-AS-Option-B"
+				class="step"
+				data-x="8000"
+				data-y="70000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE Inter-AS Option-B
+				</h1>
+				<hr />
+				<img
+					src="assets/images/option-B.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 100%;
+					" />
 			</div>
 
 			<!-- IPv6 NAT - Chapter NAT -->
