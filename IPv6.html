@@ -7824,7 +7824,11 @@
 						</ul>
 					</li>
 					<li>
-						<span style="background-color: hotpink"
+						<span
+							style="
+								background-color: pink;
+								color: dimgray;
+							"
 							>Option-D</span
 						>
 						<ul
@@ -7832,6 +7836,7 @@
 								padding-left: 4rem;
 								list-style-type: square;
 								font-size: 1.5rem;
+								color: dimgray;
 							">
 							<li>PE-1 to ASBR-1 is VPNv4</li>
 							<li>
@@ -7855,12 +7860,52 @@
 					</li>
 				</ul>
 			</div>
+			<!-- Tunneling - Chapter Tunneling 6VPE - Option-A intro-->
+			<div
+				id="IPv6-Tunneling-Inter-AS-Option-A-intro"
+				class="step"
+				data-x="8000"
+				data-y="67000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE Inter-AS Option-A
+				</h1>
+				<hr />
+				<p class="fs2 bold">Features</p>
+				<ul
+					style="
+						list-style-type: circle;
+						padding-left: 4rem;
+						font-size: 1.5rem;
+					">
+					<li>High Security</li>
+					<li>Having No Trust To The Remote Peer</li>
+					<li>
+						Each VRF Needs A Sub-Interface Between ASBR
+					</li>
+					<li>R1 To ASBR-1 : Double-MPLS-Tag</li>
+					<li>R2 To ASBR-2 : Double-MPLS-Tag</li>
+					<li>Inner-Tag : BGP</li>
+					<li>Outer-Tag : LDP</li>
+					<li>ASBR-1 To ASBR-2 : No-Tag</li>
+				</ul>
+			</div>
 			<!-- Tunneling - Chapter Tunneling 6VPE - Option-A-->
 			<div
 				id="IPv6-Tunneling-Inter-AS-Option-A"
 				class="step"
 				data-x="8000"
-				data-y="67000"
+				data-y="68500"
 				data-z="2"
 				data-scale="1"
 				data-rotate="-330">
@@ -7889,7 +7934,7 @@
 				id="IPv6-Tunneling-Inter-AS-Option-A-cfg"
 				class="step"
 				data-x="8000"
-				data-y="68500"
+				data-y="70000"
 				data-z="2"
 				data-scale="1"
 				data-rotate="330">
@@ -7909,6 +7954,9 @@
 					<p style="font-weight: bold">R6</p>
 					<p>!</p>
 					<p>router bgp 2</p>
+					<p style="padding-left: 2rem">
+						bgp router-id 6.6.6.6
+					</p>
 					<p style="padding-left: 2rem">
 						neighbor 4.4.4.4 remote-as 2
 					</p>
@@ -7941,7 +7989,10 @@
 				<div style="font-size: 1rem; float: right">
 					<p style="font-weight: bold">R4</p>
 					<p>!</p>
-					<p>interface Ethernet0/2</p>
+					<p>interface Ethernet 0/2.100</p>
+					<p style="padding-left: 2rem">
+						encapsulation dot1q 100
+					</p>
 					<p style="padding-left: 2rem">vrf forwarding B</p>
 					<p style="padding-left: 2rem">
 						ipv6 address 3000:41::4/64
@@ -7949,6 +8000,9 @@
 					<p style="padding-left: 2rem">ipv6 enable</p>
 					<p>!</p>
 					<p>router bgp 2</p>
+					<p style="padding-left: 2rem">
+						bgp router-id 4.4.4.4
+					</p>
 					<p style="padding-left: 2rem">
 						neighbor 6.6.6.6 remote-as 2
 					</p>
@@ -7983,12 +8037,13 @@
 					<p>!</p>
 				</div>
 			</div>
-			<!-- Tunneling - Chapter Tunneling 6VPE - Option-B-->
+
+			<!-- Tunneling - Chapter Tunneling 6VPE - Option-B - intro-->
 			<div
 				id="IPv6-Tunneling-Inter-AS-Option-B"
 				class="step"
 				data-x="8000"
-				data-y="70000"
+				data-y="71500"
 				data-z="2"
 				data-scale="1"
 				data-rotate="-330">
@@ -8004,12 +8059,635 @@
 					6VPE Inter-AS Option-B
 				</h1>
 				<hr />
+				<p class="fs2 bold">Features</p>
+				<ul
+					style="
+						list-style-type: circle;
+						padding-left: 4rem;
+						font-size: 1.5rem;
+					">
+					<li>Moderate Security</li>
+					<li>One eBGP For All VRFs</li>
+					<li>R1 To ASBR-1 : Double-MPLS-Tag</li>
+					<li>R2 To ASBR-2 : Double-MPLS-Tag</li>
+					<li>Inner-Tag : BGP</li>
+					<li>Outer-Tag : LDP</li>
+					<li>ASBR-1 To ASBR-2 : One-MPLS-Tag</li>
+				</ul>
+			</div>
+			<!-- Tunneling - Chapter Tunneling 6VPE - Option-B - topo-->
+			<div
+				id="IPv6-Tunneling-Inter-AS-Option-B-topo"
+				class="step"
+				data-x="8000"
+				data-y="73000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE Inter-AS Option-B
+				</h1>
+				<hr />
+
 				<img
 					src="assets/images/option-B.png"
 					style="
 						display: block;
 						margin: auto;
 						width: 100%;
+					" />
+			</div>
+			<!-- Tunneling - Chapter Tunneling 6VPE - Option-B - config-->
+			<div
+				id="IPv6-Tunneling-Inter-AS-Option-B-config"
+				class="step"
+				data-x="8000"
+				data-y="74500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE Inter-AS Option-B
+				</h1>
+				<hr />
+				<div style="float: left; font-size: 1rem">
+					<p style="font-weight: bold">R4</p>
+					<p>!</p>
+					<p>interface Ethernet 0/2</p>
+					<p style="padding-left: 2rem">
+						ipv6 address 3000:41::4/64
+					</p>
+					<p style="padding-left: 2rem">ipv6 enable</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						mpls bgp forwarding
+					</p>
+					<p>!</p>
+					<p>router bgp 2</p>
+					<p style="padding-left: 2rem">
+						bgp router-id 4.4.4.4
+					</p>
+					<p style="font-weight: bold; padding-left: 2rem">
+						no bgp default route-target filter
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 remote-as 2
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 update-source Loopback0
+					</p>
+					<p style="font-weight: bold; padding-left: 2rem">
+						neighbor 3000:41::1 remote-as 1
+					</p>
+					<p>!</p>
+					<p>
+						address-family
+						<span style="font-weight: bold">vpnv6</span>
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 activate
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 send-community extended
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 next-hop-self
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3000:41::1 activate
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3000:41::1 send-community extended
+					</p>
+					<p>exit-address-family</p>
+					<p>!</p>
+				</div>
+				<div style="font-size: 1rem; float: right">
+					<p style="font-weight: bold">R1</p>
+					<p>!</p>
+					<p>interface Ethernet 0/2</p>
+					<p style="padding-left: 2rem">
+						ipv6 address 3000:41::1/64
+					</p>
+					<p style="padding-left: 2rem">ipv6 enable</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						mpls bgp forwarding
+					</p>
+					<p>!</p>
+					<p>router bgp 2</p>
+					<p style="padding-left: 2rem">
+						bgp router-id 1.1.1.1
+					</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						no bgp default route-target filter
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 remote-as 1
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 update-source Loopback0
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3000:17::7 remote-as 3
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3000:41::4 remote-as 2
+					</p>
+					<p>!</p>
+					<p>
+						address-family
+						<span style="font-weight: bold">vpnv6</span>
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 activate
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 send-community extended
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 next-hop-self
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3000:17::7 activate
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3000:17::7 send-community extended
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3000:41::4 activate
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3000:41::4 send-community extended
+					</p>
+					<p>exit-address-family</p>
+					<p>!</p>
+				</div>
+			</div>
+			<!-- Tunneling - Chapter Tunneling 6VPE - Option-B - capture-->
+			<div
+				id="IPv6-Tunneling-Inter-AS-Option-B-capture"
+				class="step"
+				data-x="8000"
+				data-y="76000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE Inter-AS Option-B
+				</h1>
+				<hr />
+				<p class="fs1half">R5# interface 0/1</p>
+				<img
+					src="assets/images/opb-r5-0-1.png"
+					style="
+						width: 100%;
+						display: block;
+						margin: auto;
+					" />
+				<p class="fs1half">R1# interface 0/2</p>
+				<img
+					src="assets/images/opb-r1-0-2.png"
+					style="
+						width: 100%;
+						display: block;
+						margin: auto;
+					" />
+			</div>
+
+			<!-- Tunneling - Chapter Tunneling 6VPE - Option-C - intro-->
+			<div
+				id="IPv6-Tunneling-Inter-AS-Option-C-Intro"
+				class="step"
+				data-x="8000"
+				data-y="77500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE Inter-AS Option-C
+				</h1>
+				<hr />
+				<p class="fs2 bold">Features</p>
+				<ul
+					style="
+						list-style-type: circle;
+						padding-left: 4rem;
+						font-size: 1.5rem;
+					">
+					<li>Trusted Peer AS</li>
+					<li>Most Scalable Option</li>
+					<li>R1 To R2 End-To-End VPNv6</li>
+					<li>R1 To ASBR-1 : Triple-MPLS-Tag</li>
+					<li>ASBR-1 To ASBR-2 : Double-MPLS-Tag</li>
+					<li>ASBR-2 To R2 : Double-MPLS-Tag</li>
+				</ul>
+			</div>
+			<!-- Tunneling - Chapter Tunneling 6VPE - Option-C - topo-->
+			<div
+				id="IPv6-Tunneling-Inter-AS-Option-C-topo"
+				class="step"
+				data-x="8000"
+				data-y="79000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE Inter-AS Option-C
+				</h1>
+				<hr />
+
+				<img
+					src="assets/images/option-C.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 100%;
+					" />
+			</div>
+			<!-- Tunneling - Chapter Tunneling 6VPE - Option-C - config-1-->
+			<div
+				id="IPv6-Tunneling-Inter-AS-Option-C-config-1"
+				class="step"
+				data-x="8000"
+				data-y="80500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE Inter-AS Option-C
+				</h1>
+				<hr />
+				<div style="float: left; font-size: 1rem">
+					<p style="font-weight: bold">R6</p>
+					<p>!</p>
+					<p class="bold">router bgp 2</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 remote-as 1
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 update-source Loopback0
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 ebgp-multihop 20
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 4.4.4.4 remote-as 2
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 4.4.4.4 update-source Loopback0
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 9.9.9.9 remote-as 3
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 9.9.9.9 ebgp-multihop 20
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 9.9.9.9 update-source Loopback0
+					</p>
+					<p>!</p>
+
+					<p>
+						address-family
+						<span style="font-weight: bold">ipv4</span>
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 4.4.4.4 activate
+					</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						neighbor 4.4.4.4 send-label
+					</p>
+					<p>exit-address-family</p>
+					<p>!</p>
+
+					<p>
+						address-family
+						<span style="font-weight: bold">vpnv6</span>
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 activate
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 send-community extended
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 9.9.9.9 activate
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 9.9.9.9 send-community extended
+					</p>
+					<p>exit-address-family</p>
+					<p>!</p>
+
+					<p>
+						address-family
+						<span style="font-weight: bold"
+							>ipv6 vrf B</span
+						>
+					</p>
+					<p style="padding-left: 2rem">
+						redistribute connected
+					</p>
+					<p>exit-address-family</p>
+					<p>!</p>
+				</div>
+				<div style="font-size: 1rem; float: right">
+					<p style="font-weight: bold">R4</p>
+					<p>!</p>
+
+					<p>interface Ethernet 0/2</p>
+					<p style="padding-left: 2rem">
+						ip address 10.10.41.4 255.255.255.0
+					</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						mpls bgp forwarding
+					</p>
+					<p>!</p>
+					<p class="bold">router bgp 2</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 remote-as 2
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 update-source Loopback0
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 10.10.41.1 remote-as 1
+					</p>
+					<p>!</p>
+
+					<p>
+						address-family
+						<span style="font-weight: bold">ipv4</span>
+					</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						redistribute ospf 1 match internal
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 activate
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 next-hop-self
+					</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						neighbor 6.6.6.6 send-label
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 10.10.41.1 activate
+					</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						neighbor 10.10.41.1 send-label
+					</p>
+
+					<p>exit-address-family</p>
+					<p>!</p>
+				</div>
+			</div>
+			<!-- Tunneling - Chapter Tunneling 6VPE - Option-C - config-2-->
+			<div
+				id="IPv6-Tunneling-Inter-AS-Option-C-config-2"
+				class="step"
+				data-x="8000"
+				data-y="82000"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE Inter-AS Option-C
+				</h1>
+				<hr />
+				<div style="float: left; font-size: 1rem">
+					<p style="font-weight: bold">R3</p>
+					<p>!</p>
+					<p class="bold">router bgp 1</p>
+					<p style="padding-left: 2rem">
+						neighbor 1.1.1.1 remote-as 1
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 1.1.1.1 update-source Loopback0
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 remote-as 2
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 ebgp-multihop 20
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 update-source Loopback0
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 9.9.9.9 remote-as 3
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 9.9.9.9 ebgp-multihop 20
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 9.9.9.9 update-source Loopback0
+					</p>
+					<p>!</p>
+
+					<p>
+						address-family
+						<span style="font-weight: bold">ipv4</span>
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 1.1.1.1 activate
+					</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						neighbor 1.1.1.1 send-label
+					</p>
+					<p>exit-address-family</p>
+					<p>!</p>
+
+					<p>
+						address-family
+						<span style="font-weight: bold">vpnv6</span>
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 activate
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 6.6.6.6 send-community extended
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 9.9.9.9 activate
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 9.9.9.9 send-community extended
+					</p>
+					<p>exit-address-family</p>
+					<p>!</p>
+
+					<p>
+						address-family
+						<span style="font-weight: bold"
+							>ipv6 vrf A</span
+						>
+					</p>
+					<p style="padding-left: 2rem">
+						redistribute connected
+					</p>
+					<p>exit-address-family</p>
+					<p>!</p>
+				</div>
+				<div style="font-size: 1rem; float: right">
+					<p style="font-weight: bold">R1</p>
+					<p>!</p>
+
+					<p>interface Ethernet 0/2</p>
+					<p style="padding-left: 2rem">
+						ip address 10.10.41.1 255.255.255.0
+					</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						mpls bgp forwarding
+					</p>
+					<p>!</p>
+					<p class="bold">router bgp 1</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 remote-as 1
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 update-source Loopback0
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 10.10.17.7 remote-as 3
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 10.10.41.4 remote-as 2
+					</p>
+					<p>!</p>
+
+					<p>
+						address-family
+						<span style="font-weight: bold">ipv4</span>
+					</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						redistribute isis 1 level-1-2
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 activate
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 3.3.3.3 next-hop-self
+					</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						neighbor 3.3.3.3 send-label
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 10.10.17.7 activate
+					</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						neighbor 10.10.17.7 send-label
+					</p>
+					<p style="padding-left: 2rem">
+						neighbor 10.10.41.4 activate
+					</p>
+					<p style="padding-left: 2rem; font-weight: bold">
+						neighbor 10.10.41.4 send-label
+					</p>
+
+					<p>exit-address-family</p>
+					<p>!</p>
+				</div>
+			</div>
+			<!-- Tunneling - Chapter Tunneling 6VPE - Option-C - capture-->
+			<div
+				id="IPv6-Tunneling-Inter-AS-Option-C-capture"
+				class="step"
+				data-x="8000"
+				data-y="83500"
+				data-z="2"
+				data-scale="1"
+				data-rotate="-330">
+				<h1
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						padding: 0;
+					">
+					6VPE Inter-AS Option-C
+				</h1>
+				<hr />
+				<p class="fs1half">R5# interface 0/1</p>
+				<img
+					src="assets/images/opc-r5-0-1.png"
+					style="
+						width: 80%;
+						display: block;
+						margin: auto;
+					" />
+				<p class="fs1half">R4# interface 0/0</p>
+				<img
+					src="assets/images/opc-r4-0-0.png"
+					style="
+						width: 80%;
+						display: block;
+						margin: auto;
+					" />
+				<p class="fs1half">R1# interface 0/2</p>
+				<img
+					src="assets/images/opc-r1-0-2.png"
+					style="
+						width: 80%;
+						display: block;
+						margin: auto;
 					" />
 			</div>
 
