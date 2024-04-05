@@ -184,6 +184,7 @@
 					<li>- OSPFv3 Protocol</li>
 					<li>- ISIS Protocol</li>
 					<li>- BGP protocol</li>
+					<li>- VRF / VPN-Instance</li>
 				</ul>
 			</div>
 
@@ -628,125 +629,6 @@
 				</ul>
 			</div>
 
-			<!-- Basics-Applications -->
-			<div
-				id="basics-ipv6-format"
-				class="step"
-				data-x="-2000"
-				data-y="1000"
-				data-z="10000"
-				data-rotate="20">
-				<h1
-					style="
-						font-size: 3rem;
-						text-align: center;
-						color: deepskyblue;
-					">
-					IPv6 Format
-				</h1>
-				<hr />
-				<p style="text-align: center; font-size: 2rem">
-					X:X:X:X:X:X:X:X / Y
-				</p>
-				<p style="font-size: 2rem">X is a 16-bit hexadecimal</p>
-				<p style="font-size: 2rem">no subnet-mask</p>
-				<p style="font-size: 2rem">We Use Prefix-Length</p>
-				<hr />
-				<p
-					style="
-						font-size: 1.5rem;
-						font-weight: bold;
-						color: deeppink;
-					">
-					2200:1234:5678:ABCD:<span
-						style="color: dodgerblue"
-						>1234:5678:ABCD:1234</span
-					>/<span style="color: cadetblue">64</span>
-				</p>
-				<br />
-
-				<table style="width: 100%; font-weight: bold">
-					<tr style="font-size: 1rem; color: deeppink">
-						<td>2200:1234:5678:ABCD::</td>
-						<td>Prefix</td>
-					</tr>
-					<tr style="font-size: 1rem; color: dodgerblue">
-						<td>1234:5678:ABCD:1234</td>
-						<td>Host</td>
-					</tr>
-					<tr style="font-size: 1rem; color: cadetblue">
-						<td>64</td>
-						<td>Prefix-Length</td>
-					</tr>
-				</table>
-			</div>
-
-			<!-- Basics-IPv6 Format -->
-			<div
-				id="basics-IPv6-application"
-				class="step"
-				data-x="-2000"
-				data-y="1000"
-				data-z="12000"
-				data-rotate="0">
-				<h1
-					style="
-						font-size: 3rem;
-						text-align: center;
-						color: deepskyblue;
-					">
-					IPv6 Practical Applications
-				</h1>
-				<hr />
-				<ul style="font-size: 2rem; list-style-type: disc">
-					<li>
-						<span style="color: dodgerblue">ping</span>
-						<ul
-							style="
-								font-size: 1rem;
-								list-style-type: square;
-								padding-left: 4rem;
-							">
-							<li>ping ::1</li>
-							<li>ping -6 ::1</li>
-						</ul>
-					</li>
-					<li>
-						<span style="color: dodgerblue"
-							>Network Share</span
-						>
-						<ul
-							style="
-								font-size: 1rem;
-								list-style-type: square;
-								padding-left: 4rem;
-							">
-							<li>in ipv4: \\10.82.14.38\share</li>
-							<li>
-								in ipv6:
-								\\2001-1234-1234--1\share
-							</li>
-						</ul>
-					</li>
-					<li>
-						<span style="color: dodgerblue"
-							>Web Page</span
-						>
-						<ul
-							style="
-								font-size: 1rem;
-								list-style-type: square;
-								padding-left: 4rem;
-							">
-							<li>[::1]</li>
-							<li>http://[::1]</li>
-							<li>https://[2000::1]</li>
-							<li>http://[2001::1]:8080</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-
 			<!-- Basics-IPv6 bitwise grouping  -->
 			<div
 				id="basics-IPv6-bit-group"
@@ -867,6 +749,125 @@
 					">
 					1-Hextet = 16bit = 4-nibble = 2-Octet
 				</p>
+			</div>
+
+			<!-- Basics-Applications -->
+			<div
+				id="basics-ipv6-format"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="10000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Format
+				</h1>
+				<hr />
+				<p style="text-align: center; font-size: 2rem">
+					X:X:X:X:X:X:X:X / Y
+				</p>
+				<p style="font-size: 2rem">X is a 16-bit hexadecimal</p>
+				<p style="font-size: 2rem">no subnet-mask</p>
+				<p style="font-size: 2rem">We Use Prefix-Length</p>
+				<hr />
+				<p
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						color: deeppink;
+					">
+					2200:1234:5678:ABCD:<span
+						style="color: dodgerblue"
+						>1234:5678:ABCD:1234</span
+					>/<span style="color: cadetblue">64</span>
+				</p>
+				<br />
+
+				<table style="width: 100%; font-weight: bold">
+					<tr style="font-size: 1rem; color: deeppink">
+						<td>2200:1234:5678:ABCD::</td>
+						<td>Prefix</td>
+					</tr>
+					<tr style="font-size: 1rem; color: dodgerblue">
+						<td>1234:5678:ABCD:1234</td>
+						<td>Host</td>
+					</tr>
+					<tr style="font-size: 1rem; color: cadetblue">
+						<td>64</td>
+						<td>Prefix-Length</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Basics-IPv6 Format -->
+			<div
+				id="basics-IPv6-application"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="12000"
+				data-rotate="20">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Practical Applications
+				</h1>
+				<hr />
+				<ul style="font-size: 2rem; list-style-type: disc">
+					<li>
+						<span style="color: dodgerblue">ping</span>
+						<ul
+							style="
+								font-size: 1rem;
+								list-style-type: square;
+								padding-left: 4rem;
+							">
+							<li>ping ::1</li>
+							<li>ping -6 ::1</li>
+						</ul>
+					</li>
+					<li>
+						<span style="color: dodgerblue"
+							>Network Share</span
+						>
+						<ul
+							style="
+								font-size: 1rem;
+								list-style-type: square;
+								padding-left: 4rem;
+							">
+							<li>in ipv4: \\10.82.14.38\share</li>
+							<li>
+								in ipv6:
+								\\2001-1234-1234--1\share
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span style="color: dodgerblue"
+							>Web Page</span
+						>
+						<ul
+							style="
+								font-size: 1rem;
+								list-style-type: square;
+								padding-left: 4rem;
+							">
+							<li>[::1]</li>
+							<li>http://[::1]</li>
+							<li>https://[2000::1]</li>
+							<li>http://[2001::1]:8080</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 
 			<!-- Basics-IPv6 shortening -->
@@ -1568,6 +1569,11 @@
 					">
 					<li>
 						3000:123:0:F<span style="color: deeppink"
+							>0</span
+						>::/64
+					</li>
+					<li>
+						3000:123:0:F<span style="color: deeppink"
 							>1</span
 						>::/64
 					</li>
@@ -1592,6 +1598,11 @@
 						margin-top: 2rem;
 						font-weight: bold;
 					">
+					<li style="text-align: center">
+						1111 00<span style="color: deeppink"
+							>00</span
+						>
+					</li>
 					<li style="text-align: center">
 						1111 00<span style="color: deeppink"
 							>01</span
@@ -1650,26 +1661,28 @@
 				</p>
 				<hr />
 				<p style="font-size: 1.5rem">
-					R1(config)#interface GigabitEthernet 0/1
+					interface GigabitEthernet 0/1
 				</p>
-				<p style="font-size: 1.5rem">
-					R1(config-if)#ipv6 address
+				<p style="font-size: 1.5rem; padding-left: 4rem">
+					ipv6 address
 					<span style="color: deeppink"
 						>2A04:2680:17::100/64</span
 					>
 				</p>
 				<hr />
-				<p style="font-size: 1.7rem; color: dodgerblue">
-					R1(config)#ipv6 general-prefix
-					<span style="font-weight: bold">GLOBAL</span>
+				<p style="font-size: 1.7rem">
+					ipv6 general-prefix
+					<span style="font-weight: bold; color: dodgerblue"
+						>GLOBAL</span
+					>
 					2A04:2680:17::/48
 				</p>
-
+				<p style="font-size: 1.5rem">!</p>
 				<p style="font-size: 1.5rem">
-					R1(config)#interface GigabitEthernet 0/1
+					interface GigabitEthernet 0/1
 				</p>
-				<p style="font-size: 1.5rem">
-					R1(config-if)#ipv6 address
+				<p style="font-size: 1.5rem; padding-left: 4rem">
+					ipv6 address
 					<span
 						style="
 							color: dodgerblue;
@@ -1678,6 +1691,21 @@
 						GLOBAL
 					</span>
 					::100/64
+				</p>
+				<p style="font-size: 1.5rem">!</p>
+				<p style="font-size: 1.5rem">
+					interface GigabitEthernet 0/2
+				</p>
+				<p style="font-size: 1.5rem; padding-left: 4rem">
+					ipv6 address
+					<span
+						style="
+							color: dodgerblue;
+							font-weight: bold;
+						">
+						GLOBAL
+					</span>
+					::200/64
 				</p>
 			</div>
 
@@ -1695,7 +1723,7 @@
 						text-align: center;
 						color: deepskyblue;
 					">
-					IPv6 Solicited Node Multicast Address
+					IPv6 SNMA - Solicited Node Multicast Address
 				</h1>
 				<hr />
 				<p style="font-size: 1.5rem">SNMA Prefix is</p>
@@ -1713,21 +1741,21 @@
 					LSB IPv6 Address
 				</p>
 				<p style="font-size: 1.5rem; margin-top: 1rem">
-					R1(config)#interface FastEthernet 0/0
+					interface FastEthernet 0/0
 				</p>
-				<p style="font-size: 1.5rem">
-					R1(config-if)#ipv6 enable
+				<p style="font-size: 1.5rem; padding-left: 4rem">
+					ipv6 enable
 				</p>
-				<p style="font-size: 1.5rem">
-					R1(config-if)#ipv6 address
+				<p style="font-size: 1.5rem; padding-left: 4rem">
+					ipv6 address
 					<span style="font-weight: bold"
 						>2000:1234:5678:9ABCD:EF10:1112:1314:1516/64
 					</span>
 				</p>
 				<p style="font-size: 1.5rem; margin-top: 1rem">
-					R1#show ipv6 interface FastEthernet 0/0
+					show ipv6 interface FastEthernet 0/0
 				</p>
-				<p style="font-size: 1.5rem">
+				<p style="font-size: 1.5rem; padding-left: 4rem">
 					IPv6 is enabled, link-local address is
 					<span
 						style="
@@ -1788,6 +1816,83 @@
 					">
 					FFF02::1:FF14:1516
 				</p>
+			</div>
+
+			<!-- Basics-IPv4 Multicast MAC-->
+			<div
+				id="basics-IPv4-Multicast-MAC"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="48000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv4 Multicast MAC Addresses
+				</h1>
+				<hr />
+				<p style="font-size: 1.5rem">
+					IPv4 multicast range is
+					<span style="color: deeppink">224.0.0.0/4</span>
+					so 1110 are always fixed
+				</p>
+				<p style="font-size: 1.5rem">
+					The most significant 24 bits of an IPv4 multicast
+					MAC address are
+					<span style="color: deeppink">0x01005E</span>
+				</p>
+				<p style="font-size: 1.5rem; margin-bottom: 1rem">
+					25th-bit of IPv4-MAC-Address is
+					<span style="color: deeppink">ZERO</span>
+				</p>
+				<img
+					src="assets/images/ipv4-multi-MAC.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 80%;
+					" />
+			</div>
+
+			<!-- Basics-IPv6 Multicast MAC-->
+			<div
+				id="basics-IPv6-Multicast-MAC"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="50000"
+				data-rotate="20">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: deepskyblue;
+					">
+					IPv6 Multicast MAC Addresses
+				</h1>
+				<hr />
+				<p style="font-size: 1.5rem">
+					Pv6 multicast range is
+					<span style="color: deeppink">FF::/8</span>
+					so 8 bits are always fixed
+				</p>
+				<p style="font-size: 1.5rem; margin-bottom: 1rem">
+					The most significant 16 bits of an IPv6 multicast
+					MAC address are
+					<span style="color: deeppink">0x3333</span>
+				</p>
+
+				<img
+					src="assets/images/ipv6-multi-MAC.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 95%;
+					" />
 			</div>
 
 			<!-- Basics-IPv6 NDP-->
@@ -1885,14 +1990,14 @@
 
 				<p style="font-size: 1.5rem; font-weight: bold">R1</p>
 				<p style="font-size: 1.5rem">interface Ethernet0/0</p>
-				<p style="font-size: 1.5rem">
+				<p style="font-size: 1.5rem; padding-left: 4rem">
 					ipv6 address
 					1234:5678:9ABC:DEF0:1234:1234:1234:1234/112
 				</p>
 				<br />
 				<p style="font-size: 1.5rem; font-weight: bold">R2</p>
 				<p style="font-size: 1.5rem">interface Ethernet0/0</p>
-				<p style="font-size: 1.5rem">
+				<p style="font-size: 1.5rem; padding-left: 4rem">
 					ipv6 address 1234:5678:9ABC:DEF0:1234:1234:12<span
 						style="color: deeppink"
 						>34:1235</span
@@ -1917,12 +2022,43 @@
 					IPv6 NDP - NS
 				</h1>
 				<hr />
+				<p style="font-size: 1.5rem; font-weight: bold">
+					R1# Ping 1234:5678:9ABC:DEF0:1234:1234:1234:1235
+				</p>
+				<p
+					style="
+						font-size: 1.5rem;
+						font-weight: bold;
+						color: darkred;
+						text-align: center;
+					">
+					BUT
+				</p>
+				<p
+					style="
+						font-size: 1.2rem;
+						font-weight: bold;
+						color: dimgray;
+						text-align: center;
+					">
+					R1 don't knows the MAC of R2
+				</p>
+				<p
+					style="
+						font-size: 1.2rem;
+						font-weight: bold;
+						color: darkgreen;
+						text-align: center;
+					">
+					R1 sends NS
+				</p>
 				<img
 					src="assets/images/11-NS.png"
 					style="
 						display: block;
 						margin: auto;
-						width: 95%;
+						width: 80%;
+						margin-top: 1rem;
 					" />
 			</div>
 
@@ -1943,81 +2079,18 @@
 					IPv6 NDP - NA
 				</h1>
 				<hr />
+				<p
+					style="
+						font-size: 1.2rem;
+						font-weight: bold;
+						color: darkgreen;
+						text-align: center;
+						margin-bottom: 1rem;
+					">
+					R2 responds NS by NA Message
+				</p>
 				<img
 					src="assets/images/11-NA.png"
-					style="
-						display: block;
-						margin: auto;
-						width: 95%;
-					" />
-			</div>
-
-			<!-- Basics-IPv4 Multicast MAC-->
-			<div
-				id="basics-IPv4-Multicast-MAC"
-				class="step"
-				data-x="-2000"
-				data-y="1000"
-				data-z="48000"
-				data-rotate="0">
-				<h1
-					style="
-						font-size: 3rem;
-						text-align: center;
-						color: deepskyblue;
-					">
-					IPv4 Multicast MAC Addresses
-				</h1>
-				<hr />
-				<p style="font-size: 1.5rem">
-					IPv4 multicast range is
-					<span style="color: deeppink">224.0.0.0/4</span>
-					so 1110 are always fixed
-				</p>
-				<p style="font-size: 1.5rem; margin-bottom: 1rem">
-					The most significant 24 bits of an IPv4 multicast
-					MAC address are
-					<span style="color: deeppink">0x01005E</span>
-				</p>
-				<img
-					src="assets/images/ipv4-multi-MAC.png"
-					style="
-						display: block;
-						margin: auto;
-						width: 95%;
-					" />
-			</div>
-
-			<!-- Basics-IPv6 Multicast MAC-->
-			<div
-				id="basics-IPv6-Multicast-MAC"
-				class="step"
-				data-x="-2000"
-				data-y="1000"
-				data-z="50000"
-				data-rotate="20">
-				<h1
-					style="
-						font-size: 3rem;
-						text-align: center;
-						color: deepskyblue;
-					">
-					IPv6 Multicast MAC Addresses
-				</h1>
-				<hr />
-				<p style="font-size: 1.5rem">
-					Pv6 multicast range is
-					<span style="color: deeppink">FF::/8</span>
-					so 8 bits are always fixed
-				</p>
-				<p style="font-size: 1.5rem; margin-bottom: 1rem">
-					The most significant 16 bits of an IPv6 multicast
-					MAC address are
-					<span style="color: deeppink">0x3333</span>
-				</p>
-
-				<img
-					src="assets/images/ipv6-multi-MAC.png"
 					style="
 						display: block;
 						margin: auto;
@@ -2104,17 +2177,24 @@
 
 				<p style="font-size: 1.5rem; font-weight: bold">R1</p>
 				<p style="font-size: 1.5rem">interface Ethernet0/0</p>
-				<p style="font-size: 1.5rem">
+				<p style="font-size: 1.5rem; padding-left: 4rem">
 					ipv6 address 12:12:12:12:12:12:12:12/64
 				</p>
 				<br />
 				<p style="font-size: 1.5rem; font-weight: bold">R2</p>
 				<p style="font-size: 1.5rem">interface Ethernet0/0</p>
-				<p style="font-size: 1.5rem">
+				<p style="font-size: 1.5rem; padding-left: 4rem">
 					ipv6 address
 					<span style="color: deeppink"
 						>autoconfig
-						<span class="substep">default</span></span
+						<span
+							style="
+								color: darkred;
+								font-weight: bold;
+							"
+							class="substep"
+							>default</span
+						></span
 					>
 				</p>
 				<p
@@ -2145,8 +2225,34 @@
 					SLAAC - RS
 				</h1>
 				<hr />
-				<p style="font-size: 1.5rem"></p>
-				<p style="font-size: 1.5rem; margin-bottom: 1rem"></p>
+				<p
+					style="
+						font-size: 1.5rem;
+						text-align: center;
+						color: dimgray kgreen;
+					">
+					R2 sends RS to find out the Prefix
+				</p>
+				<p
+					style="
+						font-size: 1.5rem;
+						text-align: center;
+						color: darkgreen;
+					">
+					R2 looks for a Router
+				</p>
+				<p
+					style="
+						font-size: 1.5rem;
+						margin-bottom: 1rem;
+						text-align: center;
+						color: dimgray;
+					">
+					Multicast address of all routers:
+					<span style="font-weight: bold; color: black"
+						>FF02::2</span
+					>
+				</p>
 
 				<img
 					src="assets/images/RS.png"
@@ -2174,15 +2280,34 @@
 					SLAAC - RA
 				</h1>
 				<hr />
-				<p style="font-size: 1.5rem"></p>
-				<p style="font-size: 1.5rem; margin-bottom: 1rem"></p>
+				<p
+					style="
+						font-size: 1.2rem;
+						font-weight: bold;
+						color: darkgreen;
+						text-align: center;
+					">
+					R1 responds RS by RA Message
+				</p>
+				<p
+					style="
+						font-size: 1.5rem;
+						margin-bottom: 1rem;
+						text-align: center;
+						color: dimgray;
+					">
+					Multicast address of all IPv6-nodes:
+					<span style="font-weight: bold; color: black"
+						>FF02::1</span
+					>
+				</p>
 
 				<img
 					src="assets/images/RA.png"
 					style="
 						display: block;
 						margin: auto;
-						width: 95%;
+						width: 80%;
 					" />
 			</div>
 
@@ -2215,7 +2340,7 @@
 							>Stateless</span
 						>
 						<span style="color: black"
-							>- Knows as SLAAC - Prefix
+							>- Known as SLAAC - Prefix
 							Delivery</span
 						>
 					</li>
@@ -2270,7 +2395,6 @@
 						</ul>
 					</li>
 				</ul>
-				<p style="font-size: 1.5rem; margin-bottom: 1rem"></p>
 			</div>
 
 			<!-- Basics-IPv6 DHCPv6 - stateless-->
@@ -2387,10 +2511,10 @@
 				<p style="font-size: 1.5rem; font-weight: bold">R1</p>
 				<p style="font-size: 1.5rem">ipv6 dhcp pool dhcp0</p>
 				<p style="font-size: 1.5rem; padding-left: 2rem">
-					dns-server 3000::3000
+					dns-server 2001::1
 				</p>
 				<p style="font-size: 1.5rem; padding-left: 2rem">
-					domain-name dhcp0.local
+					domain-name net0.tct.ir
 				</p>
 				<p style="font-size: 1.5rem; margin-top: 2rem">
 					interface Ethernet0/0
@@ -2531,7 +2655,7 @@
 							</p>
 							<p
 								style="
-									font-size: 1.5rem;
+									font-size: 1rem;
 									padding-left: 2rem;
 								">
 								domain-name net1.local
@@ -2993,8 +3117,30 @@
 					style="
 						display: block;
 						margin: auto;
-						width: 95%;
+						width: 70%;
 					" />
+				<div style="font-size: 1.2rem">
+					<p style="font-weight: bold; color: deeppink">
+						OSPFv2
+					</p>
+					<p style="padding-left: 4rem">
+						LSAs Type 1 & 2 for topology and network
+						information
+					</p>
+
+					<p style="font-weight: bold; color: deeppink">
+						OSPFv3
+					</p>
+					<p style="padding-left: 4rem">
+						LSAs Type 1 & 2 for topology information
+					</p>
+					<p style="padding-left: 4rem">
+						LSAs Type 8 for Prefixes
+					</p>
+					<p style="padding-left: 4rem">
+						LSAs Type 9 for LLA
+					</p>
+				</div>
 			</div>
 
 			<!-- IPv6 Routing - OSPF Flooding Scope -->
@@ -3016,7 +3162,12 @@
 				</h1>
 				<hr />
 				<p class="fs2">LSA Type Code</p>
-				<ul class="fs1half" style="list-style-type: circle">
+				<ul
+					class="fs1half"
+					style="
+						list-style-type: circle;
+						padding-left: 4rem;
+					">
 					<li>0x0: Link-local scope</li>
 					<li>0x2: Area scope</li>
 					<li>0x4: AS scope</li>
@@ -3237,32 +3388,313 @@
 					MP-BGP - IPv6 prefixes Over IPv4 adjacency
 				</h1>
 				<hr />
-				<p class="fs2 bold">R</p>
+				<p class="fs2 bold">R1</p>
 				<p class="fs1 pl2">ipv6 unicast-routing</p>
 				<p class="fs1 pl2">!</p>
-				<p class="fs1 pl2 bold">router bgp 2</p>
-				<p class="fs1 pl4 bold">bgp router-id 2.2.2.2</p>
-				<p class="fs1 pl4 bold">
-					neighbor 192.168.1.1 remote-as 1
-				</p>
-				<p class="fs1 pl4 bold">!</p>
-				<p class="fs1 pl4 bold">address-family ipv6</p>
+				<p class="fs1 pl2">interface Ethernet0/0</p>
+				<p class="fs1 pl4">ip address 10.1.4.1 255.255.255.0</p>
+				<p class="fs1 pl4 bold">ipv6 address FD:1:4::1/64</p>
+				<p class="fs1 pl2">!</p>
+				<p class="fs1 pl2">router bgp 2</p>
+				<p class="fs1 pl4">bgp router-id 2.2.2.1</p>
+				<p class="fs1 pl4">neighbor 10.1.4.4 remote-as 1</p>
+				<p class="fs1 pl4">!</p>
+				<p class="fs1 pl4">address-family ipv6</p>
 				<p class="fs1 bold" style="padding-left: 8rem">
-					neighbor 192.168.1.1 activate
+					neighbor 10.1.4.4 activate
 				</p>
 				<p class="fs1 bold" style="padding-left: 8rem">
-					neighbor 192.168.1.1 route-map IPV6_NEXT_HOP out
+					neighbor 10.1.4.4 route-map setIPv6NH-AS1 out
 				</p>
 				<p class="fs1 bold" style="padding-left: 8rem">
 					network 3000::/96
 				</p>
-				<p class="fs1 pl4 bold">exit</p>
-				<p class="fs1 pl2 bold">!</p>
+				<p class="fs1 pl4">exit-address-family</p>
+				<p class="fs1 pl2">!</p>
 				<p class="fs1 pl2 bold">
-					route-map IPV6_NEXT_HOP permit 10
+					route-map setIPv6NH-AS3 permit 10
 				</p>
-				<p class="fs1 pl4 bold">set ipv6 next-hop 2000::1</p>
-				<p class="fs1 pl2 bold">!</p>
+				<p class="fs1 pl4 bold">set ipv6 next-hop FD:1:4::1</p>
+				<p class="fs1 pl2">!</p>
+			</div>
+
+			<!-- IPv6 VRF cisco-->
+			<div
+				id="Routing-vrf-cisco"
+				class="step"
+				data-x="-1000"
+				data-y="1000"
+				data-z="0"
+				data-rotate="-45">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: olivedrab;
+						font-weight: bold;
+					">
+					Virtual Routing and Forwarding
+				</h1>
+				<hr />
+				<p
+					style="
+						font-weight: bold;
+						text-align: center;
+						font-size: 2rem;
+					">
+					Cisco
+				</p>
+				<p
+					style="
+						font-weight: bold;
+						font-size: 1.5rem;
+						color: darkgreen;
+					">
+					VRF Definition
+				</p>
+				<div style="font-size: 1.5rem; padding-left: 4rem">
+					<p style="font-weight: bold">
+						vrf definition internet
+					</p>
+					<p style="padding-left: 4rem">rd 1:1</p>
+					<p style="padding-left: 4rem">
+						address-family
+						<span style="font-weight: bold">ipv4</span>
+					</p>
+					<p style="padding-left: 8rem">
+						route-target export 1:1
+					</p>
+					<p style="padding-left: 8rem">
+						route-target import 1:1
+					</p>
+					<p style="padding-left: 4rem">
+						exit-address-family
+					</p>
+					<p style="padding-left: 4rem">
+						address-family
+						<span style="font-weight: bold">ipv6</span>
+					</p>
+					<p style="padding-left: 8rem">
+						route-target export 1:1
+					</p>
+					<p style="padding-left: 8rem">
+						route-target import 1:1
+					</p>
+					<p style="padding-left: 4rem">
+						exit-address-family
+					</p>
+				</div>
+				<p
+					style="
+						font-weight: bold;
+						font-size: 1.5rem;
+						color: darkgreen;
+					">
+					Interface Binding
+				</p>
+				<div style="font-size: 1.5rem; padding-left: 4rem">
+					<p>interface Ethernet x</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							padding-left: 4rem;
+							font-weight: bold;
+						">
+						vrf forwarding internet
+					</p>
+					<p style="font-size: 1.5rem; padding-left: 4rem">
+						ipv6 address FD::1/64
+					</p>
+				</div>
+			</div>
+
+			<!-- IPv6 VRF huawei-1 -->
+			<div
+				id="Routing-vrf-Huawei-1"
+				class="step"
+				data-x="-1000"
+				data-y="1000"
+				data-z="0"
+				data-rotate="45">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: olivedrab;
+						font-weight: bold;
+					">
+					VPN-Instance
+				</h1>
+				<hr />
+				<p
+					style="
+						font-weight: bold;
+						text-align: center;
+						font-size: 2rem;
+					">
+					Huawei
+				</p>
+				<div style="float: left">
+					<p
+						style="
+							font-weight: bold;
+							font-size: 1.5rem;
+							color: darkgreen;
+						">
+						VRF Definition
+					</p>
+					<div
+						style="
+							font-size: 1.5rem;
+							padding-left: 4rem;
+						">
+						<p style="font-weight: bold">
+							ip vpn-instance internet
+						</p>
+						<p style="padding-left: 4rem">
+							ipv4-family
+						</p>
+						<p style="padding-left: 8rem">
+							route-distinguisher 1:1
+						</p>
+						<p style="padding-left: 8rem">
+							vpn-target 1:1 export-extcommunity
+						</p>
+						<p style="padding-left: 8rem">
+							vpn-target 1:1 import-extcommunity
+						</p>
+						<p style="padding-left: 4rem">
+							ipv6-family
+						</p>
+						<p style="padding-left: 8rem">
+							route-distinguisher 1:1
+						</p>
+						<p style="padding-left: 8rem">
+							vpn-target 1:1 import-extcommunity
+						</p>
+						<p style="padding-left: 8rem">
+							vpn-target 1:1 import-extcommunity
+						</p>
+					</div>
+					<p
+						style="
+							font-weight: bold;
+							font-size: 1.5rem;
+							color: darkgreen;
+						">
+						Interface Binding
+					</p>
+					<div
+						style="
+							font-size: 1.5rem;
+							padding-left: 4rem;
+						">
+						<p>interface Ethernet x</p>
+						<p
+							style="
+								font-size: 1.5rem;
+								padding-left: 4rem;
+								font-weight: bold;
+							">
+							ip binding vpn-instance internet
+						</p>
+						<p
+							style="
+								font-size: 1.5rem;
+								padding-left: 4rem;
+							">
+							ipv6 address FD::1/64
+						</p>
+					</div>
+				</div>
+				<dir style="float: right"></dir>
+			</div>
+
+			<!-- IPv6 VRF huawei-2 -->
+			<div
+				id="Routing-vrf-Huawei-2"
+				class="step"
+				data-x="-1000"
+				data-y="1000"
+				data-z="0"
+				data-rotate="-45">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: olivedrab;
+						font-weight: bold;
+					">
+					VPN-Instance
+				</h1>
+				<hr />
+				<p
+					style="
+						font-weight: bold;
+						text-align: center;
+						font-size: 2rem;
+					">
+					Huawei
+				</p>
+				<div style="float: left">
+					<p
+						style="
+							font-weight: bold;
+							font-size: 1.5rem;
+							color: darkgreen;
+						">
+						VRF Definition
+					</p>
+					<div
+						style="
+							font-size: 1.5rem;
+							padding-left: 4rem;
+						">
+						<p style="font-weight: bold">
+							ipv6 vpn6-instance internet
+						</p>
+						<p style="padding-left: 8rem">
+							route-distinguisher 1:1
+						</p>
+						<p style="padding-left: 8rem">
+							vpn-target 1:1 import-extcommunity
+						</p>
+						<p style="padding-left: 8rem">
+							vpn-target 1:1 import-extcommunity
+						</p>
+					</div>
+					<p
+						style="
+							font-weight: bold;
+							font-size: 1.5rem;
+							color: darkgreen;
+						">
+						Interface Binding
+					</p>
+					<div
+						style="
+							font-size: 1.5rem;
+							padding-left: 4rem;
+						">
+						<p>interface Ethernet x</p>
+						<p
+							style="
+								font-size: 1.5rem;
+								padding-left: 4rem;
+								font-weight: bold;
+							">
+							ipv6 binding vpn6-instance internet
+						</p>
+						<p
+							style="
+								font-size: 1.5rem;
+								padding-left: 4rem;
+							">
+							ipv6 address FD::1/64
+						</p>
+					</div>
+				</div>
+				<dir style="float: right"></dir>
 			</div>
 
 			<!-- IPv6 Security - Chapter IPV6 SECURITY -->
@@ -3598,6 +4030,16 @@
 						margin: auto;
 						height: 95%;
 					" />
+				<p
+					style="
+						font-size: 1.2rem;
+						margin-top: 1rem;
+						color: dimgray;
+					">
+					AH relies on a hash (integrity check value)
+					operation similar in concept to the CRC used on
+					frames
+				</p>
 			</div>
 
 			<!-- IPv6 Security - OSPF Encryption-->
@@ -3684,7 +4126,7 @@
 				<p class="fs1half">!</p>
 			</div>
 
-			<!-- IPv6 Security - OSPF Encryption-->
+			<!-- IPv6 Security - OSPF Encryption algorithm-->
 			<div
 				id="IPv6-Sec-encryption-algorithm"
 				class="step"
@@ -3710,6 +4152,14 @@
 							style="font-size: 1rem; color: black">
 							- Data Encryption Standard</span
 						>
+						<span
+							style="
+								color: dimgray;
+								font-size: 1rem;
+							">
+							- no longer considered secure - 56-bit
+							key</span
+						>
 					</li>
 					<li style="color: dodgerblue">
 						<span class="bold">3DES</span
@@ -3717,6 +4167,14 @@
 							style="font-size: 1rem; color: black">
 							- Triple Data Encryption
 							Standard</span
+						>
+						<span
+							style="
+								color: dimgray;
+								font-size: 1rem;
+							">
+							- 3DES was developed as a more secure
+							alternative - 168-bit key</span
 						>
 					</li>
 					<li style="color: dodgerblue">
@@ -4062,6 +4520,19 @@
 				</p>
 				<p class="fs1 pl2">device-role host</p>
 				<p class="fs1">!</p>
+				<p class="fs1">interface ethernet 0/1</p>
+				<p class="fs1 pl2">
+					ipv6 nd raguard attach-policy
+					<span
+						style="
+							font-weight: bold;
+							color: deepskyblue;
+						"
+						>HOSTS</span
+					>
+				</p>
+				<hr style="width: 30%; border: 1px solid lightblue" />
+				<p class="fs1">!</p>
 				<p class="fs1">
 					ipv6 prefix-list
 					<span style="color: deeppink">PREFIX</span>
@@ -4095,18 +4566,6 @@
 						>ROUTERS</span
 					>
 				</p>
-				<p class="fs1">!</p>
-				<p class="fs1">interface ethernet 0/1</p>
-				<p class="fs1 pl2">
-					ipv6 nd raguard attach-policy
-					<span
-						style="
-							font-weight: bold;
-							color: deepskyblue;
-						"
-						>HOSTS</span
-					>
-				</p>
 			</div>
 
 			<!-- IPv6 Security - First-hop-security DHCPV6 GUARD -->
@@ -4135,6 +4594,7 @@
 						margin: auto;
 					" />
 			</div>
+			<hr style="width: 50%; border: 1px solid lightblue" />
 
 			<!-- IPv6 Security - First-hop-security DHCPV6 GUARD config -->
 			<div
@@ -4154,6 +4614,20 @@
 					IPv6 FHS - DHCPv6 Guard
 				</h1>
 				<hr />
+				<p style="font-size: 1.2rem; color: darkviolet">
+					DHCPv6 Guard Roles:
+				</p>
+				<ul
+					style="
+						font-size: 1.2rem;
+						list-style-type: circle;
+						padding-left: 4rem;
+					">
+					<li>Server</li>
+					<li>Client</li>
+				</ul>
+				<hr style="width: 50%; border: 1px solid lightblue" />
+
 				<p class="fs1">
 					ipv6 dhcp guard policy
 					<span style="color: deepskyblue">SERVER</span>
@@ -4177,11 +4651,14 @@
 					ipv6 dhcp guard attach-policy
 					<span style="color: deeppink">CLIENT</span>
 				</p>
-				<hr />
-				<p class="fs1half">Advanced DHCPv6 Options</p>
+				<hr style="width: 50%; border: 1px solid lightblue" />
+
+				<p style="color: darkviolet; font-size: 1.2rem">
+					Advanced DHCPv6 Options
+				</p>
 				<ul
 					style="
-						font-size: 1.5rem;
+						font-size: 1.2rem;
 						list-style-type: circle;
 						padding-left: 4rem;
 						color: dimgray;
@@ -4255,6 +4732,9 @@
 					IPv6 FHS - ND Inspection
 				</h1>
 				<hr />
+				<p style="font-size: 1.2rem; color: dimgray">
+					Host-1 needs MAC address of Host-2
+				</p>
 				<img
 					src="assets/images/ND-insp.png"
 					style="
@@ -4278,9 +4758,9 @@
 				<p class="fs1">!</p>
 			</div>
 
-			<!-- IPv6 Security - First-hop-security  Source Guard-->
+			<!-- IPv6 Security - First-hop-security  Source Guard info-->
 			<div
-				id="IPv6-Sec-FHS-source-guard"
+				id="IPv6-Sec-FHS-source-guard-info"
 				class="step"
 				data-x="0"
 				data-y="1000"
@@ -4296,12 +4776,19 @@
 					IPv6 FHS - Source Guard
 				</h1>
 				<hr />
-				<p class="fs1half" style="color: deeppink">
+				<p style="text-align: center; font-size: 1.2rem">
+					<span style="font-weight: bold"
+						>Source Guard</span
+					>
+					: Drops inbound traffic that are not in the IPv6
+					Binding-Table
+				</p>
+				<p style="color: deeppink; font-size: 1.2rem">
 					IPv6 Binding-Table contains:
 				</p>
 				<ul
 					style="
-						font-size: 1.5rem;
+						font-size: 1.2rem;
 						list-style-type: disc;
 						padding-left: 4rem;
 					">
@@ -4310,12 +4797,14 @@
 					<li>VLAN</li>
 					<li>Interface ID</li>
 				</ul>
+				<hr style="width: 50%; border: 1px solid lightblue" />
+
 				<p class="fs1half" style="color: deeppink">
 					IPv6 Binding-Table fills by:
 				</p>
 				<ul
 					style="
-						font-size: 1.5rem;
+						font-size: 1.2rem;
 						list-style-type: disc;
 						padding-left: 4rem;
 					">
@@ -4323,25 +4812,130 @@
 					<li>NDP</li>
 					<li>Static binding</li>
 				</ul>
+				<hr style="width: 50%; border: 1px solid lightblue" />
+
+				<p style="font-size: 1.2rem; color: deeppink">
+					Source Guard Security Level
+				</p>
+				<ul
+					style="
+						font-size: 1.2rem;
+						list-style-type: disc;
+						padding-left: 4rem;
+					">
+					<li>
+						glean
+						<span
+							style="
+								font-size: 1rem;
+								color: dimgray;
+							">
+							- Gleans addresses from messages and
+							populates the binding table without
+							any verification</span
+						>
+					</li>
+					<li>
+						guard
+						<span
+							style="
+								font-size: 1rem;
+								color: dimgray;
+							">
+							- Gleans addresses and inspects
+							messages and it rejects RA and DHCP
+							server messages - default
+						</span>
+					</li>
+					<li>
+						inspect
+						<span
+							style="
+								font-size: 1rem;
+								color: dimgray;
+							"
+							>Gleans addresses, validates messages
+							for consistency and conformance
+						</span>
+					</li>
+				</ul>
+			</div>
+
+			<!-- IPv6 Security - First-hop-security  Source Guard-->
+			<div
+				id="IPv6-Sec-FHS-source-guard"
+				class="step"
+				data-x="0"
+				data-y="1000"
+				data-z="2"
+				data-rotate="240">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: blueviolet;
+						font-weight: bold;
+					">
+					IPv6 FHS - Source Guard
+				</h1>
 				<hr />
-				<p
-					class="fs1half"
-					style="text-align: center; color: deeppink">
-					<span style="font-weight: bold"
-						>Source Guard</span
-					>
-					: Drops inbound traffic that are not in the IPv6
-					Binding-Table
-				</p>
-				<p class="fs1">!</p>
-				<p class="fs1">ipv6 snooping policy example_policy</p>
-				<p class="fs1 pl4">security-level glean</p>
-				<p class="fs1">!</p>
-				<p class="fs1">interface ethernet 0/0</p>
-				<p class="fs1 pl4">
-					ipv6 snooping attach-policy example_policy
-				</p>
-				<p class="fs1">!</p>
+				<dir style="font-size: 1.5rem">
+					<p>!</p>
+					<p>ipv6 snooping policy example_policy</p>
+					<p class="pl4">
+						security-level
+						<span
+							style="
+								font-weight: bold;
+								color: deeppink;
+							"
+							>glean</span
+						>
+					</p>
+					<p>!</p>
+					<p>interface ethernet 0/0</p>
+					<p class="pl4">
+						ipv6 snooping attach-policy example_policy
+					</p>
+					<p>!</p>
+					<hr
+						style="
+							width: 50%;
+							border: 1px solid lightblue;
+						" />
+					<p
+						style="
+							font-size: 1.5rem;
+							color: dimgray;
+							text-align: center;
+						">
+						It ensures that only
+						<span
+							style="
+								font-weight: bold;
+								color: darkcyan;
+							"
+							>legitimate traffic</span
+						>
+						from
+						<span
+							style="
+								font-weight: bold;
+								color: darkcyan;
+							"
+							>specified interface</span
+						>
+						and from
+						<span
+							style="
+								font-weight: bold;
+								color: darkcyan;
+							"
+							>known sources</span
+						>
+						(entries in the binding table) is allowed
+					</p>
+				</dir>
 			</div>
 
 			<!-- IPv6 Security - First-hop-security  pacl-->
@@ -4351,7 +4945,7 @@
 				data-x="0"
 				data-y="1000"
 				data-z="2"
-				data-rotate="220">
+				data-rotate="280">
 				<h1
 					style="
 						font-size: 2rem;
@@ -4435,9 +5029,7 @@
 					through a process called encapsulation.
 				</p>
 				<p class="fs1">!</p>
-				<p class="fs1 bold">
-					interface Tunnel 0 tunnel destination Y tunnel
-				</p>
+				<p class="fs1 bold">interface Tunnel 0</p>
 				<p class="fs1 pl4">
 					ip address x.x.x.x | ipv6 address x::y
 				</p>
@@ -4522,7 +5114,13 @@
 						IPv6 over IP encapsulation
 					</li>
 					<li>
-						<span style="font-weight: bold">mpls</span>
+						<span
+							style="
+								font-weight: bold;
+								color: darkcyan;
+							"
+							>mpls</span
+						>
 						MPLS encapsulations
 					</li>
 					<li>
@@ -4579,7 +5177,9 @@
 						ipv6)
 					</li>
 					<li>
-						IPv6IP
+						<span style="font-weight: bold"
+							>IPv6IP</span
+						>
 						<ul
 							style="
 								list-style-type: square;
@@ -4883,7 +5483,11 @@
 				</ul>
 				<img
 					src="assets/images/6to4.png"
-					style="display: block; margin: auto" />
+					style="
+						display: block;
+						margin: auto;
+						width: 70%;
+					" />
 			</div>
 
 			<!-- Tunneling - Chapter Tunneling Automatic 6to4 src-->
@@ -4904,8 +5508,8 @@
 					IPv6 Automatic 6to4 Tunneling - Source-IP
 				</h1>
 				<hr />
-				<p class="fs1half">Tunnel source-IP is important</p>
-				<p class="fs1half">
+				<p class="fs1">Tunnel source-IP is important</p>
+				<p class="fs1">
 					Tunnel IPv6 source-IP should contain IPv4 address
 				</p>
 				<p
@@ -4916,21 +5520,64 @@
 					">
 					Automatic 6to4 IPv4 to IPv6
 				</p>
-				<p style="font-size: 1.5rem; text-align: center">
-					<span style="color: tomato">6to4-Prefix </span>+
-					<span style="color: blueviolet">IPv4-Hex</span> +
-					<span style="color: darkmagenta">subnet</span>
+				<p
+					style="
+						font-size: 1.5rem;
+						text-align: center;
+						font-weight: bold;
+						margin-top: 1rem;
+					">
+					<span
+						style="
+							background-color: cornflowerblue;
+							color: white;
+							padding: 5px;
+						"
+						>6to4-Prefix - 16bit </span
+					>+
+					<span
+						style="
+							background-color: firebrick;
+							color: white;
+							padding: 5px;
+						"
+						>IPv4-Hex-32bit</span
+					>
+					+
+					<span
+						style="
+							background-color: yellowgreen;
+							color: white;
+							padding: 5px;
+						"
+						>subnet-16bit</span
+					>
 					<span style="color: olivedrab">/64</span> +
-					<span style="color: firebrick">Host</span>
+					<span
+						style="
+							background-color: lightslategray;
+							color: white;
+							padding: 5px;
+						"
+						>Host-64bit</span
+					>
 				</p>
 				<img
 					src="assets/images/6to4-ip.png"
 					style="
 						display: block;
 						margin: auto;
-						width: 80%;
+						width: 60%;
+						display: none;
 					" />
-				<ul style="font-size: 1.5rem; list-style-type: circle">
+				<hr style="width: 50%; border: 1px solid lightblue" />
+
+				<ul
+					style="
+						font-size: 1rem;
+						list-style-type: circle;
+						margin-top: 1rem;
+					">
 					<li>6to4 Prefix : 2002::/16</li>
 					<li>
 						IPv4 hex-format:
@@ -4948,12 +5595,12 @@
 								10.10.1.6 => 0A.0A.01.06 =>
 								A0A.106
 							</li>
-							<li>
-								172.16.18.1 => AC.10.12.1 =>
-								AC10.1201
-							</li>
 						</ul>
-						<hr />
+						<hr
+							style="
+								width: 50%;
+								border: 1px solid lightblue;
+							" />
 						<ul style="font-size: 1rem">
 							<li>
 								192.168.1.1 =>
@@ -4962,15 +5609,11 @@
 							<li>
 								10.10.1.6 => 2002:A0A.106::/64
 							</li>
-							<li>
-								172.16.18.1 =>
-								2002:AC10.1201::/64
-							</li>
 						</ul>
 					</li>
 				</ul>
-				<hr />
-				<p style="font-size: 1.5rem">6to4 Prefix by command</p>
+				<hr style="width: 50%; border: 1px solid lightblue" />
+				<p style="font-size: 1rem">6to4 Prefix by command</p>
 				<p
 					style="
 						font-size: 1.5rem;
@@ -5242,16 +5885,45 @@
 						color: steelblue;
 						padding-left: 4rem;
 					">
-					<li>IPv6 Prefix</li>
+					<li>IPv6 Prefix - default is /32</li>
 					<li>IPv4 Prefix-Length</li>
 					<li>BR router</li>
 				</ul>
 				<p style="font-size: 1.5rem; text-align: center">
-					<span style="color: tomato">6RD-Prefix </span>+
-					<span style="color: blueviolet">IPv4-Hex</span> +
-					<span style="color: darkmagenta">subnet</span>
+					<span
+						style="
+							background-color: darkturquoise;
+							color: white;
+							padding: 5px;
+						"
+						>6RD-Prefix - 32bit</span
+					>+
+					<span
+						style="
+							background-color: greenyellow;
+							color: black;
+							padding: 5px;
+						"
+						>IPv4-Hex</span
+					>
+					+
+					<span
+						style="
+							background-color: yellow;
+							color: black;
+							padding: 5px;
+						"
+						>subnet</span
+					>
 					<span style="color: olivedrab">/64</span> +
-					<span style="color: firebrick">Host</span>
+					<span
+						style="
+							background-color: lightslategray;
+							color: white;
+							padding: 5px;
+						"
+						>Host - 64bit</span
+					>
 				</p>
 				<p
 					style="
@@ -5379,7 +6051,7 @@
 						>::/64</span
 					>
 				</p>
-				<hr />
+				<hr style="width: 50%; border: 1px solid lightblue" />
 				<p class="fs1 bold">interface Tunnel 0</p>
 				<p class="fs1 pl4">ipv6 enable</p>
 				<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
@@ -5409,7 +6081,7 @@
 						>::/48</span
 					>
 				</p>
-				<hr />
+				<hr style="width: 50%; border: 1px solid lightblue" />
 				<p style="font-size: 1.3rem; color: dimgray">
 					Command To Generate 6RD Prefix:
 					<span style="font-weight: bold; color: darkcyan">
@@ -5534,7 +6206,6 @@
 						>
 						6rd Tunnel0
 					</p>
-					<p class="fs1">!</p>
 					<p class="fs1 bold">interface Tunnel 0</p>
 					<p class="fs1 pl4">ipv6 enable</p>
 					<p class="fs1 pl4">tunnel source Ethernet0/2</p>
