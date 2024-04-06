@@ -59,7 +59,6 @@
 		<div class="fallback-message">
 			<p>Your Browser Do Not Support</p>
 		</div>
-
 		<!-- ...... -->
 
 		<div
@@ -71,6 +70,7 @@
 			data-min-scale="0"
 			data-perspective="1000">
 			<!-- data-autoplay="7" -->
+
 			<!-- Start -->
 			<div
 				class="step"
@@ -3534,7 +3534,7 @@
 					">
 					Huawei
 				</p>
-				<div style="float: left">
+				<div>
 					<p
 						style="
 							font-weight: bold;
@@ -3570,7 +3570,7 @@
 							route-distinguisher 1:1
 						</p>
 						<p style="padding-left: 8rem">
-							vpn-target 1:1 import-extcommunity
+							vpn-target 1:1 export-extcommunity
 						</p>
 						<p style="padding-left: 8rem">
 							vpn-target 1:1 import-extcommunity
@@ -3607,7 +3607,6 @@
 						</p>
 					</div>
 				</div>
-				<dir style="float: right"></dir>
 			</div>
 
 			<!-- IPv6 VRF huawei-2 -->
@@ -3636,7 +3635,7 @@
 					">
 					Huawei
 				</p>
-				<div style="float: left">
+				<div>
 					<p
 						style="
 							font-weight: bold;
@@ -3657,7 +3656,7 @@
 							route-distinguisher 1:1
 						</p>
 						<p style="padding-left: 8rem">
-							vpn-target 1:1 import-extcommunity
+							vpn-target 1:1 export-extcommunity
 						</p>
 						<p style="padding-left: 8rem">
 							vpn-target 1:1 import-extcommunity
@@ -3694,7 +3693,6 @@
 						</p>
 					</div>
 				</div>
-				<dir style="float: right"></dir>
 			</div>
 
 			<!-- IPv6 Security - Chapter IPV6 SECURITY -->
@@ -6077,7 +6075,7 @@
 					<span style="font-size: 1.2rem; color: crimson"
 						>2000:ABCD:<span
 							style="background-color: bisque"
-							>CECE</span
+							>6464</span
 						>::/48</span
 					>
 				</p>
@@ -6367,12 +6365,13 @@
 						Headend Router Helps Clients to Configure
 						Themselves (RS-RA)
 					</li>
+					<li>Headend ISATAP EUI-64 Standard</li>
 				</ul>
 
 				<img
 					src="assets/images/ISTAP-IPV4.png"
 					style="
-						width: 50%;
+						width: 40%;
 						display: block;
 						margin: auto;
 						margin-top: 1rem;
@@ -6397,7 +6396,7 @@
 					IPv6 ISATAP
 				</h1>
 				<hr />
-				<p style="margin-bottom: 2rem; font-size: 1.5rem">
+				<p style="margin-bottom: 1.5rem; font-size: 1.5rem">
 					<span style="font-weight: bold">Headend</span> Can
 					Use
 					<span style="color: darkcyan; font-weight: bold"
@@ -6411,7 +6410,7 @@
 				<ul
 					style="
 						list-style-type: square;
-						font-size: 1.5rem;
+						font-size: 1.2rem;
 						padding-left: 2rem;
 					">
 					<li>
@@ -6478,11 +6477,15 @@
 					</li>
 				</ul>
 				<hr />
-				<p style="margin-bottom: 2rem; font-size: 1.5rem">
+				<p style="margin-bottom: 1.5rem; font-size: 1.5rem">
 					<span style="font-weight: bold">Clients</span> Can
 					Use
 					<span style="color: deeppink; font-weight: bold"
 						>SLAAC-Autoconfig</span
+					>
+					Or
+					<span style="color: deeppink; font-weight: bold"
+						>EUI-64</span
 					>
 					Or
 					<span style="color: deeppink; font-weight: bold"
@@ -6492,7 +6495,7 @@
 				<ul
 					style="
 						list-style-type: square;
-						font-size: 1.5rem;
+						font-size: 1.2rem;
 						padding-left: 2rem;
 					">
 					<li>
@@ -6508,6 +6511,20 @@
 							ipv6 address autoconfig default
 						</p>
 					</li>
+
+					<li>
+						<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>EUI-64:
+						</span>
+						<p style="text-align: center">
+							ipv6 address PREFIX/64 eui-64
+						</p>
+					</li>
+
 					<li>
 						<span
 							style="
@@ -6621,6 +6638,7 @@
 						padding-left: 4rem;
 					">
 					<li>ipv6 address autoconfig</li>
+					<li>ipv6 address 2000::/64 eui-64</li>
 					<li>ipv6 address 2000::A0B:C0D/64</li>
 				</ul>
 			</div>
@@ -6828,7 +6846,11 @@
 				</ul>
 				<img
 					src="assets/images/6PE.png"
-					style="display: block; margin: auto" />
+					style="
+						display: block;
+						margin: auto;
+						width: 70%;
+					" />
 			</div>
 			<!-- Tunneling - Chapter Tunneling MPLS Network 6PE-topo -->
 			<div
@@ -6891,81 +6913,35 @@
 							font-size: 1rem;
 							font-weight: bold;
 							padding-left: 2rem;
-							color: dimgray;
 						">
 						router bgp 1
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor FD:79::9 remote-as 2
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 8.8.8.8 remote-as 1
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 8.8.8.8 update-source Loopback0
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 20.20.73.3 remote-as 2
 					</p>
 					<p style="font-size: 1rem; color: dimgray">!</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						address-family ipv4
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 8.8.8.8 activate
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 8.8.8.8 next-hop-self
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 20.20.73.3 activate
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						exit-address-family
 					</p>
 					<p style="font-size: 1rem; color: dimgray">!</p>
@@ -6974,19 +6950,13 @@
 							font-size: 1rem;
 							font-weight: bold;
 							padding-left: 2rem;
-							color: dimgray;
 						">
 						address-family
 						<span style="background-color: chartreuse"
 							>ipv6</span
 						>
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor FD:79::9 activate
 					</p>
 					<p
@@ -6994,7 +6964,6 @@
 							font-size: 1rem;
 							padding-left: 4rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						neighbor
 						<span style="background-color: chartreuse"
@@ -7007,7 +6976,6 @@
 							font-size: 1rem;
 							padding-left: 4rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						neighbor
 						<span style="background-color: chartreuse"
@@ -7020,19 +6988,13 @@
 							font-size: 1rem;
 							padding-left: 4rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						neighbor
 						<span style="background-color: chartreuse"
 							>8.8.8.8 send-label</span
 						>
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						exit-address-family
 					</p>
 					<p style="font-size: 1rem; color: dimgray">!</p>
@@ -7048,65 +7010,29 @@
 							font-size: 1rem;
 							font-weight: bold;
 							padding-left: 2rem;
-							color: dimgray;
 						">
 						router bgp 1
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 7.7.7.7 remote-as 1
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 7.7.7.7 update-source Loopback0
 					</p>
 					<p style="font-size: 1rem; color: dimgray">!</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						address-family ipv4
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						redistribute static
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 7.7.7.7 activate
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 7.7.7.7 next-hop-self
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						exit-address-family
 					</p>
 					<p style="font-size: 1rem; color: dimgray">!</p>
@@ -7115,26 +7041,19 @@
 							font-size: 1rem;
 							font-weight: bold;
 							padding-left: 2rem;
-							color: dimgray;
 						">
 						address-family
 						<span style="background-color: chartreuse"
 							>ipv6</span
 						>
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						redistribute static
 					</p>
 					<p
 						style="
 							font-size: 1rem;
 							padding-left: 4rem;
-							color: dimgray;
 							font-weight: bold;
 						">
 						neighbor
@@ -7147,7 +7066,6 @@
 						style="
 							font-size: 1rem;
 							padding-left: 4rem;
-							color: dimgray;
 							font-weight: bold;
 						">
 						neighbor
@@ -7160,7 +7078,6 @@
 						style="
 							font-size: 1rem;
 							padding-left: 4rem;
-							color: dimgray;
 							font-weight: bold;
 						">
 						neighbor
@@ -7168,15 +7085,10 @@
 							>7.7.7.7 send-label</span
 						>
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						exit-address-family
 					</p>
-					<p style="font-size: 1rem; color: dimgray">!</p>
+					<p style="font-size: 1rem">!</p>
 				</div>
 			</div>
 			<!-- Tunneling - Chapter Tunneling MPLS Network 6PE-capture -->
@@ -7303,57 +7215,26 @@
 							font-size: 1rem;
 							font-weight: bold;
 							padding-left: 2rem;
-							color: dimgray;
 						">
 						router bgp 1
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 8.8.8.8 remote-as 1
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 8.8.8.8 update-source Loopback0
 					</p>
 					<p style="font-size: 1rem; color: dimgray">!</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						address-family vpnv4
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 8.8.8.8 activate
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 8.8.8.8 send-community extended
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						exit-address-family
 					</p>
 					<p style="font-size: 1rem; color: dimgray">!</p>
@@ -7362,7 +7243,6 @@
 							font-size: 1rem;
 							padding-left: 2rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						address-family
 						<span style="background-color: gold"
@@ -7375,7 +7255,6 @@
 							font-size: 1rem;
 							padding-left: 4rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						neighbor
 						<span style="background-color: gold"
@@ -7388,7 +7267,6 @@
 							font-size: 1rem;
 							padding-left: 4rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						neighbor
 						<span style="background-color: gold"
@@ -7401,42 +7279,21 @@
 							font-size: 1rem;
 							padding-left: 2rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						exit-address-family
 					</p>
 					<p style="font-size: 1rem; color: dimgray">!</p>
 
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						address-family ipv4 vrf V4
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 20.20.73.3 remote-as 2
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 20.20.73.3 activate
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						exit-address-family
 					</p>
 					<p style="font-size: 1rem; color: dimgray">!</p>
@@ -7445,7 +7302,6 @@
 							font-size: 1rem;
 							font-weight: bold;
 							padding-left: 2rem;
-							color: dimgray;
 						">
 						address-family<span
 							style="background-color: gold">
@@ -7457,7 +7313,6 @@
 							font-size: 1rem;
 							padding-left: 4rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						neighbor FD:79::9 remote-as 2
 					</p>
@@ -7466,7 +7321,6 @@
 							font-size: 1rem;
 							padding-left: 4rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						neighbor FD:79::9 activate
 					</p>
@@ -7475,7 +7329,6 @@
 							font-size: 1rem;
 							padding-left: 2rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						exit-address-family
 					</p>
@@ -7492,57 +7345,26 @@
 							font-size: 1rem;
 							font-weight: bold;
 							padding-left: 2rem;
-							color: dimgray;
 						">
 						router bgp 1
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 7.7.7.7 remote-as 1
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 7.7.7.7 update-source Loopback0
 					</p>
 					<p style="font-size: 1rem; color: dimgray">!</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						address-family vpnv4
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 7.7.7.7 activate
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						neighbor 7.7.7.7 send-community extended
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						exit-address-family
 					</p>
 					<p style="font-size: 1rem; color: dimgray">!</p>
@@ -7551,7 +7373,6 @@
 							font-size: 1rem;
 							padding-left: 2rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						address-family
 						<span style="background-color: gold"
@@ -7564,7 +7385,6 @@
 							font-size: 1rem;
 							padding-left: 4rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						neighbor
 						<span style="background-color: gold"
@@ -7577,7 +7397,6 @@
 							font-size: 1rem;
 							padding-left: 4rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						neighbor
 						<span style="background-color: gold"
@@ -7590,40 +7409,23 @@
 							font-size: 1rem;
 							padding-left: 2rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						exit-address-family
 					</p>
 					<p style="font-size: 1rem; color: dimgray">!</p>
 
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						address-family ipv4 vrf V4
 					</p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 4rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 4rem">
 						redistribute static
 					</p>
 					<p
 						style="
 							font-size: 1rem;
 							padding-left: 4rem;
-							color: dimgray;
 						"></p>
-					<p
-						style="
-							font-size: 1rem;
-							padding-left: 2rem;
-							color: dimgray;
-						">
+					<p style="font-size: 1rem; padding-left: 2rem">
 						exit-address-family
 					</p>
 					<p style="font-size: 1rem; color: dimgray">!</p>
@@ -7632,7 +7434,6 @@
 							font-size: 1rem;
 							font-weight: bold;
 							padding-left: 2rem;
-							color: dimgray;
 						">
 						address-family<span
 							style="background-color: gold">
@@ -7644,7 +7445,6 @@
 							font-size: 1rem;
 							padding-left: 4rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						redistribute static
 					</p>
@@ -7654,7 +7454,6 @@
 							font-size: 1rem;
 							padding-left: 2rem;
 							font-weight: bold;
-							color: dimgray;
 						">
 						exit-address-family
 					</p>
@@ -7847,7 +7646,13 @@
 					IPv6 over GRE with IPSec
 				</h1>
 				<hr />
-				<ul style="list-style-type: decimal; font-size: 1.5rem">
+				<p style="font-size: 1.5rem; color: darkcyan">Steps:</p>
+				<ul
+					style="
+						list-style-type: decimal;
+						font-size: 1.2rem;
+						padding-left: 4rem;
+					">
 					<li>Verify Two End-Point Network Connectivity</li>
 					<li>Establish GRE Tunneling</li>
 					<li>Verify Traffic Over GRE Tunnel</li>
@@ -8418,7 +8223,8 @@
 								R1 to ASBR-1 connection is VPNv6
 							</li>
 							<li>
-								ASBR-1 with ASBR-2 is IP-Based
+								ASBR-1 with ASBR-2 is IPv6-Based
+								- Traffics under sub-interface
 							</li>
 							<li>ASBR-2 to R2 is VPNv6</li>
 						</ul>
@@ -8449,8 +8255,7 @@
 								font-size: 1.5rem;
 							">
 							<li>
-								PE-1 to PE-2 the connection is
-								VPNv6
+								R1 to R2 the connection is VPNv6
 							</li>
 						</ul>
 					</li>
@@ -8460,7 +8265,7 @@
 								background-color: pink;
 								color: dimgray;
 							"
-							>Option-D</span
+							>Option-D / AB</span
 						>
 						<ul
 							style="
@@ -8524,10 +8329,18 @@
 					<li>
 						Each VRF Needs A Sub-Interface Between ASBR
 					</li>
+					<li>
+						Each VRF Needs Its Own neigborhood Between
+						ASBR
+					</li>
 					<li>R1 To ASBR-1 : Double-MPLS-Tag</li>
 					<li>R2 To ASBR-2 : Double-MPLS-Tag</li>
-					<li>Inner-Tag : BGP</li>
-					<li>Outer-Tag : LDP</li>
+					<li style="padding-left: 4rem">
+						Inner-Tag : BGP
+					</li>
+					<li style="padding-left: 4rem">
+						Outer-Tag : LDP
+					</li>
 					<li>ASBR-1 To ASBR-2 : No-Tag</li>
 				</ul>
 			</div>
@@ -8701,8 +8514,12 @@
 					<li>One eBGP For All VRFs</li>
 					<li>R1 To ASBR-1 : Double-MPLS-Tag</li>
 					<li>R2 To ASBR-2 : Double-MPLS-Tag</li>
-					<li>Inner-Tag : BGP</li>
-					<li>Outer-Tag : LDP</li>
+					<li style="padding-left: 4rem">
+						Inner-Tag : BGP
+					</li>
+					<li style="padding-left: 4rem">
+						Outer-Tag : LDP
+					</li>
 					<li>ASBR-1 To ASBR-2 : One-MPLS-Tag</li>
 				</ul>
 			</div>
@@ -8997,7 +8814,6 @@
 				<hr />
 				<div style="float: left; font-size: 1rem">
 					<p style="font-weight: bold">R6</p>
-					<p>!</p>
 					<p class="bold">router bgp 2</p>
 					<p style="padding-left: 2rem">
 						neighbor 3.3.3.3 remote-as 1
@@ -9071,7 +8887,6 @@
 				</div>
 				<div style="font-size: 1rem; float: right">
 					<p style="font-weight: bold">R4</p>
-					<p>!</p>
 
 					<p>interface Ethernet 0/2</p>
 					<p style="padding-left: 2rem">
@@ -9636,7 +9451,7 @@
 					src="assets/images/sl-1.png"
 					style="
 						display: block;
-						height: 50%;
+						height: 40%;
 						margin: auto;
 					" />
 				<div style="font-size: 1rem; float: left">
@@ -9948,6 +9763,62 @@
 						margin: auto;
 					" />
 			</div>
+
+			<!-- IPv6 NAT - Chapter NAT - Static Stateful NAT64 capture 2-->
+			<div
+				id="IPv6-NAT-stateful-static-cap2"
+				class="step"
+				data-x="2000"
+				data-y="1000"
+				data-z="2"
+				data-rotate="-90">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkslateblue;
+						font-weight: bold;
+					">
+					IPv6 NAT - Stateful Static NAT64
+				</h1>
+				<hr />
+
+				<p style="font-size: 1rem; font-weight: bold">
+					R6: ping 64:FF9B::4 source 2000::1
+				</p>
+				<p
+					style="
+						font-size: 1rem;
+						color: dimgray;
+						font-weight: bold;
+					">
+					64:FF9B::4 => 4.4.4.4
+				</p>
+				<p
+					style="
+						font-size: 1rem;
+						color: dimgray;
+						font-weight: bold;
+					">
+					2000::1 => 20.20.20.20
+				</p>
+				<p
+					style="
+						font-size: 1rem;
+						font-weight: bold;
+						color: darkgreen;
+					">
+					Capture R4 ethernet 0/0
+				</p>
+				<img
+					src="assets/images/sf-cap-6.png"
+					style="
+						display: block;
+						width: 60%;
+						margin: auto;
+					" />
+			</div>
+
 			<!-- IPv6 NAT - Chapter NAT - Stateless NAT64 topo-2-->
 			<div
 				id="IPv6-NAT-stateful-topo-2"
@@ -9955,7 +9826,7 @@
 				data-x="2000"
 				data-y="1000"
 				data-z="2"
-				data-rotate="-90">
+				data-rotate="90">
 				<h1
 					style="
 						font-size: 2rem;
@@ -10022,7 +9893,7 @@
 				data-x="2000"
 				data-y="1000"
 				data-z="2"
-				data-rotate="90">
+				data-rotate="-90">
 				<h1
 					style="
 						font-size: 2rem;
@@ -10072,7 +9943,7 @@
 				data-x="2000"
 				data-y="1000"
 				data-z="2"
-				data-rotate="-90">
+				data-rotate="90">
 				<h1
 					style="
 						font-size: 2rem;
@@ -10098,7 +9969,7 @@
 				data-x="2000"
 				data-y="1000"
 				data-z="2"
-				data-rotate="90">
+				data-rotate="-90">
 				<h1
 					style="
 						font-size: 2rem;
@@ -10152,7 +10023,7 @@
 				data-x="2000"
 				data-y="1000"
 				data-z="2"
-				data-rotate="-90">
+				data-rotate="90">
 				<h1
 					style="
 						font-size: 2rem;
@@ -10203,7 +10074,7 @@
 				data-x="2000"
 				data-y="1000"
 				data-z="2"
-				data-rotate="90">
+				data-rotate="-90">
 				<h1
 					style="
 						font-size: 2rem;
@@ -10273,7 +10144,7 @@
 				data-x="2000"
 				data-y="1000"
 				data-z="2"
-				data-rotate="-90">
+				data-rotate="90">
 				<h1
 					style="
 						font-size: 2rem;
@@ -10363,7 +10234,7 @@
 				data-x="2000"
 				data-y="1000"
 				data-z="2"
-				data-rotate="90">
+				data-rotate="-90">
 				<h1
 					style="
 						font-size: 2rem;
@@ -10389,7 +10260,7 @@
 				data-x="2000"
 				data-y="1000"
 				data-z="2"
-				data-rotate="-90">
+				data-rotate="90">
 				<h1
 					style="
 						font-size: 2rem;
@@ -10415,7 +10286,7 @@
 				data-x="2000"
 				data-y="1000"
 				data-z="2"
-				data-rotate="90">
+				data-rotate="-90">
 				<h1
 					style="
 						font-size: 2rem;
@@ -10537,7 +10408,7 @@
 				data-x="2000"
 				data-y="1000"
 				data-z="2"
-				data-rotate="-90">
+				data-rotate="90">
 				<h1
 					style="
 						font-size: 2rem;
@@ -10680,7 +10551,7 @@
 				data-x="2000"
 				data-y="1000"
 				data-z="2"
-				data-rotate="90">
+				data-rotate="-90">
 				<h1
 					style="
 						font-size: 2rem;
@@ -10720,7 +10591,7 @@
 				data-x="2000"
 				data-y="1000"
 				data-z="2"
-				data-rotate="-90">
+				data-rotate="90">
 				<h1
 					style="
 						font-size: 2rem;
@@ -10805,16 +10676,6 @@
 				Press 'P' to launch speaker console.
 			</p>
 		</div>
-
-		<script>
-			if ("ontouchstart" in document.documentElement) {
-				document.querySelector(".hint").innerHTML =
-					"<p>Swipe left or right to navigate</p>";
-			}
-			document.addEventListener("contextmenu", (event) =>
-				event.preventDefault()
-			);
-		</script>
 
 		<script src="assets/js/impress.js"></script>
 		<script src="assets/js/impress-slide-num.js"></script>

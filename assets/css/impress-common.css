@@ -151,7 +151,7 @@ body.impress-mouse-timeout {
 	pointer-events: none;
 }
 .impress-enabled #impress {
-	pointer-events: auto;
+	pointer-events: none;
 }
 
 /*If you disable pointer-events, you need to re-enable them for the toolbar.
