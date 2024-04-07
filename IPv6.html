@@ -68,7 +68,8 @@
 			data-height="768"
 			data-max-scale="2"
 			data-min-scale="0"
-			data-perspective="1000">
+			data-perspective="1000"
+			style="color: darkslategray">
 			<!-- data-autoplay="7" -->
 
 			<!-- Start -->
@@ -83,8 +84,8 @@
 						text-align: center;
 						font-size: 10rem;
 						font-weight: bold;
-						color: darkcyan;
-						text-shadow: 10px 10px 20px deeppink;
+						color: mediumvioletred;
+						text-shadow: 5px 5px 5px black;
 					">
 					IPv6
 				</h1>
@@ -93,19 +94,22 @@
 						text-align: center;
 						font-size: 2rem;
 						color: cadetblue;
-						text-shadow: 10px 10px 50px deeppink;
+						text-shadow: 1px 1px 2px black;
 					">
 					<span style="font-size: 1rem">By</span>
 					<br />
 					Samad Ghanbari
-					<br />
-					<br />
-					<br />
+
 					<span
 						style="
-							font-size: 1.5rem;
-							color: dimgray;
-							text-shadow: 10px 10px 50px deeppink;
+							font-size: 1rem;
+							color: gray;
+							position: absolute;
+							bottom: -120px;
+							display: block;
+							width: 100%;
+							text-align: center;
+							text-shadow: 2px 2px 10px pink;
 						"
 						>Ghanbari.Samad@Gmail.com</span
 					>
@@ -126,6 +130,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 2px 3px 3px black;
 					">
 					Topics
 				</h1>
@@ -157,6 +162,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 2px 3px 3px black;
 					">
 					IPv6 Fundamentals
 				</h1>
@@ -192,6 +198,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 2px 3px 3px black;
 					">
 					IPv6 Routing
 				</h1>
@@ -226,6 +233,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 2px 3px 3px black;
 					">
 					IPv6 Security
 				</h1>
@@ -241,7 +249,21 @@
 						- OSPFv3 Authentication/Encryption
 					</li>
 					<li class="substep">- ISIS Authentication</li>
-					<li class="substep">- IPv6 First-Hop Security</li>
+					<li class="substep">
+						- IPv6 First-Hop Security
+						<ul
+							style="
+								font-weight: bold;
+								font-size: 1.5rem;
+								padding-left: 4rem;
+								list-style-type: square;
+							">
+							<li class="substep">RA Guard</li>
+							<li class="substep">DHCPv6 Guard</li>
+							<li class="substep">ND Inspection</li>
+							<li class="substep">Source Guard</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 
@@ -259,6 +281,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 2px 3px 3px black;
 					">
 					IPv6 Tunneling
 				</h1>
@@ -302,6 +325,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 2px 3px 3px black;
 					">
 					NAT64 / DNS64
 				</h1>
@@ -337,9 +361,9 @@
 					style="
 						font-size: 4rem;
 						text-align: center;
-						color: deepskyblue;
+						color: mediumvioletred;
 						font-weight: bold;
-						text-shadow: 5px 5px 10px darkcyan;
+						text-shadow: 2px 3px 3px black;
 					">
 					IPv6 Fundamentals
 				</h1>
@@ -357,24 +381,35 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 2px 3px 3px black;
 					">
 					Basics - IPv6 Featues
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<ul style="font-size: 2rem">
-					<li>- Larger address space</li>
-					<li>- No Broadcast traffic</li>
-					<li>
+				<ul
+					style="
+						font-size: 2rem;
+						color: darkslategray;
+						font-weight: bold;
+					">
+					<li class="substep">- Larger address space</li>
+					<li class="substep">- No Broadcast traffic</li>
+					<li class="substep">
 						- Stateless Address Autoconfiguration -
 						SLAAC
 					</li>
-					<li>- Address Renumbering</li>
-					<li>- IPsec</li>
-					<li>- Improved and Simplified L3 header</li>
-					<li>- Simple Interconnectivity</li>
-					<li>- Perfect Migration Tools</li>
+					<li class="substep">- Address Renumbering</li>
+					<li class="substep">- IPsec</li>
+					<li class="substep">
+						- Improved and Simplified L3 header
+					</li>
+					<li class="substep">
+						- Simple Interconnectivity
+					</li>
+					<li class="substep">- Perfect Migration Tools</li>
 				</ul>
 			</div>
 
@@ -390,23 +425,34 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 2px 3px 3px black;
 					">
 					Basics - Address Space
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<h1 style="color: deeppink">IPv4</h1>
+				<h1
+					style="
+						color: deeppink;
+						text-shadow: 2px 3px 3px black;
+						font-weight: bold;
+					">
+					IPv4
+				</h1>
 				<ul
 					style="
 						font-size: 2rem;
 						list-style-type: circle;
 						padding-left: 5rem;
+						font-weight: bold;
+						color: darkslategrey;
 					">
-					<li>32bit</li>
-					<li>4 billion</li>
-					<li>displayed as 4 octet</li>
-					<li>sample: X.X.X.X</li>
+					<li>32-Bit</li>
+					<li>4 Billion address space</li>
+					<li>Displayed as 4 octet</li>
+					<li>Sample: X.X.X.X</li>
 				</ul>
 			</div>
 
@@ -422,23 +468,94 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 2px 3px 3px black;
 					">
 					Basics - Address Space
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<h1 style="color: deeppink">IPv6</h1>
+				<h1
+					style="
+						color: deeppink;
+						font-weight: bold;
+						text-shadow: 2px 3px 3px black;
+					">
+					IPv6
+				</h1>
 				<ul
 					style="
 						font-size: 2rem;
 						list-style-type: circle;
 						padding-left: 5rem;
+						font-weight: bold;
+						color: darkslategray;
 					">
-					<li>128bit</li>
-					<li>~340 undecillion</li>
-					<li>displayed as 8 hextet</li>
-					<li>sample: X:X:X:X:X:X:X:X</li>
+					<li>128-Bit</li>
+					<li>~340 Undecillion</li>
+					<li>Displayed as 8 hextet</li>
+					<li>Sample: X:X:X:X:X:X:X:X</li>
+				</ul>
+			</div>
+			<!-- Basics address space IPv6 -->
+			<div
+				id="basics-Address-Space-IPv6"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="6000"
+				data-rotate="20">
+				<h1
+					style="
+						font-size: 3rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 2px 3px 3px black;
+					">
+					Basics - Address Space
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+
+				<h1
+					style="
+						color: deeppink;
+						font-weight: bold;
+						text-shadow: 2px 3px 3px black;
+					">
+					IPv6
+				</h1>
+				<ul
+					style="
+						font-size: 2rem;
+						list-style-type: circle;
+						padding-left: 5rem;
+						font-weight: bold;
+						color: darkslategray;
+					">
+					<li>128-Bit</li>
+					<li>
+						~340
+						<span
+							style="
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
+							"
+							>Undecillion</span
+						>
+					</li>
+					<li>
+						Displayed as 8
+						<span
+							style="
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
+							"
+							>hextet</span
+						>
+					</li>
+					<li>Sample: X:X:X:X:X:X:X:X</li>
 				</ul>
 			</div>
 
@@ -454,7 +571,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					Basics - Mathematics Review
 				</h1>
@@ -462,13 +581,14 @@
 
 				<ul
 					style="
-						font-size: 1rem;
+						font-size: 1.2rem;
 						list-style-type: square;
 						padding-left: 2rem;
 					">
 					<li
 						style="
-							color: dodgerblue;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 3px black;
 							font-weight: bold;
 							font-size: 2rem;
 						">
@@ -634,7 +754,13 @@
 							>one decillion</span
 						>
 					</li>
-					<li style="background-color: beige">
+					<li
+						style="
+							background-color: lightskyblue;
+							text-shadow: 1px 1px 1px black;
+							box-shadow: 1px 1px 1px black;
+							margin: 10px 0 10px 0;
+						">
 						1,000,<span
 							style="
 								color: olivedrab;
@@ -697,7 +823,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					Bitwise Group
 				</h1>
@@ -764,6 +892,8 @@
 							style="
 								color: deeppink;
 								font-weight: bold;
+								text-shadow: 1px 1px 1px black;
+								font-size: 1.2rem;
 							">
 							16 bit
 						</td>
@@ -771,14 +901,18 @@
 							style="
 								color: deeppink;
 								font-weight: bold;
+								font-size: 1.2rem;
+								text-shadow: 1px 1px 1px black;
 							">
-							Hexadectet/<span
+							Hexadectet /
+							<span
 								style="
 									font-size: 2rem;
 									color: crimson;
 								"
 								>Hextet</span
-							>/Doublet
+							>
+							/ Doublet
 						</td>
 					</tr>
 
@@ -797,13 +931,13 @@
 						<td>Hexlet</td>
 					</tr>
 				</table>
-				<hr style="width: 100%; border: 1px solid darkcyan" />
-
+				<br />
 				<p
 					style="
 						text-align: center;
-						color: crimson;
-						font-size: 2rem;
+						color: mediumvioletred;
+						font-size: 3rem;
+						text-shadow: 1px 1px 3px black;
 					">
 					1-Hextet = 16bit = 4-nibble = 2-Octet
 				</p>
@@ -821,23 +955,39 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Format
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p style="text-align: center; font-size: 2rem">
+				<p
+					style="
+						text-align: center;
+						font-size: 2rem;
+						color: darkslategray;
+						text-shadow: 1px 1px 1px black;
+					">
 					X:X:X:X:X:X:X:X / Y
 				</p>
-				<p style="font-size: 2rem">X is a 16-bit hexadecimal</p>
-				<p style="font-size: 2rem">no subnet-mask</p>
-				<p style="font-size: 2rem">We Use Prefix-Length</p>
+				<p style="font-size: 2rem; color: darkslategray">
+					X is a 16-bit hexadecimal
+				</p>
+				<p style="font-size: 2rem; color: darkslategray">
+					No subnet-mask
+				</p>
+				<p style="font-size: 2rem; color: darkslategray">
+					We Use Prefix-Length
+				</p>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<p
 					style="
-						font-size: 1.5rem;
+						font-size: 1.8rem;
+						text-shadow: 1px 1px 1px black;
+
 						font-weight: bold;
 						color: deeppink;
 					">
@@ -848,16 +998,21 @@
 				</p>
 				<br />
 
-				<table style="width: 100%; font-weight: bold">
-					<tr style="font-size: 1rem; color: deeppink">
+				<table
+					style="
+						width: 100%;
+						font-weight: bold;
+						text-shadow: 1px 1px 1px black;
+					">
+					<tr style="font-size: 1.5rem; color: deeppink">
 						<td>2200:1234:5678:ABCD::</td>
 						<td>Prefix</td>
 					</tr>
-					<tr style="font-size: 1rem; color: dodgerblue">
+					<tr style="font-size: 1.5rem; color: dodgerblue">
 						<td>1234:5678:ABCD:1234</td>
 						<td>Host</td>
 					</tr>
-					<tr style="font-size: 1rem; color: cadetblue">
+					<tr style="font-size: 1.5rem; color: cadetblue">
 						<td>64</td>
 						<td>Prefix-Length</td>
 					</tr>
@@ -876,18 +1031,29 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Practical Applications
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<ul style="font-size: 2rem; list-style-type: disc">
-					<li>
-						<span style="color: dodgerblue">ping</span>
+					<li class="substep">
+						<span
+							style="
+								color: mediumvioletred;
+								font-weight: bold;
+								text-shadow: 1px 1px 3px black;
+							"
+							>ping</span
+						>
 						<ul
 							style="
-								font-size: 1rem;
+								font-size: 2rem;
+								color: darkslategray;
+								font-weight: bold;
 								list-style-type: square;
 								padding-left: 4rem;
 							">
@@ -895,13 +1061,20 @@
 							<li>ping -6 ::1</li>
 						</ul>
 					</li>
-					<li>
-						<span style="color: dodgerblue"
+					<li class="substep">
+						<span
+							style="
+								color: mediumvioletred;
+								font-weight: bold;
+								text-shadow: 1px 1px 3px black;
+							"
 							>Network Share</span
 						>
 						<ul
 							style="
-								font-size: 1rem;
+								font-size: 2rem;
+								color: darkslategray;
+								font-weight: bold;
 								list-style-type: square;
 								padding-left: 4rem;
 							">
@@ -912,13 +1085,20 @@
 							</li>
 						</ul>
 					</li>
-					<li>
-						<span style="color: dodgerblue"
+					<li class="substep">
+						<span
+							style="
+								color: mediumvioletred;
+								text-shadow: 1px 1px 3px black;
+								font-weight: bold;
+							"
 							>Web Page</span
 						>
 						<ul
 							style="
-								font-size: 1rem;
+								font-size: 2rem;
+								color: darkslategray;
+								font-weight: bold;
 								list-style-type: square;
 								padding-left: 4rem;
 							">
@@ -943,13 +1123,24 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					Shortening IPv6 Addresses
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs1half">String of Zeros Replacement</p>
+				<p
+					style="
+						color: mediumvioletred;
+						font-weight: bold;
+						text-shadow: 1px 1px 1px black;
+						text-align: center;
+						font-size: 1.5rem;
+					">
+					String of Zeros Replacement
+				</p>
 				<p class="fs2">
 					2200:0000:ABCD:<span
 						style="color: crimson; font-weight: bold"
@@ -966,9 +1157,18 @@
 						>::</span
 					>1111
 				</p>
-				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<hr style="width: 50%; border: 1px solid lightblue" />
 
-				<p class="fs1half">Leading Zeros Removal</p>
+				<p
+					style="
+						color: mediumvioletred;
+						font-weight: bold;
+						text-shadow: 1px 1px 1px black;
+						text-align: center;
+						font-size: 1.5rem;
+					">
+					Leading Zeros Removal
+				</p>
 				<p class="fs2">
 					2200:<span
 						style="color: crimson; font-weight: bold"
@@ -995,63 +1195,80 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 Calculation
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p style="font-size: 1rem; text-align: center">
+				<p
+					style="
+						font-size: 1.5rem;
+						text-align: center;
+						font-weight: bold;
+						text-shadow: 1px 1px 1px black;
+					">
 					IPv6: 1234:4568:9ABC:DEF0:1234:5678:9ABC:DEF0 /
 					<span style="color: deeppink; font-weight: bold"
 						>43</span
 					>
 				</p>
-				<br />
-				<p style="font-weight: bold; font-size: 1rem">
-					Find the 43th bit Hextet 2*16=32 && 3*16=48 =>
-					<span style="color: dodgerblue"
-						>2*Hextet + 2*nibble + 3bit</span
-					>
+				
+				<p
+					style="
+						font-weight: bold;
+						font-size: 1.5rem;
+						text-shadow: 1px 1px 1px black;
+					">
+					Find the 43th bit Hextet <br />
+					2*16=32 <br />
+					3*16=48
+					<p style="color: mediumvioletred; font-size: 1.5rem;;text-shadow: 1px 1px 1px black;font-weight: bold; text-align: center;"
+						>2*Hextet + 2*nibble + 3bit</p>
 				</p>
-				<p style="font-size: 1rem; text-align: center">
+				<p style="font-size: 1.5rem; text-align: center;font-weight: bold;
+				text-shadow: 1px 1px 1px black;">
 					1234:4568:<span
 						style="color: deeppink; font-weight: bold"
 						>9ABC</span
 					>:DEF0:1234:5678:9ABC:DEF0
 				</p>
-				<p style="font-weight: bold; font-size: 1rem">
+				<hr style="width: 50%; border: 1px solid lightblue;">
+				<p style="font-weight: bold; font-size: 1.5rem; text-align: center;">
 					9A<span
 						style="
 							color: deeppink;
+							text-shadow: 1px 1px 1px black;
 							font-weight: bold;
-							font-size: 2rem;
+							font-size: 1.5rem;
 						"
 						>B</span
 					>C
 				</p>
-				<p style="font-weight: bold; font-size: 1rem">
+				<p style="font-weight: bold; font-size: 1.5rem;text-shadow: 1px 1px 1px black;text-align: center;">
 					B ~ 10<span
-						style="font-size: 2rem; color: deeppink"
+						style="font-size: 1.5rem; color: deeppink"
 						>1</span
 					>1 =>10<span
-						style="font-size: 2rem; color: deeppink"
+						style="font-size: 1.5rem; color: deeppink"
 						>1</span
 					>0 => A
 				</p>
-				<p style="font-weight: bold; font-size: 1rem">
+				<p style="font-weight: bold; font-size: 1.5rem; text-align: center;text-shadow: 1px 1px 1px black;">
 					9A<span
 						style="
 							color: deeppink;
 							font-weight: bold;
-							font-size: 2rem;
+							font-size: 1.5rem;
 						"
 						>A</span
 					>0
 				</p>
-				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<hr style="width: 50%; border: 1px solid lightblue;">
 
-				<table style="font-size: 1rem; width: 100%">
+				<table style="font-size: 1.5rem;font-weight: bold;text-shadow: 1px 1px 1px black; width: 100%">
 					<tr>
 						<td style="color: dodgerblue">Prefix</td>
 						<td>1234:4568:9AA0:: / 43</td>
@@ -1086,32 +1303,35 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 Calculation
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p style="font-size: 1rem; text-align: center">
+				<p style="font-size: 2rem; font-weight: bold; text-align: center">
 					IPv6: 1234:4568:9ABC:DEF0:1234:5678:9ABC:DEF0 /
 					<span style="color: deeppink; font-weight: bold"
 						>77</span
 					>
 				</p>
-				<br />
-				<p style="font-weight: bold; font-size: 1rem">
-					Find the 77th bit Hextet 4*16=32 && 5*16=80 =>
-					<span style="color: dodgerblue"
-						>4*Hextet + 3*nibble + 1bit</span
+				<p style="font-weight: bold; font-size: 1.2rem;text-shadow: 1px 1px 1px black;">
+					Find the 77th bit Hextet <br> 4*16=64 <br> 5*16=80 <br />
+					<p style="color: mediumvioletred; font-size: 1.5rem;;text-shadow: 1px 1px 1px black;font-weight: bold; text-align: center;"
+						>4*Hextet + 3*nibble + 1bit</p
 					>
 				</p>
-				<p style="font-size: 1rem; text-align: center">
+				<p style="font-size: 1.5rem; text-align: center;font-weight: bold;
+				text-shadow: 1px 1px 1px black;">
 					1234:4568:9ABC:DEF0:<span
 						style="color: deeppink; font-weight: bold"
 						>1234</span
 					>:5678:9ABC:DEF0
 				</p>
-				<p style="font-weight: bold; font-size: 1rem">
+				<hr style="width: 50%; border: 1px solid lightblue;">
+				<p style="font-weight: bold; font-size: 1.5rem; text-align: center;">
 					123<span
 						style="
 							color: deeppink;
@@ -1121,7 +1341,7 @@
 						>4</span
 					>
 				</p>
-				<p style="font-weight: bold; font-size: 1rem">
+				<p style="font-weight: bold; font-size: 1.5rem;text-shadow: 1px 1px 1px black;text-align: center;">
 					4 ~
 					<span style="font-size: 2rem; color: deeppink"
 						>0</span
@@ -1130,19 +1350,19 @@
 						>0</span
 					>000 => 0
 				</p>
-				<p style="font-weight: bold; font-size: 1rem">
+				<p style="font-weight: bold; font-size: 1.5rem; text-align: center;text-shadow: 1px 1px 1px black;">
 					123<span
 						style="
 							color: deeppink;
 							font-weight: bold;
-							font-size: 2rem;
+							font-size: 1.5rem;
 						"
 						>0</span
 					>
 				</p>
-				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<hr style="width: 50%; border: 1px solid lightblue" />
 
-				<table style="font-size: 1rem; width: 100%">
+				<table style="font-size: 1.5rem;font-weight: bold;text-shadow: 1px 1px 1px black; width: 100%">
 					<tr>
 						<td style="color: dodgerblue">Prefix</td>
 						<td>1234:4568:9ABC:DEF0:1230:: / 77</td>
@@ -1177,7 +1397,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 Split
 				</h1>
@@ -1258,7 +1480,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 Split
 				</h1>
@@ -1360,7 +1584,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 Address Types
 				</h1>
@@ -1453,7 +1679,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 Address Assignment
 				</h1>
@@ -1488,7 +1716,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 EUI-64
 				</h1>
@@ -1528,7 +1758,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 EUI-64
 				</h1>
@@ -1614,7 +1846,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 Summarization
 				</h1>
@@ -1718,7 +1952,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 General Prefix
 				</h1>
@@ -1800,7 +2036,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 SNMA - Solicited Node Multicast Address
 				</h1>
@@ -1910,7 +2148,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv4 Multicast MAC Addresses
 				</h1>
@@ -1951,7 +2191,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 Multicast MAC Addresses
 				</h1>
@@ -1989,7 +2231,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 Neighbor Discovery Protocol
 				</h1>
@@ -2057,7 +2301,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 NDP - NS / NA
 				</h1>
@@ -2100,7 +2346,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 NDP - NS
 				</h1>
@@ -2158,7 +2406,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 NDP - NA
 				</h1>
@@ -2195,7 +2445,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					StateLess Address Auto-Configuration
 				</h1>
@@ -2248,7 +2500,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					IPv6 NDP - RS / RA
 				</h1>
@@ -2307,7 +2561,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					SLAAC - RS
 				</h1>
@@ -2363,7 +2619,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					SLAAC - RA
 				</h1>
@@ -2412,7 +2670,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					DHCPv6
 				</h1>
@@ -2499,7 +2759,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					DHCPv6 - Stateless
 				</h1>
@@ -2586,7 +2848,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					SLAAC - O-Flag
 				</h1>
@@ -2660,7 +2924,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					Stateful DHCPv6
 				</h1>
@@ -2687,7 +2953,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					DHCPv6 Server
 				</h1>
@@ -2851,7 +3119,9 @@
 					style="
 						font-size: 3rem;
 						text-align: center;
-						color: deepskyblue;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
 					">
 					DHCPv6 Clients
 				</h1>

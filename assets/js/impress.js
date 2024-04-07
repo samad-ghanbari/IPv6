@@ -41,7 +41,7 @@
 	wm.style.position = "absolute";
 	wm.style.color = "lightcyan";
 	wm.style.opacity = "0.5";
-	wm.style.zIndex = "50000";
+	wm.style.zIndex = "-50000";
 	wm.style.top = "50%";
 	//wm.style.left = "20px";
 	wm.style.rotate = "-45deg";
