@@ -6558,14 +6558,19 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					Tunneling
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<p
-					class="fs1 bold"
-					style="text-align: center; color: deeppink">
+					class="fs1half bold"
+					style="
+						text-align: center;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
 					Tunneling is a way of communicating or
 					transferring data from one network to another
 					through a process called encapsulation.
@@ -6580,7 +6585,12 @@
 				<p class="fs1 pl4">mode MODE</p>
 				<p class="fs1">!</p>
 
-				<p style="color: deeppink; font-size: 1.5rem">
+				<p
+					style="
+						color: mediumvioletred;
+						font-size: 1.5rem;
+						text-shadow: 1px 1px 1px black;
+					">
 					All L3 Tunnel Interface Modes
 				</p>
 				<ul
@@ -6618,7 +6628,7 @@
 						<span
 							style="
 								font-weight: bold;
-								color: darkcyan;
+								color: mediumvioletred;
 							"
 							>gre</span
 						>
@@ -6637,7 +6647,7 @@
 						<span
 							style="
 								font-weight: bold;
-								color: darkcyan;
+								color: mediumvioletred;
 							"
 							>ipv6</span
 						>
@@ -6649,7 +6659,7 @@
 						<span
 							style="
 								font-weight: bold;
-								color: darkcyan;
+								color: mediumvioletred;
 							"
 							>ipv6ip</span
 						>
@@ -6659,7 +6669,7 @@
 						<span
 							style="
 								font-weight: bold;
-								color: darkcyan;
+								color: mediumvioletred;
 							"
 							>mpls</span
 						>
@@ -6692,6 +6702,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Tunneling
 				</h1>
@@ -6700,7 +6711,8 @@
 				<h1
 					style="
 						font-size: 1.5rem;
-						color: darkcyan;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
 						font-weight: bold;
 					">
 					L3 Encapsulation
@@ -6755,7 +6767,8 @@
 				<h1
 					style="
 						font-size: 1.5rem;
-						color: darkcyan;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
 						font-weight: bold;
 					">
 					MPLS Network
@@ -6790,12 +6803,18 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Tunneling - Manual
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs1half">
+				<p
+					class="fs1half"
+					style="
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
 					Supports IPv6 IGPs (RIP, EIGRP, OSPF, BGP) and
 					multicast traffic
 				</p>
@@ -6803,7 +6822,7 @@
 					src="assets/images/manual.png"
 					style="
 						display: block;
-						height: 95%;
+
 						margin: auto;
 					" />
 			</div>
@@ -6822,18 +6841,22 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Tunneling - Manual
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs1 bold">R5</p>
+				<p class="fs2 bold">R5</p>
 				<p class="fs1">!</p>
 				<p class="fs1 bold">interface Tunnel 0</p>
 				<p class="fs1 pl4">ipv6 address FD::5/64</p>
 				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
 				<p class="fs1 pl4">tunnel destination 10.10.46.6</p>
-				<p class="fs1 pl4">tunnel mode ipv6ip</p>
+				<p class="fs1 pl4">
+					tunnel mode
+					<span style="color: mediumvioletred">ipv6ip</span>
+				</p>
 				<p class="fs1">!</p>
 				<p class="fs1">!</p>
 				<p class="fs1 bold">router bgp 1</p>
@@ -6863,6 +6886,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Tunneling - Manual
 				</h1>
@@ -6874,7 +6898,10 @@
 				<p class="fs1 pl4">ipv6 address FD::6/64</p>
 				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
 				<p class="fs1 pl4">tunnel destination 10.10.35.5</p>
-				<p class="fs1 pl4">tunnel mode ipv6ip</p>
+				<p class="fs1 pl4">
+					tunnel mode
+					<span style="color: mediumvioletred">ipv6ip</span>
+				</p>
 				<p class="fs1">!</p>
 				<p class="fs1">!</p>
 				<p class="fs1 bold">router bgp 1</p>
@@ -6904,12 +6931,18 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Tunneling - GRE
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs1">
+				<p
+					class="fs1half"
+					style="
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
 					Supports IPv6 IGPs (RIP, EIGRP, OSPF,
 					<span class="bold">ISIS</span>, BGP) and multicast
 					traffic
@@ -6937,6 +6970,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Tunneling - GRE
 				</h1>
@@ -6949,7 +6983,10 @@
 				<p class="fs1 pl4">ipv6 router isis 1</p>
 				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
 				<p class="fs1 pl4">tunnel destination 10.10.46.6</p>
-				<p class="fs1 pl4">tunnel mode gre ip</p>
+				<p class="fs1 pl4">
+					tunnel mode
+					<span style="color: mediumvioletred">gre ip</span>
+				</p>
 				<p class="fs1">!</p>
 				<p class="fs1 bold">router isis 1</p>
 				<p class="fs1 pl2">net 98.0005.0000.0000.0005.00</p>
@@ -6977,6 +7014,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Tunneling - GRE
 				</h1>
@@ -6989,7 +7027,10 @@
 				<p class="fs1 pl4">ipv6 router isis 1</p>
 				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
 				<p class="fs1 pl4">tunnel destination 10.10.35.5</p>
-				<p class="fs1 pl4">tunnel mode gre ip</p>
+				<p class="fs1 pl4">
+					tunnel mode
+					<span style="color: mediumvioletred">gre ip</span>
+				</p>
 				<p class="fs1">!</p>
 				<p class="fs1">!</p>
 				<p class="fs1 bold">router isis 1</p>
@@ -7011,6 +7052,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Automatic 6to4 Tunneling
 				</h1>
@@ -7054,6 +7096,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Automatic 6to4 Tunneling - Source-IP
 				</h1>
@@ -7189,6 +7232,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Automatic 6to4 Tunneling
 				</h1>
@@ -7217,6 +7261,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Automatic 6to4 Tunneling
 				</h1>
@@ -7274,6 +7319,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Automatic 6to4 Tunneling
 				</h1>
@@ -7331,6 +7377,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 Automatic 6to4 Tunneling Drawbacks
 				</h1>
@@ -7368,6 +7415,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 6RD Tunneling - Rapid Deployment
 				</h1>
@@ -7421,6 +7469,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 6RD Tunneling
 				</h1>
@@ -7495,7 +7544,7 @@
 					style="
 						color: deeppink;
 						text-align: left;
-						font-size: 1.5rem;
+						font-size: 1.2rem;
 					">
 					Default value for Tunnel 6rd ipv4 prefex-length is
 					0
@@ -7514,7 +7563,7 @@
 					style="
 						color: deeppink;
 						text-align: left;
-						font-size: 1.5rem;
+						font-size: 1.2rem;
 					">
 					IPv4 Prefex-Length = 24 => 3 Octet In Common => 3
 					Octet Can Be Removed
@@ -7537,7 +7586,7 @@
 					style="
 						color: deeppink;
 						text-align: left;
-						font-size: 1.5rem;
+						font-size: 1.2rem;
 					">
 					IPv4 Prefex-Length = 16 => 2 Octet In Common => 2
 					Octet Can Be Removed
@@ -7571,6 +7620,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 6RD Tunneling
 				</h1>
@@ -7599,17 +7649,26 @@
 				</p>
 				<p class="fs1">!</p>
 				<p
-					class="fs1 bold"
-					style="text-align: center; color: deeppink">
+					class="fs1half bold"
+					style="
+						text-align: center;
+						color: deeppink;
+						text-shadow: 1px 1px 1px black;
+					">
 					IPv6 Prefix Assigned To This Router :
-					<span style="font-size: 1.2rem; color: crimson"
+					<span
+						style="
+							font-size: 1.5rem;
+							color: crimson;
+							text-shadow: 1px 1px 1px black;
+						"
 						>2000:ABCD:<span
 							style="background-color: bisque"
 							>CECE:CECE</span
 						>::/64</span
 					>
 				</p>
-				<hr style="width: 50%; border: 1px solid lightblue" />
+				<hr style="width: 50%; border: 1px solid pink" />
 				<p class="fs1 bold">interface Tunnel 0</p>
 				<p class="fs1 pl4">ipv6 enable</p>
 				<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
@@ -7629,17 +7688,26 @@
 				</p>
 				<p class="fs1">!</p>
 				<p
-					class="fs1 bold"
-					style="text-align: center; color: deeppink">
+					class="fs1half bold"
+					style="
+						text-align: center;
+						color: deeppink;
+						text-shadow: 1px 1px 1px black;
+					">
 					IPv6 Prefix Assigned To This Router :
-					<span style="font-size: 1.2rem; color: crimson"
+					<span
+						style="
+							font-size: 1.5rem;
+							color: crimson;
+							text-shadow: 1px 1px 1px black;
+						"
 						>2000:ABCD:<span
 							style="background-color: bisque"
 							>6464</span
 						>::/48</span
 					>
 				</p>
-				<hr style="width: 50%; border: 1px solid lightblue" />
+				<hr style="width: 50%; border: 1px solid pink" />
 				<p style="font-size: 1.3rem; color: dimgray">
 					Command To Generate 6RD Prefix:
 					<span style="font-weight: bold; color: darkcyan">
@@ -7663,6 +7731,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 6RD Tunneling
 				</h1>
@@ -7691,6 +7760,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 6RD Tunneling
 				</h1>
@@ -7702,33 +7772,42 @@
 						display: block;
 						width: 250px;
 						margin: auto;
+						float: right;
 					" />
-				<p class="fs1 bold" style="color: deeppink">R6</p>
-				<p class="fs1">!</p>
-				<p class="fs1 bold">interface Tunnel 0</p>
-				<p class="fs1 pl4">ipv6 enable</p>
-				<p class="fs1 pl4">tunnel source Ethernet0/1</p>
-				<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
-				<p class="fs1 pl4">tunnel 6rd ipv4 prefix-len 16</p>
-				<p class="fs1 pl4">tunnel 6rd prefix 2000:ABCD::/32</p>
-				<p class="fs1 pl4">tunnel 6rd br 10.10.4.4</p>
-				<p class="fs1">!</p>
-				<p class="fs1 bold">interface Loopback 0</p>
-				<p class="fs1 pl4">
-					ipv6 address
-					<span style="background-color: chartreuse"
-						>2000:ABCD:106::1/128</span
-					>
-				</p>
-				<p class="fs1">!</p>
-				<p class="fs1">ipv6 route 2000:ABCD::/32 Tunnel0</p>
-				<p class="fs1">ipv6 route ::/0 2000:ABCD:404::</p>
-				<p class="fs1">!</p>
-				<p class="fs1 bold">interface Ethernet0/1</p>
-				<p class="fs1 pl4">
-					ip address 10.10.1.6 255.255.255.0
-				</p>
-				<p class="fs1">!</p>
+				<dir style="float: left">
+					<p class="fs1 bold" style="color: deeppink">R6</p>
+					<p class="fs1">!</p>
+					<p class="fs1 bold">interface Tunnel 0</p>
+					<p class="fs1 pl4">ipv6 enable</p>
+					<p class="fs1 pl4">tunnel source Ethernet0/1</p>
+					<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
+					<p class="fs1 pl4">
+						tunnel 6rd ipv4 prefix-len 16
+					</p>
+					<p class="fs1 pl4">
+						tunnel 6rd prefix 2000:ABCD::/32
+					</p>
+					<p class="fs1 pl4">tunnel 6rd br 10.10.4.4</p>
+					<p class="fs1">!</p>
+					<p class="fs1 bold">interface Loopback 0</p>
+					<p class="fs1 pl4">
+						ipv6 address
+						<span style="background-color: chartreuse"
+							>2000:ABCD:106::1/128</span
+						>
+					</p>
+					<p class="fs1">!</p>
+					<p class="fs1">
+						ipv6 route 2000:ABCD::/32 Tunnel0
+					</p>
+					<p class="fs1">ipv6 route ::/0 2000:ABCD:404::</p>
+					<p class="fs1">!</p>
+					<p class="fs1 bold">interface Ethernet0/1</p>
+					<p class="fs1 pl4">
+						ip address 10.10.1.6 255.255.255.0
+					</p>
+					<p class="fs1">!</p>
+				</dir>
 			</div>
 			<!-- Tunneling - Chapter Tunneling 6rd topo - r7-->
 			<div
@@ -7745,6 +7824,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 6RD Tunneling
 				</h1>
@@ -7848,6 +7928,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 6RD Tunneling
 				</h1>
@@ -7859,25 +7940,34 @@
 						display: block;
 						height: 150px;
 						margin: auto;
+						float: right;
 					" />
-				<p class="fs1 bold" style="color: deeppink">BR</p>
+				<dir style="float: left">
+					<p class="fs1 bold" style="color: deeppink">BR</p>
 
-				<p class="fs1">!</p>
-				<p class="fs1 bold">interface Tunnel 0</p>
-				<p class="fs1 pl4">ipv6 enable</p>
-				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
-				<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
-				<p class="fs1 pl4">tunnel 6rd ipv4 prefix-len 16</p>
-				<p class="fs1 pl4">tunnel 6rd prefix 2000:ABCD::/32</p>
-				<p class="fs1 pl4">tunnel 6rd br 10.10.4.4</p>
-				<p class="fs1">!</p>
-				<p class="fs1">ipv6 route 2000:ABCD::/32 Tunnel0</p>
-				<p class="fs1">!</p>
-				<p class="fs1 bold">interface Ethernet0/0</p>
-				<p class="fs1 pl4">
-					ip address 10.10.4.4 255.255.255.0
-				</p>
-				<p class="fs1">!</p>
+					<p class="fs1">!</p>
+					<p class="fs1 bold">interface Tunnel 0</p>
+					<p class="fs1 pl4">ipv6 enable</p>
+					<p class="fs1 pl4">tunnel source Ethernet0/0</p>
+					<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
+					<p class="fs1 pl4">
+						tunnel 6rd ipv4 prefix-len 16
+					</p>
+					<p class="fs1 pl4">
+						tunnel 6rd prefix 2000:ABCD::/32
+					</p>
+					<p class="fs1 pl4">tunnel 6rd br 10.10.4.4</p>
+					<p class="fs1">!</p>
+					<p class="fs1">
+						ipv6 route 2000:ABCD::/32 Tunnel0
+					</p>
+					<p class="fs1">!</p>
+					<p class="fs1 bold">interface Ethernet0/0</p>
+					<p class="fs1 pl4">
+						ip address 10.10.4.4 255.255.255.0
+					</p>
+					<p class="fs1">!</p>
+				</dir>
 			</div>
 
 			<!-- Tunneling - Chapter Tunneling ISATAP-->
@@ -7895,6 +7985,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 ISATAP <br />
 					<span style="font-size: 1.5rem"
@@ -7957,6 +8048,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 ISATAP
 				</h1>
@@ -8152,6 +8244,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 ISATAP
 				</h1>
@@ -8174,7 +8267,8 @@
 				<p
 					style="
 						font-size: 1.5rem;
-						color: darkcyan;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
 						font-weight: bold;
 						margin-bottom: 2rem;
 					">
@@ -8190,12 +8284,13 @@
 					<li>ipv6 address 2000::/64 eui-64</li>
 					<li>ipv6 address 2000::0000:5EFE:A0B:C0D/64</li>
 				</ul>
-				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<hr style="width: 50%; border: 1px solid pink" />
 
 				<p
 					style="
 						font-size: 1.5rem;
-						color: darkcyan;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
 						font-weight: bold;
 						margin-bottom: 2rem;
 					">
@@ -8229,6 +8324,7 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 ISATAP
 				</h1>
@@ -8268,13 +8364,19 @@
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 ISATAP
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<div style="float: left">
-					<p class="fs1 bold" style="color: deeppink">
+					<p
+						class="fs1half bold"
+						style="
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
 						Headend
 					</p>
 					<p class="fs1">!</p>
@@ -8287,7 +8389,12 @@
 					<p class="fs1">!</p>
 				</div>
 				<div style="float: right">
-					<p class="fs1 bold" style="color: deeppink">
+					<p
+						class="fs1half bold"
+						style="
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
 						Client-1
 					</p>
 					<p class="fs1">!</p>
@@ -8301,7 +8408,12 @@
 					<p class="fs1 pl4">tunnel destination 1.1.1.1</p>
 					<p class="fs1">!</p>
 
-					<p class="fs1 bold" style="color: deeppink">
+					<p
+						class="fs1half bold"
+						style="
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
 						Client-2
 					</p>
 					<p class="fs1">!</p>
@@ -8327,11 +8439,12 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					MPLS Network Tunnel
 				</h1>
@@ -8341,7 +8454,8 @@
 					style="
 						list-style-type: circle;
 						font-size: 2rem;
-						color: darkcyan;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
 					">
 					<li>
 						6PE
@@ -8349,6 +8463,7 @@
 							style="
 								list-style-type: square;
 								font-size: 1.5rem;
+								text-shadow: none;
 								color: dimgray;
 								padding-left: 4rem;
 							">
@@ -8364,6 +8479,7 @@
 							style="
 								list-style-type: square;
 								font-size: 1.5rem;
+								text-shadow: none;
 								color: dimgrey;
 								padding-left: 4rem;
 							">
@@ -8389,11 +8505,12 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					6PE
 				</h1>
@@ -8438,12 +8555,12 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6PE
 				</h1>
@@ -8468,12 +8585,12 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6PE
 				</h1>
@@ -8679,18 +8796,23 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6PE
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs1half" style="color: darkmagenta">
+				<p
+					class="fs1half"
+					style="
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
 					Captured ICMPv6 Packet Between Sites
 				</p>
 				<img
@@ -8714,12 +8836,12 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE
 				</h1>
@@ -8744,12 +8866,12 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE
 				</h1>
@@ -8774,12 +8896,12 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE
 				</h1>
@@ -9052,18 +9174,23 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs1half" style="color: darkolivegreen">
+				<p
+					class="fs1half"
+					style="
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
 					Captured ICMPv6 Packet Between Sites
 				</p>
 				<img
@@ -9087,21 +9214,27 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 over GRE with IPSec
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs1half" style="color: darkcyan">
+				<p
+					class="fs1half"
+					style="
+						color: darkcyan;
+						text-shadow: 1px 1px 1px black;
+					">
 					IPsec is a group of protocols for securing
 					connections between devices.
 				</p>
+				<hr style="width: 50%; border: 1px solid pink" />
 				<p class="fs1half bold">
 					IPsec Tunnel:
 					<span style="color: deeppink">IKE</span> (Internet
@@ -9117,7 +9250,8 @@
 						<span
 							style="
 								font-weight: bold;
-								color: darkcyan;
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
 							"
 							>IKE phase-1</span
 						>
@@ -9125,7 +9259,7 @@
 							style="
 								list-style-type: decimal;
 								padding-left: 2rem;
-								font-size: 1rem;
+								font-size: 1.2rem;
 							">
 							<li>
 								Exchange Parameters Of
@@ -9153,7 +9287,8 @@
 						<span
 							style="
 								font-weight: bold;
-								color: darkcyan;
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
 							"
 							>IKE phase-2</span
 						>
@@ -9161,7 +9296,7 @@
 							style="
 								list-style-type: decimal;
 								padding-left: 2rem;
-								font-size: 1rem;
+								font-size: 1.2rem;
 							">
 							<li>
 								IKE-Phase 2 Tunnel Establishes
@@ -9190,12 +9325,12 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 over GRE with IPSec
 				</h1>
@@ -9220,18 +9355,25 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 over GRE with IPSec
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p style="font-size: 1.5rem; color: darkcyan">Steps:</p>
+				<p
+					style="
+						font-size: 2rem;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
+					Steps:
+				</p>
 				<ul
 					style="
 						list-style-type: decimal;
@@ -9336,12 +9478,12 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 over GRE with IPSec
 				</h1>
@@ -9508,12 +9650,12 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 over GRE with IPSec
 				</h1>
@@ -9579,12 +9721,12 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 over GRE with IPSec - Topology
 				</h1>
@@ -9609,12 +9751,12 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 over GRE with IPSec - Configuration
 				</h1>
@@ -9624,7 +9766,8 @@
 					<p
 						style="
 							font-size: 2rem;
-							color: darkcyan;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
 							font-weight: bold;
 						">
 						R1
@@ -9646,16 +9789,13 @@
 						tunnel destination 20.20.52.2
 					</p>
 					<p style="font-size: 1rem">!</p>
-					<hr
-						style="
-							width: 100%;
-							border: 1px solid darkcyan;
-						" />
+					<hr style="width: 50%; border: 1px solid pink" />
 
 					<p
 						style="
 							font-size: 2rem;
-							color: darkcyan;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
 							font-weight: bold;
 						">
 						IKE#1
@@ -9688,7 +9828,8 @@
 						style="
 							font-size: 2rem;
 							font-weight: bold;
-							color: darkcyan;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
 						">
 						IKE#2
 					</p>
@@ -9700,10 +9841,12 @@
 						mode tunnel
 					</p>
 					<p style="font-size: 1rem">!</p>
+					<hr style="width: 50%; border: 1px solid pink" />
 					<p
 						style="
 							font-size: 2rem;
-							color: darkcyan;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
 							font-weight: bold;
 						">
 						Perform
@@ -9757,12 +9900,12 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					Inter-AS Communication
 				</h1>
@@ -9787,12 +9930,12 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					Inter-AS Communication
 				</h1>
@@ -9806,7 +9949,11 @@
 						font-weight: bold;
 					">
 					<li>
-						<span style="background-color: pink"
+						<span
+							style="
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
+							"
 							>Option-A</span
 						>
 						<ul
@@ -9826,7 +9973,11 @@
 						</ul>
 					</li>
 					<li>
-						<span style="background-color: pink"
+						<span
+							style="
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
+							"
 							>Option-B</span
 						>
 						<ul
@@ -9841,7 +9992,11 @@
 						</ul>
 					</li>
 					<li>
-						<span style="background-color: pink"
+						<span
+							style="
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
+							"
 							>Option-C</span
 						>
 						<ul
@@ -9858,8 +10013,8 @@
 					<li>
 						<span
 							style="
-								background-color: pink;
-								color: dimgray;
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
 							"
 							>Option-D / AB</span
 						>
@@ -9903,12 +10058,12 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE Inter-AS Option-A
 				</h1>
@@ -9952,12 +10107,12 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE Inter-AS Option-A
 				</h1>
@@ -9982,19 +10137,26 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE Inter-AS Option-A
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<div style="float: left; font-size: 1rem">
-					<p style="font-weight: bold">R6</p>
+					<p
+						style="
+							color: mediumvioletred;
+							font-size: 1.5rem;
+							text-shadow: 1px 1px 1px black;
+						">
+						R6
+					</p>
 					<p>!</p>
 					<p>router bgp 2</p>
 					<p style="padding-left: 2rem">
@@ -10030,7 +10192,14 @@
 					<p>!</p>
 				</div>
 				<div style="font-size: 1rem; float: right">
-					<p style="font-weight: bold">R4</p>
+					<p
+						style="
+							color: mediumvioletred;
+							font-size: 1.5rem;
+							text-shadow: 1px 1px 1px black;
+						">
+						R4
+					</p>
 					<p>!</p>
 					<p>interface Ethernet 0/2.100</p>
 					<p style="padding-left: 2rem">
@@ -10092,18 +10261,26 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE Inter-AS Option-B
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs2 bold">Features</p>
+				<p
+					class="fs2"
+					style="
+						color: mediumvioletred;
+						font-size: 2rem;
+						text-shadow: 1px 1px 1px black;
+					">
+					Features
+				</p>
 				<ul
 					style="
 						list-style-type: circle;
@@ -10134,12 +10311,12 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE Inter-AS Option-B
 				</h1>
@@ -10164,26 +10341,37 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE Inter-AS Option-B
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<div style="float: left; font-size: 1rem">
-					<p style="font-weight: bold">R4</p>
+					<p
+						style="
+							color: mediumvioletred;
+							font-size: 1.5rem;
+							text-shadow: 1px 1px 1px black;
+						">
+						R4
+					</p>
 					<p>!</p>
 					<p>interface Ethernet 0/2</p>
 					<p style="padding-left: 2rem">
 						ipv6 address 3000:41::4/64
 					</p>
 					<p style="padding-left: 2rem">ipv6 enable</p>
-					<p style="padding-left: 2rem; font-weight: bold">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						mpls bgp forwarding
 					</p>
 					<p>!</p>
@@ -10191,7 +10379,11 @@
 					<p style="padding-left: 2rem">
 						bgp router-id 4.4.4.4
 					</p>
-					<p style="font-weight: bold; padding-left: 2rem">
+					<p
+						style="
+							background-color: greenyellow;
+							padding-left: 2rem;
+						">
 						no bgp default route-target filter
 					</p>
 					<p style="padding-left: 2rem">
@@ -10200,13 +10392,19 @@
 					<p style="padding-left: 2rem">
 						neighbor 6.6.6.6 update-source Loopback0
 					</p>
-					<p style="font-weight: bold; padding-left: 2rem">
+					<p
+						style="
+							background-color: greenyellow;
+							padding-left: 2rem;
+						">
 						neighbor 3000:41::1 remote-as 1
 					</p>
 					<p>!</p>
 					<p>
 						address-family
-						<span style="font-weight: bold">vpnv6</span>
+						<span style="background-color: greenyellow"
+							>vpnv6</span
+						>
 					</p>
 					<p style="padding-left: 2rem">
 						neighbor 6.6.6.6 activate
@@ -10217,7 +10415,11 @@
 					<p style="padding-left: 2rem">
 						neighbor 6.6.6.6 next-hop-self
 					</p>
-					<p style="padding-left: 2rem">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						neighbor 3000:41::1 activate
 					</p>
 					<p style="padding-left: 2rem">
@@ -10227,14 +10429,25 @@
 					<p>!</p>
 				</div>
 				<div style="font-size: 1rem; float: right">
-					<p style="font-weight: bold">R1</p>
+					<p
+						style="
+							color: mediumvioletred;
+							font-size: 1.5rem;
+							text-shadow: 1px 1px 1px black;
+						">
+						R1
+					</p>
 					<p>!</p>
 					<p>interface Ethernet 0/2</p>
 					<p style="padding-left: 2rem">
 						ipv6 address 3000:41::1/64
 					</p>
 					<p style="padding-left: 2rem">ipv6 enable</p>
-					<p style="padding-left: 2rem; font-weight: bold">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						mpls bgp forwarding
 					</p>
 					<p>!</p>
@@ -10242,7 +10455,11 @@
 					<p style="padding-left: 2rem">
 						bgp router-id 1.1.1.1
 					</p>
-					<p style="padding-left: 2rem; font-weight: bold">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						no bgp default route-target filter
 					</p>
 					<p style="padding-left: 2rem">
@@ -10251,16 +10468,26 @@
 					<p style="padding-left: 2rem">
 						neighbor 3.3.3.3 update-source Loopback0
 					</p>
-					<p style="padding-left: 2rem">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						neighbor 3000:17::7 remote-as 3
 					</p>
-					<p style="padding-left: 2rem">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						neighbor 3000:41::4 remote-as 2
 					</p>
 					<p>!</p>
 					<p>
 						address-family
-						<span style="font-weight: bold">vpnv6</span>
+						<span style="background-color: greenyellow"
+							>vpnv6</span
+						>
 					</p>
 					<p style="padding-left: 2rem">
 						neighbor 3.3.3.3 activate
@@ -10271,13 +10498,21 @@
 					<p style="padding-left: 2rem">
 						neighbor 3.3.3.3 next-hop-self
 					</p>
-					<p style="padding-left: 2rem">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						neighbor 3000:17::7 activate
 					</p>
 					<p style="padding-left: 2rem">
 						neighbor 3000:17::7 send-community extended
 					</p>
-					<p style="padding-left: 2rem">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						neighbor 3000:41::4 activate
 					</p>
 					<p style="padding-left: 2rem">
@@ -10298,18 +10533,25 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE Inter-AS Option-B
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs1half">R5# interface 0/1</p>
+				<p
+					class="fs1half"
+					style="
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
+					R5# interface 0/1
+				</p>
 				<img
 					src="assets/images/opb-r5-0-1.png"
 					style="
@@ -10317,7 +10559,14 @@
 						display: block;
 						margin: auto;
 					" />
-				<p class="fs1half">R1# interface 0/2</p>
+				<p
+					class="fs1half"
+					style="
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
+					R1# interface 0/2
+				</p>
 				<img
 					src="assets/images/opb-r1-0-2.png"
 					style="
@@ -10338,18 +10587,25 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE Inter-AS Option-C
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs2 bold">Features</p>
+				<p
+					class="fs2"
+					style="
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
+					Features
+				</p>
 				<ul
 					style="
 						list-style-type: circle;
@@ -10375,12 +10631,12 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE Inter-AS Option-C
 				</h1>
@@ -10405,19 +10661,26 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE Inter-AS Option-C
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<div style="float: left; font-size: 1rem">
-					<p style="font-weight: bold">R6</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
+						R6
+					</p>
 					<p class="bold">router bgp 2</p>
 					<p style="padding-left: 2rem">
 						neighbor 3.3.3.3 remote-as 1
@@ -10452,7 +10715,11 @@
 					<p style="padding-left: 2rem">
 						neighbor 4.4.4.4 activate
 					</p>
-					<p style="padding-left: 2rem; font-weight: bold">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						neighbor 4.4.4.4 send-label
 					</p>
 					<p>exit-address-family</p>
@@ -10460,7 +10727,9 @@
 
 					<p>
 						address-family
-						<span style="font-weight: bold">vpnv6</span>
+						<span style="background-color: greenyellow"
+							>vpnv6</span
+						>
 					</p>
 					<p style="padding-left: 2rem">
 						neighbor 3.3.3.3 activate
@@ -10490,7 +10759,14 @@
 					<p>!</p>
 				</div>
 				<div style="font-size: 1rem; float: right">
-					<p style="font-weight: bold">R4</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
+						R4
+					</p>
 
 					<p>interface Ethernet 0/2</p>
 					<p style="padding-left: 2rem">
@@ -10516,7 +10792,11 @@
 						address-family
 						<span style="font-weight: bold">ipv4</span>
 					</p>
-					<p style="padding-left: 2rem; font-weight: bold">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						redistribute ospf 1 match internal
 					</p>
 					<p style="padding-left: 2rem">
@@ -10525,13 +10805,21 @@
 					<p style="padding-left: 2rem">
 						neighbor 6.6.6.6 next-hop-self
 					</p>
-					<p style="padding-left: 2rem; font-weight: bold">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						neighbor 6.6.6.6 send-label
 					</p>
 					<p style="padding-left: 2rem">
 						neighbor 10.10.41.1 activate
 					</p>
-					<p style="padding-left: 2rem; font-weight: bold">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						neighbor 10.10.41.1 send-label
 					</p>
 
@@ -10550,19 +10838,26 @@
 				data-rotate="90">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE Inter-AS Option-C
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<div style="float: left; font-size: 1rem">
-					<p style="font-weight: bold">R3</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
+						R3
+					</p>
 					<p>!</p>
 					<p class="bold">router bgp 1</p>
 					<p style="padding-left: 2rem">
@@ -10598,7 +10893,11 @@
 					<p style="padding-left: 2rem">
 						neighbor 1.1.1.1 activate
 					</p>
-					<p style="padding-left: 2rem; font-weight: bold">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						neighbor 1.1.1.1 send-label
 					</p>
 					<p>exit-address-family</p>
@@ -10606,7 +10905,9 @@
 
 					<p>
 						address-family
-						<span style="font-weight: bold">vpnv6</span>
+						<span style="background-color: greenyellow"
+							>vpnv6</span
+						>
 					</p>
 					<p style="padding-left: 2rem">
 						neighbor 6.6.6.6 activate
@@ -10636,14 +10937,25 @@
 					<p>!</p>
 				</div>
 				<div style="font-size: 1rem; float: right">
-					<p style="font-weight: bold">R1</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
+						R1
+					</p>
 					<p>!</p>
 
 					<p>interface Ethernet 0/2</p>
 					<p style="padding-left: 2rem">
 						ip address 10.10.41.1 255.255.255.0
 					</p>
-					<p style="padding-left: 2rem; font-weight: bold">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						mpls bgp forwarding
 					</p>
 					<p>!</p>
@@ -10666,7 +10978,11 @@
 						address-family
 						<span style="font-weight: bold">ipv4</span>
 					</p>
-					<p style="padding-left: 2rem; font-weight: bold">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						redistribute isis 1 level-1-2
 					</p>
 					<p style="padding-left: 2rem">
@@ -10675,19 +10991,31 @@
 					<p style="padding-left: 2rem">
 						neighbor 3.3.3.3 next-hop-self
 					</p>
-					<p style="padding-left: 2rem; font-weight: bold">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						neighbor 3.3.3.3 send-label
 					</p>
 					<p style="padding-left: 2rem">
 						neighbor 10.10.17.7 activate
 					</p>
-					<p style="padding-left: 2rem; font-weight: bold">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						neighbor 10.10.17.7 send-label
 					</p>
 					<p style="padding-left: 2rem">
 						neighbor 10.10.41.4 activate
 					</p>
-					<p style="padding-left: 2rem; font-weight: bold">
+					<p
+						style="
+							padding-left: 2rem;
+							background-color: greenyellow;
+						">
 						neighbor 10.10.41.4 send-label
 					</p>
 
@@ -10706,18 +11034,25 @@
 				data-rotate="0">
 				<h1
 					style="
-						font-size: 1.5rem;
+						font-size: 2rem;
 						font-weight: bold;
 						text-align: center;
 						color: darkcyan;
 						font-weight: bold;
-						padding: 0;
+						text-shadow: 1px 1px 3px black;
 					">
 					6VPE Inter-AS Option-C
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs1half">R5# interface 0/1</p>
+				<p
+					class="fs1half"
+					style="
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
+					R5# interface 0/1
+				</p>
 				<img
 					src="assets/images/opc-r5-0-1.png"
 					style="
@@ -10725,7 +11060,14 @@
 						display: block;
 						margin: auto;
 					" />
-				<p class="fs1half">R4# interface 0/0</p>
+				<p
+					class="fs1half"
+					style="
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
+					R4# interface 0/0
+				</p>
 				<img
 					src="assets/images/opc-r4-0-0.png"
 					style="
@@ -10733,7 +11075,14 @@
 						display: block;
 						margin: auto;
 					" />
-				<p class="fs1half">R1# interface 0/2</p>
+				<p
+					class="fs1half"
+					style="
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
+					R1# interface 0/2
+				</p>
 				<img
 					src="assets/images/opc-r1-0-2.png"
 					style="
