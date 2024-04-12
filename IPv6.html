@@ -140,7 +140,7 @@
 						color: darkslategrey;
 						font-weight: bold;
 					">
-					<li class="substep">- IPv6 Fundamentals</li>
+					<li>- IPv6 Fundamentals</li>
 					<li class="substep">- IPv6 Routing</li>
 					<li class="substep">- IPv6 Security</li>
 					<li class="substep">- IPv6 Tunneling</li>
@@ -172,7 +172,7 @@
 						color: darkslategray;
 						font-weight: bold;
 					">
-					<li class="substep">- Features</li>
+					<li>- Features</li>
 					<li class="substep">- Practical Applications</li>
 					<li class="substep">- IPv6 Calculation</li>
 					<li class="substep">- IPv6 Address Types</li>
@@ -208,7 +208,7 @@
 						color: darkslategray;
 						font-weight: bold;
 					">
-					<li class="substep">- Static Route</li>
+					<li>- Static Route</li>
 					<li class="substep">- RIPng Protocol</li>
 					<li class="substep">- EIGRP Protocol</li>
 					<li class="substep">- OSPFv3 Protocol</li>
@@ -217,7 +217,6 @@
 					<li class="substep">- VRF / VPN-Instance</li>
 				</ul>
 			</div>
-
 			<!-- Security Topics -->
 			<div
 				id="Security-Topics"
@@ -243,7 +242,7 @@
 						font-weight: bold;
 						color: darkslategray;
 					">
-					<li class="substep">- IPv6 ACL</li>
+					<li>- IPv6 Access List</li>
 					<li class="substep">
 						- OSPFv3 Authentication/Encryption
 					</li>
@@ -265,7 +264,6 @@
 					</li>
 				</ul>
 			</div>
-
 			<!-- Tunneling Topics -->
 			<div
 				id="Tunneling-Topics"
@@ -292,9 +290,7 @@
 						color: darkslategray;
 						font-weight: bold;
 					">
-					<li class="substep">
-						- IPv6 GRE/Manual Tunneling
-					</li>
+					<li>- IPv6 GRE/Manual Tunneling</li>
 					<li class="substep">
 						- IPv6 Automatic 6to4 Tunneling
 					</li>
@@ -309,7 +305,6 @@
 					<li class="substep">- IPv6 IPsec Tunneling</li>
 				</ul>
 			</div>
-
 			<!-- NAT Topics -->
 			<div
 				id="NAT-Topics"
@@ -336,7 +331,7 @@
 						color: darkslategray;
 						font-weight: bold;
 					">
-					<li class="substep">- NAT Types</li>
+					<li>- NAT Types</li>
 					<li class="substep">- Stateless NAT64</li>
 					<li class="substep">- Stateful Static NAt64</li>
 					<li class="substep">- Stateful Dynamic NAt64</li>
@@ -394,7 +389,7 @@
 						color: darkslategray;
 						font-weight: bold;
 					">
-					<li class="substep">- Larger address space</li>
+					<li>- Larger address space</li>
 					<li class="substep">- No Broadcast traffic</li>
 					<li class="substep">
 						- Stateless Address Autoconfiguration -
@@ -942,7 +937,7 @@
 				</p>
 			</div>
 
-			<!-- Basics-Applications -->
+			<!-- Basics-IPv6 Format -->
 			<div
 				id="basics-ipv6-format"
 				class="step"
@@ -1018,7 +1013,7 @@
 				</table>
 			</div>
 
-			<!-- Basics-IPv6 Format -->
+			<!-- Basics-IPv6 Applications -->
 			<div
 				id="basics-IPv6-application"
 				class="step"
@@ -1039,7 +1034,7 @@
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<ul style="font-size: 2rem; list-style-type: disc">
-					<li class="substep">
+					<li>
 						<span
 							style="
 								color: mediumvioletred;
@@ -2002,38 +1997,40 @@
 						width: 70%;
 					" />
 				<hr style="width: 50%; border: 1px solid pink" />
-				<p
-					style="
-						font-size: 1.5rem;
-						text-shadow: 1px 1px 1px black;
-						color: dimgray;
-					">
-					Inside tunnels EUI-64 uses IPv4 address to
-					configure IPv6 address
-				</p>
+				<div class="substep">
+					<p
+						style="
+							font-size: 1.5rem;
+							text-shadow: 1px 1px 1px black;
+							color: dimgray;
+						">
+						Inside tunnels EUI-64 uses IPv4 address to
+						configure IPv6 address
+					</p>
 
-				<ul
-					style="
-						list-style-type: circle;
-						padding-left: 4rem;
-						font-size: 1.2rem;
-						font-weight: bold;
-						text-shadow: 1px 1px 1px black;
-					">
-					<li>
-						ISATAP :
-						<span style="color: darkmagenta"
-							>IPv6-Prefix :: 0000 : 5EFE :
-							IPv4-Hex</span
-						>
-					</li>
-					<li>
-						IPv6IP :
-						<span style="color: darkmagenta"
-							>IPv6-Prefix :: IPv4-Hex</span
-						>
-					</li>
-				</ul>
+					<ul
+						style="
+							list-style-type: circle;
+							padding-left: 4rem;
+							font-size: 1.2rem;
+							font-weight: bold;
+							text-shadow: 1px 1px 1px black;
+						">
+						<li>
+							ISATAP :
+							<span style="color: darkmagenta"
+								>IPv6-Prefix :: 0000 : 5EFE :
+								IPv4-Hex</span
+							>
+						</li>
+						<li>
+							IPv6IP :
+							<span style="color: darkmagenta"
+								>IPv6-Prefix :: IPv4-Hex</span
+							>
+						</li>
+					</ul>
+				</div>
 			</div>
 
 			<!-- Basics-IPv6 eui-64-->
@@ -2090,7 +2087,7 @@
 							color: deeppink;
 							font-weight: bold;
 							padding-left: 4rem;
-							font-size: 2rem;
+							font-size: 1.5rem;
 						">
 						<span style="color: dimgray"
 							>MAC-Addrress : bia : </span
@@ -2370,62 +2367,63 @@
 					>
 				</p>
 				<hr style="width: 50%; border: 1px solid pink" />
-
-				<p style="font-size: 1.5rem; font-weight: bold">
-					ipv6 general-prefix
-					<span
+				<dir class="substep">
+					<p style="font-size: 1.5rem; font-weight: bold">
+						ipv6 general-prefix
+						<span
+							style="
+								font-weight: bold;
+								color: darkmagenta;
+								background-color: azure;
+								text-shadow: 1px 1px 1px black;
+							"
+							>GP</span
+						>
+						2A04:2680:17::/48
+					</p>
+					<p style="font-size: 1.2rem">!</p>
+					<p style="font-size: 1.2rem; font-weight: bold">
+						interface GigabitEthernet 0/1
+					</p>
+					<p
 						style="
-							font-weight: bold;
-							color: darkmagenta;
-							background-color: azure;
-							text-shadow: 1px 1px 1px black;
-						"
-						>GP</span
-					>
-					2A04:2680:17::/48
-				</p>
-				<p style="font-size: 1.2rem">!</p>
-				<p style="font-size: 1.2rem; font-weight: bold">
-					interface GigabitEthernet 0/1
-				</p>
-				<p
-					style="
-						font-size: 1.5rem;
-						padding-left: 4rem;
-						font-weight: bold;
-					">
-					ipv6 address
-					<span
-						style="
-							color: darkmagenta;
-							font-weight: bold;
-							text-shadow: 1px 1px 1px black;
-						">
-						GP
-					</span>
-					::100/64
-				</p>
-				<p style="font-size: 1.2rem">!</p>
-				<p style="font-size: 1.2rem; font-weight: bold">
-					interface GigabitEthernet 0/2
-				</p>
-				<p
-					style="
-						font-size: 1.5rem;
-						padding-left: 4rem;
-						font-weight: bold;
-					">
-					ipv6 address
-					<span
-						style="
-							color: darkmagenta;
-							text-shadow: 1px 1px 1px black;
+							font-size: 1.5rem;
+							padding-left: 4rem;
 							font-weight: bold;
 						">
-						GP
-					</span>
-					::200/64
-				</p>
+						ipv6 address
+						<span
+							style="
+								color: darkmagenta;
+								font-weight: bold;
+								text-shadow: 1px 1px 1px black;
+							">
+							GP
+						</span>
+						::100/64
+					</p>
+					<p style="font-size: 1.2rem">!</p>
+					<p style="font-size: 1.2rem; font-weight: bold">
+						interface GigabitEthernet 0/2
+					</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							padding-left: 4rem;
+							font-weight: bold;
+						">
+						ipv6 address
+						<span
+							style="
+								color: darkmagenta;
+								text-shadow: 1px 1px 1px black;
+								font-weight: bold;
+							">
+							GP
+						</span>
+						::200/64
+					</p>
+				</dir>
 			</div>
 
 			<!-- Basics-IPv6 SNMA-->
@@ -3461,7 +3459,7 @@
 					style="
 						font-size: 1.5rem;
 						padding-left: 2rem;
-						color: deeppink;
+						color: darkmagenta;
 					">
 					ipv6 nd other-config-flag
 				</p>
@@ -3469,7 +3467,7 @@
 					style="
 						font-size: 1.5rem;
 						padding-left: 2rem;
-						color: deeppink;
+						color: darkmagenta;
 					">
 					ipv6 dhcp server dhcp0 preference 200
 				</p>
@@ -3486,7 +3484,7 @@
 				<p style="font-size: 1.5rem">interface Ethernet0/0</p>
 				<p style="font-size: 1.5rem; padding-left: 2rem">
 					ipv6 address
-					<span style="color: deeppink"
+					<span style="color: darkmagenta"
 						>autoconfig default</span
 					>
 				</p>
@@ -4122,9 +4120,7 @@
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<ul style="list-style-type: circle; font-size: 1.8rem">
-					<li class="substep">
-						OSPFv3 packets are sourced from LLA
-					</li>
+					<li>OSPFv3 packets are sourced from LLA</li>
 					<li class="substep">New LSA types introduced</li>
 					<li class="substep">
 						OSPFv3 uses interface commands
@@ -4174,7 +4170,11 @@
 						width: 70%;
 					" />
 				<div style="font-size: 1.2rem">
-					<p style="font-weight: bold; color: deeppink">
+					<p
+						style="
+							font-weight: bold;
+							color: mediumvioletred;
+						">
 						OSPFv2
 					</p>
 					<p style="padding-left: 4rem">
@@ -4182,7 +4182,11 @@
 						information
 					</p>
 
-					<p style="font-weight: bold; color: deeppink">
+					<p
+						style="
+							font-weight: bold;
+							color: mediumvioletred;
+						">
 						OSPFv3
 					</p>
 					<p style="padding-left: 4rem">
@@ -4394,7 +4398,12 @@
 				<p class="fs2">
 					MP-BGP supports different addresse-families
 				</p>
-				<ul class="fs2 pl4" style="list-style-type: circle">
+				<ul
+					class="fs2 pl4"
+					style="
+						list-style-type: circle;
+						color: darkmagenta;
+					">
 					<li>IPv4 unicast</li>
 					<li>IPv4 multicast</li>
 					<li>IPv6 unicast</li>
@@ -5827,7 +5836,7 @@
 				<ul
 					class="fs2"
 					style="width: 90%; list-style-type: disc">
-					<li class="substep">
+					<li>
 						<span
 							style="
 								color: mediumvioletred;
@@ -6200,18 +6209,18 @@
 					<span style="color: mediumvioletred">SERVER</span>
 				</p>
 				<p class="fs1 pl4">device-role server</p>
-				<p class="fs1half pl4">
+				<p class="fs1 pl4">
 					match reply prefix-list
 					<span style="background-color: pink">PREFIX</span>
 				</p>
-				<p class="fs1half pl4">
+				<p class="fs1 pl4">
 					match server access-list
 					<span style="background-color: greenyellow"
 						>SERVER_LLA</span
 					>
 				</p>
-				<p class="fs1half pl4">preference min 110</p>
-				<p class="fs1half pl4">preference max 120</p>
+				<p class="fs1 pl4">preference min 110</p>
+				<p class="fs1 pl4">preference max 120</p>
 
 				<p class="fs1">!</p>
 				<p class="fs1">interface ethernet 0/0</p>
@@ -9663,48 +9672,70 @@
 				<table style="font-size: 1.5rem; width: 100%">
 					<tr style="background-color: palegreen">
 						<td rowspan="2">AH Transform</td>
-						<td>ah-md5-hmac</td>
-						<td>AH with MD5 authentication</td>
+						<td style="font-size: 1rem">ah-md5-hmac</td>
+						<td style="font-size: 1rem">
+							AH with MD5 authentication
+						</td>
 					</tr>
 					<tr style="background-color: palegreen">
-						<td>ah-sha-hmac</td>
-						<td>AH with SHA authentication</td>
+						<td style="font-size: 1rem">ah-sha-hmac</td>
+						<td style="font-size: 1rem">
+							AH with SHA authentication
+						</td>
 					</tr>
 
 					<tr style="background-color: powderblue">
 						<td rowspan="5">
 							ESP Encryption Transform
 						</td>
-						<td>esp-aes</td>
-						<td>ESP with 128-bit AES encryption</td>
+						<td style="font-size: 1rem">esp-aes</td>
+						<td style="font-size: 1rem">
+							ESP with 128-bit AES encryption
+						</td>
 					</tr>
 					<tr style="background-color: powderblue">
-						<td>esp-aes 192</td>
-						<td>ESP with 192-bit AES encryption</td>
+						<td style="font-size: 1rem">esp-aes 192</td>
+						<td style="font-size: 1rem">
+							ESP with 192-bit AES encryption
+						</td>
 					</tr>
 					<tr style="background-color: powderblue">
-						<td>esp-aes 256</td>
-						<td>ESP with 256-bit AES encryption</td>
+						<td style="font-size: 1rem">esp-aes 256</td>
+						<td style="font-size: 1rem">
+							ESP with 256-bit AES encryption
+						</td>
 					</tr>
 					<tr style="background-color: powderblue">
-						<td>esp-des</td>
-						<td>ESP with 56-bit DES encryption</td>
+						<td style="font-size: 1rem">esp-des</td>
+						<td style="font-size: 1rem">
+							ESP with 56-bit DES encryption
+						</td>
 					</tr>
 					<tr style="background-color: powderblue">
-						<td>esp-3des</td>
-						<td>ESP with 168-bit DES encryption</td>
+						<td style="font-size: 1rem">esp-3des</td>
+						<td style="font-size: 1rem">
+							ESP with 168-bit DES encryption
+						</td>
 					</tr>
 
 					<tr style="background-color: pink">
 						<td rowspan="2">
 							ESP Authentication Transform
 						</td>
-						<td>esp-md5-hmac</td>
-						<td>ESP with MD5 authentication</td>
+						<td style="font-size: 1rem">
+							esp-md5-hmac
+						</td>
+						<td style="font-size: 1rem">
+							ESP with MD5 authentication
+						</td>
 					</tr>
 					<tr style="background-color: pink">
-						<td>esp-sha-hmac</td>
-						<td>ESP with SHA authentication</td>
+						<td style="font-size: 1rem">
+							esp-sha-hmac
+						</td>
+						<td style="font-size: 1rem">
+							ESP with SHA authentication
+						</td>
 					</tr>
 				</table>
 			</div>
@@ -11139,7 +11170,7 @@
 						padding-left: 4rem;
 						list-style-type: circle;
 					">
-					<li class="substep">
+					<li>
 						<span
 							style="
 								margin-top: 2rem;
@@ -11409,7 +11440,7 @@
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<ul style="font-size: 1.5rem; list-style-type: disc">
-					<li class="substep">
+					<li>
 						For every IPv6 user a dedicated IPv4 address
 						is required
 					</li>
@@ -12068,7 +12099,7 @@
 
 				<div style="font-size: 1.5rem">
 					<ul style="list-style-type: circle">
-						<li class="substep">
+						<li>
 							The specified IPv6 can reach to All
 							IPv4 addresses
 						</li>
@@ -12590,7 +12621,7 @@
 						color: mediumvioletred;
 						text-shadow: 1px 1px 1px black;
 					">
-					<li class="substep">
+					<li>
 						Domain Name
 						<ul
 							style="
