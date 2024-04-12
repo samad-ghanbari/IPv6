@@ -71,7 +71,6 @@
 			data-perspective="1000"
 			style="color: darkslategray; font-weight: bold">
 			<!-- data-autoplay="7" -->
-
 			<!-- Start -->
 			<div
 				class="step"
@@ -105,7 +104,7 @@
 							font-size: 1rem;
 							color: gray;
 							position: absolute;
-							bottom: -120px;
+							bottom: -100px;
 							display: block;
 							width: 100%;
 							text-align: center;
@@ -11126,8 +11125,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT Types
 				</h1>
@@ -11139,8 +11139,13 @@
 						padding-left: 4rem;
 						list-style-type: circle;
 					">
-					<li>
-						<span class="bold" style="margin-top: 2rem"
+					<li class="substep">
+						<span
+							style="
+								margin-top: 2rem;
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
+							"
 							>Stateless NAT</span
 						>
 						<ul
@@ -11172,8 +11177,14 @@
 							</li>
 						</ul>
 					</li>
-					<li>
-						<span class="bold" style="margin-top: 2rem"
+					<li class="substep">
+						<span
+							class="bold"
+							style="
+								margin-top: 2rem;
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
+							"
 							>Stateful NAT</span
 						>
 						<ul
@@ -11200,9 +11211,13 @@
 								</ul>
 							</li>
 						</ul>
+						<hr
+							style="
+								width: 50%;
+								border: 1px dotted darkcyan;
+							" />
 					</li>
 				</ul>
-				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<ul
 					style="
@@ -11210,8 +11225,14 @@
 						padding-left: 4rem;
 						list-style-type: square;
 					">
-					<li>
-						<span style="font-weight: bold">NAT64</span>
+					<li class="substep">
+						<span
+							style="
+								font-weight: bold;
+								color: darkmagenta;
+							"
+							>NAT64</span
+						>
 						<ul
 							style="
 								font-size: 1.2rem;
@@ -11239,7 +11260,7 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li class="substep">
 						<span
 							style="
 								font-weight: bold;
@@ -11248,7 +11269,11 @@
 							>NAT66</span
 						>
 						=>
-						<span style="font-weight: bold">
+						<span
+							style="
+								font-weight: bold;
+								color: darkmagenta;
+							">
 							NPTv6</span
 						>
 					</li>
@@ -11266,8 +11291,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - NPTv6
 				</h1>
@@ -11280,18 +11306,23 @@
 					style="
 						font-size: 1.5rem;
 						padding-left: 4rem;
-						color: darkblue;
+						color: mediumvioletred;
 						list-style-type: square;
 					">
-					<li>NPTv6 Only Translates prefixe</li>
-					<li>Keeps The Same Host Address</li>
-					<li>
+					<li class="substep">
+						NPTv6 Only Translates prefixe
+					</li>
+					<li class="substep">
+						Keeps The Same Host Address
+					</li>
+					<li class="substep">
 						1:1 Translation Between Inside And Outside
 					</li>
-					<li>No Overloading</li>
+					<li class="substep">No Overloading</li>
 				</ul>
 				<img
 					src="assets/images/nptv6.png"
+					class="substep"
 					style="
 						display: block;
 						width: 80%;
@@ -11310,12 +11341,13 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - NPTv6
 				</h1>
-				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<hr style="width: 50%; border: 1px dotted darkcyan" />
 
 				<img
 					src="assets/images/nptv6-topo.png"
@@ -11326,17 +11358,29 @@
 					" />
 
 				<dir style="font-size: 1.2rem">
-					<p class="bold">NPTv6</p>
+					<p
+						class="bold"
+						style="
+							font-size: 1.5rem;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
+						NPTv6
+					</p>
 					<p>!</p>
 					<p>interface Ethernet 0/0</p>
 					<p class="pl2">ipv6 address 2001:DB8::1/64</p>
-					<p class="pl2 bold">nat66 inside</p>
+					<p class="pl2" style="color: darkmagenta">
+						nat66 inside
+					</p>
 					<p>!</p>
 					<p>interface Ethernet 0/1</p>
 					<p class="pl2">ipv6 address 2200::1/64</p>
-					<p class="pl2 bold">nat66 outside</p>
+					<p class="pl2" style="color: darkmagenta">
+						nat66 outside
+					</p>
 					<p>!</p>
-					<p class="bold">
+					<p style="color: darkmagenta">
 						nat66 prefix inside 2001:DB8::/64 outside
 						2200::/64
 					</p>
@@ -11356,37 +11400,40 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - Stateless NAT64
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<ul style="font-size: 1.5rem; list-style-type: disc">
-					<li>
+					<li class="substep">
 						For every IPv6 user a dedicated IPv4 address
 						is required
 					</li>
-					<li>
-						Usage : When you have few numbers of IPv6
+					<li class="substep">
+						Usage : When you have a few numbers of IPv6
 						addresses
 					</li>
-					<li>
+					<li class="substep">
 						1:1 mapping between single IPv6 to single
 						IPv4 host
 					</li>
-					<li>
+					<li class="substep">
 						By
-						<span style="font-weight: bold"
+						<span style="color: darkmagenta"
 							>nat64 route</span
 						>
 						we specify which IPv4-to-IPv6 attached in
 						which interface
 					</li>
-					<li>
-						Only one stateless NAT prefix cab be defined
-						in a Router
+					<li class="substep">
+						Only
+						<span style="color: darkmagenta">one</span>
+						stateless NAT prefix cab be defined in a
+						Router
 					</li>
 				</ul>
 			</div>
@@ -11402,8 +11449,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - Stateless NAT64
 				</h1>
@@ -11417,34 +11465,32 @@
 						margin: auto;
 					" />
 				<div style="font-size: 1rem; float: left">
-					<p class="bold">R</p>
+					<p>R</p>
 					<p>!</p>
 					<p>interface Ethernet 0/0</p>
 					<p class="pl2">
 						ip address 10.10.0.1 255.255.255.0
 					</p>
-					<p class="bold pl2">nat64 enable</p>
+					<p class="pl2" style="color: darkmagenta">
+						nat64 enable
+					</p>
 					<p>!</p>
 					<p>interface Ethernet 0/1</p>
 					<p class="pl2">ipv6 enable</p>
-					<p class="bold pl2">nat64 enable</p>
-					<p>!</p>
-					<p class="bold">
-						nat64 prefix stateless 3064::/96
+					<p class="pl2" style="color: darkmagenta">
+						nat64 enable
 					</p>
 					<p>!</p>
-					<p class="bold">
+					<p style="color: darkmagenta">
+						nat64 prefix stateless 3064::/96
+					</p>
+					<p style="color: darkmagenta">
 						nat64 route 20.20.20.20/32 Ethernet0/1
 					</p>
 					<p>!</p>
 				</div>
 
-				<div
-					style="
-						float: right;
-						font-size: 1rem;
-						color: darkslateblue;
-					">
+				<div style="float: right; font-size: 1rem">
 					<br />
 					20.20.20.20 === HEX ===> 14.14.14.14 ===>
 					1414:1414
@@ -11458,8 +11504,22 @@
 					</p>
 					<br />
 					<br />
-					<p>Prefix + IPv4-Hex</p>
-					<p class="bold">3064::1414:1414</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
+						Prefix + IPv4-Hex
+					</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							text-shadow: 1px 1px 1px
+								mediumvioletred;
+						">
+						3064::1414:1414
+					</p>
 				</div>
 			</div>
 			<!-- IPv6 NAT - Chapter NAT - Stateless NAT64 topo-1 capture-->
@@ -11474,14 +11534,19 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - Stateless NAT64
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p style="font-size: 1.5rem; font-weight: bold">
+				<p
+					style="
+						font-size: 1.5rem;
+						text-shadow: 1px 1px 1px mediumvioletred;
+					">
 					R4: ping 20.20.20.20 source 4.4.4.4
 				</p>
 				<p
@@ -11490,15 +11555,32 @@
 						font-weight: bold;
 						text-align: center;
 					">
-					4.4.4.4 => 3064::404:404
+					4.4.4.4 =>
+					<span
+						style="
+							font-size: 1.3rem;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						"
+						>3064::404:404</span
+					>
 					<br />
-					20.20.20.20 => 3064::1414:1414
+					20.20.20.20 =>
+					<span
+						style="
+							font-size: 1.3rem;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						"
+						>3064::1414:1414</span
+					>
 				</p>
 				<p
 					style="
 						font-size: 1.5rem;
 						font-weight: bold;
-						color: darkgreen;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
 					">
 					Capture R6 ethernet 0/1
 				</p>
@@ -11522,8 +11604,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - Stateless NAT64
 				</h1>
@@ -11536,14 +11619,25 @@
 						width: 100%;
 						margin: auto;
 					" />
-				<div style="font-size: 0.8rem">
-					<p class="bold">R3</p>
+				<div style="font-size: 1rem; float: left">
+					<p
+						style="
+							font-size: 1.5rem;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
+						R3
+					</p>
 					<p>Interface range ethernet 0/0-1</p>
 					<p class="pl2">nat64 enable</p>
 					<p>!</p>
 					<p class="bold">
 						nat64 prefix stateless 3064::/96
 					</p>
+					<p>!</p>
+				</div>
+				<div style="font-size: 1rem; float: right">
+					<p>!</p>
 					<p>nat64 route 6.6.6.6/32 Ethernet0/0</p>
 					<p>nat64 route 7.7.7.7/32 Ethernet0/0</p>
 					<p>nat64 route 9.9.9.9/32 Ethernet0/0</p>
@@ -11564,8 +11658,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - Stateful Static NAT64
 				</h1>
@@ -11585,17 +11680,21 @@
 					<p class="pl2">
 						ip address 10.10.0.1 255.255.255.0
 					</p>
-					<p class="bold pl2">nat64 enable</p>
+					<p class="bold pl2" style="color: darkmagenta">
+						nat64 enable
+					</p>
 					<p>!</p>
 					<p>interface Ethernet 0/1</p>
 					<p class="pl2">ipv6 enable</p>
-					<p class="bold pl2">nat64 enable</p>
+					<p class="bold pl2" style="color: darkmagenta">
+						nat64 enable
+					</p>
 					<p>!</p>
-					<p class="bold">
+					<p class="bold" style="color: darkmagenta">
 						nat64 v4v6 static 4.4.4.4 64:FF9B::4
 					</p>
 					<p>!</p>
-					<p class="bold">
+					<p class="bold" style="color: darkmagenta">
 						nat64 v6v4 static 2000::1 20.20.20.20
 					</p>
 					<p>!</p>
@@ -11603,43 +11702,62 @@
 				<div style="font-size: 1rem; float: right">
 					<p style="font-size: 1rem">
 						By committing
-						<span class="bold">nat64 enable</span> under
-						the interface
+						<span style="color: darkmagenta"
+							>nat64 enable</span
+						>
+						under the interface
 					</p>
 
 					<p
 						style="
 							font-size: 1rem;
 							font-weight: bold;
-							color: darkslateblue;
 							text-align: center;
 						">
-						The prefix 64:FF9B::/96 will be inserted
-						into routing table
+						The prefix
+						<span
+							style="
+								color: mediumvioletred;
+								font-size: 1.5rem;
+								text-shadow: 1px 1px 1px black;
+							"
+							>64:FF9B::/96</span
+						>
+						will be inserted into routing table
 					</p>
-					<p style="font-size: 1rem">
-						<span style="font-weight: bold">NVI</span> :
-						Nat Virtual Interface
+					<p style="font-size: 1.5rem">
+						<span
+							style="
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
+							"
+							>NVI</span
+						>
+						: Nat Virtual Interface
 					</p>
 					<br />
 
-					<p>
+					<p style="font-size: 1.3rem">
 						nat64 v6v4
 						<span
 							style="
 								font-weight: bold;
-								color: darkmagenta;
+								font-size: 1.5rem;
+								text-shadow: 1px 1px 1px black;
+								color: darkred;
 							">
 							Required
 						</span>
 					</p>
 
-					<p>
+					<p style="font-size: 1.3rem">
 						nat64 v4v6
 						<span
 							style="
 								font-weight: bold;
-								color: darkolivegreen;
+								font-size: 1.5rem;
+								text-shadow: 1px 1px 1px black;
+								color: yellowgreen;
 							">
 							Optional
 						</span>
@@ -11650,7 +11768,12 @@
 					<p style="font-weight: bold">
 						R# show ipv6 route
 					</p>
-					<p class="pl2">Static 64:FF9B::/96 via NVI1</p>
+					<p class="pl2">
+						Static 64:FF9B::/96 via
+						<span style="color: mediumvioletred"
+							>NVI1</span
+						>
+					</p>
 					<p>!</p>
 				</div>
 			</div>
@@ -11666,8 +11789,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - Stateful Static NAT64
 				</h1>
@@ -11686,9 +11810,10 @@
 				</p>
 				<p
 					style="
-						font-size: 1rem;
+						font-size: 1.5rem;
 						font-weight: bold;
-						color: darkgreen;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
 					">
 					Capture R6 ethernet 0/1
 				</p>
@@ -11713,9 +11838,10 @@
 				</p>
 				<p
 					style="
-						font-size: 1rem;
+						font-size: 1.5rem;
 						font-weight: bold;
-						color: darkgreen;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
 					">
 					Capture R6 ethernet 0/1
 				</p>
@@ -11740,8 +11866,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - Stateful Static NAT64
 				</h1>
@@ -11768,9 +11895,10 @@
 				</p>
 				<p
 					style="
-						font-size: 1rem;
+						font-size: 1.5rem;
 						font-weight: bold;
-						color: darkgreen;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
 					">
 					Capture R4 ethernet 0/0
 				</p>
@@ -11778,7 +11906,7 @@
 					src="assets/images/sf-cap-6.png"
 					style="
 						display: block;
-						width: 60%;
+						width: 80%;
 						margin: auto;
 					" />
 			</div>
@@ -11795,8 +11923,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - Stateful Static NAT64
 				</h1>
@@ -11809,41 +11938,107 @@
 						width: 100%;
 						margin: auto;
 					" />
-				<div style="font-size: 0.8rem">
-					<p class="bold">R3</p>
+				<div style="font-size: 1rem; float: left">
+					<p
+						style="
+							font-size: 1.5rem;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
+						R3
+					</p>
 					<p>Interface range ethernet 0/0-1</p>
 					<p class="pl2">nat64 enable</p>
 					<p>!</p>
 					<p class="bold">
 						nat64 prefix stateful 3064::/96
 					</p>
+					<p>!</p>
+				</div>
+				<div style="font-size: 1rem; float: right">
+					<p>!</p>
 					<p>
-						nat64 v6v4 static 2000::6
-						<span style="font-weight: bold"
+						nat64 v6v4 static
+						<span
+							style="
+								color: darkolivegreen;
+								text-shadow: 1px 1px 1px black;
+							"
+							>2000::6</span
+						>
+						<span
+							style="
+								color: darkmagenta;
+								text-shadow: 1px 1px 1px black;
+							"
 							>6.6.6.6</span
 						>
 					</p>
 					<p>
-						nat64 v6v4 static 2000::7
-						<span style="font-weight: bold">
+						nat64 v6v4 static
+						<span
+							style="
+								color: darkolivegreen;
+								text-shadow: 1px 1px 1px black;
+							"
+							>2000::7</span
+						>
+						<span
+							style="
+								color: darkmagenta;
+								text-shadow: 1px 1px 1px black;
+							">
 							7.7.7.7</span
 						>
 					</p>
 					<p>
-						nat64 v6v4 static 2000::8
-						<span style="font-weight: bold">
+						nat64 v6v4 static
+						<span
+							style="
+								color: darkolivegreen;
+								text-shadow: 1px 1px 1px black;
+							"
+							>2000::8</span
+						>
+						<span
+							style="
+								color: darkmagenta;
+								text-shadow: 1px 1px 1px black;
+							">
 							8.8.8.8</span
 						>
 					</p>
 					<p>
-						nat64 v6v4 static 2000::9
-						<span style="font-weight: bold">
+						nat64 v6v4 static
+						<span
+							style="
+								color: darkolivegreen;
+								text-shadow: 1px 1px 1px black;
+							"
+							>2000::9</span
+						>
+						<span
+							style="
+								color: darkmagenta;
+								text-shadow: 1px 1px 1px black;
+							">
 							9.9.9.9</span
 						>
 					</p>
 					<p>
-						nat64 v6v4 static 2000::A
-						<span style="font-weight: bold">
+						nat64 v6v4 static
+						<span
+							style="
+								color: darkolivegreen;
+								text-shadow: 1px 1px 1px black;
+							"
+							>2000::A</span
+						>
+						<span
+							style="
+								color: darkmagenta;
+								text-shadow: 1px 1px 1px black;
+							">
 							10.10.10.10</span
 						>
 					</p>
@@ -11863,8 +12058,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - Stateful Dynamic NAT64
 				</h1>
@@ -11872,19 +12068,19 @@
 
 				<div style="font-size: 1.5rem">
 					<ul style="list-style-type: circle">
-						<li>
-							The specified IPv6 range can reach to
+						<li class="substep">
+							The specified IPv6 can reach to All
 							IPv4 addresses
 						</li>
-						<li>
+						<li class="substep">
 							An IPv4-host cannot access or start
 							the communication with IPv6-Host
 						</li>
-						<li>
+						<li class="substep">
 							The nat64-router keeps the state of
 							the connection by port number
 						</li>
-						<li>
+						<li class="substep">
 							IPv6-user can access the IPv4-user by
 							setting the destination:
 							<br />
@@ -11892,11 +12088,33 @@
 							<span
 								style="
 									font-weight: bold;
-									color: darkcyan;
+									color: mediumvioletred;
+									text-shadow: 1px 1px 1px
+										black;
 									display: block;
 									text-align: center;
+									font-size: 1.5rem;
 								">
-								NAT64-prefix + hex-format-IPv4
+								<span
+									style="
+										background-color: lightcyan;
+										box-shadow: 5px 5px
+											3px dimgray;
+										color: darkcyan;
+										padding: 10px;
+									"
+									>NAT64-prefix</span
+								>
+								+
+								<span
+									style="
+										background-color: azure;
+										box-shadow: 5px 5px
+											3px dimgray;
+										padding: 10px;
+									"
+									>IPv4-hex-format</span
+								>
 							</span>
 						</li>
 					</ul>
@@ -11914,8 +12132,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - Stateful Dynamic NAT64
 				</h1>
@@ -11941,41 +12160,72 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - Stateful Dynamic NAT64
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<div style="float: left; font-size: 1.5rem">
-					<p class="bold">R3</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
+						R3
+					</p>
 					<p>interface Ethernet 0/0</p>
 					<p class="pl2">ipv6 enable</p>
-					<p class="pl2 bold">nat64 enable</p>
+					<p class="pl2" style="color: darkmagenta">
+						nat64 enable
+					</p>
 					<p>!</p>
 					<p>interface Ethernet0/0</p>
 					<p class="pl2">
 						ip address 10.10.23.3 255.255.255.0
 					</p>
-					<p class="pl2 bold">nat64 enable</p>
+					<p class="pl2" style="color: darkmagenta">
+						nat64 enable
+					</p>
 					<p>!</p>
 					<div class="substep">
-						<p class="bold">
-							nat64 v4 pool pool64-v4 10.10.10.1
-							10.10.10.4
+						<p style="color: darkmagenta">
+							<span
+								style="
+									text-shadow: 1px 1px 1px
+										black;
+								"
+								>nat64 v4 pool</span
+							>
+							pool64-v4 10.10.10.1 10.10.10.4
 						</p>
 						<p>!</p>
 					</div>
 					<div class="substep">
-						<p class="bold">ipv6 access-list ACL6</p>
-						<p class="pl4 bold">
+						<p style="color: darkmagenta">
+							<span
+								style="
+									text-shadow: 1px 1px 1px
+										black;
+								"
+								>ipv6 access-list</span
+							>
+							ACL6
+						</p>
+						<p class="pl4" style="color: darkmagenta">
 							permit ipv6 2000::/96 any
 						</p>
 						<p>!</p>
 					</div>
 					<div class="substep">
-						<p class="bold">
+						<p
+							style="
+								color: darkmagenta;
+								text-shadow: 1px 1px 1px black;
+							">
 							nat64 v6v4 list ACL6 pool pool64-v4
 							overload
 						</p>
@@ -11996,22 +12246,29 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - Stateful Dynamic NAT64
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<div style="font-size: 1.5rem">
-					<p class="bold">R10 wants to access R4</p>
+					<p>R10 wants to access R4</p>
 					<p
 						style="
 							text-align: center;
 							color: darkcyan;
-							font-weight: bold;
+							text-shadow: 1px 1px 1px black;
 						">
-						R10: 2000::a
+						<span style="color: darkmagenta"
+							>R10[2000::a]</span
+						>
+						ping
+						<span style="color: darkmagenta"
+							>R4[4.4.4.4]</span
+						>
 					</p>
 					<p
 						style="
@@ -12019,12 +12276,44 @@
 							color: darkcyan;
 							font-weight: bold;
 						">
-						R4 : 4.4.4.4 => 3064::/96 + 4.4.4.4 =>
-						3096::404:404
+						R4 : 4.4.4.4 =>
+						<span
+							style="
+								background-color: azure;
+								padding: 5px;
+								text-shadow: 1px 1px 1px black;
+							"
+							>3064::/96</span
+						>
+						+
+						<span
+							style="
+								background-color: azure;
+								padding: 5px;
+								text-shadow: 1px 1px 1px black;
+							"
+							>4.4.4.4</span
+						>
+						=>
+						<span
+							style="
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
+								font-size: 1.5rem;
+								padding: 5px;
+								background-color: wheat;
+								box-shadow: 5px 5px 3px dimgray;
+							"
+							>3096::404:404</span
+						>
 					</p>
 					<br />
 					<p>R10# ping 3064::404:404 source 2000::a</p>
-					<p style="color: dimgray">
+					<p
+						style="
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
 						Capture on port 0/1 of R4
 					</p>
 					<img
@@ -12048,15 +12337,21 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					IPv6 NAT - Stateful Dynamic NAT64
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<div style="font-size: 1.2rem">
-					<p style="font-weight: bold">
+					<p
+						style="
+							font-size: 1.5rem;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
 						R3# show nat64 translations
 					</p>
 					<br />
@@ -12065,6 +12360,8 @@
 							style="
 								background-color: aliceblue;
 								line-height: 70px;
+								color: darkmagenta;
+								text-shadow: 1px 1px 1px black;
 							">
 							<td style="text-align: center">
 								Proto
@@ -12119,28 +12416,37 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					Domain Name System
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
 				<div style="font-size: 1.5rem">
-					<p style="font-weight: bold; color: darkcyan">
+					<p
+						style="
+							font-weight: bold;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
 						DNS Servers
 					</p>
 					<ul
 						style="
 							list-style-type: circle;
 							padding-left: 4rem;
+							color: darkmagenta;
+							text-shadow: 1px 1px 1px black;
 						">
-						<li>
+						<li class="substep">
 							DNS recursor / Resolver
 							<ul
 								style="
 									list-style-type: square;
 									color: dimgray;
+									text-shadow: none;
 									padding-left: 4rem;
 								">
 								<li>Like a librarian</li>
@@ -12150,12 +12456,13 @@
 								</li>
 							</ul>
 						</li>
-						<li>
+						<li class="substep">
 							Root nameserver
 							<ul
 								style="
 									list-style-type: square;
 									color: dimgray;
+									text-shadow: none;
 									padding-left: 4rem;
 								">
 								<li>
@@ -12167,12 +12474,13 @@
 								</li>
 							</ul>
 						</li>
-						<li>
+						<li class="substep">
 							TLD nameserver
 							<ul
 								style="
 									list-style-type: square;
 									color: dimgray;
+									text-shadow: none;
 									padding-left: 4rem;
 								">
 								<li>
@@ -12181,12 +12489,13 @@
 								</li>
 							</ul>
 						</li>
-						<li>
+						<li class="substep">
 							Authoritative nameserver
 							<ul
 								style="
 									list-style-type: square;
 									color: dimgray;
+									text-shadow: none;
 									padding-left: 4rem;
 								">
 								<li>
@@ -12210,8 +12519,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					Domain Name System
 				</h1>
@@ -12237,8 +12547,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					Domain Name System
 				</h1>
@@ -12264,21 +12575,29 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
-					DNS terminology
+					DNS Terminology
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<ul style="font-size: 1.2rem; list-style-type: disc">
-					<li>
+				<ul
+					style="
+						font-size: 1.2rem;
+						list-style-type: disc;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
+					<li class="substep">
 						Domain Name
 						<ul
 							style="
 								color: dimgray;
 								padding-left: 4rem;
 								list-style-type: square;
+								text-shadow: none;
 							">
 							<li>
 								The human-friendly name
@@ -12287,11 +12606,12 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li class="substep">
 						Domain Name System
 						<ul
 							style="
 								color: dimgray;
+								text-shadow: none;
 								padding-left: 4rem;
 								list-style-type: square;
 							">
@@ -12302,11 +12622,12 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li class="substep">
 						Top-Level Domain
 						<ul
 							style="
 								color: dimgray;
+								text-shadow: none;
 								padding-left: 4rem;
 								list-style-type: square;
 							">
@@ -12317,13 +12638,14 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li class="substep">
 						Zone File
 						<ul
 							style="
 								color: dimgray;
 								padding-left: 4rem;
 								list-style-type: square;
+								text-shadow: none;
 							">
 							<li>
 								A simple text file contains the
@@ -12332,13 +12654,14 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li class="substep">
 						Records
 						<ul
 							style="
 								color: dimgray;
 								padding-left: 4rem;
 								list-style-type: square;
+								text-shadow: none;
 							">
 							<li>
 								A single mapping between a
@@ -12346,13 +12669,14 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li class="substep">
 						FQDN
 						<ul
 							style="
 								color: dimgray;
 								padding-left: 4rem;
 								list-style-type: square;
+								text-shadow: none;
 							">
 							<li>Fully qualified domain name</li>
 							<li>
@@ -12361,7 +12685,7 @@
 									style="
 										font-weight: bold;
 										text-align: center;
-										color: cornflowerblue;
+										color: darkmagenta;
 									">
 									https://www.google.com<span
 										style="
@@ -12387,21 +12711,28 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					DNS Records
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<ul style="font-size: 1.2rem; list-style-type: disc">
+				<ul
+					style="
+						font-size: 1.2rem;
+						list-style-type: disc;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
 					<li>
 						A
 						<ul
 							style="
 								color: dimgray;
 								padding-left: 4rem;
-								list-style-type: square;
+								text-shadow: none;
 							">
 							<li>
 								Maps a hostname to an IPv4
@@ -12415,7 +12746,7 @@
 							style="
 								color: dimgray;
 								padding-left: 4rem;
-								list-style-type: square;
+								text-shadow: none;
 							">
 							<li>
 								Maps a hostname to an
@@ -12437,7 +12768,7 @@
 							style="
 								color: dimgray;
 								padding-left: 4rem;
-								list-style-type: square;
+								text-shadow: none;
 							">
 							<li>Canonical Name</li>
 						</ul>
@@ -12448,7 +12779,7 @@
 							style="
 								color: dimgray;
 								padding-left: 4rem;
-								list-style-type: square;
+								text-shadow: none;
 							">
 							<li>Main Exchnage</li>
 						</ul>
@@ -12459,7 +12790,7 @@
 							style="
 								color: dimgray;
 								padding-left: 4rem;
-								list-style-type: square;
+								text-shadow: none;
 							">
 							<li>
 								Reverse DNS Lookup – Maps IP to
@@ -12473,7 +12804,7 @@
 							style="
 								color: dimgray;
 								padding-left: 4rem;
-								list-style-type: square;
+								text-shadow: none;
 							">
 							<li>
 								Start Of Authority – Information
@@ -12487,7 +12818,7 @@
 							style="
 								color: dimgray;
 								padding-left: 4rem;
-								list-style-type: square;
+								text-shadow: none;
 							">
 							<li>Descriptive text</li>
 						</ul>
@@ -12498,7 +12829,7 @@
 							style="
 								color: dimgray;
 								padding-left: 4rem;
-								list-style-type: square;
+								text-shadow: none;
 							">
 							<li>Service Locator</li>
 						</ul>
@@ -12509,7 +12840,7 @@
 							style="
 								color: dimgray;
 								padding-left: 4rem;
-								list-style-type: square;
+								text-shadow: none;
 							">
 							<li>
 								To use specific name server-
@@ -12531,14 +12862,20 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					DNS Query Capture
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p style="font-size: 1.5rem; color: dodgerblue">
+				<p
+					style="
+						font-size: 1.5rem;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
 					DNS Query
 				</p>
 				<img
@@ -12549,7 +12886,12 @@
 						margin: auto;
 					" />
 
-				<p style="font-size: 1.5rem; color: dodgerblue">
+				<p
+					style="
+						font-size: 1.5rem;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
 					DNS Query Response
 				</p>
 				<img
@@ -12572,8 +12914,9 @@
 					style="
 						font-size: 2rem;
 						text-align: center;
-						color: darkslateblue;
+						color: darkcyan;
 						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
 					">
 					DNS64
 				</h1>
