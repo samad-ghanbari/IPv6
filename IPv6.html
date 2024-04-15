@@ -964,16 +964,18 @@
 						color: darkslategray;
 						text-shadow: 1px 1px 1px black;
 					">
-					X:X:X:X:X:X:X:X / Y
+					X1 : X2 : X3 : X4 : X5 : X6 : X7 : X8 / Y
 				</p>
 				<p style="font-size: 2rem; color: darkslategray">
-					X is a 16-bit hexadecimal
+					<span style="color: mediumvioletred">Xn</span> is
+					a 16-bit hexadecimal ~ 1 Hextet ~ 4 Nibble
+				</p>
+				<p style="font-size: 2rem; color: darkslategray">
+					<span style="color: mediumvioletred">Y</span>
+					Prefix-Length
 				</p>
 				<p style="font-size: 2rem; color: darkslategray">
 					No Subnet-Mask
-				</p>
-				<p style="font-size: 2rem; color: darkslategray">
-					We Use Prefix-Length
 				</p>
 				<hr style="width: 50%; border: 1px dotted darkcyan" />
 
@@ -1052,7 +1054,12 @@
 								padding-left: 4rem;
 							">
 							<li>ping ::1</li>
-							<li>ping -6 ::1</li>
+							<li>
+								ping
+								<span style="font-family: fira"
+									>-</span
+								>6 ::1
+							</li>
 						</ul>
 					</li>
 					<li class="substep">
@@ -1074,8 +1081,16 @@
 							">
 							<li>in ipv4: \\10.82.14.38\share</li>
 							<li class="substep">
-								in ipv6:
-								\\2001-1234-1234--1\share
+								in ipv6: \\2001<span
+									style="font-family: fira"
+									>-</span
+								>1234<span
+									style="font-family: fira"
+									>-</span
+								>1234<span
+									style="font-family: fira"
+									>--</span
+								>1\share
 							</li>
 						</ul>
 					</li>
@@ -1532,7 +1547,7 @@
 						text-align: center;
 						text-shadow: 1px 1px 1px black;
 					">
-					Spliting Into Two Prefixes
+					Splitting Into Two Prefixes
 					<span style="font-size: 2rem"> => /58</span>
 				</p>
 				<hr style="width: 50%; border: 1px dotted darkcyan" />
@@ -1682,7 +1697,7 @@
 						text-align: center;
 						text-shadow: 1px 1px 1px black;
 					">
-					Spliting Into Four Prefixes
+					Splitting Into Four Prefixes
 					<span style="font-size: 2rem"> => /59</span>
 				</p>
 				<hr style="width: 50%; border: 1px dotted darkcyan" />
@@ -1813,13 +1828,298 @@
 				</p>
 			</div>
 
+			<!-- Basics-IPv6 split-3 -->
+			<div
+				id="basics-IPv6-split-3"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="26000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
+					">
+					IPv6 Split
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+
+				<p
+					style="
+						font-size: 2rem;
+						text-shadow: 1px 1px 1px black;
+						text-align: center;
+					">
+					2A04:2680:17::
+					<span style="color: deeppink; font-weight: bold">
+						/ 48</span
+					>
+				</p>
+				<hr style="width: 50%; border: 1px dotted darkcyan" />
+				<p
+					style="
+						font-weight: bold;
+						font-size: 1.5rem;
+						text-shadow: 1px 1px 1px black;
+						text-align: center;
+						color: darkmagenta;
+					">
+					Splitting /49
+				</p>
+				<p
+					style="
+						font-size: 1.5rem;
+						text-align: center;
+						text-shadow: 1px 1px 1px black;
+					">
+					2A04:2680:17:<span
+						style="color: deeppink; font-weight: bold"
+						>0</span
+					>:: /49
+				</p>
+				<p
+					style="
+						font-size: 1.5rem;
+						text-align: center;
+						text-shadow: 1px 1px 1px black;
+					">
+					2A04:2680:17:<span
+						style="color: deeppink; font-weight: bold"
+						>8000</span
+					>:: /49
+				</p>
+				<hr style="width: 50%; border: 1px dotted darkcyan" />
+				<p
+					style="
+						font-size: 1.5rem;
+						color: darkmagenta;
+						font-weight: bold;
+						text-align: center;
+						text-shadow: 1px 1px 1px black;
+					">
+					Splitting /64
+				</p>
+				<div style="float: left">
+					<p
+						style="
+							font-size: 1.5rem;
+							text-align: center;
+							text-shadow: 1px 1px 1px black;
+						">
+						2A04:2680:17:<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>0000</span
+						>:: /64
+					</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							text-align: center;
+							text-shadow: 1px 1px 1px black;
+						">
+						2A04:2680:17:<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>0001</span
+						>:: /64
+					</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							text-align: center;
+							text-shadow: 1px 1px 1px black;
+						">
+						2A04:2680:17:<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>0002</span
+						>:: /64
+					</p>
+					<p
+						style="
+							color: deeppink;
+							font-size: 1.5rem;
+							margin: 0;
+							padding: 0;
+						">
+						. . .
+					</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							text-align: center;
+							text-shadow: 1px 1px 1px black;
+						">
+						2A04:2680:17:<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>000F</span
+						>:: /64
+					</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							text-align: center;
+							text-shadow: 1px 1px 1px black;
+						">
+						2A04:2680:17:<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>0010</span
+						>:: /64
+					</p>
+					<p
+						style="
+							color: deeppink;
+							font-size: 1.5rem;
+							margin: 0;
+							padding: 0;
+						">
+						. . .
+					</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							text-align: center;
+							text-shadow: 1px 1px 1px black;
+						">
+						2A04:2680:17:<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>7FFF</span
+						>:: /64
+					</p>
+				</div>
+				<div style="float: right">
+					<p
+						style="
+							font-size: 1.5rem;
+							text-align: center;
+							text-shadow: 1px 1px 1px black;
+						">
+						2A04:2680:17:<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>8000</span
+						>:: /64
+					</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							text-align: center;
+							text-shadow: 1px 1px 1px black;
+						">
+						2A04:2680:17:<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>8001</span
+						>:: /64
+					</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							text-align: center;
+							text-shadow: 1px 1px 1px black;
+						">
+						2A04:2680:17:<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>8002</span
+						>:: /64
+					</p>
+					<p
+						style="
+							color: deeppink;
+							font-size: 1.5rem;
+							margin: 0;
+							padding: 0;
+						">
+						. . .
+					</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							text-align: center;
+							text-shadow: 1px 1px 1px black;
+						">
+						2A04:2680:17:<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>800F</span
+						>:: /64
+					</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							text-align: center;
+							text-shadow: 1px 1px 1px black;
+						">
+						2A04:2680:17:<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>8010</span
+						>:: /64
+					</p>
+					<p
+						style="
+							color: deeppink;
+							font-size: 1.5rem;
+							margin: 0;
+							padding: 0;
+						">
+						. . .
+					</p>
+					<p
+						style="
+							font-size: 1.5rem;
+							text-align: center;
+							text-shadow: 1px 1px 1px black;
+						">
+						2A04:2680:17:<span
+							style="
+								color: deeppink;
+								font-weight: bold;
+							"
+							>FFFF</span
+						>:: /64
+					</p>
+				</div>
+			</div>
+
 			<!-- Basics-IPv6 Address Types-->
 			<div
 				id="basics-IPv6-address-types"
 				class="step"
 				data-x="-2000"
 				data-y="1000"
-				data-z="26000"
+				data-z="28000"
 				data-rotate="20">
 				<h1
 					style="
@@ -1928,7 +2228,7 @@
 				class="step"
 				data-x="-2000"
 				data-y="1000"
-				data-z="28000"
+				data-z="30000"
 				data-rotate="0">
 				<h1
 					style="
@@ -1949,7 +2249,10 @@
 						color: mediumvioletred;
 						text-shadow: 1px 1px 1px black;
 					">
-					IANA => RIR => ISP => Customers
+					IANA <span style="font-family: fira">=></span> RIR
+					<span style="font-family: fira">=></span> ISP
+					<span style="font-family: fira">=></span>
+					Customers
 				</p>
 				<img
 					src="assets/images/rir-map.svg"
@@ -1974,7 +2277,7 @@
 				class="step"
 				data-x="-2000"
 				data-y="1000"
-				data-z="30000"
+				data-z="32000"
 				data-rotate="20">
 				<h1
 					style="
@@ -2063,7 +2366,7 @@
 				class="step"
 				data-x="-2000"
 				data-y="1000"
-				data-z="32000"
+				data-z="34000"
 				data-rotate="0">
 				<h1
 					style="
@@ -2212,7 +2515,7 @@
 				class="step"
 				data-x="-2000"
 				data-y="1000"
-				data-z="34000"
+				data-z="36000"
 				data-rotate="20">
 				<h1
 					style="
@@ -2330,7 +2633,7 @@
 				class="step"
 				data-x="-2000"
 				data-y="1000"
-				data-z="36000"
+				data-z="38000"
 				data-rotate="0">
 				<h1
 					style="
@@ -2468,7 +2771,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="38000"
+				data-z="40000"
 				data-rotate="20">
 				<h1
 					style="
@@ -3591,21 +3894,21 @@
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
 								">
 								address prefix 2000::/64
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
 								">
 								dns-server 3000::3
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
 								">
 								domain-name net0.local
@@ -3621,21 +3924,21 @@
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
 								">
 								address prefix 2001::/64
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
 								">
 								dns-server 3000::1
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
 								">
 								domain-name net1.local
@@ -3653,29 +3956,30 @@
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
+									color: dimgray;
 								">
 								ipv6 address FE80:2000::1
 								link-local
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
 								">
 								ipv6 address 2000::1/64
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
 								">
 								ipv6 enable
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
 								">
 								ipv6 dhcp server dhcp0
@@ -3692,29 +3996,30 @@
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
+									color: dimgray;
 								">
 								ipv6 address FE80:2001::1
 								link-local
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
 								">
 								ipv6 address 2001::1/64
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
 								">
 								ipv6 enable
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.2rem;
 									padding-left: 2rem;
 								">
 								ipv6 dhcp server dhcp1
@@ -3768,14 +4073,14 @@
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.5rem;
 									padding-left: 2rem;
 								">
 								ipv6 address dhcp rapid-commit
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.5rem;
 									padding-left: 2rem;
 								">
 								ipv6 enable
@@ -3798,14 +4103,14 @@
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.5rem;
 									padding-left: 2rem;
 								">
 								ipv6 address dhcp rapid-commit
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.5rem;
 									padding-left: 2rem;
 								">
 								ipv6 enable
@@ -3823,11 +4128,11 @@
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.5rem;
 									padding-left: 2rem;
 								">
 								Ethernet0/0
-								2000::7DC6:AE87:40FB:32D8
+								2000::7DC6:AE87:40FB:32D8 #000
 							</p>
 						</td>
 						<td>
@@ -3840,7 +4145,7 @@
 							</p>
 							<p
 								style="
-									font-size: 1rem;
+									font-size: 1.5rem;
 									padding-left: 2rem;
 								">
 								Ethernet0/1
@@ -4225,10 +4530,10 @@
 						LSAs Type 1 & 2 for topology information
 					</p>
 					<p style="padding-left: 4rem">
-						LSAs Type 8 for Prefixes
+						LSAs Type 8 for LLA
 					</p>
 					<p style="padding-left: 4rem">
-						LSAs Type 9 for LLA
+						LSAs Type 9 for Prefixes
 					</p>
 				</div>
 			</div>
@@ -4483,7 +4788,7 @@
 				<p class="fs1half bold" style="padding-left: 8rem">
 					network 3000::/96
 				</p>
-				<p class="fs1half pl4 bold">exit</p>
+				<p class="fs1half pl4 bold">exit-address-family</p>
 			</div>
 
 			<!-- IPv6 Routing - BGP 6 over 4 -->
@@ -6889,26 +7194,44 @@
 
 				<p class="fs2 bold">R5</p>
 				<p class="fs1">!</p>
-				<p class="fs1 bold">interface Tunnel 0</p>
-				<p class="fs1 pl4">ipv6 address FD::5/64</p>
-				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
-				<p class="fs1 pl4">tunnel destination 10.10.46.6</p>
-				<p class="fs1 pl4">
+				<p style="font-size: 1.2rem" class="fs1 bold">
+					interface Tunnel 0
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					ipv6 address FD::5/64
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					tunnel source Ethernet0/0
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					tunnel destination 10.10.46.6
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
 					tunnel mode
 					<span style="color: mediumvioletred">ipv6ip</span>
 				</p>
 				<p class="fs1">!</p>
 				<p class="fs1">!</p>
-				<p class="fs1 bold">router bgp 1</p>
-				<p class="fs1 pl2">neighbor FD::6 remote-as 1</p>
+				<p style="font-size: 1.2rem" class="fs1 bold">
+					router bgp 1
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl2">
+					neighbor FD::6 remote-as 1
+				</p>
 				<p class="fs1">!</p>
-				<p class="fs1 pl2">address-family ipv6</p>
-				<p class="fs1 pl4">
+				<p style="font-size: 1.2rem" class="fs1 pl2">
+					address-family ipv6
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
 					redistribute ospf 1 metric 10 match internal
 					external 1 external 2 include-connected
 				</p>
-				<p class="fs1 pl4">neighbor FD::6 activate</p>
-				<p class="fs1 pl2">exit-address-family</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					neighbor FD::6 activate
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl2">
+					exit-address-family
+				</p>
 				<p class="fs1">!</p>
 			</div>
 
@@ -6932,28 +7255,46 @@
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs1 bold">R6</p>
+				<p class="fs2 bold">R6</p>
 				<p class="fs1">!</p>
-				<p class="fs1 bold">interface Tunnel 0</p>
-				<p class="fs1 pl4">ipv6 address FD::6/64</p>
-				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
-				<p class="fs1 pl4">tunnel destination 10.10.35.5</p>
-				<p class="fs1 pl4">
+				<p style="font-size: 1.2rem" class="fs1 bold">
+					interface Tunnel 0
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					ipv6 address FD::6/64
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					tunnel source Ethernet0/0
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					tunnel destination 10.10.35.5
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
 					tunnel mode
 					<span style="color: mediumvioletred">ipv6ip</span>
 				</p>
 				<p class="fs1">!</p>
 				<p class="fs1">!</p>
-				<p class="fs1 bold">router bgp 1</p>
-				<p class="fs1 pl2">neighbor FD::5 remote-as 1</p>
+				<p style="font-size: 1.2rem" class="fs1 bold">
+					router bgp 1
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl2">
+					neighbor FD::5 remote-as 1
+				</p>
 				<p class="fs1">!</p>
-				<p class="fs1 pl2">address-family ipv6</p>
-				<p class="fs1 pl4">
+				<p style="font-size: 1.2rem" class="fs1 pl2">
+					address-family ipv6
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
 					redistribute isis 1 metric 10 level-1-2
 					include-connected
 				</p>
-				<p class="fs1 pl4">neighbor FD::5 activate</p>
-				<p class="fs1 pl2">exit-address-family</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					neighbor FD::5 activate
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl2">
+					exit-address-family
+				</p>
 				<p class="fs1">!</p>
 			</div>
 
@@ -7016,27 +7357,45 @@
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs1 bold">R5</p>
+				<p class="fs2 bold">R5</p>
 				<p class="fs1">!</p>
-				<p class="fs1 bold">interface Tunnel 0</p>
-				<p class="fs1 pl4">ipv6 enable</p>
-				<p class="fs1 pl4">ipv6 router isis 1</p>
-				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
-				<p class="fs1 pl4">tunnel destination 10.10.46.6</p>
-				<p class="fs1 pl4">
+				<p style="font-size: 1.2rem" class="fs1 bold">
+					interface Tunnel 0
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					ipv6 enable
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					ipv6 router isis 1
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					tunnel source Ethernet0/0
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					tunnel destination 10.10.46.6
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
 					tunnel mode
 					<span style="color: mediumvioletred">gre ip</span>
 				</p>
 				<p class="fs1">!</p>
-				<p class="fs1 bold">router isis 1</p>
-				<p class="fs1 pl2">net 98.0005.0000.0000.0005.00</p>
+				<p style="font-size: 1.2rem" class="fs1 bold">
+					router isis 1
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl2">
+					net 98.0005.0000.0000.0005.00
+				</p>
 				<p class="fs1">!</p>
-				<p class="fs1 pl2">address-family ipv6</p>
-				<p class="fs1 pl4">
+				<p style="font-size: 1.2rem" class="fs1 pl2">
+					address-family ipv6
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
 					redistribute ospf 1 metric 10 match internal
 					external 1 external 2 include-connected
 				</p>
-				<p class="fs1 pl2">exit-address-family</p>
+				<p style="font-size: 1.2rem" class="fs1 pl2">
+					exit-address-family
+				</p>
 				<p class="fs1">!</p>
 			</div>
 
@@ -7060,21 +7419,35 @@
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs1 bold">R6</p>
+				<p class="fs2 bold">R6</p>
 				<p class="fs1">!</p>
-				<p class="fs1 bold">interface Tunnel 0</p>
-				<p class="fs1 pl4">ipv6 enable</p>
-				<p class="fs1 pl4">ipv6 router isis 1</p>
-				<p class="fs1 pl4">tunnel source Ethernet0/0</p>
-				<p class="fs1 pl4">tunnel destination 10.10.35.5</p>
-				<p class="fs1 pl4">
+				<p style="font-size: 1.2rem" class="fs1 bold">
+					interface Tunnel 0
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					ipv6 enable
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					ipv6 router isis 1
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					tunnel source Ethernet0/0
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
+					tunnel destination 10.10.35.5
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl4">
 					tunnel mode
 					<span style="color: mediumvioletred">gre ip</span>
 				</p>
 				<p class="fs1">!</p>
 				<p class="fs1">!</p>
-				<p class="fs1 bold">router isis 1</p>
-				<p class="fs1 pl2">net 98.0006.0000.0000.0006.00</p>
+				<p style="font-size: 1.2rem" class="fs1 bold">
+					router isis 1
+				</p>
+				<p style="font-size: 1.2rem" class="fs1 pl2">
+					net 98.0006.0000.0000.0006.00
+				</p>
 				<p class="fs1">!</p>
 			</div>
 
@@ -7142,8 +7515,10 @@
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p class="fs1">Tunnel source-IP is important</p>
-				<p class="fs1">
+				<p style="font-size: 1.2rem" class="fs1">
+					Tunnel source-IP is important
+				</p>
+				<p style="font-size: 1.2rem" class="fs1">
 					Tunnel IPv6 source-IP should contain IPv4 address
 				</p>
 				<p
@@ -7156,7 +7531,7 @@
 				</p>
 				<p
 					style="
-						font-size: 1.5rem;
+						font-size: 1.2rem;
 						text-align: center;
 						font-weight: bold;
 						margin-top: 1rem;
@@ -7167,27 +7542,23 @@
 							color: white;
 							padding: 5px;
 						"
-						>6to4-Prefix - 16bit </span
-					>+
-					<span
+						>6to4-Prefix-16bit
+					</span>
+					+<span
 						style="
 							background-color: firebrick;
 							color: white;
 							padding: 5px;
 						"
 						>IPv4-Hex-32bit</span
-					>
-					+
-					<span
+					>+<span
 						style="
 							background-color: yellowgreen;
 							color: white;
 							padding: 5px;
 						"
 						>subnet-16bit</span
-					>
-					<span style="color: olivedrab">/64</span> +
-					<span
+					><span style="color: olivedrab">/64</span>+<span
 						style="
 							background-color: lightslategray;
 							color: white;
@@ -7208,7 +7579,7 @@
 
 				<ul
 					style="
-						font-size: 1rem;
+						font-size: 1.2rem;
 						list-style-type: circle;
 						margin-top: 1rem;
 					">
@@ -7218,7 +7589,7 @@
 						<ul
 							style="
 								padding-left: 4rem;
-								font-size: 1rem;
+								font-size: 1.2rem;
 								color: dimgray;
 							">
 							<li>
@@ -7235,7 +7606,7 @@
 								width: 50%;
 								border: 1px dotted darkcyan;
 							" />
-						<ul style="font-size: 1rem">
+						<ul style="font-size: 1.2rem">
 							<li>
 								192.168.1.1 =>
 								2002:C0A8:101::1/64
@@ -7247,7 +7618,9 @@
 					</li>
 				</ul>
 				<hr style="width: 50%; border: 1px dotted darkcyan" />
-				<p style="font-size: 1rem">6to4 Prefix by command</p>
+				<p style="font-size: 1.2rem" style="font-size: 1rem">
+					6to4 Prefix by command
+				</p>
 				<p
 					style="
 						font-size: 1.5rem;
@@ -7814,36 +8187,32 @@
 						margin: auto;
 						float: right;
 					" />
-				<dir style="float: left">
-					<p class="fs1 bold" style="color: deeppink">R6</p>
+				<dir style="float: left; font-size: 1.2rem">
+					<p class="fs2 bold" style="color: deeppink">R6</p>
 					<p class="fs1">!</p>
-					<p class="fs1 bold">interface Tunnel 0</p>
-					<p class="fs1 pl4">ipv6 enable</p>
-					<p class="fs1 pl4">tunnel source Ethernet0/1</p>
-					<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
-					<p class="fs1 pl4">
-						tunnel 6rd ipv4 prefix-len 16
-					</p>
-					<p class="fs1 pl4">
+					<p class="bold">interface Tunnel 0</p>
+					<p class="pl4">ipv6 enable</p>
+					<p class="pl4">tunnel source Ethernet0/1</p>
+					<p class="pl4">tunnel mode ipv6ip 6rd</p>
+					<p class="pl4">tunnel 6rd ipv4 prefix-len 16</p>
+					<p class="pl4">
 						tunnel 6rd prefix 2000:ABCD::/32
 					</p>
-					<p class="fs1 pl4">tunnel 6rd br 10.10.4.4</p>
+					<p class="pl4">tunnel 6rd br 10.10.4.4</p>
 					<p class="fs1">!</p>
-					<p class="fs1 bold">interface Loopback 0</p>
-					<p class="fs1 pl4">
+					<p class="bold">interface Loopback 0</p>
+					<p class="pl4">
 						ipv6 address
 						<span style="background-color: chartreuse"
 							>2000:ABCD:106::1/128</span
 						>
 					</p>
 					<p class="fs1">!</p>
-					<p class="fs1">
-						ipv6 route 2000:ABCD::/32 Tunnel0
-					</p>
-					<p class="fs1">ipv6 route ::/0 2000:ABCD:404::</p>
+					<p>ipv6 route 2000:ABCD::/32 Tunnel0</p>
+					<p>ipv6 route ::/0 2000:ABCD:404::</p>
 					<p class="fs1">!</p>
-					<p class="fs1 bold">interface Ethernet0/1</p>
-					<p class="fs1 pl4">
+					<p class="bold">interface Ethernet0/1</p>
+					<p class="pl4">
 						ip address 10.10.1.6 255.255.255.0
 					</p>
 					<p class="fs1">!</p>
@@ -7982,28 +8351,24 @@
 						margin: auto;
 						float: right;
 					" />
-				<dir style="float: left">
-					<p class="fs1 bold" style="color: deeppink">BR</p>
+				<dir style="float: left; font-size: 1.2rem">
+					<p class="fs2 bold" style="color: deeppink">BR</p>
 
 					<p class="fs1">!</p>
-					<p class="fs1 bold">interface Tunnel 0</p>
-					<p class="fs1 pl4">ipv6 enable</p>
-					<p class="fs1 pl4">tunnel source Ethernet0/0</p>
-					<p class="fs1 pl4">tunnel mode ipv6ip 6rd</p>
-					<p class="fs1 pl4">
-						tunnel 6rd ipv4 prefix-len 16
-					</p>
-					<p class="fs1 pl4">
+					<p class="bold">interface Tunnel 0</p>
+					<p class="pl4">ipv6 enable</p>
+					<p class="pl4">tunnel source Ethernet0/0</p>
+					<p class="pl4">tunnel mode ipv6ip 6rd</p>
+					<p class="pl4">tunnel 6rd ipv4 prefix-len 16</p>
+					<p class="pl4">
 						tunnel 6rd prefix 2000:ABCD::/32
 					</p>
-					<p class="fs1 pl4">tunnel 6rd br 10.10.4.4</p>
+					<p class="pl4">tunnel 6rd br 10.10.4.4</p>
 					<p class="fs1">!</p>
-					<p class="fs1">
-						ipv6 route 2000:ABCD::/32 Tunnel0
-					</p>
+					<p>ipv6 route 2000:ABCD::/32 Tunnel0</p>
 					<p class="fs1">!</p>
-					<p class="fs1 bold">interface Ethernet0/0</p>
-					<p class="fs1 pl4">
+					<p class="bold">interface Ethernet0/0</p>
+					<p class="pl4">
 						ip address 10.10.4.4 255.255.255.0
 					</p>
 					<p class="fs1">!</p>
@@ -8115,7 +8480,7 @@
 						<span
 							style="
 								color: darkcyan;
-								font-weight: bold;
+								font-size: 1.5rem;
 							"
 							>EUI-64 :
 						</span>
@@ -8127,7 +8492,7 @@
 						<span
 							style="
 								color: darkcyan;
-								font-weight: bold;
+								font-size: 1.5rem;
 							"
 							>Manual:</span
 						><br />
@@ -8203,7 +8568,7 @@
 						<span
 							style="
 								color: deeppink;
-								font-weight: bold;
+								font-size: 1.5rem;
 							"
 							>SLAAC-Autoconfig :
 						</span>
@@ -8217,7 +8582,7 @@
 						<span
 							style="
 								color: deeppink;
-								font-weight: bold;
+								font-size: 1.5rem;
 							"
 							>EUI-64:
 						</span>
@@ -8230,7 +8595,7 @@
 						<span
 							style="
 								color: deeppink;
-								font-weight: bold;
+								font-size: 1.5rem;
 							"
 							>Manual:</span
 						><br />
@@ -8410,7 +8775,7 @@
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<div style="float: left">
+				<div style="float: left; font-size: 1.2rem">
 					<p
 						class="fs1half bold"
 						style="
@@ -8420,15 +8785,13 @@
 						Headend
 					</p>
 					<p class="fs1">!</p>
-					<p class="fs1 bold">interface Tunnel 0</p>
-					<p class="fs1 pl4">
-						ipv6 address 2000::/64 eui-64
-					</p>
-					<p class="fs1 pl4">tunnel source Loopback0</p>
-					<p class="fs1 pl4">tunnel mode ipv6ip isatap</p>
+					<p class="bold">interface Tunnel 0</p>
+					<p class="pl4">ipv6 address 2000::/64 eui-64</p>
+					<p class="pl4">tunnel source Loopback0</p>
+					<p class="pl4">tunnel mode ipv6ip isatap</p>
 					<p class="fs1">!</p>
 				</div>
-				<div style="float: right">
+				<div style="float: right; font-size: 1.2rem">
 					<p
 						class="fs1half bold"
 						style="
@@ -8438,14 +8801,12 @@
 						Client-1
 					</p>
 					<p class="fs1">!</p>
-					<p class="fs1 bold">interface Tunnel 0</p>
-					<p class="fs1 pl4">no ipv6 nd ra suppress</p>
-					<p class="fs1 pl4">
-						ipv6 address autoconfig default
-					</p>
-					<p class="fs1 pl4">tunnel source Loopback0</p>
-					<p class="fs1 pl4">tunnel mode ipv6ip</p>
-					<p class="fs1 pl4">tunnel destination 1.1.1.1</p>
+					<p class="bold">interface Tunnel 0</p>
+					<p class="pl4">no ipv6 nd ra suppress</p>
+					<p class="pl4">ipv6 address autoconfig default</p>
+					<p class="pl4">tunnel source Loopback0</p>
+					<p class="pl4">tunnel mode ipv6ip</p>
+					<p class="pl4">tunnel destination 1.1.1.1</p>
 					<p class="fs1">!</p>
 
 					<p
@@ -8457,13 +8818,11 @@
 						Client-2
 					</p>
 					<p class="fs1">!</p>
-					<p class="fs1 bold">interface Tunnel 0</p>
-					<p class="fs1 pl4">
-						ipv6 address 2000::404:404/64
-					</p>
-					<p class="fs1 pl4">tunnel source Loopback0</p>
-					<p class="fs1 pl4">tunnel mode ipv6ip</p>
-					<p class="fs1 pl4">tunnel destination 1.1.1.1</p>
+					<p class="bold">interface Tunnel 0</p>
+					<p class="pl4">ipv6 address 2000::404:404/64</p>
+					<p class="pl4">tunnel source Loopback0</p>
+					<p class="pl4">tunnel mode ipv6ip</p>
+					<p class="pl4">tunnel destination 1.1.1.1</p>
 					<p class="fs1">!</p>
 				</div>
 			</div>
