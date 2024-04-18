@@ -1015,111 +1015,6 @@
 				</table>
 			</div>
 
-			<!-- Basics-IPv6 Applications -->
-			<div
-				id="basics-IPv6-application"
-				class="step"
-				data-x="-2000"
-				data-y="1000"
-				data-z="12000"
-				data-rotate="20">
-				<h1
-					style="
-						font-size: 2rem;
-						text-align: center;
-						color: darkcyan;
-						font-weight: bold;
-						text-shadow: 1px 1px 3px black;
-					">
-					IPv6 Practical Applications
-				</h1>
-				<hr style="width: 100%; border: 1px solid darkcyan" />
-
-				<ul style="font-size: 2rem; list-style-type: disc">
-					<li>
-						<span
-							style="
-								color: mediumvioletred;
-								font-weight: bold;
-								text-shadow: 1px 1px 3px black;
-							"
-							>ping</span
-						>
-						<ul
-							style="
-								font-size: 2rem;
-								color: darkslategray;
-								font-weight: bold;
-								list-style-type: square;
-								padding-left: 4rem;
-							">
-							<li>ping ::1</li>
-							<li>
-								ping
-								<span style="font-family: fira"
-									>-</span
-								>6 ::1
-							</li>
-						</ul>
-					</li>
-					<li class="substep">
-						<span
-							style="
-								color: mediumvioletred;
-								font-weight: bold;
-								text-shadow: 1px 1px 3px black;
-							"
-							>Network Share</span
-						>
-						<ul
-							style="
-								font-size: 2rem;
-								color: darkslategray;
-								font-weight: bold;
-								list-style-type: square;
-								padding-left: 4rem;
-							">
-							<li>in ipv4: \\10.82.14.38\share</li>
-							<li class="substep">
-								in ipv6: \\2001<span
-									style="font-family: fira"
-									>-</span
-								>1234<span
-									style="font-family: fira"
-									>-</span
-								>1234<span
-									style="font-family: fira"
-									>--</span
-								>1\share
-							</li>
-						</ul>
-					</li>
-					<li class="substep">
-						<span
-							style="
-								color: mediumvioletred;
-								text-shadow: 1px 1px 3px black;
-								font-weight: bold;
-							"
-							>Web Page</span
-						>
-						<ul
-							style="
-								font-size: 2rem;
-								color: darkslategray;
-								font-weight: bold;
-								list-style-type: square;
-								padding-left: 4rem;
-							">
-							<li>[::1]</li>
-							<li>http://[::1]</li>
-							<li>https://[2000::1]</li>
-							<li>http://[2001::1]:8080</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-
 			<!-- Basics-IPv6 shortening -->
 			<div
 				id="basics-IPv6-shortening"
@@ -2316,6 +2211,32 @@
 						margin: auto;
 						width: 70%;
 					" />
+				<p style="font-size: 1.5rem">
+					The 7th bit in a MAC address is known as the
+					<span style="color: mediumvioletred"
+						>Universal/Local (U/L) bit</span
+					>
+				</p>
+				<p
+					style="
+						font-size: 1.3rem;
+						text-align: center;
+						font-weight: bold;
+					">
+					U/L bit '0'
+					<span style="font-family: fira">===></span>
+					globally administered
+				</p>
+				<p
+					style="
+						font-size: 1.3rem;
+						text-align: center;
+						font-weight: bold;
+					">
+					U/L bit '1'
+					<span style="font-family: fira">===></span>
+					locally administered
+				</p>
 				<hr style="width: 50%; border: 1px dotted darkcyan" />
 				<div class="substep">
 					<p
@@ -3088,7 +3009,7 @@
 							style="
 								color: orangered;
 								text-align: center;
-								font-size: 2rem;
+								font-size: 1.5rem;
 							">
 							ARP NOT Exists In IPv6
 						</span>
@@ -3099,7 +3020,7 @@
 							style="
 								color: dimgray;
 								text-align: center;
-								font-size: 2rem;
+								font-size: 1.5rem;
 							">
 							Duplicate Address Detection
 						</span>
@@ -3865,8 +3786,14 @@
 					style="
 						display: block;
 						margin: auto;
-						width: 70%;
+						width: 60%;
 					" />
+				<p style="color: mediumvioletred; font-size: 2rem">
+					dhcp# Interface 0/1 Capture
+				</p>
+				<img
+					src="assets/images/dhcp-messages.png"
+					style="display: block; margin: 1rem auto" />
 			</div>
 
 			<!-- Basics-DHCPv6-server-->
@@ -3892,8 +3819,11 @@
 					DHCPv6 Server
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<p style="font-size: 1.5rem; color: mediumvioletred">
+					dhcp Router
+				</p>
 
-				<table style="width: 100%">
+				<table style="width: 100%; margin-top: 1rem">
 					<tr>
 						<td>
 							<p
@@ -4072,6 +4002,7 @@
 								style="
 									font-size: 1.5rem;
 									font-weight: bold;
+									color: mediumvioletred;
 								">
 								R1
 							</p>
@@ -4102,6 +4033,7 @@
 								style="
 									font-size: 1.5rem;
 									font-weight: bold;
+									color: mediumvioletred;
 								">
 								R2
 							</p>
@@ -4167,6 +4099,68 @@
 				</table>
 			</div>
 
+			<!-- Basics-IPv6 DHCPv6 capture solicit -->
+			<div
+				id="basics-IPv6-dhcpv6-cap-solicit"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="24000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					Stateful DHCPv6 Solicit
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<p style="font-size: 1.5rem; color: mediumvioletred">
+					dhcp# Capture Interface 0/1
+				</p>
+				<img
+					src="assets/images/dhcpv6-solicit.png"
+					style="
+						margin: 1rem auto;
+						display: block;
+						width: 100%;
+					" />
+			</div>
+
+			<!-- Basics-IPv6 DHCPv6 capture reply -->
+			<div
+				id="basics-IPv6-dhcpv6-cap-reply"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="22000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					Stateful DHCPv6 Reply
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<p style="font-size: 1.5rem; color: mediumvioletred">
+					dhcp# Capture Interface 0/1
+				</p>
+				<img
+					src="assets/images/dhcpv6-reply.png"
+					style="
+						margin: 1rem auto;
+						display: block;
+						width: 100%;
+					" />
+			</div>
+
 			<!-- Basics-IPv6 Applications windows -->
 			<div
 				id="basics-ipv6-windows"
@@ -4177,7 +4171,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="26000"
+				data-z="20000"
 				data-rotate="0">
 				<h1
 					style="
@@ -4187,9 +4181,384 @@
 						text-shadow: 1px 1px 3px black;
 						font-weight: bold;
 					">
-					IPv6 - Windows
+					IPv6 Practical Applications
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<dir style="font-size: 1.5rem">
+					<p style="text-align: left">
+						Before Windows Vista
+						<span style="color: darkmagenta">
+							Windows Use EUI-64</span
+						>
+					</p>
+					<p class="substep">
+						On Wherever and Whichever Networks
+						<span style="font-family: fira">==></span>
+						User Can Be Tracked
+					</p>
+					<p
+						class="substep"
+						style="
+							color: mediumvioletred;
+							text-align: center;
+							font-size: 2rem;
+							margin: 1rem;
+						">
+						Security Vulnerability
+					</p>
+					<div class="substep">
+						<p style="color: darkmagenta">
+							To Improve User's Privacy:
+						</p>
+						<ul
+							style="
+								padding-left: 4rem;
+								list-style-type: circle;
+							">
+							<li>
+								Random Interface Identifiers
+								<span
+									class="substep"
+									style="
+										color: mediumvioletred;
+									">
+									Default</span
+								><span
+									class="substep"
+									style="
+										color: tomato;
+										font-family: fira;
+									">
+									==> DAD</span
+								>
+							</li>
+							<li>Temporary IPv6 addresses</li>
+						</ul>
+						<p
+							style="
+								color: mediumvioletred;
+								text-align: center;
+								font-size: 2rem;
+								margin: 1rem;
+							">
+							After Windows Vista, this feature is
+							enabled by default
+						</p>
+					</div>
+				</dir>
+			</div>
+			<!-- Basics-IPv6 Applications windows SET IP-->
+			<div
+				id="basics-ipv6-windows-SET"
+				class="step"
+				style="
+					font-weight: bold;
+					text-shadow: 1px 1px 1px black;
+				"
+				data-x="-2000"
+				data-y="1000"
+				data-z="18000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
+					">
+					IPv6 Practical Applications
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<dir style="font-size: 1.5rem">
+					<p
+						style="
+							text-align: center;
+							color: mediumvioletred;
+						">
+						Set IPv6 on Windows
+					</p>
+					<div style="font-size: 2rem">
+						<ul
+							style="
+								padding-left: 4rem;
+								list-style-type: circle;
+							">
+							<li>Manually</li>
+							<li>SLAAC</li>
+							<li>Stateful DHCPv6</li>
+						</ul>
+					</div>
+					<img
+						src="assets/images/Win-NIC-ipv6.png"
+						style="margin: auto" />
+					<img
+						src="assets/images/Win-NIC-ipv6-set.png"
+						style="margin: auto" />
+				</dir>
+			</div>
+			<!-- Basics-IPv6 Applications windows RI -->
+			<div
+				id="basics-ipv6-windows-RII"
+				class="step"
+				style="
+					font-weight: bold;
+					text-shadow: 1px 1px 1px black;
+				"
+				data-x="-2000"
+				data-y="1000"
+				data-z="16000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
+					">
+					IPv6 Practical Applications
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<dir style="font-size: 1.5rem">
+					<p style="text-align: center">
+						Command :
+						<span style="color: mediumvioletred">
+							netsh interface ipv6 show global
+						</span>
+					</p>
+					<img
+						src="assets/images/win-RII.png"
+						style="
+							margin: auto;
+							display: block;
+							margin: 1rem auto;
+						" />
+				</dir>
+			</div>
+			<!-- Basics-IPv6 Applications windows ipconfig -->
+			<div
+				id="basics-ipv6-windows-ipconfig"
+				class="step"
+				style="
+					font-weight: bold;
+					text-shadow: 1px 1px 1px black;
+				"
+				data-x="-2000"
+				data-y="1000"
+				data-z="14000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
+					">
+					IPv6 Practical Applications
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<dir style="font-size: 1.5rem">
+					<p style="text-align: center">
+						Show IPv6 Address :
+						<span style="color: mediumvioletred">
+							ipconfig
+						</span>
+						or
+						<span style="color: mediumvioletred"
+							>ipconfig /all</span
+						>
+					</p>
+					<img
+						src="assets/images/win-ipconfig.png"
+						style="
+							margin: auto;
+							display: block;
+							margin: 1rem auto;
+						" />
+				</dir>
+			</div>
+			<!-- Basics-IPv6 Applications windows ping -->
+			<div
+				id="basics-ipv6-windows-ping"
+				class="step"
+				style="
+					font-weight: bold;
+					text-shadow: 1px 1px 1px black;
+				"
+				data-x="-2000"
+				data-y="1000"
+				data-z="12000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
+					">
+					IPv6 Practical Applications
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<dir style="font-size: 1.5rem">
+					<p
+						style="
+							color: mediumvioletred;
+							font-weight: bold;
+							text-shadow: 1px 1px 3px black;
+							font-size: 2rem;
+						">
+						ping
+					</p>
+					<ul
+						style="
+							font-size: 2rem;
+							color: darkslategray;
+							font-weight: bold;
+							list-style-type: square;
+							padding-left: 4rem;
+						">
+						<li>
+							ping
+							<span style="font-family: fira"
+								>-</span
+							>6 FD00::1
+						</li>
+						<li>ping FD00::1</li>
+					</ul>
+
+					<img
+						src="assets/images/Win-NIC-ipv6-ping.png"
+						style="
+							margin: auto;
+							display: block;
+							margin: 1rem auto;
+						" />
+				</dir>
+			</div>
+			<!-- Basics-IPv6 Applications windows share -->
+			<div
+				id="basics-ipv6-windows-share"
+				class="step"
+				style="
+					font-weight: bold;
+					text-shadow: 1px 1px 1px black;
+				"
+				data-x="-2000"
+				data-y="1000"
+				data-z="10000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
+					">
+					IPv6 Practical Applications
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<dir style="font-size: 1.5rem">
+					<p
+						style="
+							color: mediumvioletred;
+							font-weight: bold;
+							text-shadow: 1px 1px 3px black;
+							font-size: 2rem;
+						">
+						Network Share
+					</p>
+					<ul
+						style="
+							font-size: 2rem;
+							color: darkslategray;
+							font-weight: bold;
+							list-style-type: square;
+							padding-left: 4rem;
+						">
+						<li>
+							in ipv4: \\10.82.14.38\path-to-folder
+						</li>
+						<li class="substep">
+							in ipv6: \\FD00<span
+								style="font-family: fira"
+								>--</span
+							>1<span style="color: darkmagenta"
+								>.ipv6<span
+									style="font-family: fira"
+									>-</span
+								>literal.net</span
+							>\path-to-folder
+							<img
+								src="assets/images/Win-share-2.png"
+								style="
+									margin: auto;
+									display: block;
+									margin: 1rem auto;
+								" />
+							<img
+								src="assets/images/Win-share-path.png"
+								style="
+									margin: auto;
+									display: block;
+									margin: 1rem auto;
+								" />
+						</li>
+					</ul>
+				</dir>
+			</div>
+			<!-- Basics-IPv6 Applications windows share -->
+			<div
+				id="basics-ipv6-windows-website"
+				class="step"
+				style="
+					font-weight: bold;
+					text-shadow: 1px 1px 1px black;
+				"
+				data-x="-2000"
+				data-y="1000"
+				data-z="8000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
+					">
+					IPv6 Practical Applications
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<dir style="font-size: 1.5rem">
+					<p
+						style="
+							color: mediumvioletred;
+							text-shadow: 1px 1px 3px black;
+							font-weight: bold;
+							font-size: 2rem;
+						">
+						Web Page
+					</p>
+					<ul
+						style="
+							font-size: 2rem;
+							color: darkslategray;
+							font-weight: bold;
+							list-style-type: square;
+							padding-left: 4rem;
+						">
+						<li>http://[::1]</li>
+						<li>https://[FD00::1]</li>
+						<li>http://[FD00::1]:80</li>
+					</ul>
+					<img
+						src="assets/images/Win-IIS-ULA.png"
+						style="display: block; margin: 1rem auto" />
+				</dir>
 			</div>
 
 			<!-- Basics-IPv6 Applications Linux -->
@@ -4202,7 +4571,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="24000"
+				data-z="6000"
 				data-rotate="0">
 				<h1
 					style="
@@ -4212,7 +4581,7 @@
 						text-shadow: 1px 1px 3px black;
 						font-weight: bold;
 					">
-					IPv6 - Linux Ubuntu
+					IPv6 Practical Applications
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 			</div>

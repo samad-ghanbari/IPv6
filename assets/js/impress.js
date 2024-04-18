@@ -45,10 +45,10 @@
 	wm.style.top = "50%";
 	//wm.style.left = "20px";
 	wm.style.rotate = "-45deg";
-	wm.style.fontSize = "4rem";
+	wm.style.fontSize = "3rem";
 	wm.style.textAlign = "center";
 	var m = document.createTextNode(
-		"\u0068\u0074\u0074\u0070\u0073\u003a\u002f\u002f\u0067\u0069\u0074\u0068\u0075\u0062\u002e\u0063\u006f\u006d\u002f\u0073\u0061\u006d\u0061\u0064\u002d\u0067\u0068\u0061\u006e\u0062\u0061\u0072\u0069"
+		"\u0068\u0074\u0074\u0070\u0073\u003a\u002f\u002f\u0067\u0069\u0074\u0068\u0075\u0062\u002e\u0063\u006f\u006d\u002f\u0073\u0061\u006d\u0061\u0064\u002d\u0067\u0068\u0061\u006e\u0062\u0061\u0072\u0069\u002f\u0049\u0050\u0076\u0036"
 	);
 	wm.appendChild(m);
 	document.body.appendChild(wm);
