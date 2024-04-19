@@ -173,7 +173,7 @@
 						font-weight: bold;
 					">
 					<li>- Features</li>
-					<li class="substep">- Practical Applications</li>
+					<li class="substep">- IPv6 Format</li>
 					<li class="substep">- IPv6 Calculation</li>
 					<li class="substep">- IPv6 Address Types</li>
 					<li class="substep">- IPv6 Summerization</li>
@@ -181,6 +181,7 @@
 					<li class="substep">- IPv6 SNMA</li>
 					<li class="substep">- IPv6 NDP</li>
 					<li class="substep">- DHCPv6</li>
+					<li class="substep">- Practical Applications</li>
 				</ul>
 			</div>
 			<!-- Routing Topics -->
@@ -2052,6 +2053,15 @@
 										color: darkmagenta;
 									"
 									>2000::/3</span
+								><span
+									style="
+										font-size: 1.2rem;
+										color: dimgray;
+										font-family: fira;
+										text-shadow: none;
+									">
+									- First Hextet
+									2000~3FFF</span
 								>
 							</li>
 							<li>
@@ -2061,7 +2071,16 @@
 										font-weight: bold;
 										color: darkmagenta;
 									"
-									>FC00::/7 ~ FD00::/8</span
+									>FC00::/7~FD00::/8</span
+								><span
+									style="
+										font-size: 1.2rem;
+										color: dimgray;
+										font-family: fira;
+										text-shadow: none;
+									">
+									- First Hextet
+									FD00~FDFF</span
 								>
 							</li>
 							<li>
@@ -2072,6 +2091,15 @@
 										color: darkmagenta;
 									"
 									>FE80::/10</span
+								><span
+									style="
+										font-size: 1.2rem;
+										font-family: fira;
+										color: dimgray;
+										text-shadow: none;
+									">
+									- First Hextet
+									FE80~FEBF</span
 								>
 							</li>
 							<li>
@@ -3789,7 +3817,7 @@
 						width: 60%;
 					" />
 				<p style="color: mediumvioletred; font-size: 2rem">
-					dhcp# Interface 0/1 Capture
+					R1# Interface 0/0 Capture
 				</p>
 				<img
 					src="assets/images/dhcp-messages.png"
@@ -4119,7 +4147,7 @@
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 				<p style="font-size: 1.5rem; color: mediumvioletred">
-					dhcp# Capture Interface 0/1
+					R1# Capture Interface 0/0
 				</p>
 				<img
 					src="assets/images/dhcpv6-solicit.png"
@@ -4150,7 +4178,7 @@
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 				<p style="font-size: 1.5rem; color: mediumvioletred">
-					dhcp# Capture Interface 0/1
+					dhcp# Capture Interface 0/0
 				</p>
 				<img
 					src="assets/images/dhcpv6-reply.png"
@@ -4184,6 +4212,14 @@
 					IPv6 Practical Applications
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<p
+					style="
+						text-align: center;
+						font-size: 2rem;
+						color: mediumvioletred;
+					">
+					Windows
+				</p>
 				<dir style="font-size: 1.5rem">
 					<p style="text-align: left">
 						Before Windows Vista
@@ -4205,7 +4241,19 @@
 							margin: 1rem;
 						">
 						Security Vulnerability
+						<span
+							style="
+								color: mediumvioletred;
+								display: block;
+								text-align: center;
+								font-size: 1.5rem;
+								margin: 1rem;
+							">
+							After Windows Vista, EUI-64 feature is
+							disabled by default
+						</span>
 					</p>
+
 					<div class="substep">
 						<p style="color: darkmagenta">
 							To Improve User's Privacy:
@@ -4234,16 +4282,6 @@
 							</li>
 							<li>Temporary IPv6 addresses</li>
 						</ul>
-						<p
-							style="
-								color: mediumvioletred;
-								text-align: center;
-								font-size: 2rem;
-								margin: 1rem;
-							">
-							After Windows Vista, this feature is
-							enabled by default
-						</p>
 					</div>
 				</dir>
 			</div>
@@ -4320,10 +4358,18 @@
 					IPv6 Practical Applications
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<p
+					style="
+						text-align: center;
+						font-size: 2rem;
+						color: mediumvioletred;
+					">
+					Windows
+				</p>
 				<dir style="font-size: 1.5rem">
 					<p style="text-align: center">
 						Command :
-						<span style="color: mediumvioletred">
+						<span style="color: darkmagenta">
 							netsh interface ipv6 show global
 						</span>
 					</p>
@@ -4359,14 +4405,22 @@
 					IPv6 Practical Applications
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<p
+					style="
+						text-align: center;
+						font-size: 2rem;
+						color: mediumvioletred;
+					">
+					Windows
+				</p>
 				<dir style="font-size: 1.5rem">
 					<p style="text-align: center">
 						Show IPv6 Address :
-						<span style="color: mediumvioletred">
+						<span style="color: darkmagenta">
 							ipconfig
 						</span>
 						or
-						<span style="color: mediumvioletred"
+						<span style="color: darkmagenta"
 							>ipconfig /all</span
 						>
 					</p>
@@ -4379,6 +4433,67 @@
 						" />
 				</dir>
 			</div>
+			<!-- Basics-IPv6 Applications windows ipconfig eui-64-->
+			<div
+				id="basics-ipv6-windows-ipconfig-eui64"
+				class="step"
+				style="
+					font-weight: bold;
+					text-shadow: 1px 1px 1px black;
+				"
+				data-x="-2000"
+				data-y="1000"
+				data-z="12000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
+					">
+					IPv6 Practical Applications
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<p
+					style="
+						text-align: center;
+						font-size: 2rem;
+						color: mediumvioletred;
+					">
+					Enable EUI-64 on Windows
+				</p>
+				<dir style="font-size: 1.5rem">
+					<p style="text-align: center">
+						<span style="color: darkmagenta">
+							netsh interface IPV6 set global
+							randomizeidentifier=disabled
+						</span>
+					</p>
+					<img
+						src="assets/images/win-enable-eui-64.png"
+						style="
+							margin: auto;
+							display: block;
+							margin: 1rem auto;
+						" />
+					<p style="text-align: center">
+						Show IPv6 Address :
+						<span style="color: darkmagenta"
+							>ipconfig /all</span
+						>
+					</p>
+					<img
+						src="assets/images/win-ipconfig-eui64.png"
+						style="
+							margin: auto;
+							display: block;
+							margin: 1rem auto;
+						" />
+				</dir>
+			</div>
+
 			<!-- Basics-IPv6 Applications windows ping -->
 			<div
 				id="basics-ipv6-windows-ping"
@@ -4389,7 +4504,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="12000"
+				data-z="10000"
 				data-rotate="0">
 				<h1
 					style="
@@ -4448,7 +4563,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="10000"
+				data-z="8000"
 				data-rotate="0">
 				<h1
 					style="
@@ -4520,7 +4635,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="8000"
+				data-z="6000"
 				data-rotate="0">
 				<h1
 					style="
@@ -4553,17 +4668,17 @@
 						">
 						<li>http://[::1]</li>
 						<li>https://[FD00::1]</li>
-						<li>http://[FD00::1]:80</li>
+						<li>http://[FD00::1]:8080</li>
 					</ul>
 					<img
 						src="assets/images/Win-IIS-ULA.png"
 						style="display: block; margin: 1rem auto" />
 				</dir>
 			</div>
-
 			<!-- Basics-IPv6 Applications Linux -->
+			<!-- Basics-IPv6 Applications Linux SET IP-->
 			<div
-				id="basics-ipv6-Linux"
+				id="basics-ipv6-linux-SET"
 				class="step"
 				style="
 					font-weight: bold;
@@ -4571,7 +4686,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="6000"
+				data-z="4000"
 				data-rotate="0">
 				<h1
 					style="
@@ -4584,6 +4699,163 @@
 					IPv6 Practical Applications
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<dir style="font-size: 1.5rem">
+					<p
+						style="
+							text-align: center;
+							color: mediumvioletred;
+						">
+						Set IPv6 on Linux Ubuntu
+					</p>
+					<div style="font-size: 2rem"></div>
+					<img
+						src="assets/images/ubuntu-ipv6-setip.png"
+						style="
+							margin: auto;
+							display: block;
+							margin: 1rem auto;
+						" />
+				</dir>
+			</div>
+			<!-- Basics-IPv6 Applications Linux show IP-->
+			<div
+				id="basics-ipv6-linux-show-ipv6"
+				class="step"
+				style="
+					font-weight: bold;
+					text-shadow: 1px 1px 1px black;
+				"
+				data-x="-2000"
+				data-y="1000"
+				data-z="2000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
+					">
+					IPv6 Practical Applications
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<div style="font-size: 1.5rem">
+					<p
+						style="
+							text-align: left;
+							color: mediumvioletred;
+						">
+						Show IPv6 Address on Ubuntu
+					</p>
+					<p style="text-align: center">
+						<span style="color: darkmagenta">
+							ip -6 address
+						</span>
+					</p>
+					<img
+						src="assets/images/ubuntu ipv6 add.png"
+						style="
+							margin: auto;
+							display: block;
+							margin: 1rem auto;
+						" />
+					<p
+						style="
+							text-align: left;
+							color: mediumvioletred;
+						">
+						ping
+					</p>
+					<img
+						src="assets/images/ubuntu ipv6 ping.png"
+						style="
+							margin: auto;
+							display: block;
+							margin: 1rem auto;
+						" />
+				</div>
+			</div>
+			<!-- Basics-IPv6 Applications Linux enable eui64-->
+			<div
+				id="basics-ipv6-linux-eui64"
+				class="step"
+				style="
+					font-weight: bold;
+					text-shadow: 1px 1px 1px black;
+				"
+				data-x="-2000"
+				data-y="1000"
+				data-z="0"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
+					">
+					IPv6 Practical Applications
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+
+				<div style="font-size: 1.5rem">
+					<p
+						style="
+							text-align: left;
+							color: mediumvioletred;
+						">
+						Show Default Address Generation Mode
+					</p>
+					<p style="text-align: center">
+						<span style="color: darkmagenta">
+							nmcli connection show S.GH | grep
+							ipv6.addr-gen-mode
+						</span>
+					</p>
+					<img
+						src="assets/images/ubuntu show add gen.png"
+						style="
+							margin: auto;
+							display: block;
+							margin: 1rem auto;
+						" />
+					<p
+						style="
+							text-align: left;
+							color: mediumvioletred;
+						">
+						Enable EUI-64
+					</p>
+					<p style="text-align: center; color: darkmagenta">
+						nmcli connection modify S.GH
+						ipv6.addr-gen-mode eui64
+					</p>
+					<img
+						src="assets/images/ubuntu enable eui-64.png"
+						style="
+							margin: auto;
+							display: block;
+							margin: 1rem auto;
+						" />
+
+					<p
+						style="
+							text-align: left;
+							color: mediumvioletred;
+						">
+						Show IPv6 Address
+					</p>
+
+					<img
+						src="assets/images/ubuntu ipv6 show eui64.png"
+						style="
+							margin: auto;
+							display: block;
+							margin: 1rem auto;
+						" />
+				</div>
 			</div>
 
 			<!-- IPv6 Routing - Chapter Routing -->
