@@ -53,6 +53,19 @@
 				vertical-align: middle;
 				text-align: left;
 			}
+
+			#BW-table {
+				margin: auto;
+				border: none;
+
+				font-weight: bold;
+				font-size: 1rem;
+				td {
+					border: none;
+					padding: 5px;
+					min-width: 200px;
+				}
+			}
 		</style>
 	</head>
 	<body class="impress-not-supported">
@@ -121,7 +134,7 @@
 				class="step"
 				data-x="0"
 				data-y="500"
-				data-z="-20000"
+				data-z="-16000"
 				data-rotate="0">
 				<h1
 					style="
@@ -449,7 +462,38 @@
 					<li>32-Bit</li>
 					<li>4 Billion address space</li>
 					<li>Displayed as 4 octet</li>
-					<li>Sample: X.X.X.X</li>
+					<li>
+						Sample:
+						<span
+							style="
+								text-shadow: 1px 1px 1px
+									mediumvioletred;
+							"
+							>X . X . X . X</span
+						>
+						<ul
+							style="
+								list-style-type: none;
+								color: dimgray;
+								font-size: 1.5rem;
+								padding-left: 4rem;
+							">
+							<li>
+								Delimeter
+								<span
+									style="
+										text-shadow: 1px 1px
+											1px
+											mediumvioletred;
+									">
+									.
+								</span>
+							</li>
+							<li>X : 8-bit</li>
+							<li>X : Decimal Number</li>
+							<li>X : 0 ~ 255</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 
@@ -492,7 +536,45 @@
 					<li>128-Bit</li>
 					<li>~340 Undecillion</li>
 					<li>Displayed as 8 hextet</li>
-					<li>Sample: X:X:X:X:X:X:X:X</li>
+					<li>
+						Sample:
+						<span
+							style="
+								text-shadow: 1px 1px 1px
+									mediumvioletred;
+							"
+							>X : X : X : X : X : X : X : X</span
+						>
+						<ul
+							style="
+								list-style-type: none;
+								color: dimgray;
+								font-size: 1.5rem;
+								padding-left: 4rem;
+							">
+							<li>
+								Delimeter
+								<span
+									style="
+										text-shadow: 1px 1px
+											1px
+											mediumvioletred;
+									">
+									:
+								</span>
+							</li>
+							<li>X : 16-bit</li>
+							<li>
+								X : hexadecimal Numbers
+								<span style="font-size: 1.2rem"
+									>(Each hexadecimal digit
+									is 4-bit / 1-nibble)</span
+								>
+							</li>
+							<li></li>
+							<li>X : 4 digit hexadecimal</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 			<!-- Basics address space IPv6 -->
@@ -552,7 +634,45 @@
 							>hextet</span
 						>
 					</li>
-					<li>Sample: X:X:X:X:X:X:X:X</li>
+					<li>
+						Sample:
+						<span
+							style="
+								text-shadow: 1px 1px 1px
+									mediumvioletred;
+							"
+							>X : X : X : X : X : X : X : X</span
+						>
+						<ul
+							style="
+								list-style-type: none;
+								color: dimgray;
+								font-size: 1.5rem;
+								padding-left: 4rem;
+							">
+							<li>
+								Delimeter
+								<span
+									style="
+										text-shadow: 1px 1px
+											1px
+											mediumvioletred;
+									">
+									:
+								</span>
+							</li>
+							<li>X : 16-bit</li>
+							<li>
+								X : hexadecimal Numbers
+								<span style="font-size: 1.2rem"
+									>(Each hexadecimal digit
+									is 4-bit / 1-nibble)</span
+								>
+							</li>
+							<li></li>
+							<li>X : 4 digit hexadecimal</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 
@@ -828,12 +948,7 @@
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<table
-					style="
-						width: 100%;
-						font-weight: bold;
-						font-size: 1rem;
-					">
+				<table id="BW-table">
 					<tr>
 						<td>1 bit</td>
 						<td>Bit</td>
@@ -849,7 +964,11 @@
 						<td>Trio</td>
 					</tr>
 
-					<tr>
+					<tr
+						style="
+							border-bottom: 1px solid
+								mediumvioletred;
+						">
 						<td>4 bit</td>
 						<td>Nibble/Quartet</td>
 					</tr>
@@ -884,7 +1003,11 @@
 						<td>Declet</td>
 					</tr>
 
-					<tr>
+					<tr
+						style="
+							border-bottom: 1px solid
+								mediumvioletred;
+						">
 						<td
 							style="
 								color: deeppink;
@@ -928,16 +1051,121 @@
 						<td>Hexlet</td>
 					</tr>
 				</table>
-				<br />
 				<p
 					style="
+						margin-top: 1rem;
 						text-align: center;
 						color: mediumvioletred;
-						font-size: 3rem;
+						font-size: 2rem;
 						text-shadow: 1px 1px 3px black;
 					">
 					1-Hextet = 16bit = 4-nibble = 2-Octet
 				</p>
+			</div>
+
+			<!-- Basics-IPv6 hex digits  -->
+			<div
+				id="basics-IPv6-hex-digits"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="12000"
+				data-rotate="10">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					Hexadecimal Digits
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<div style="font-size: 1.5rem">
+					<p>
+						<span
+							style="
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
+							"
+							>Decimal</span
+						>
+					</p>
+					<ul style="padding-left: 4rem">
+						<li>Base is 10</li>
+						<li>10 digits should be exists</li>
+						<li>
+							Digits are : 0, 1, 2, 3, 4, 5, 6, 7,
+							8, 9
+						</li>
+					</ul>
+					<hr
+						style="
+							width: 50%;
+							border: 1px dotted darkcyan;
+						" />
+					<p>
+						<span
+							style="
+								color: mediumvioletred;
+								text-shadow: 1px 1px 1px black;
+							"
+							>Hexadecimal</span
+						>
+					</p>
+					<ul style="padding-left: 4rem">
+						<li>Base is 16</li>
+						<li>16 digits should be exists</li>
+						<li>
+							Digits in Decimal are : 0, 1, 2, 3, 4,
+							5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+						</li>
+						<li>
+							Digits in Hex are : 0, 1, 2, 3, 4, 5,
+							6, 7, 8, 9, A, B, C, D, E, F
+						</li>
+						<li>
+							Digits in Binary are :
+							<span
+								style="
+									font-size: 1rem;
+									color: darkmagenta;
+									text-shadow: 1px 1px 1px
+										black;
+								"
+								>0000, 0001, 0010, 0011, 0100,
+								0101, 0110, 0111, 1000, 1001,
+								1010, 1011, 1100, 1101, 1110,
+								1111</span
+							>
+						</li>
+					</ul>
+					<hr
+						style="
+							width: 50%;
+							border: 1px dotted darkcyan;
+						" />
+
+					<p style="font-size: 1.3rem; text-align: center">
+						1-Section of IPv6 : 1-Hextet : 16-bits
+						<span
+							style="
+								font-family: fira;
+								color: darkmagenta;
+							">
+							==>
+						</span>
+						Separate in groups of 4-bits
+						<span
+							style="
+								font-family: fira;
+								color: darkmagenta;
+							">
+							==> </span
+						>Assign Hex digits
+					</p>
+				</div>
 			</div>
 
 			<!-- Basics-IPv6 Format -->
@@ -14105,7 +14333,7 @@
 				class="step slide"
 				data-x="0"
 				data-y="2000"
-				data-z="-20000"
+				data-z="-16000"
 				data-rotate="0">
 				<q
 					style="
