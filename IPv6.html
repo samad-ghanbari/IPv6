@@ -381,7 +381,7 @@
 
 			<!-- Basics Features -->
 			<div
-				id="basics-IPv6"
+				id="basics-OSI"
 				class="step"
 				data-x="-2000"
 				data-y="1000"
@@ -395,7 +395,7 @@
 						font-weight: bold;
 						text-shadow: 1px 1px 1px black;
 					">
-					IPv6 - Internet Protocol Ver.6
+					OSI Model
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
@@ -405,7 +405,13 @@
 						width: 450px;
 						margin: auto;
 					">
-					<p style="text-align: center">OSI Model</p>
+					<p
+						style="
+							text-align: center;
+							margin-bottom: 1rem;
+						">
+						The Open Systems Interconnection model
+					</p>
 					<div
 						style="
 							width: 400px;
@@ -477,14 +483,6 @@
 								font-size: 1rem;
 								display: block;
 							">
-							<span
-								style="
-									text-shadow: 1px 1px 1px
-										dodgerblue;
-									font-size: 1rem;
-								"
-								>TCP, UDP</span
-							>
 							<div
 								style="
 									text-shadow: 1px 1px 1px
@@ -492,7 +490,7 @@
 									font-size: 1rem;
 									text-align: center;
 								">
-								Port
+								Port Number
 							</div>
 						</div>
 					</div>
@@ -525,16 +523,7 @@
 										dodgerblue;
 									font-size: 1rem;
 								"
-								>IPV4</span
-							>,
-							<span
-								style="
-									font-size: 1.3rem;
-									text-shadow: 1px 1px 5px
-										black;
-									color: white;
-								"
-								>IPV6</span
+								>IP Address</span
 							>
 						</div>
 					</div>
@@ -564,7 +553,7 @@
 										dodgerblue;
 									font-size: 1rem;
 								"
-								>Ethernet</span
+								>Ethernet: MAC Address</span
 							>
 						</div>
 						<div
@@ -574,7 +563,7 @@
 								font-size: 1rem;
 								text-align: center;
 							">
-							MAC
+							ATM: VPI/VCI
 						</div>
 					</div>
 
@@ -593,6 +582,101 @@
 						">
 						Physical
 					</div>
+				</div>
+			</div>
+
+			<!-- Basics Features -->
+			<div
+				id="basics-IPv6"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="1500"
+				data-rotate="20">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 1px black;
+					">
+					Internet Protocol
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+
+				<div
+					style="
+						font-size: 1.5rem;
+						width: 100%;
+						margin: auto;
+					">
+					<p
+						style="
+							text-align: left;
+							color: mediumvioletred;
+							font-size: 2rem;
+							text-shadow: 1px 1px 1px black;
+						">
+						IP Versions
+					</p>
+					<ul
+						style="
+							padding-left: 4rem;
+							list-style-type: disc;
+						">
+						<li>
+							IPv1 ~ IPv3
+							<ul
+								style="
+									padding-left: 4rem;
+									list-style-type: circle;
+								">
+								<li>Experimental versions</li>
+								<li>Between 1973 and 1978</li>
+								<li>
+									Documented as Internet
+									Experiment Note (IEN)
+								</li>
+							</ul>
+						</li>
+						<li>
+							IPv4
+							<ul
+								style="
+									padding-left: 4rem;
+									list-style-type: disc;
+								">
+								<li>Standard</li>
+								<li>RFC 791 - RFC 2003</li>
+							</ul>
+						</li>
+						<li>
+							IPv5
+							<ul
+								style="
+									padding-left: 4rem;
+									list-style-type: disc;
+								">
+								<li>
+									Internet Stream Protocol
+									or ST-II
+								</li>
+								<li>RFC 1190 - RFC 1819</li>
+							</ul>
+						</li>
+						<li>
+							IPv6
+							<ul
+								style="
+									padding-left: 4rem;
+									list-style-type: disc;
+								">
+								<li>Standard</li>
+								<li>RFC 2473</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</div>
 
@@ -2596,7 +2680,7 @@
 
 				<ul
 					style="
-						font-size: 2rem;
+						font-size: 1.5rem;
 						text-shadow: 1px 1px 3px black;
 					">
 					<li style="color: mediumvioletred">
@@ -2647,6 +2731,12 @@
 									- First Hextet
 									FD00~FDFF</span
 								>
+								<img
+									src="assets/images/ULA.png"
+									style="
+										display: block;
+										width: 80%;
+									" />
 							</li>
 							<li>
 								LLA - Link-Local -
@@ -2666,6 +2756,12 @@
 									- First Hextet
 									FE80~FEBF</span
 								>
+								<img
+									src="assets/images/LLA.png"
+									style="
+										display: block;
+										width: 80%;
+									" />
 							</li>
 							<li>
 								Loopback -
@@ -2701,6 +2797,13 @@
 							"
 							>FF::/8</span
 						>
+						<img
+							src="assets/images/MC.png"
+							style="
+								display: block;
+								width: 80%;
+								padding-left: 4rem;
+							" />
 					</li>
 					<li style="color: mediumvioletred">
 						<span style="font-weight: bold"
@@ -2708,6 +2811,39 @@
 						>
 					</li>
 				</ul>
+			</div>
+
+			<!-- Basics-IPv6 Address Types IANA-->
+			<div
+				id="basics-IPv6-address-types-IANA"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="28500"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
+					">
+					IPv6 Address Types - IANA
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<div style="font-size: 1.2rem">
+					<p>
+						https://www.iana.org/assignments/ipv6-address-space/ipv6-address-space.xhtml
+					</p>
+					<img
+						src="assets/images/IANA.png"
+						style="
+							margin: auto;
+							display: block;
+							width: 90%;
+						" />
+				</div>
 			</div>
 
 			<!-- Basics-IPv6 Address Assignment-->
