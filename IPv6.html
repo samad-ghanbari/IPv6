@@ -101,6 +101,18 @@
 					">
 					IPv6
 				</h1>
+				<h1
+					style="
+						text-align: center;
+						font-size: 2rem;
+						font-weight: bold;
+						color: mediumvioletred;
+						text-shadow: 2px 2px 2px black;
+						position: relative;
+						top: -60px;
+					">
+					Advanced
+				</h1>
 				<div
 					style="
 						text-align: center;
@@ -121,7 +133,8 @@
 							display: block;
 							width: 100%;
 							text-align: center;
-							text-shadow: 2px 2px 10px pink;
+							text-shadow: none;
+							/* text-shadow: 2px 2px 10px pink; */
 						"
 						>Ghanbari.Samad@Gmail.com</span
 					>
@@ -4118,7 +4131,7 @@
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
-				<p style="font-size: 1.5rem; color: mediumvioletred">
+				<p style="font-size: 2rem; color: mediumvioletred">
 					DHCPv4 Messages: (DORA Process)
 				</p>
 				<ul
@@ -4349,7 +4362,7 @@
 
 			<!-- Basics- DHCPv4 Relay-->
 			<div
-				id="basics-DHCPv4-Relay-captures"
+				id="basics-DHCPv4-Relay"
 				class="step"
 				style="
 					font-weight: bold;
@@ -4375,8 +4388,78 @@
 					style="
 						display: block;
 						margin: auto;
-						width: 95%;
+						width: 100%;
 					" />
+			</div>
+
+			<!-- Basics- DHCPv4 Relay config -->
+			<div
+				id="basics-DHCPv4-Relay-config"
+				class="step"
+				style="
+					font-weight: bold;
+					text-shadow: 1px 1px 1px black;
+				"
+				data-x="-2000"
+				data-y="1000"
+				data-z="24000"
+				data-rotate="20">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
+					">
+					DHCPv4 Relay Config
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+
+				<div
+					style="
+						float: left;
+						font-size: 1.5rem;
+						color: darkslategray;
+						width: 45%;
+					">
+					<p style="color: mediumvioletred">Server</p>
+					<p>!</p>
+					<p>ip dhcp pool POOL</p>
+					<p style="padding-left: 2rem">
+						network 172.16.18.0 255.255.255.0
+					</p>
+					<p style="padding-left: 2rem">
+						default-router 172.16.18.1
+					</p>
+					<p style="padding-left: 2rem">
+						dns-server 8.8.8.8
+					</p>
+					<p>!</p>
+					<p>interface Ethernet 0/0</p>
+					<p style="padding-left: 2rem">
+						ip address 10.10.12.2 255.255.255.252
+					</p>
+					<p>!</p>
+				</div>
+				<div
+					style="
+						float: right;
+						font-size: 1.5rem;
+						color: darkslategray;
+						width: 45%;
+					">
+					<p style="color: mediumvioletred">Relay</p>
+					<p>!</p>
+					<p>interface Ethernet 0/2</p>
+					<p style="padding-left: 2rem">
+						ip address 172.16.18.1 255.255.255.0
+					</p>
+					<p style="padding-left: 2rem">
+						ip helper-address 10.10.12.2
+					</p>
+					<p>!</p>
+				</div>
 			</div>
 
 			<!-- Basics- DHCPv4 option 82-->
@@ -4389,8 +4472,8 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="24000"
-				data-rotate="20">
+				data-z="22000"
+				data-rotate="0">
 				<h1
 					style="
 						font-size: 2rem;
@@ -4419,6 +4502,59 @@
 					" />
 			</div>
 
+			<!-- Basics- DHCPv4 option82 config -->
+			<div
+				id="basics-DHCPv4-Option82-config"
+				class="step"
+				style="
+					font-weight: bold;
+					text-shadow: 1px 1px 1px black;
+				"
+				data-x="-2000"
+				data-y="1000"
+				data-z="20000"
+				data-rotate="20">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						text-shadow: 1px 1px 3px black;
+						font-weight: bold;
+					">
+					DHCPv4 Option 82 Config
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+
+				<div
+					style="
+						float: left;
+						font-size: 1.5rem;
+						color: darkslategray;
+						width: 100%;
+					">
+					<p style="color: mediumvioletred">
+						Relay Option 82
+					</p>
+					<p>!</p>
+					<p>interface Ethernet 0/1</p>
+					<p style="padding-left: 2rem">
+						ip dhcp relay information option
+						subscriber-id Relay01_Eth0/1-Floor14
+					</p>
+					<p style="padding-left: 2rem">
+						ip dhcp relay information option-insert
+					</p>
+					<p style="padding-left: 2rem">
+						ip address 10.82.14.1 255.255.255.0
+					</p>
+					<p style="padding-left: 2rem">
+						ip helper-address 10.10.10.1
+					</p>
+					<p>!</p>
+				</div>
+			</div>
+
 			<!-- Basics- DHCPv4 option 82-->
 			<div
 				id="basics-DHCPv4-Option82-captures"
@@ -4429,7 +4565,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="22000"
+				data-z="18000"
 				data-rotate="0">
 				<h1
 					style="
@@ -4461,7 +4597,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="20000"
+				data-z="16000"
 				data-rotate="20">
 				<h1
 					style="
@@ -4554,7 +4690,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="18000"
+				data-z="14000"
 				data-rotate="0">
 				<h1
 					style="
@@ -4666,7 +4802,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="16000"
+				data-z="12000"
 				data-rotate="20">
 				<h1
 					style="
@@ -4754,7 +4890,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="14000"
+				data-z="10000"
 				data-rotate="0">
 				<h1
 					style="
@@ -4793,7 +4929,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="12000"
+				data-z="8000"
 				data-rotate="20">
 				<h1
 					style="
@@ -4968,7 +5104,7 @@
 				"
 				data-x="-2000"
 				data-y="1000"
-				data-z="10000"
+				data-z="6000"
 				data-rotate="0">
 				<h1
 					style="
@@ -5092,7 +5228,7 @@
 				class="step"
 				data-x="-2000"
 				data-y="1000"
-				data-z="8000"
+				data-z="4000"
 				data-rotate="20">
 				<h1
 					style="
@@ -5123,7 +5259,7 @@
 				class="step"
 				data-x="-2000"
 				data-y="1000"
-				data-z="6000"
+				data-z="2000"
 				data-rotate="0">
 				<h1
 					style="
@@ -5144,6 +5280,351 @@
 					style="
 						margin: 1rem auto;
 						display: block;
+						width: 100%;
+					" />
+			</div>
+
+			<!-- Basics-IPv6 DHCPv6 DUID-->
+			<div
+				id="basics-IPv6-dhcpv6-DUID"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="0"
+				data-rotate="20">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					DHCP Client Identifier
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<p
+					style="
+						font-size: 2rem;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
+					DHCP Client
+				</p>
+				<ul
+					style="
+						list-style-type: disc;
+						padding-left: 4rem;
+						color: darkslategray;
+						font-size: 1.5rem;
+					">
+					<li>
+						<span
+							style="
+								font-weight: bold;
+								text-shadow: 1px 1px 1px black;
+							"
+							>IPv4 Network</span
+						>
+						: MAC Address
+					</li>
+					<li>
+						<span
+							style="
+								font-weight: bold;
+								text-shadow: 1px 1px 1px black;
+							"
+							>IPv6 Network</span
+						>
+						: DUID (DHCP Unique Identifier)
+					</li>
+				</ul>
+				<p style="font-size: 1.5rem; color: darkcyan">
+					Each DHCPv6-Server and DHCPv6-Client has its own
+					DUID
+				</p>
+
+				<p
+					style="
+						font-size: 2rem;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
+					DUID Types
+				</p>
+				<ul
+					style="
+						list-style-type: disc;
+						padding-left: 4rem;
+						color: darkslategray;
+						font-size: 1.5rem;
+					">
+					<li>
+						<span
+							style="
+								font-weight: bold;
+								text-shadow: 1px 1px 1px black;
+							"
+							>DUID-LLT</span
+						>
+						: using Link-Layer address plus Time
+					</li>
+					<li>
+						<span
+							style="
+								font-weight: bold;
+								text-shadow: 1px 1px 1px black;
+							"
+							>DUID-EN</span
+						>
+						: using vendor assigned Enterprise Number
+					</li>
+					<li>
+						<span
+							style="
+								font-weight: bold;
+								text-shadow: 1px 1px 1px black;
+							"
+							>DUID-LL</span
+						>
+						: using Link-Layer address
+					</li>
+					<li>
+						<span
+							style="
+								font-weight: bold;
+								text-shadow: 1px 1px 1px black;
+							"
+							>DUID-UUID</span
+						>: using a Universally Unique Identifier
+					</li>
+				</ul>
+
+				<p
+					style="
+						font-size: 2rem;
+						color: darkmagenta;
+						text-align: center;
+						text-shadow: 1px 1px 1px black;
+					">
+					Device With Multiple NIC : Same DUID
+				</p>
+			</div>
+
+			<!-- Basics-IPv6 DHCPv6 Relay-->
+			<div
+				id="basics-IPv6-dhcpv6-Relay"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="-2000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					DHCPv6 Relay
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<img
+					src="assets/images/dhcpv6-relay.png"
+					style="
+						display: block;
+						width: 100%;
+						margin: auto;
+					" />
+
+				<p
+					style="
+						font-size: 2rem;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+						margin-top: 1rem;
+					">
+					Communications
+				</p>
+				<ul
+					style="
+						list-style-type: circle;
+						font-size: 2rem;
+						color: mediumvioletred;
+						padding-left: 4rem;
+					">
+					<li>Client and Relay : Multicast</li>
+					<li>Relay and Server : Unicast</li>
+				</ul>
+			</div>
+
+			<!-- Basics-IPv6 DHCPv6 Relay config-->
+			<div
+				id="basics-IPv6-dhcpv6-Relay-config"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="-4000"
+				data-rotate="20">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					DHCPv6 Relay Config
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+
+				<div
+					style="
+						float: left;
+						font-size: 1.5rem;
+						color: darkslategray;
+						width: 45%;
+					">
+					<p style="color: mediumvioletred">Server</p>
+					<p>!</p>
+					<p>ipv6 dhcp pool POOL</p>
+					<p style="padding-left: 2rem">
+						address prefix 2000::/64
+					</p>
+					<p style="padding-left: 2rem">
+						dns-server 2222::2
+					</p>
+					<p>!</p>
+					<p>interface Ethernet 0/3</p>
+					<p style="padding-left: 2rem">ipv6 enable</p>
+					<p style="padding-left: 2rem">
+						ipv6 address FE80::4 link-local
+					</p>
+					<p style="padding-left: 2rem">
+						ipv6 dhcp server POOL
+					</p>
+					<p>!</p>
+				</div>
+				<div
+					style="
+						float: right;
+						font-size: 1.5rem;
+						color: darkslategray;
+						width: 45%;
+					">
+					<p style="color: mediumvioletred">Relay</p>
+					<p>!</p>
+					<p>interface Ethernet 0/1</p>
+					<p style="padding-left: 2rem">ipv6 enable</p>
+					<p style="padding-left: 2rem">
+						ipv6 address FE80::2 link-local
+					</p>
+					<p style="padding-left: 2rem">
+						ipv6 address 2000::1/64
+					</p>
+					<p style="padding-left: 2rem">
+						ipv6 dhcp relay destination 3000::4
+					</p>
+					<p>!</p>
+				</div>
+			</div>
+
+			<!-- Basics-IPv6 DHCPv6 Relay capture-->
+			<div
+				id="basics-IPv6-dhcpv6-Relay-capture"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="-6000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					DHCPv6 Relay Capture
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<p
+					style="
+						font-size: 2rem;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
+					Client Interface Capture
+				</p>
+				<img
+					src="assets/images/dhcpv6-relay-client.png"
+					style="display: block; margin: auto" />
+				<p
+					style="
+						font-size: 2rem;
+						color: mediumvioletred;
+						text-shadow: 1px 1px 1px black;
+					">
+					Server Interface Capture
+				</p>
+				<img
+					src="assets/images/dhcpv6-relay-server.png"
+					style="display: block; margin: auto" />
+			</div>
+
+			<!-- Basics-IPv6 DHCPv6 client-to-relay solicit capture-->
+			<div
+				id="basics-IPv6-dhcpv6-client-to-Relay-solicit"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="-8000"
+				data-rotate="20">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					DHCPv6 Client To Relay Solicit Message
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<img
+					src="assets/images/dhcpv6-client-to-relay-solicit.png"
+					style="
+						display: block;
+						margin: auto;
+						width: 100%;
+					" />
+			</div>
+
+			<!-- Basics-IPv6 DHCPv6 relay-to-server solicit capture-->
+			<div
+				id="basics-IPv6-dhcpv6-relay-to-server-solicit"
+				class="step"
+				data-x="-2000"
+				data-y="1000"
+				data-z="-10000"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					DHCPv6 Relay To Server Solicit Message
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<img
+					src="assets/images/dhcpv6-relay-to-server-solicit.png"
+					style="
+						display: block;
+						margin: auto;
 						width: 100%;
 					" />
 			</div>
