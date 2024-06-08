@@ -206,7 +206,7 @@
 					<li class="substep">- IPv6 General-Prefix</li>
 					<li class="substep">- IPv6 SNMA</li>
 					<li class="substep">- IPv6 NDP</li>
-					<li class="substep">- DHCPv6</li>
+					<li class="substep">- DHCPv4 / DHCPv6</li>
 					<li class="substep">
 						- OS Practical Applications
 					</li>
@@ -325,6 +325,7 @@
 					</li>
 					<li class="substep">- IPv6 6RD Tunneling</li>
 					<li class="substep">- IPv6 ISATAP Tunneling</li>
+					<li class="substep">- IPv6 TEREDO Tunneling</li>
 					<li class="substep">
 						- IPv6 6PE / 6VPE Tunneling
 					</li>
@@ -9304,6 +9305,11 @@
 								<span class="bold">ISATAP </span
 								>(tunnel mode ipv6ip isatap)
 							</li>
+							<li>
+								<span class="bold">TEREDO </span
+								>(Tunneling IPv6 over UDP
+								through NAT)
+							</li>
 						</ul>
 					</li>
 				</ul>
@@ -11034,6 +11040,149 @@
 					<p class="pl4">tunnel destination 1.1.1.1</p>
 					<p class="fs1">!</p>
 				</div>
+			</div>
+			<!-- Tunneling - Chapter Tunneling Teredo -->
+			<div
+				id="IPv6-Tunneling-Teredo"
+				class="step"
+				data-x="1000"
+				data-y="1000"
+				data-z="54000"
+				data-scale="1"
+				data-rotate="45">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					IPv6 TEREDO
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+
+				<div style="font-size: 1.5rem">
+					<p
+						style="
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
+						IPv6 packets can be transmitted over an IPv4
+						network even if the client is behind a
+						<span style="font-size: 2rem">NAT</span>
+					</p>
+					<p
+						style="
+							text-align: center;
+							text-shadow: 1px 1px 1px
+								mediumvioletred;
+						">
+						RFC 4380
+					</p>
+					<p style="color: darkmagenta">
+						Teredo Terminology
+					</p>
+					<ul
+						style="
+							list-style-type: circle;
+							padding-left: 4rem;
+						">
+						<li>
+							Teredo Client <br />
+							<span
+								style="
+									font-size: 1.2rem;
+									color: gray;
+								"
+								>host which has IPv4 internet
+								connectivity behind a NAT and
+								uses Teredo tunneling</span
+							>
+						</li>
+						<li>
+							Teredo Server <br />
+							<span
+								style="
+									font-size: 1.2rem;
+									color: gray;
+								">
+								Used to provide IPv6
+								connectivity to Teredo
+								clients</span
+							>
+						</li>
+						<li>
+							Teredo Relay <br />
+							<span
+								style="
+									font-size: 1.2rem;
+									color: gray;
+								">
+								Forwards all of the data on
+								behalf of Teredo client</span
+							>
+						</li>
+						<li>
+							Teredo Service Port <br />
+							<span
+								style="
+									font-size: 1.2rem;
+									color: gray;
+								">
+								The port from which a Teredo
+								client sends Teredo
+								packets</span
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Tunneling - Chapter Tunneling Teredo packet -->
+			<div
+				id="IPv6-Tunneling-Teredo-packet"
+				class="step"
+				data-x="1000"
+				data-y="1000"
+				data-z="56000"
+				data-scale="1"
+				data-rotate="-45">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					IPv6 TEREDO
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<img
+					src="assets/images/teredo.png"
+					style="
+						display: block;
+						width: 100%;
+						margin: auto;
+					" />
+
+				<div style="font-size: 1.5rem">
+					<p
+						style="
+							font-size: 2rem;
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
+						Reserved Teredo Prefix: 2001:0::/32
+					</p>
+				</div>
+				<img
+					src="assets/images/Teredo-Example.jpg"
+					style="
+						display: block;
+						width: 50%;
+						margin: auto;
+					" />
 			</div>
 
 			<!-- Tunneling - Chapter Tunneling MPLS Network-->
