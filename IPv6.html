@@ -11058,7 +11058,7 @@
 						font-weight: bold;
 						text-shadow: 1px 1px 3px black;
 					">
-					IPv6 TEREDO
+					IPv6 TEREDO Tunnel
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 
@@ -11068,20 +11068,7 @@
 							color: mediumvioletred;
 							text-shadow: 1px 1px 1px black;
 						">
-						IPv6 packets can be transmitted over an IPv4
-						network even if the client is behind a
-						<span style="font-size: 2rem">NAT</span>
-					</p>
-					<p
-						style="
-							text-align: center;
-							text-shadow: 1px 1px 1px
-								mediumvioletred;
-						">
-						RFC 4380
-					</p>
-					<p style="color: darkmagenta">
-						Teredo Terminology
+						Teredo Tunnel
 					</p>
 					<ul
 						style="
@@ -11089,58 +11076,36 @@
 							padding-left: 4rem;
 						">
 						<li>
-							Teredo Client <br />
-							<span
+							Teredo Named after a worm that bores
+							into wooden ships<br /><img
+								src="assets/images/teredo-worm.jpg"
 								style="
-									font-size: 1.2rem;
-									color: gray;
-								"
-								>host which has IPv4 internet
-								connectivity behind a NAT and
-								uses Teredo tunneling</span
-							>
+									display: block;
+									margin: auto;
+									width: 50%;
+								" />
 						</li>
 						<li>
-							Teredo Server <br />
-							<span
-								style="
-									font-size: 1.2rem;
-									color: gray;
-								">
-								Used to provide IPv6
-								connectivity to Teredo
-								clients</span
-							>
+							Tunnels IPv6 packets over an IPv4
+							network
+						</li>
+						<li>Clients are behind a NAT Device</li>
+						<li>
+							Each 6to4, 6RD, ISATAP clients need a
+							public IPv4 address
 						</li>
 						<li>
-							Teredo Relay <br />
-							<span
-								style="
-									font-size: 1.2rem;
-									color: gray;
-								">
-								Forwards all of the data on
-								behalf of Teredo client</span
-							>
+							Multiple Teredo clients can use ONE
+							public IPv4 address
 						</li>
-						<li>
-							Teredo Service Port <br />
-							<span
-								style="
-									font-size: 1.2rem;
-									color: gray;
-								">
-								The port from which a Teredo
-								client sends Teredo
-								packets</span
-							>
-						</li>
+						<li>RFC 4380</li>
+						<li>Teredo uses IPv4 UDP Tunnel</li>
 					</ul>
 				</div>
 			</div>
-			<!-- Tunneling - Chapter Tunneling Teredo packet -->
+			<!-- Tunneling - Chapter Tunneling Teredo components -->
 			<div
-				id="IPv6-Tunneling-Teredo-packet"
+				id="IPv6-Tunneling-Teredo-components"
 				class="step"
 				data-x="1000"
 				data-y="1000"
@@ -11158,31 +11123,250 @@
 					IPv6 TEREDO
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
-				<img
-					src="assets/images/teredo.png"
-					style="
-						display: block;
-						width: 100%;
-						margin: auto;
-					" />
-
 				<div style="font-size: 1.5rem">
 					<p
 						style="
-							font-size: 2rem;
 							color: mediumvioletred;
 							text-shadow: 1px 1px 1px black;
 						">
-						Reserved Teredo Prefix: 2001:0::/32
+						Teredo Components
+					</p>
+					<ul
+						style="
+							list-style-type: circle;
+							padding-left: 4rem;
+						">
+						<li>
+							Teredo client<br /><span
+								style="color: gray"
+								>The client connected to the
+								home-router and uses NAT to
+								access the internet</span
+							>
+						</li>
+						<li>
+							Teredo server<br /><span
+								style="color: gray"
+								>Teredo server does not need to
+								be on the IPv6 network</span
+							>
+						</li>
+						<li>
+							Teredo Relay<br /><span
+								style="color: gray"
+								>Teredo server direct the client
+								to a teredo relay(IPv6
+								Conectivity)</span
+							>
+						</li>
+					</ul>
+					<p
+						style="
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+						">
+						The teredo client will tunnel to the teredo
+						relay which transfers data to the IPv6
+						Network
 					</p>
 				</div>
-				<img
-					src="assets/images/Teredo-Example.jpg"
+			</div>
+			<!-- Tunneling - Chapter Tunneling Teredo IP -->
+			<div
+				id="IPv6-Tunneling-Teredo-IP"
+				class="step"
+				data-x="1000"
+				data-y="1000"
+				data-z="58000"
+				data-scale="1"
+				data-rotate="0">
+				<h1
 					style="
-						display: block;
-						width: 50%;
-						margin: auto;
-					" />
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					IPv6 TEREDO Address
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<div style="font-size: 1.5rem">
+					<img
+						src="assets/images/teredo.png"
+						style="
+							width: 100%;
+							display: block;
+							margin: auto;
+						" />
+					<ul
+						style="
+							list-style-type: circle;
+							padding-left: 2rem;
+						">
+						<li>
+							<span style="color: mediumvioletred"
+								>Prefix :
+							</span>
+							32 bit - Reserved prefix is
+							2001:0000::/32
+						</li>
+						<li>
+							<span style="color: mediumvioletred"
+								>Teredo IPv4 Server :</span
+							>
+							32 bit - Hex-format of IPv4 address of
+							the server
+						</li>
+						<li>
+							<span style="color: mediumvioletred"
+								>Flags :
+							</span>
+							16 bit - For type of address and NAT
+						</li>
+						<li>
+							<span style="color: mediumvioletred"
+								>UDP Port :
+							</span>
+							16 bit - The obfuscated port from
+							which the Teredo client sends packets.
+						</li>
+						<li>
+							<span style="color: mediumvioletred"
+								>Client IPv4 Address :
+							</span>
+							32 bit - Obfuscated Address of the
+							client
+						</li>
+					</ul>
+					<p style="margin-top: 2rem">
+						Obfuscated format : reverses 1 & 0 before
+						converting to hex-format
+					</p>
+				</div>
+			</div>
+			<!-- Tunneling - Chapter Tunneling Teredo example -->
+			<div
+				id="IPv6-Tunneling-Teredo-IP-example"
+				class="step"
+				data-x="1000"
+				data-y="1000"
+				data-z="60000"
+				data-scale="1"
+				data-rotate="45">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					IPv6 TEREDO Address
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<div style="width: 100%; font-size: 2rem">
+					<p>Teredo Address Example:</p>
+					<div style="text-align: center">
+						<span
+							style="
+								background-color: aqua;
+								padding: 5px;
+							"
+							>2001 : 0000</span
+						>
+						:
+						<span
+							style="
+								background-color: chartreuse;
+								padding: 5px;
+							"
+							>2E64: 0101</span
+						>
+						:
+						<span
+							style="
+								background-color: darkorange;
+								padding: 5px;
+							"
+							>8000</span
+						>
+						:
+						<span
+							style="
+								background-color: lightpink;
+								padding: 5px;
+							"
+							>3CAF</span
+						>
+						:
+						<span
+							style="
+								background-color: dodgerblue;
+								padding: 5px;
+							"
+							>EFFFE : EFFFE</span
+						>
+					</div>
+					<br />
+					<ul>
+						<li>
+							<span
+								style="
+									background-color: aqua;
+									padding: 10px;
+									display: inline-block;
+								"
+								>Prefix - 32 bit -
+								2001::/32</span
+							>
+						</li>
+						<li>
+							<span
+								style="
+									background-color: chartreuse;
+									padding: 10px;
+									display: inline-block;
+								"
+								>Teredo Server IPv4 - 32 bit -
+								2E.64.01.01 ~ 46.100.1.1</span
+							>
+						</li>
+						<li>
+							<span
+								style="
+									background-color: darkorange;
+									padding: 10px;
+									display: inline-block;
+								"
+								>Flags - NAT type</span
+							>
+						</li>
+						<li>
+							<span
+								style="
+									background-color: lightpink;
+									padding: 10px;
+									display: inline-block;
+								"
+								>Obfuscated UDP Port - 3CAF =>
+								C350 => 50000</span
+							>
+						</li>
+						<li>
+							<span
+								style="
+									background-color: dodgerblue;
+									padding: 10px;
+									display: inline-block;
+								"
+								>Obfuscated Client IP - EFFFE :
+								EFFFE => 10001 : 10001 =>
+								1.1.1.1
+							</span>
+						</li>
+					</ul>
+				</div>
 			</div>
 
 			<!-- Tunneling - Chapter Tunneling MPLS Network-->
