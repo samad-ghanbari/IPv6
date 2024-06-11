@@ -10331,7 +10331,7 @@
 						"
 						>2000:ABCD:<span
 							style="background-color: bisque"
-							>CECE</span
+							>6464</span
 						>::/48</span
 					>
 				</p>
@@ -11137,7 +11137,7 @@
 							padding-left: 4rem;
 						">
 						<li>
-							Teredo client<br /><span
+							Teredo-client<br /><span
 								style="color: gray"
 								>The client connected to the
 								home-router and uses NAT to
@@ -11145,14 +11145,14 @@
 							>
 						</li>
 						<li>
-							Teredo server<br /><span
+							Teredo-server<br /><span
 								style="color: gray"
 								>Teredo server does not need to
 								be on the IPv6 network</span
 							>
 						</li>
 						<li>
-							Teredo Relay<br /><span
+							Teredo-Relay<br /><span
 								style="color: gray"
 								>Teredo server direct the client
 								to a teredo relay(IPv6
@@ -11162,12 +11162,20 @@
 					</ul>
 					<p
 						style="
-							color: mediumvioletred;
+							color: darkcyan;
 							text-shadow: 1px 1px 1px black;
 						">
-						The teredo client will tunnel to the teredo
-						relay which transfers data to the IPv6
-						Network
+						The teredo-client will tunnel to the
+						teredo-relay which transfers data to the
+						IPv6 Network
+					</p>
+					<p
+						style="
+							color: darkmagenta;
+							text-shadow: 1px 1px 1px black;
+						">
+						The teredo-server can play the teredo-relay
+						role
 					</p>
 				</div>
 			</div>
@@ -11317,7 +11325,7 @@
 									padding: 10px;
 									display: inline-block;
 								"
-								>Prefix - 32 bit -
+								>Teredo Prefix - 32 bit -
 								2001::/32</span
 							>
 						</li>
