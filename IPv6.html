@@ -11230,7 +11230,7 @@
 							<span style="color: mediumvioletred"
 								>Flags :
 							</span>
-							16 bit - For type of address and NAT
+							16 bit
 						</li>
 						<li>
 							<span style="color: mediumvioletred"
@@ -11253,9 +11253,9 @@
 					</p>
 				</div>
 			</div>
-			<!-- Tunneling - Chapter Tunneling Teredo example -->
+			<!-- Tunneling - Chapter Tunneling Teredo Flags -->
 			<div
-				id="IPv6-Tunneling-Teredo-IP-example"
+				id="IPv6-Tunneling-Teredo-Flags"
 				class="step"
 				data-x="1000"
 				data-y="1000"
@@ -11270,11 +11270,149 @@
 						font-weight: bold;
 						text-shadow: 1px 1px 3px black;
 					">
+					IPv6 TEREDO Address Flags
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<div style="font-size: 1.5rem">
+					<p
+						style="
+							color: darkmagenta;
+							text-shadow: 1px 1px 1px black;
+							text-align: left;
+						">
+						16-Bit Obfuscated Teredo Flags:
+					</p>
+					<p
+						style="
+							color: mediumvioletred;
+							text-shadow: 1px 1px 1px black;
+							text-align: center;
+							font-size: 2rem;
+						">
+						CRAA-AAUG-AAAA-AAAA
+					</p>
+					<ul
+						style="
+							list-style-type: square;
+							color: gray;
+							font-size: 1.3rem;
+						">
+						<li>
+							<span
+								style="
+									color: mediumvioletred;
+									font-size: 1.5rem;
+									text-shadow: 1px 1px 1px
+										black;
+								"
+								>C :
+							</span>
+							Teredo client is located behind a cone
+							NAT - RFC 5991 changed it to always be
+							ZERO
+						</li>
+						<li>
+							<span
+								style="
+									color: mediumvioletred;
+									font-size: 1.5rem;
+									text-shadow: 1px 1px 1px
+										black;
+								"
+								>R</span
+							>
+							Reserved - Currently unassigned and
+							should be sent as ZERO
+						</li>
+						<li>
+							<span
+								style="
+									color: mediumvioletred;
+									font-size: 1.5rem;
+									text-shadow: 1px 1px 1px
+										black;
+								"
+								>A</span
+							>
+							In RFC 4380 is ZERO, but were changed
+							to random bits chosen by the Teredo
+							client in RFC 5991
+						</li>
+						<li>
+							<span
+								style="
+									color: mediumvioletred;
+									font-size: 1.5rem;
+									text-shadow: 1px 1px 1px
+										black;
+								"
+								>U</span
+							>
+							Universal/local bit in MAC address
+						</li>
+						<li>
+							<span
+								style="
+									color: mediumvioletred;
+									text-shadow: 1px 1px 1px
+										black;
+								"
+								>G</span
+							>
+							Group/individual bit in MAC address
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Tunneling - Chapter Tunneling Teredo Flags -->
+			<div
+				id="IPv6-Tunneling-Teredo-win10-config"
+				class="step"
+				data-x="1000"
+				data-y="1000"
+				data-z="62000"
+				data-scale="1"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					Windows-10 Teredo Configuration
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<img
+					src="assets/images/teredo-windows10-config.png"
+					style="width: 50%; float: left" />
+				<img
+					src="assets/images/teredo-windows10-ipconfig.png"
+					style="width: 50%; float: right" />
+			</div>
+			<!-- Tunneling - Chapter Tunneling Teredo windows-10 -->
+			<div
+				id="IPv6-Tunneling-Teredo-windows10-IP"
+				class="step"
+				data-x="1000"
+				data-y="1000"
+				data-z="64000"
+				data-scale="1"
+				data-rotate="45">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
 					IPv6 TEREDO Address
 				</h1>
 				<hr style="width: 100%; border: 1px solid darkcyan" />
 				<div style="width: 100%; font-size: 2rem">
-					<p>Teredo Address Example:</p>
+					<p>Teredo Address:</p>
 					<div style="text-align: center">
 						<span
 							style="
@@ -11289,7 +11427,7 @@
 								background-color: chartreuse;
 								padding: 5px;
 							"
-							>2E64: 0101</span
+							>D911 : C0d9</span
 						>
 						:
 						<span
@@ -11297,7 +11435,7 @@
 								background-color: darkorange;
 								padding: 5px;
 							"
-							>8000</span
+							>8CE</span
 						>
 						:
 						<span
@@ -11305,7 +11443,7 @@
 								background-color: lightpink;
 								padding: 5px;
 							"
-							>3CAF</span
+							>1322</span
 						>
 						:
 						<span
@@ -11313,7 +11451,7 @@
 								background-color: dodgerblue;
 								padding: 5px;
 							"
-							>EFFFE : EFFFE</span
+							>FA10 : 9F8D</span
 						>
 					</div>
 					<br />
@@ -11337,8 +11475,8 @@
 									display: inline-block;
 								"
 								>Teredo Server IPv4 - 32 bit -
-								2E.64.01.01 ~ 46.100.1.1</span
-							>
+								D911 : C0D9 ~ 217.17.192.217
+							</span>
 						</li>
 						<li>
 							<span
@@ -11347,8 +11485,8 @@
 									padding: 10px;
 									display: inline-block;
 								"
-								>Flags - NAT type</span
-							>
+								>Flags - 08CE
+							</span>
 						</li>
 						<li>
 							<span
@@ -11357,9 +11495,9 @@
 									padding: 10px;
 									display: inline-block;
 								"
-								>Obfuscated UDP Port - 3CAF =>
-								C350 => 50000</span
-							>
+								>Obfuscated UDP Port - 1322 =>
+								ECDD => 60637
+							</span>
 						</li>
 						<li>
 							<span
@@ -11368,12 +11506,80 @@
 									padding: 10px;
 									display: inline-block;
 								"
-								>Obfuscated Client IP - EFFFE :
-								EFFFE => 10001 : 10001 =>
-								1.1.1.1
+								>Obfuscated Client IP - FA10 :
+								9F8D => 05EF : 6072 =>
+								5.239.96.114
 							</span>
 						</li>
 					</ul>
+				</div>
+			</div>
+			<!-- Tunneling - Chapter Tunneling Teredo windows-10 -->
+			<div
+				id="IPv6-Tunneling-Teredo-Ubuntu"
+				class="step"
+				data-x="1000"
+				data-y="1000"
+				data-z="66000"
+				data-scale="1"
+				data-rotate="0">
+				<h1
+					style="
+						font-size: 2rem;
+						text-align: center;
+						color: darkcyan;
+						font-weight: bold;
+						text-shadow: 1px 1px 3px black;
+					">
+					Teredo IPv6 Tunneling For Unix
+				</h1>
+				<hr style="width: 100%; border: 1px solid darkcyan" />
+				<div style="width: 100%; font-size: 2rem">
+					<p>
+						Linux/BSD daemon program providing Teredo
+						tunnel service:
+					</p>
+					<p
+						style="
+							color: mediumvioletred;
+							text-align: center;
+							text-shadow: 1px 1px 1px black;
+						">
+						Miredo
+					</p>
+					<p
+						style="
+							color: gray;
+							text-align: left;
+							text-shadow: 1px 1px 1px black;
+							font-size: 1.5rem;
+						">
+						Install
+					</p>
+					<img
+						src="assets/images/ubuntu-miredo.png"
+						style="
+							width: 90%;
+							display: block;
+							margin: auto;
+						" />
+					<p
+						style="
+							color: gray;
+							text-align: left;
+							text-shadow: 1px 1px 1px black;
+							font-size: 1.5rem;
+						">
+						Config
+					</p>
+					<img
+						src="assets/images/miredo-config.png"
+						style="
+							width: 90%;
+							margin-top: 1rem;
+							display: block;
+							margin: auto;
+						" />
 				</div>
 			</div>
 

@@ -22,7 +22,7 @@
 var initSlideNo = function (obj) {
 	var impressApi = obj;
 	var slideNo = 1;
-	var totalSlide = 203;
+	var totalSlide = 211;
 	var toSlideStr = "";
 	var slides = [];
 
